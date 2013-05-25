@@ -1,0 +1,188 @@
+The game ROM is slot 1.
+
+Text at 0x14000 in ROM space is at $8000 in memory space.
+
+Thus, $8002 is the first letter of "Huh. Somebody left an envelope on the table." (after Oidon's name tag).
+
+
+
+Here is the script fetch routine:
+
+
+; FetchAndPrintChar
+; Inputs:
+;   HL = address in VRAM of char in pattern table to print to
+;
+; Outputs:
+;   HL = address in VRAM of next char in pattern table
+;
+; Possibly reserved:
+;   BC
+$45e7:
+        ld      a,(ix+#00)      ; This is where we load the next char from the script
+        inc     ix              ; Bump the index
+        cp      #7f             ; Is this the <end> code?
+        jp      nz,#476d        ; Jump if not
+        ; It is; this does not concern us, however
+
+
+$476d:  cp      #7e             ; Is this the newline code?
+        jr      nz,#477b        ; Jump if not
+        ; It is; this does not concern us yet
+
+
+$477b:  cp      #ff             ; Is this the <key> code?
+        jr      nz,#4784        ; Jump if not
+        ; It is; this does not concern us yet
+
+
+$4784:  cp      #fe             ; Is this a character name tag (e.g. <Oidon>)?
+        jr      nz,#47a1        ; Jump if not
+        ; It is; this does not concern us yet
+
+
+$47a1:
+        ; I presume here we have a normal char, dict code, or color code
+        ld      b,a             ; $f2d0 -> $f301 (text color). Dunno what the purpose is yet.
+        ld      a,(#f2d0)
+        ld      (#f301),a
+        ld      a,b
+        jp      #4616
+
+
+$4616:  add     a,#80           ; convert char to MSX charset
+        cp      #23             ; originally $a3 -- <pause>
+        jr      z,#464f
+        cp      #24             ; originally $a4 -- ellipsis
+        jr      z,#465d
+        cp      #25             ; originally $a5 -- ですぜ。 ("desu ze." dict code)
+        jr      z,#4669
+        ; ... skipping more such special cases, incl. color codes ...
+$464c:  ; By this point, we SHOULD have an honest-to-god letter to draw
+        jp      #47ac
+
+
+$47ac:  ld      b,a             ; $f2d0 -> $f301 (text_color) again
+        ld      a,(#f2d0)
+        ld      (#f301),a
+        ld      a,b
+        call    #4847           ; We'll call this DoChar
+        jp      #476a
+
+
+$476a:  jp      #45e7           ; go back to start of script fetch routine
+
+
+
+; DoChar
+$4847:  push    af
+        push    bc
+        ld      b,#07           ; execute the following loop 7 times
+-       ld      a,(#f2d5)       ; usually $ff
+        call    #0135           ; CHGSND
+        xor     a               ; clear A
+        call    #0135           ; CHGSND
+        djnz    -
+        ld      b,#12           ; looks like a delay amount
+        call    #470a           ; looks like a delay function
+        pop     bc
+        pop     af
+        cp      #de             ; handle dakuten
+        jr      z,#4885
+        cp      #df             ; handle handakuten
+        jr      z,#489e
+        jr      #48b7
+
+
+$48b7:  call    #47ba           ; PrintChar
+        push    bc
+        ld      bc,#0040        ; bump VRAM pointer to next char in pattern table
+        add     hl,bc
+        pop     bc
+        ret                     ; exit back to the end of the fetch routine or wherever
+
+
+; PrintChar
+; The actual char display routine!
+; A = character to print (in ASCII-like MSX charset)
+$47ba:
+        ld      (#f2e1),a       ; put char to display in $f2e1
+        push    bc
+        push    de
+        push    hl
+        push    af
+        xor     a               ; clear $f2ea (= bold flag)
+        ld      (#f2ea),a
+        pop     af
+        ex      de,hl           ; what's the point of this?
+        cp      #21             ; If char to print is "!"...
+        jr      z,++            ; ...make it bold
+        cp      #80             ; Are we displaying the odd "nu" symbol?
+        jr      nz,+            ; Skip next couple instructions if not
+        ld      hl,#4b09        ; We are; copy char from $4b09 instead of BIOS
+        jr      _skip_bios
++       cp      #30             ; Is character in Latin alphabet?
+        jr      c,+
+        cp      #7b
+        jr      nc,+
+++      ld      (#f2ea),a       ; It is; set bold flag
++       ld      bc,(#0004)      ; BC = addr of BIOS font
+        ld      h,#00           ; All this bit does is hl = a*8...
+        ld      l,a
+        sla     l
+        rl      h
+        sla     l
+        rl      h
+        sla     l
+        rl      h
+        add     hl,bc           ; ...then adds it to the font's base address
+_skip_bios:
+        ex      de,hl
+        push    hl
+        pop     bc
+        ld      hl,(#f2d6)      ; This is almost certainly unused (this is the only instance of D6 F2 in the ROM)
+        add     hl,bc
+        ld      b,#08
+        ld      a,(#f2ea)       ; check bold flag
+        or      a
+        jr      z,_not_bold
+-       ld      a,(de)
+        ; This is the "emboldenator"; we've NOPped a couple lines out in our hack
+        ld      c,a
+        srl     a               ; (NOPped out)
+        or      c               ; (NOPped out)
+        ; end emboldenator
+        call    #004d           ; WRTVRM
+        inc     hl
+        inc     de
+        djnz    -
+        jr      +
+_not_bold:
+-       ld      a,(de)
+        call    #004d           ; WRTVRM
+        inc     hl
+        inc     de
+        djnz    -
++       pop     hl              ; restore hl to the value it had coming in
+        push    hl
+        ld      de,#2000
+        add     hl,de
+        ld      b,#08
+-       ld      a,(#f301)       ; this must be the text color
+        call    #004d           ; WRTVRM
+        inc     hl
+        djnz    -
+        ld      a,(#f2e1)       ; Put char we've displayed back in A
+        cp      #a1             ; These insert a delay after certain punctuation symbols
+        call    z,#4708
+        cp      #a4
+        call    z,#4708
+        cp      #3f
+        call    z,#4708
+        cp      #21
+        call    z,#4708
+        call    #4c56
+        pop     hl
+        pop     de
+        pop     bc
+        ret

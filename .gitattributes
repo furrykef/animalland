@@ -1,0 +1,11 @@
+* text=auto
+
+*.txt text
+*.md text
+*.asm text
+
+*.tbl text eol=crlf
+*.bat text eol=crlf
+
+*.bin binary
+*.bmp binary

@@ -1,0 +1,6 @@
+This is only the bare minimum needed to get through the game.
+
+
+Victim's room:
+* Look table (find envelope)
+* Take envelope

@@ -1,0 +1,240 @@
+MURDER IN ANIMAL LAND
+=====================
+Check if our bankswitching can interfere with interrupt handlers
+* The game installs an HTIMI (vblank interrupt) handler at $c102 (RAM).
+
+
+<Torbjorn> / <Oidon>クンクン。うっ、これは　ちのにおい・・・・・・<pause>
+<Torbjorn> / というのはうそて゛す。
+<Torbjorn> / し゛ょうひんな　においか゛しますぜ。<end>
+<Torbjorn> / @TODO@ - confirm that this is a joke
+<Torbjorn> <Oidon>
+<Torbjorn> Yep, it's a joke ;p
+
+<Torbjorn> / <Oidon>け゛んは゛に　のこされた　かみに"<char>"というもし゛か゛
+<Torbjorn> / かかれていたのた゛か゛
+<Torbjorn> / なにか　おもいあたる　ふしは、ないか？<key>
+<Torbjorn> / <Kokon><char>　・・・　なにかか゛　ヌっと　て゛てきたとか、
+<Torbjorn> / なーんちゃって、そんなの　わかりませんよ。<end>
+<Torbjorn> Depending what the Nu spells out eventually we might have a different character to work with for this line later maybe
+<furrykef> I believe it's Nuki
+<furrykef> You can probably guess what species he is
+<Torbjorn> tanuki? :;p
+<furrykef> ding ding ding ding ding!
+<Torbjorn> It just depends what we call him then
+<Torbjorn> maybe Rocky like Rocky Racoon from that Beatles song :p
+<furrykef> I currently just call him Nuki, and refer to the symbol as an "N"
+<furrykef> So it'd go something like, "Do you know anything about this?" "It looks like the letter 'N'... but I don't know anything about it."
+<Torbjorn> Yeah that's one way to go
+<Torbjorn> it just means cutting out a joke from that spot
+<Torbjorn> probably doesn't matter in the long run but I'll see if I come up with anything good for it eventually
+<Torbjorn> gotta get to bed now, I'll be back later! ;)
+<furrykef> Hmm, is it a pun on the word ぬっと? Sorry, I don't always get these things easily. ^^;;
+<Torbjorn> Little late now but yeah, it's a pun on ぬっと
+<furrykef> We can make note of it and come back to it later
+
+Change "(slap!)" to "*slap!*" and "(sniff, sniff)" to "*sniff, sniff*"
+
+
+Pointers
+--------
+A routine at 2C3A (4C3A in mem space) handles loading pointers for both menus and script. They're passed in via registers. Trap all calls to it.
+
+
+Release checklist
+-----------------
+* All passwords work.
+* Correct passwords are given at the end of each chapter.
+* All menu item names correct and sensible in context
+* No menu item names overflow
+* No "Translation goes here" in script
+* All dialogue has speaker tag
+* All dialogue has END tag
+* Make sure I've never mixed up Kokon and Konta
+* Password text input never overflows on-screen boundary
+* No significant @TODO@'s in code or script
+* All hyphenation is according to rules: http://www.melbpc.org.au/pcupdate/9100/9112article4.htm
+* All lines in main script conform to one of these regexes:
+    ^$      [blank line]
+    ^//     [comment]
+    ^<      [dialogue tag]
+    <nl>$
+    <key>$
+    <end>$
+
+
+When done, submit to MSX sites:
+* msx.org
+
+
+Hacking notes
+-------------
+#msxdev on irc.rizon.net
+
+http://bifi.msxnet.org/msxnet/tech/megaroms.html#ascii8 -- mapper info
+
+http://www.tni.nl/products/tniasm.html -- assembler by GuyveR800 from #msxdev
+
+Several codes print out multiple characters. The code that does this can possibly be leveraged for our own text compression.
+
+The bank at $6000 seems to always be set to ROM bank 0 ($00000-01fff). We can probably safely swap it out and back in during the text routines.
+
+
+Intro text
+----------
+The game never switches a bank into A000-BFFF during the intro, so we can safely store our intro text there.
+
+
+Emboldenation
+-------------
+While I've already implemented this, I'm keeping a record here partly so I'll remember how it works, partly so I can find where the font is loaded in case I want to implement simultaneous bold and un-bold fonts.
+
+<@BiFi> offset $27fa in the rom image is where that part starts
+<furrykef> BiFi -- huh, how did you work that out?
+<@BiFi> openmsx debugger :)
+<furrykef> yeah, but I'm looking at that code and have pretty much no idea what's going on
+<@BiFi> the core of the boldmaker is:
+<@BiFi> ld a,(de)
+<@BiFi> ld c,a
+<@BiFi> srl a
+<@BiFi> or c
+<@BiFi> call $4d
+<@BiFi> - read data from rom
+<@BiFi> - keep for later
+<@BiFi> - shift right
+<furrykef> ahhh... I get it
+<furrykef> SRL and OR to double up the pixels... pretty clever
+<furrykef> Yep. Three NOPs over the SRL and the OR and it's no longer bold
+
+
+"What?"
+-------
+The "なにを？" prompt could be translated as "Choose an item."
+
+If we want to get REALLY adventurous, we could remember what the last menu item was and compare it to allow us to print strings such as "Look at what?"
+
+
+Text blocks
+-----------
+All ranges are inclusive
+
+006A0-00903   -- intro text
+02C80-0363B   -- menu commands (miru, toru, shiraberu...; names of objects; etc.)
+14000-1F92E   -- main script [no discontinuities at page boundaries] (wow, 46k!)
+1FD20-1FDF3   -- end credits (ASCII) [starting offset approximate]
+1FDF4-1FFFF   -- garbage (looks like text, but is just repeat of earlier stuff)
+
+
+Bank identification
+-------------------
+00000: 41   - page 0
+02000: C3   - page 1
+04000: 21   - page 2
+06000: 3E   - page 3
+08000: 6F   - page 4
+0A000: 02   - page 5
+0C000: 0F   - page 6
+0E000: 03   - page 7
+10000: 01   - page 8
+12000: 00   - page 9
+14000: FE   - page A
+16000: 76   - page B
+18000: 60   - page C
+1A000: 0E   - page D
+1C000: 7E   - page E
+1E000: 7F   - page F
+
+No duplicates. So long as we don't change these, we can identify a bank by its first byte.
+
+
+Remember to put in manual
+-------------------------
+ROM type is "ASCII 8kbyte"
+
+Run at NTSC speed (may want to emulate a Japanese MSX)
+
+You can use 0 to back out of menus
+
+
+Credits
+-------
+Kef Schecter - hacking and translation
+Torbjorn -- translation
+BiFi (#msxdev) - found code for making text bold so I could disable it
+
+Special thanks:
+* ##japanese on freenode
+* #romhacking.net on synIRC
+* #msxdev on Rizon
+
+
+Beta testers
+------------
+* I.S.T.
+
+
+Character and place names
+-------------------------
+People:
+  ゴンきち (murder victim)              - Renard [gon = fox noise] -- name suggested by Aerdan
+  おいどん (canine partner)             - Andy
+  ココン (Renard's younger son)        - Kit
+  コンタ (other son)                   - Red
+  リンリン (female)                     - ???
+  ヌキ (a tanuki)                     - Nuki
+  ピョンコ (bunny; Kokon's girlfriend)  - Amy -- considering "Bonnie" or "Honey" (for Honey Bunny), since "pyon" is a bunny's hop
+  タージ                               - Taji
+  ペルー                               - Peru (maybe Pelu)
+  ツネコ (female cat)                  - Neko
+  コアラ                               - Kola
+  ベアス                               - ???
+  ドラクレ (tiger)                      - Dora (if female), Draco/Drago/Drake (if male) -- maybe think of a more tigery name
+
+Places:
+  どうぶつの　むら              - Animalville
+  コンコンこうせきてん            - Foxy Jewelry [konkon = fox noise again] - name suggested by Saeko
+
+In addition, the けいさつ at HQ should read "ALPD" or "PDHQ".
+
+
+Alternative titles
+------------------
+The Animal Land Murder
+The Animal Land Murder Case
+The Animal Land Murder Mystery
+
+
+Passwords
+---------
+Chapter 2: あるまじろ (armadillo)
+Chapter 3: こびとかば (pygmy hippopotamus)
+Chapter 4: あふりかぞう (African elephant)
+
+
+Possible English passwords
+--------------------------
+KAKAPO
+CALICO
+FALCON
+HIPPO
+ELEPHANT
+RHINO
+MAMMOTH
+MARMOT
+CRICKET
+SNAIL
+CARACOL
+VULPES
+COYOTE
+BEAGLE
+NAUTILUS
+BASILISK
+PENGUIN
+SEAGULL
+
+
+Misc
+----
+Consider "ASK ABOUT" instead of "ASK".
+
+The game will probably wig out if the text for any chapter begins in a different bank from the corresponding block in the original ROM.

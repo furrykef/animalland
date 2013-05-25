@@ -1,0 +1,7920 @@
+#VAR(ascii, TABLE)
+#VAR(tbl, TABLE)
+#ADDTBL("ascii.tbl", ascii)
+#ADDTBL("animalhacke.tbl", tbl)
+#ACTIVETBL(tbl)
+
+// Used for menu commands
+#VAR(cmdptr, CUSTOMPOINTER)
+#CREATEPTR(cmdptr, "LINEAR", $-2000, 16)
+
+// Used for script
+#VAR(ptr14000, CUSTOMPOINTER)
+#CREATEPTR(ptr14000, "LINEAR", $C000, 16)
+
+
+// Replaces SRL A; OR C with NOP NOP NOP to disable bold font
+// Thanks to BiFi for this
+// @TODO@ -- move to ASM code file
+#JMP($2804, $2806)
+($00)($00)($00)
+
+
+// File menu
+// Line width is 12 chars
+#JMP($5A4, $5F4)
+// <contd><Oidon>だんな、そうさファイルの
+// なまえ　なんて゛したっけ？<END>
+($01)<Oidon>
+What's the<nl>
+file's name?<end>
+
+// <contd>ファイルめいは？　<END>
+($01)Password:<end>
+
+// <contd><Oidon>それて゛は　そうさを
+// さいかいしましょう。<END>
+($01)<Oidon>OK,<nl>
+let's go.<end>
+
+// <contd><Oidon>だんな、そんなファイル
+// ないですぜ。<END>
+($01)<Oidon>
+No such<nl>
+file.<end>
+
+// Intro text
+// I cut this down just a hair so it would fit in the original space.
+// I could have relocated it, but the original text was a bit verbose/
+// repetitive and no real details are lost. I also changed "sofa" to
+// "chair" to be consistent with the in-game scenes.
+#JMP($6A0, $893)
+// ある日、わたしのところに
+// さつし゛んし゛けんか゛　とひ゛こんて゛きた。<key>
+// そのし゛けんか゛　おこった　は゛しょは、
+// ある　やまにある　しす゛かて゛　へいわな
+// と゛うふ゛つのむらた゛った。<key>
+// ほうこくによると、
+// コンコンほうせきてんの　しゃちょう　て゛ある
+// キタキツネの<green>ゴンきち<white>か゛、なにものかによって
+// さつか゛いされた　ということた゛。<key>
+// かれは、ソファーに　すわったままの
+// かっこうて゛　し゛ゅうて゛　しんそ゛うを
+// うたれて　そくしのし゛ょうたいて゛
+// あったらしい。<end>
+It was a day like any<nl>
+other in Animalville, a<nl>
+quiet, peaceful moun-<nl>
+tain village.<key>
+At least, it was until<nl>
+the murder of <green-on-black>Renard<nl>
+Fox<white-on-black>, the owner of Foxy<nl>
+Jewelry.<end>
+
+// はっけんしゃは、かれのむすこて゛
+// し゛なんの　<green>ココン<white>た゛った。<key>
+// し゛けんのあった　つき゛の日とおもわれる
+// あさ11時こ゛ろ、ココンは　ほうせきてんにきた。
+// <pause>みせのいりく゛ちか゛　あいていて
+// かれは　はいることか゛　て゛きた。<key>
+// そして　おうせつまへ　いくと、
+// むねに　ちのついた　ちちか゛　ソファーに
+// よこたわっているのを、はっけんし、すく゛に
+// わたしのところへ　つうこくをしたということた゛。<key>
+// わたしは、すく゛さま　ちゅうし゛つな
+// ふ゛かて゛ある　いぬの"<cyan>おいと゛ん<white>"と　ともに
+// このし゛けんの　そうさにのりた゛すことにした。<end>
+He was discovered by<nl>
+<green-on-black>Kit<white-on-black>, his son.<key>
+Kit entered the jewelry<nl>
+store at about 11 AM on<nl>
+the day after the<nl>
+murder.<key>
+The door was unlocked.<nl>
+When he went in, he saw<nl>
+his father in his<nl>
+chair,<key>
+his chest covered with<nl>
+blood. He'd been shot<nl>
+in the heart.<key>
+My partner <cyan-on-black>Andy<white-on-black> and I<nl>
+set out immediately to<nl>
+investigate the case...<end>
+
+
+// Character names (used for dialogue tags)
+// All must be padded w/ spaces to 4 chars
+#JMP($253B, $25A4)
+#ACTIVETBL(ascii)
+// おいどん
+ANDY($A2)
+
+// ココン
+KIT ($A2)
+
+// コンタ - @TODO@
+RED ($A2)
+
+// ツネコ - @TODO@
+TNKO($A2)
+
+// タージ
+TAJI($A2)
+
+// ペルー
+PERU($A2)
+
+// リンリン - @TODO@
+RIN ($A2)
+
+// ピョンコ
+AMY ($A2)
+
+// ヌキ
+NUKI($A2)
+
+// コアラ
+KOLA($A2)
+
+// ベアス - @TODO@
+BESU($A2)
+
+($A2)
+
+// ドラクレ - @TODO@
+DORA($A2)
+
+($A2)
+
+// ようせい - @TODO@
+ELF ($A2)
+
+// モグラ
+MOLE($A2)
+
+// さかな
+FISH($A2)
+
+// ****
+????($A2)
+
+// ぜんいん
+ALL ($A2)
+
+// こども
+KID ($A2)
+
+// ははおや
+MOM ($A2)
+
+#ACTIVETBL(tbl)
+
+
+// Commands
+#JMP($2C80, $363B)
+// みる<end>
+LOOK<end>
+
+// とる<end>
+TAKE<end>
+
+// しらへ゛る<end>
+CHECK<end>
+
+// きく<end>
+ASK<end>
+
+// あける<end>
+OPEN<end>
+
+// みせる<end>
+SHOW<end>
+
+// ハナきかす<end>
+SNIFF<end>
+
+// と゛こかいく<end>
+GO<end>
+
+// よふ゛<end>
+CALL<end>
+
+// すいりする<end>
+// @TODO@ - guess
+REASON<end>
+
+// し゛ょうほう<end>
+// @TODO@ - guess
+INFO<end>
+
+// テーフ゛ル<end>
+TABLE<end>
+
+// ゆか<end>
+FLOOR<end>
+
+// いす<end>
+CHAIR<end>
+
+// ほうせきてん<end>
+SHOP<end>
+
+// しょさい<end>
+STUDY<end>
+
+// おうせつま<end>
+PARLOR<end>
+
+// そうさ<pause>6ほんふ゛<end>
+HQ<end>
+
+// ふうとう<end>
+ENVE-<pause>1LOPE<end>
+
+// きんは゜つ<end>
+BLOND HAIR<end>
+
+// てんない<end>
+SHOP<end>
+
+// メモ<end>
+NOTE<end>
+
+// つくえ<end>
+DESK<end>
+
+// ほんた゛な<end>
+BOOK-<pause>1CASE<end>
+
+// まと゛<end>
+WINDOW<end>
+
+// ほん<end>
+BOOKS<end>
+
+// つくえの<pause>4ひきた゛し<end>
+DRAWER<end>
+
+// ほんた゛な<pause>3のとひ゛ら<end>
+BOOK-<pause>1CASE<end>
+
+// きんこ<end>
+SAFE<end>
+
+// コ゛ンきち<end>
+RENARD<end>
+
+// コンタ<end>
+RED<end>
+
+// ココン<end>
+KIT<end>
+
+// ふうとう<pause>5のなかみ<end>
+ENV'S CONTENTS<end>
+
+// リンリン<end>
+RINRIN<end>
+
+// ターシ゛<end>
+TAJI<end>
+
+// かえす<end>
+LET GO<end>
+
+// やっは゜り<pause>1いくのをやめる<end>
+CANCEL<end>
+
+// かへ゛<end>
+WALL<end>
+
+// ト゛ア<end>
+DOOR<end>
+
+// カ゛ラス<pause>6ケース<end>
+GLASS CASE<end>
+
+// ほうせき<pause>5は゛こ<end>
+JEWEL BOX<end>
+
+// ひ゛んせん<end>
+PAPER<end>
+
+// けんし゛ゅう<end>
+GUN<end>
+
+
+// Menu items for chapter 2
+#WRITE(cmdptr, $2BCB)
+
+// てんいん<end>
+CLERK<end>
+
+// しょうひん<end>
+GOODS<end>
+
+// さくやのこと<end>
+// @TODO@
+LAST<pause>1NIGHT<end>
+
+// し゛ゅうせい<pause>4のこと<end>
+// @TODO@
+GUN-<pause>1SHOT<end>
+
+// きんは゜つ<end>
+BLOND HAIR<end>
+
+// メモ<end>
+NOTE<end>
+
+// みる<end>
+LOOK<end>
+
+// とる<end>
+TAKE<end>
+
+// しらへ゛る<end>
+CHECK<end>
+
+// きく<end>
+ASK<end>
+
+// あける<end>
+OPEN<end>
+
+// みせる<end>
+SHOW<end>
+
+// ハナきかす<end>
+SNIFF<end>
+
+// と゛こかいく<end>
+GO<end>
+
+// よふ゛<end>
+CALL<end>
+
+// すいりする<end>
+// @TODO@
+REASON<end>
+
+// し゛ょうほう<end>
+INFO<end>
+
+// そうさ<pause>6ほんふ゛<end>
+HQ<end>
+
+// リンリン<pause>6のこと<end>
+RINRIN<end>
+
+// コンタのへや<end>
+RED'S<pause>1ROOM<end>
+
+// コンヒ゛ニエ<pause>1ンスストアー<end>
+AMY'S SHOP<end>
+
+// て<end>
+HAND<end>
+
+// てちょう<end>
+PAD<end>
+
+// ココンのこと<end>
+KIT<end>
+
+// くるまのいろ<end>
+CAR'S COLOR<end>
+
+// リンリン<end>
+RINRIN<end>
+
+// けんし゛ゅう<end>
+GUN<end>
+
+// ね<end>
+SOUND<end>
+
+// つくえ<end>
+DESK<end>
+
+// ほん<end>
+BOOKS<end>
+
+// コンタ<end>
+RED<end>
+
+// ココン<end>
+KIT<end>
+
+// ホ<end>
+// @TODO@ - ?
+HO<end>
+
+// ヒ゜ョンコ<end>
+AMY<end>
+
+// アリハ゛イ<end>
+ALIBI<end>
+
+// くるまのこと<end>
+CAR<end>
+
+// 「($00)」という<pause>1もし゛のこと<end>
+"N"<end>
+
+// ゆ<end>
+WATER<end>
+
+// カキ゛のこと<end>
+KEY<end>
+
+// しょさい<pause>5のこと<end>
+STUDY<end>
+
+// ケカ゛のこと<end>
+INJURY<end>
+
+// やっは゜り<pause>1いくのをやめる<end>
+CANCEL<end>
+
+// かえす<end>
+LET GO<end>
+
+// くるま<end>
+CAR<end>
+
+// てんない<end>
+SHOP<end>
+
+// おにき゛り<end>
+ONI-<pause>1GIRI<end>
+
+// のりまき<end>
+NORI-<pause>1MAKI<end>
+
+// コ゛ンきち<pause>5のこと<end>
+RENARD<end>
+
+// てき<end>
+ENEMY<end>
+
+// もめこ゛と<end>
+QUAR-<pause>1REL<end>
+
+// せいかつ<end>
+LIFE<end>
+
+// しゅみ<end>
+HOBBY<end>
+
+// まと゛<end>
+WINDOW<end>
+
+// かへ゛<end>
+WALL<end>
+
+// コ゛ンきち<end>
+RENARD<end>
+
+// リンリン<end>
+RINRIN<end>
+
+// ターシ゛<end>
+TAJI<end>
+
+// ゛<end>
+<end>
+
+// ほうせきてん<pause>2へいったか<end>
+SHOP<end>
+
+// あける<end>
+OPEN<end>
+
+// みせる<end>
+SHOW<end>
+
+// ハナをきかす<end>
+SNIFF<end>
+
+// と゛こかいく<end>
+GO<end>
+
+// よふ゛<end>
+CALL<end>
+
+// すいりする<end>
+// @TODO@
+REASON<end>
+
+// し゛ょうほう<end>
+INFO<end>
+
+// みる<end>
+LOOK<end>
+
+// とる<end>
+TAKE<end>
+
+// しらへ゛る<end>
+CHECK<end>
+
+// きく<end>
+ASK<end>
+
+// あける<end>
+OPEN<end>
+
+// すいりする<end>
+REASON<end>
+
+// し゛んふ゛つ<end>
+CHAR-<pause>1ACTER
+
+// と<end>
+<end>
+
+// と<end>
+<end>
+
+// と<end>
+<end>
+
+// きんは゜つ<pause>5のこと<end>
+BLOND HAIR<end>
+
+// ト゛ラコ゛ン<end>
+DRAGON<end>
+
+// いさ゛かや<pause>4　クマ<end>
+// @TODO@ - ?
+BAR<end>
+
+// や<end>
+// @TODO@ - ?
+YA<end>
+
+// しょうこひん<end>
+PROOF<end>
+
+// メモ<end>
+NOTE<end>
+
+// けんし゛ゅう<end>
+GUN<end>
+
+// おかねのこと<end>
+MONEY<end>
+
+// アリハ゛イ<end>
+ALIBI<end>
+
+// しゅっちょう<pause>4のこと<end>
+TRIP<end>
+
+// きんは゜つの<pause>1きゃくのこと<end>
+HAIR<end>
+
+// 「($00)」という<pause>1もし゛のこと<end>
+"N"<end>
+
+// くるまのこと<end>
+CAR<end>
+
+// マスター<end>
+MASTER<end>
+
+// てんない<end>
+SHOP<end>
+
+// そうさ<pause>5ほんふ゛<end>
+HQ<end>
+
+// ん<end>
+
+// け<end>
+<end>
+
+// イ<end>
+<end>
+
+// え<end>
+<end>
+
+// え<end>
+<end>
+
+// か<end>
+<end>
+
+// な<end>
+<end>
+
+// し<end>
+<end>
+
+// コンタ<end>
+RED<end>
+
+// ココン<end>
+KIT<end>
+
+<end>
+
+// ヘ゜ルー<end>
+PERU<end>
+
+// ターシ゛<end>
+TAJI<end>
+
+// リンリン<end>
+RINRIN<end>
+
+// ン<end>
+<end>
+
+// ココンのこと<end>
+KIT<end>
+
+// コ゛ンきちの<pause>5こと<end>
+RENARD<end>
+
+<end>
+<end>
+<end>
+
+// ほうせきてん<pause>1へいったか？<end>
+SHOP<end>
+
+// メモのこと<end>
+NOTE<end>
+
+// と<end>
+// @TODO@
+TO<end>
+
+// きんは゜つ<end>
+BLOND HAIR<end>
+
+// コーヒー<end>
+COFFEE<end>
+
+// けか゛のこと<end>
+INJURY<end>
+
+// てき<end>
+ENEMY<end>
+
+// もめこ゛と<end>
+QUAR-<pause>1REL<end>
+
+// せいかつ<end>
+LIFE<end>
+
+// しゅみ<end>
+HOBBY<end>
+
+// テーフ゛ル<end>
+TABLE<end>
+
+// ゆか<end>
+FLOOR<end>
+
+// リンリンの<pause>3こと<end>
+RINRIN<end>
+
+// コ゛ンきち<end>
+RENARD<end>
+
+// と<end>
+<end>
+
+// と<end>
+<end>
+
+// かえす<end>
+LET GO<end>
+
+// いくのを<pause>5やめる<end>
+CANCEL<end>
+
+// キ<end>
+<end>
+
+// ヒ゜ョンコ<end>
+AMY<end>
+
+// ー<end>
+<end>
+
+// と<end>
+<end>
+
+// と<end>
+<end>
+
+// さかな<pause>3ハンティンク゛<end>
+FISH-<pause>1ING<end>
+
+// ゜<end>
+<end>
+
+// くるま<end>
+CAR<end>
+
+// コアラにきく<end>
+ASK<pause>1KOALA<end>
+
+// し゛けんに<pause>4ついて<end>
+MURDER<end>
+
+// コンタに<pause>5ついて<end>
+RED<end>
+
+// ココンに<pause>5ついて<end>
+KIT<end>
+
+// あける<end>
+OPEN<end>
+
+// みせる<end>
+LOOK<end>
+
+// たいほする<end>
+ARREST<end>
+
+// と゛こかいく<end>
+GO<end>
+
+// よふ゛<end>
+CALL<end>
+
+// すいりする<end>
+REASON<end>
+
+// し゛ょうほう<end>
+INFO<end>
+
+// みる<end>
+LOOK<end>
+
+// とる<end>
+TAKE<end>
+
+// しらへ゛る<end>
+CHECK<end>
+
+// きく<end>
+ASK<end>
+
+// コンタ<end>
+RED<end>
+
+// ココン<end>
+KIT<end>
+
+// ヘ゜ルー<end>
+PERU<end>
+
+// ヌキ<end>
+NUKI<end>
+
+// きんは゜つ<end>
+BLOND HAIR<end>
+
+// ゜<end>
+<end>
+
+// 「($00)」という<pause>3もし゛<end>
+"N"<end>
+
+// ん<end>
+<end>
+
+// ほうせきるい<end>
+JEWELS<end>
+
+// リ<end>
+<end>
+
+// いさ゛かや<pause>5　クマ<end>
+BAR<end>
+
+// ヌキのへや<end>
+NUKI'SROOM<end>
+
+// ヌキのこと<end>
+NUKI<end>
+
+// しょうこひん<end>
+GOODS<end>
+
+// りょうしゅう<pause>4しょう<end>
+RE-<pause>1CEIPT<end>
+
+// カキ゛<end>
+KEY<end>
+
+// てか゛みの<pause>5ありか<end>
+LOC.OFLETTER<end>
+
+// てか゛みの<pause>4ないよう<end>
+LETTER<end>
+
+// アリハ゛イ<end>
+ALIBI<end>
+
+// くるまのこと<end>
+CAR<end>
+
+// ほうせきの<pause>6こと<end>
+JEWEL<end>
+
+// ほんた゛な<end>
+BOOK-<pause>1CASE<end>
+
+// ほん<end>
+BOOKS<end>
+
+// しおり<end>
+BOOK-<pause>1MARK<end>
+
+// たたみ<end>
+// @TODO@ - ?
+TATAMI<end>
+
+// まと゛<end>
+WINDOW<end>
+
+// コ゛ンきち<end>
+RENARD<end>
+
+// ターシ゛<end>
+TAJI<end>
+
+// リンリン<end>
+RINRIN<end>
+
+// コ゛ンきちの<pause>5こと<end>
+RENARD<end>
+
+// 「($00)」という<pause>1もし゛のこと<end>
+"N"<end>
+
+// カキ゛のこと<end>
+KEY<end>
+
+// と<end>
+<end>
+
+// え<end>
+<end>
+
+// てき<end>
+ENEMY<end>
+
+// さかな<pause>3ハンティンク゛<end>
+FISH-<pause>1ING<end>
+
+// コ゛ンきちと<pause>1もめたりゆう<end>
+MOTIVE<end>
+
+// せいかつ<end>
+LIFE<end>
+
+// もめこ゛と<end>
+QUAR-<pause>1REL<end>
+
+// ツネコのこと<end>
+NEKO<end>
+
+// コ゛ンきちの<pause>5つま<end>
+HIS<pause>1WIFE<end>
+
+// いくのを<pause>6やめる<end>
+CANCEL<end>
+
+// くるま<end>
+CAR<end>
+
+// ス<end>
+<end>
+
+// ラ<end>
+<end>
+
+// てんない<end>
+SHOP<end>
+
+// と<end>
+<end>
+
+// そうさ<pause>5ほんふ゛<end>
+HQ<end>
+
+// ほうせきるい<pause>3とカキ゛<end>
+JEWEL KEY<end>
+
+// かえす<end>
+LET GO<end>
+
+// ほんふ゛へ<pause>3もと゛る<end>
+GO TO HQ<end>
+
+// し゛けんに<pause>4ついて<end>
+MURDER<end>
+
+// ヌキに<pause>6ついて<end>
+NUKI<end>
+
+<end>
+
+// あける<end>
+OPEN<end>
+
+// みせる<end>
+SHOW<end>
+
+// たいほする<end>
+ARREST<end>
+
+// と゛こかいく<end>
+GO<end>
+
+// よふ゛<end>
+CALL<end>
+
+// すいりする<end>
+REASON<end>
+
+// し゛ょうほう<end>
+INFO<end>
+
+// みる<end>
+LOOK<end>
+
+// とる<end>
+TAKE<end>
+
+// しらへ゛る<end>
+CHECK<end>
+
+// きく<end>
+ASK<end>
+
+// コンタ<end>
+RED<end>
+
+// ヌキ<end>
+NUKI<end>
+
+// コ゛ンきちの<pause>3てか゛み<end>
+LETTER<end>
+
+// ほうせきるい<pause>4のこと<end>
+JEWELS<end>
+
+// いさ゛かや<pause>5　クマ<end>
+BAR<end>
+
+// しょさい<end>
+STUDY<end>
+
+// ツネコのへや<end>
+NEKO'S<pause>1ROOM<end>
+
+// まよいのもり<end>
+FOREST<end>
+
+// ノートのこと<end>
+NOTE<end>
+
+// ノート<end>
+NOTE<end>
+
+// カキ゛<end>
+KEY<end>
+
+// ほんた゛なの<pause>3とひ゛ら<end>
+BOOK-<pause>1CASE<end>
+
+// つくえの<pause>4ひきた゛し<end>
+DRAWER<end>
+
+// きんこ<end>
+SAFE<end>
+
+// そうさ<pause>5ほんふ゛<end>
+HQ<end>
+
+// へや<end>
+ROOM<end>
+
+// はくせい<end>
+PLUSH<end>
+
+// コ゛ンきちの<pause>5こと<end>
+RENARD<end>
+
+// はくせいの<pause>6こと<end>
+PLUSH<end>
+
+// てか゛み<end>
+LETTER<end>
+
+// ココン<end>
+KIT<end>
+
+// ターシ゛<end>
+TAJI<end>
+
+// リンリン<end>
+RINRIN<end>
+
+// ヘ゜ルー<end>
+PERU<end>
+
+// コ゛ンきち<end>
+RENARD<end>
+
+// し゛んふ゛つ<end>
+CHAR-<pause>1ACTER<end>
+
+// しょうこひん<end>
+PROOF<end>
+
+// アリハ゛イ<end>
+ALIBI<end>
+
+// かえす<end>
+LET GO<end>
+
+// いくのを<pause>6やめる<end>
+CANCEL<end>
+
+// きんは゜つ<end>
+BLOND HAIR<end>
+
+// 「($00)」という<pause>4もし゛<end>
+"N"<end>
+
+// リ<end>
+<end>
+
+// 「($00)」という<pause>1もし゛のこと<end>
+"N"<end>
+
+// え<end>
+<end>
+
+// つくえ<end>
+DESK<end>
+
+// ほんた゛な<end>
+BOOK-<pause>1CASE<end>
+
+// いす<end>
+CHAIR<end>
+
+// ほん<end>
+BOOKS<end>
+
+// ゆか<end>
+FLOOR<end>
+
+// ソファー<end>
+SOFA<end>
+
+// まと゛<end>
+WINDOW<end>
+
+// ツネコ<end>
+NEKO<end>
+
+// てか゛みの<pause>6こと<end>
+LETTER<end>
+
+// ス<end>
+<end>
+
+// ラ<end>
+<end>
+
+// はんにんの<pause>6こと<end>
+PERP<end>
+
+// みる<end>
+LOOK<end>
+
+// とる<end>
+TAKE<end>
+
+// しらへ゛る<end>
+CHECK<end>
+
+// きく<end>
+ASK<end>
+
+// もちもの<end>
+ITEMS<end>
+
+// つかう<end>
+USE<end>
+
+// と゛こかいく<end>
+GO<end>
+
+// あしもと<end>
+GROUND<end>
+
+// し゛めん<end>
+GROUND<end>
+
+// き<end>
+TREE<end>
+
+// いわ<end>
+ROCK<end>
+
+// みす゛うみ<end>
+LAKE<end>
+
+// かわ<end>
+RIVER<end>
+
+// はし<end>
+BRIDGE<end>
+
+// レンカ゛<end>
+BRICK<end>
+
+// マッチは゛こ<end>
+MATCH-BOX<end>
+
+// オノ<end>
+// @TODO@ - ?
+ONO<end>
+
+// すいとう<end>
+FLASK<end>
+
+// ホ゛ール<end>
+BALL<end>
+
+// ほ゛うえん<pause>5きょう<end>
+TELE-<pause>1SCOPE<end>
+
+// すいちゅう<pause>4メカ゛ネ<end>
+GOG-<pause>1GLES<end>
+
+// カキ゛<end>
+KEY<end>
+
+// すいちゅう<pause>4し゛ゅう<end>
+// @TODO@ - ?
+DIVING<end>
+
+// むしメカ゛ネ<end>
+MAG.<pause>1GLASS<end>
+
+// しんふ゛ん<end>
+NEWS<end>
+
+// しゃしんつき<pause>2しんふ゛ん<end>
+// @TODO@ - should be "news & photo"
+NEWS<pause>1PHOTO<end>
+
+// しゅうかんし<end>
+MAG<end>
+
+// とうゆ<end>
+OIL<end>
+
+// けそ゛め<pause>3く゛すり<end>
+HAIR<pause>1DYE<end>
+
+// こや<end>
+HUT<end>
+
+// くす゛かこ゛<end>
+WASTE BASKET<end>
+
+// せきは゛ん<end>
+SLATE<end>
+
+// あな<end>
+HOLE<end>
+
+// （そのた）<end>
+OTHER<end>
+
+// せきは゛んの<pause>4もし゛<end>
+SLATE<end>
+
+// しんふ゛ん<end>
+NEWS<end>
+
+// てつのはこ<end>
+IRON<pause>1BOX<end>
+
+// し゛めんの<pause>6あな<end>
+HOLE<end>
+
+// モク゛ラ<end>
+MOLE<end>
+
+// さかな<end>
+FISH<end>
+
+// なそ゛のひと<end>
+UNK.<pause>1PERSON<end>
+
+// むかしの<pause>3まよいのもり<end>
+OLD<pause>1FOREST<end>
+
+// いまの<pause>4まよいのもり<end>
+FORESTTODAY<end>
+
+// なそ゛の<pause>3と゛うふ゛つ<end>
+UNK.<pause>1ANIMAL<end>
+
+// と゛うふ゛つ<pause>3のゆくえ<end>
+LOCA0<pause>1TION<end>
+
+// にしの<pause>5みす゛うみ<end>
+SOUTH LAKE<end>
+
+// くす゛れた<pause>6はし<end>
+BROKENBRIDGE<end>
+
+// よこ゛れた<pause>4ホ゛ール<end>
+DIRTY BALL<end>
+
+// きれいな<pause>5ホ゛ール<end>
+CLEAN BALL<end>
+
+// ハチのす<end>
+BEE-<pause>1HIVE<end>
+
+// いくのを<pause>6やめる<end>
+CANCEL<end>
+
+// こやのなか<end>
+INSIDEHUT<end>
+
+// ト゛ア<end>
+DOOR<end>
+
+// もと゛る<end>
+GO BACK<end>
+
+// あける<end>
+OPEN<end>
+
+// みせる<end>
+SHOW<end>
+
+// たいほする<end>
+ARREST<end>
+
+// と゛こかいく<end>
+GO<end>
+
+// よふ゛<end>
+CALL<end>
+
+// すいりする<end>
+REASON<end>
+
+// し゛ょうほう<end>
+INFO<end>
+
+// みる<end>
+LOOK<end>
+
+// とる<end>
+TAKE<end>
+
+// しらへ゛る<end>
+CHECK<end>
+
+// きく<end>
+ASK<end>
+
+// コンタ<end>
+RED<end>
+
+// ココン<end>
+KIT<end>
+
+// ツネコ<end>
+NEKO<end>
+
+// コンタのこと<end>
+RED<end>
+
+// ゆひ゛わの<pause>5こと<end>
+RING<end>
+
+// ヘ゜ルー<end>
+PERU<end>
+
+// リンリン<end>
+RINRIN<end>
+
+// ヒ゜ョンコ<end>
+AMY<end>
+
+// しゅうかんし<end>
+MAG<end>
+
+// しんふ゛ん<end>
+NEWS<end>
+
+// かお<pause>6し゛ゃしん<end>
+PHOTO<end>
+
+// ん<end>
+<end>
+
+// ほうせきるい<end>
+JEWELS<end>
+
+// しんふ゛んの<pause>4きし゛<end>
+ART-<pause>1ICLE<end>
+
+// ようき゛しゃ<end>
+SUS-<pause>PECT<end>
+
+// はんにん<end>
+PERP<end>
+
+// ゛<end>
+<end>
+
+// ゆひ゛わ<end>
+RING<end>
+
+// ん<end>
+<end>
+
+// ン<end>
+<end>
+
+// いさ゛かや<pause>5　クマ<end>
+BAR<end>
+
+// そうさ<pause>5ほんふ゛<end>
+HQ<end>
+
+// コ゛ンきちの<pause>5こと<end>
+RENARD<end>
+
+// まよいのもり<pause>4のこと<end>
+FOREST<end>
+
+// つ<end>
+<end>
+
+// すいちゅう<pause>4し゛ゅう<end>
+// @TODO@ - ?
+DIVING<end>
+
+// たいほにいく<end>
+ARREST<end>
+
+// おうせつまの<pause>3かへ゛<end>
+PARLORWALL<end>
+
+// と<end>
+<end>
+
+// ほうせきの<pause>6こと<end>
+JEWEL<end>
+
+// い<end>
+<end>
+
+// ー<end>
+<end>
+
+// ー<end>
+<end>
+
+// た゛んか゛ん<pause>3の　ち<end>
+BULLETBLOOD<end>
+
+// しんふ゛んの<pause>5こと<end>
+NEWS<end>
+
+// ゛<end>
+<end>
+
+// ラ<end>
+<end>
+
+// かえす<end>
+LET GO<end>
+
+// いくのを<pause>6やめる<end>
+CANCEL<end>
+
+
+// Game script
+#JMP($14000, $1F92E)
+
+// <Oidon>ん？　ふうとうか゛　おいてありますぜ。<end>
+<Oidon>
+Huh. Somebody left an<nl>
+envelope on the table.<end>
+
+// <Oidon>タ゛イヤルしき　ですぜ。<end>
+// (This refers to a safe.)
+<Oidon>
+It's the kind with a<nl>
+dial.<end>
+
+// <Oidon>みたところ、なにも　おちてませんぜ。
+// おいと゛んのしこ゛とは、やっは゜　めより　はな
+// て゛しょうなー。<end>
+<Oidon>
+I don't see anything<nl>
+there. But perhaps we<nl>
+should CHECK it out in<nl>
+more detail.<end>
+
+// <Oidon>みるた゛けし゛ゃ、よくわかりませんぜ。<end>
+<Oidon>
+I'll need more than a<nl>
+mere glance to find<nl>
+anything.<end>
+
+// <Oidon>なんた゛か、す゛いふ゛ん　おおきな　いすて゛す。<end>
+<Oidon>
+Rather big chair.<end>
+
+// <Oidon>なんと゛みても、おなし゛ですぜ。<end>
+<Oidon>
+No matter how many<nl>
+times you look, it's<nl>
+still the same.<end>
+
+0<end>
+0<end>
+0<end>
+
+// <Oidon>て゛は、しょうこひんとして　もっておきます。<end>
+<Oidon>
+OK, we'll use this as<nl>
+evidence.<end>
+
+0<end>
+
+// <Oidon>うえにも　したにも、なにも　おいて
+// ありませんぜ。<end>
+<Oidon>
+There's nothing on it<nl>
+or under it.<end>
+
+0<end>
+0<end>
+
+// <Oidon>もう　しらへ゛ましたせ゛。<end>
+<Oidon>
+We've already checked<nl>
+that.<end>
+
+// <Oidon>くしゃくしゃて゛　はんふ゛ん　やふ゛れています。
+// やっ　なにか　かかれている!
+// "ヘ゜ルーへ　もし　わしに　なにか　あったら
+// これを　けいさつへ。ゴンきち"<key>
+// <Oidon>おいと゛んか゛　きいたところに　よりますと
+// ヘ゜ルーというのは　ほうせきてんの　てんいんて゛
+// いまは　しゅっちょうに　て゛かけていて
+// ここにはいないそうて゛す。<end>
+<Oidon>
+Half of it's torn up<nl>
+and crumpled. Look, it<nl>
+says something!<key>
+<Oidon>
+"Peru: if something<nl>
+should happen to me,<nl>
+give this to the<nl>
+police. - Renard"<key>
+<Oidon>
+Peru's his assistant,<nl>
+but he's currently out<nl>
+on a business trip.<end>
+
+0<end>
+
+// <Oidon>おおっ、<pause>これは　きんは゜つ!
+// さては、はんにんは　きんは゜つた゛な。
+// ねぇ、だんな。<end>
+<Oidon>
+A blond hair! So the<nl>
+perp must be blond...<end>
+
+// <Oidon>ここには、た゛れも　いませんぜ。<end>
+<Oidon>
+There's no one to talk<nl>
+to here.<end>
+
+// <Oidon>あけるものは、なにも　ありませんぜ。<end>
+<Oidon>
+There's nothing here to<nl>
+open.<end>
+
+// <Oidon>みせるものも　みせるあいても、た゛れも
+// いませんぜ。<end>
+<Oidon>
+You don't have anything<nl>
+to show or anyone to<nl>
+show it to.<end>
+
+// <Oidon>みせるあいては、た゛れも　いません。<end>
+<Oidon>
+There's no one to show<nl>
+anything to.<end>
+
+// <Oidon>はまきの　いいにおいか゛　しますぜ。
+// うーたまらん、だんなも　と゛うて゛す？<end>
+<Oidon>
+The pleasant scent of a<nl>
+cigar. Irresistible,<nl>
+don't you think?<end>
+
+// <Oidon>ほんじゃ、ほうせきてんへ　いきましょうや。<end>
+<Oidon>
+OK, to the jewelry<nl>
+shop.<end>
+
+// <Oidon>ほんじゃ、しょさいへ　いきましょうや。<end>
+<Oidon>
+OK, to the study.<end>
+
+// <Oidon>ほんじゃ、おうせつまへ　いきましょうや。<end>
+<Oidon>
+OK, to the parlor.<end>
+
+// <Oidon>ほんじゃ、そうさほんふ゛へ　いきましょうや。<end>
+<Oidon>
+OK, to headquarters.<end>
+
+// <Oidon>ほうせきか゛、すへ゛て　きえてます。
+// こ゛うとうさつし゛ん　て゛すね。<end>
+<Oidon>
+The jewels are all<nl>
+gone. So the killer was<nl>
+a robber...<end>
+
+0<end>
+
+// <Oidon>ん？<pause>　なにやら、メモのようなものか゛
+// おちてますぜ。<end>
+// (Describes note on floor)
+<Oidon>
+Huh? There's a note or<nl>
+something on it.<end>
+
+0<end>
+
+// <Oidon>て゛は、とっておきますよ。<end>
+<Oidon>
+OK, I'll take it.<end>
+
+// <Oidon>もう　とりましたせ゛。<end>
+<Oidon>
+We've already got it.<end>
+
+0<end>
+
+// <Oidon>リンリン、ターシ゛、コンタなと゛と
+// なまえか゛、かかれてますぜ。<end>
+<Oidon>
+It has the names<nl>
+Rinrin, Taji, and Red<nl>
+written on it.<end>
+
+// <Oidon>クンクン、かなり　そうし゛か゛　ゆきとと゛いてます。
+// ワックスの　いいにおいか゛、しますぜ。<end>
+<Oidon>
+(sniff, sniff)<nl>
+It's quite clean. The<nl>
+pleasant scent of wax.<end>
+
+0<end>
+
+// <Oidon>ムフっ　だんな、せかいホ゜ルノせ゛んしゅうて゛
+// いっは゜い　ですぜ。
+// そうさか゛　おわってから、し゛っくり
+// みましょうよ。<end>
+// (HOW DO YOU FIND THIS?!)
+<Oidon>
+It's full of, ah, maga-<nl>
+zines. We can read 'em<nl>
+later. For the arti-<nl>
+cles, of course.<end>
+
+0<end>
+
+0<end>
+
+// <Oidon>このいす、つくえと　あってるし゛ゃないて゛すか。
+// こういうのを　コンヒ゛ネーションか゛　いいって
+// いうんて゛しょうね。<key>
+// <Oidon>て゛も、だんなと　おいと゛んのコンヒ゛ネーションに
+// かてるものなと゛　ありゃしませんぜ。<end>
+<Oidon>
+This chair and this<nl>
+desk make a lovely<nl>
+pair, don't they?<key>
+<Oidon>
+But there's no pair<nl>
+more lovely than you<nl>
+and me. Platonically<nl>
+speaking, of course.<end>
+
+// <Oidon>さいしょ　みたとおりですぜ。<end>
+<Oidon>
+It hasn't changed.<end>
+
+0<end>
+
+// <Oidon>ふつうの　つくえて゛す。<end>
+<Oidon>
+Just an ordinary desk.<end>
+
+// <Oidon>ふつうの　ほんた゛なですぜ。
+// こうきゅうそうな　かんし゛か゛、しますけと゛。<end>
+<Oidon>
+An ordinary bookcase,<nl>
+if a rather classy one.<end>
+
+// <Oidon>このきんこは・・・・・・。
+// タ゛イヤルしきですぜ。<end>
+<Oidon>
+This safe... it's the<nl>
+kind with a dial.<end>
+
+0<end>
+
+// <Oidon>んく゛き゛き゛っ、カキ゛か゛　かかってて　あきませんぜ。
+// だんなも　やってみて　くた゛さいよ。<end>
+<Oidon>
+Nngghh... it's locked.<end>
+
+// <Oidon>カキ゛か゛　なけれは゛、なんと゛やっても
+// おなし゛ですぜ。<end>
+<Oidon>
+Try all you want, you<nl>
+can't open it without<nl>
+the key.<end>
+
+0<end>
+
+// <Oidon>なかには、きんこか゛　はいってますぜ。<end>
+<Oidon>
+There's a safe inside.<end>
+
+// <Oidon>だんな、は゛んこ゛うか゛　わからなくちゃ
+// あきませんぜ。<end>
+<Oidon>
+It's no use without the<nl>
+combination.<end>
+
+// <Oidon>は゛んこ゛うを　しることか゛、せんけつですぜ。<end>
+<Oidon>
+First we need the com-<nl>
+bination.<end>
+
+0<end>
+
+// <Oidon>ひか゛いしゃ。　3年まえに、つまと　りこん。
+// ほうせきてんの　しゃちょうて゛あり、マンションも
+// けいえいしている。
+// ふたりの　むすこか゛いる。　38さい。<end>
+// (Description of Gonkichi/Renard)
+<Oidon>
+The victim. Divorced 3<nl>
+years ago. Owned Foxy<nl>
+Jewelry and a condo.<nl>
+Two sons. 38 years old.<end>
+
+// <Oidon>20さい。　ひか゛いしゃの　むすこて゛
+// ちょうなん。
+// ほうせきてんの　せんむて゛、し゛き　しゃちょうとの
+// うわさか゛ある。<end>
+// (Description of Konta/Red)
+<Oidon>
+20 years old. Victim's<nl>
+first son. Helps with<nl>
+the shop.<key>
+<Oidon>
+It's rumored that he<nl>
+was to become the owner<nl>
+soon.<end>
+
+// <Oidon>18さい。　コンタと　きょうた゛いて゛　し゛なん。
+// ヒ゜ョンコという　こいひ゛とか゛　いる。<end>
+// (Description of Kokon/Kit)
+<Oidon>
+Age 18. Red's younger<nl>
+brother. Has a girl-<nl>
+friend named Amy.<end>
+
+// <Oidon>40さい。　コンコンほうせきてんの
+// しょうは゛いか゛たき。<end>
+// (Don't know who this is.)
+<Oidon>
+40 years old. Competes<nl>
+with Foxy Jewelry.<end>
+
+// <Oidon>また゛　このと゛うふ゛つのことは、なに1つ
+// わかっていない。<end>
+<Oidon>
+I don't know a thing<nl>
+about this person yet.<end>
+
+// <Oidon>また゛　このと゛うふ゛つのことは、なに1つ
+// わかっていない。<end>
+<Oidon>
+I don't know a thing<nl>
+about this person yet.<end>
+
+0<end>
+
+// <Oidon>ここか゛、そうさほんふ゛て゛す。
+// だんな、ほうこくによりますと　はんこうか゛
+// あった日は　コンコンほうせきてんか゛
+// やすみて゛、はんにんいか゛いに　た゛れか゛<key>
+// <Oidon>て゛はいりしたかは　わからないようて゛すせ゛。
+// ・・・それて゛は　だんな、
+// いままて゛　て゛てきた　かんけいしゃを、
+// しらへ゛て　みましょう。<end>
+<Oidon>
+Here we are at head-<nl>
+quarters.<key>
+<Oidon>
+Foxy Jewelry was<nl>
+reportedly closed on<nl>
+the day of the crime.<key>
+<Oidon>
+It's unknown who else<nl>
+might have been in the<nl>
+shop.<key>
+<Oidon>
+OK, let's have a look<nl>
+at the people involved.<end>
+
+// と゛うする？　<end>
+What to do? <end>
+
+// なにを？　<end>
+What? <end>
+
+// と゛こへ？　<end>
+Where? <end>
+
+// た゛れを　しらへ゛る？　<end>
+Check whom? <end>
+
+// <Oidon>ふつうの　かへ゛ですぜ。<end>
+<Oidon>
+Just an ordinary wall.<end>
+
+// <Oidon>ふつうの　ト゛アですぜ。はんにんは　ここを
+// とおって　このへやへ　はいってきたのて゛しょう。<end>
+<Oidon>
+Just an ordinary door.<nl>
+The killer must have<nl>
+used it to get in and<nl>
+out.<end>
+
+0<end>
+
+// <Oidon>・・・。た゛んな、へ゛つにかわったところは
+// ありませんぜ。<end>
+<Oidon>
+Nothing particularly<nl>
+unusual about it.<end>
+
+0<end>
+
+0<end>
+
+// <Oidon>だんな、もうなにもないようですぜ。<end>
+<Oidon>
+Nothing else here.<end>
+
+// <Oidon>なかなかしゃれた　まと゛ですぜ。
+// カキ゛か゛　かかっています。<end>
+<Oidon>
+Rather stylish window.<nl>
+It's locked, though.<end>
+
+// <Oidon>とくに　かわったところは　ないようですぜ。<end>
+<Oidon>
+Nothing particularly<nl>
+unusual about it.<end>
+
+// <Oidon>た゛いふ゛ひと゛く　こわされてます。<end>
+<Oidon>
+It's all smashed up.<end>
+
+0<end>
+
+0<end>
+
+// <Oidon>なかにはいっていた　ほうせきるいは
+// 1つのこらす゛　ぬすまれているのて゛　なかには
+// カ゛ラスのはへんいか゛い　なにもありませんぜ。<end>
+<Oidon>
+There's not a single<nl>
+jewel left, only shards<nl>
+of glass.<end>
+
+// <Oidon>・・・・・・こし゛あけられた　けいせきは
+// ありません。
+// はんにんは　カキ゛をもっていたのかも
+// しれませんね。<end>
+<Oidon>
+Doesn't look like it<nl>
+was forced open. Maybe<nl>
+the perp had a key.<end>
+
+// <Oidon>へ゛つに　なんともありませんぜ。<end>
+<Oidon>
+There's nothing inter-<nl>
+esting about it.<end>
+
+// <Oidon>もうなにも　おちてないようですぜ。<end>
+<Oidon>
+Nothing else there.<end>
+
+// <Oidon>みたところ　なにも　おちてないようですぜ。<end>
+<Oidon>
+Doesn't seem to be any-<nl>
+thing there.<end>
+
+// <Oidon>ふつうの　ほんのようですぜ。<end>
+<Oidon>
+Just ordinary books.<end>
+
+0<end>
+
+0<end>
+
+// <Oidon>く゛おっ・・・。<pause><end>
+<Oidon>
+Nnngghh...<end>
+
+// <contd>
+// だんな、おもくて　うこ゛きませんぜ。<end>
+<contd>
+It won't budge.<end>
+
+// <Oidon>カ゛サ　カ゛サ・・・。<pause>
+// なにも　ないようですぜ。<end>
+// (searching a floor)
+<Oidon>
+...<nl>
+Nope, nothing.<end>
+
+// <Oidon>・・・<end>
+<Oidon>
+...<end>
+
+// <Oidon>ハ゜ラ　ハ゜ラ・・・<pause><end>
+<Oidon>
+(shuffle, shuffle)<end>
+
+// <Oidon>カ゛ラ　カ゛ラ・・・。<pause>
+// のと゛かな　ふうけいか゛　みえます。
+// とても　さつし゛んし゛けんか゛　おこったとは
+// おもえませんぜ。<end>
+<Oidon>
+Such a tranquil scene.<nl>
+Impossible to believe a<nl>
+murder happened here.<end>
+
+// <Oidon>だんな、ここには　きくあいてか゛　いませんぜ。<end>
+<Oidon>
+There's no one here to<nl>
+ask anything.<end>
+
+// <Oidon>クンクン。<pause>　ほんや　きの　においか゛します。
+// しょさいと゛くとくの　においですぜ。<end>
+<Oidon>
+It smells of books and<nl>
+of wood, just like any<nl>
+study.<end>
+
+// <Oidon>つくえのうえに　ほんか゛おいてありますぜ。<end>
+<Oidon>
+There are books on the<nl>
+desk.<end>
+
+// <Oidon>だんな、ふつうの　ほんのようなのて゛　これは
+// おいておきますぜ。<end>
+<Oidon>
+They're just ordinary<nl>
+books. Let's just leave<nl>
+them here.<end>
+
+// <Oidon>あきましたよ。<pause>・・・だんな、こんなところに
+// きんこか゛ありますぜ。<end>
+<Oidon>
+It's open. Seems<nl>
+there's a safe in here.<end>
+
+// <contd>
+// しかし、さすか゛　かねもちた゛けあって
+// ほんた゛なに　すきまなと゛は　みられませんぜ。<end>
+// Describes bookcase. Follows "nothing particularly" line.
+<contd>
+Since he was rich, it's<nl>
+in great condition.<end>
+
+// <Oidon>だんな　なんた゛か　ナソ゛のおおい　し゛けんですぜ。
+// "<char>"というもし゛は　なにか。きんは゜つは
+// た゛れのものか。それに　ほうせきてんの　ト゛アか゛
+// あいていた　というのも　きになりますぜ。<key>
+// <Oidon>てか゛かりは　はんにんか゛　のこした　きんは゜つと
+// けんし゛ゅうた゛けて゛す。ます゛は　し゛けんにかんする
+// し゛ょうほうを　あつめなくては・・・。<key>
+// <Oidon>コンコンほうせきてんの　まえには
+// コンヒ゛ニエンスストアーか゛　あります。
+// そこて゛　なにか　きけるかもしれませんぜ。
+// さあ　だんな　そうさに　のりた゛しましょう!<key>
+// <Oidon>だんな　ここまて゛の　し゛けんの　けいかを
+// そうさファイルに　まとめました。
+// ファイルめいは　<red>あるまし゛ろ<black>て゛す。<end>
+<Oidon>
+This is a rather myste-<nl>
+rious case, boss.<key>
+<Oidon>
+What's with the "N" on<nl>
+the paper? Whose hair<nl>
+did we find? Why was<nl>
+the door open?<key>
+<Oidon>
+The only clues the perp<nl>
+left are the hair and<nl>
+the gun. We'll have to<nl>
+gather more info.<key>
+<Oidon>
+There's a convenience<nl>
+store across the street<nl>
+from Foxy Jewelry.<key>
+<Oidon>
+Maybe they know some-<nl>
+thing. Let's check it<nl>
+out.<key>
+<Oidon>
+By the way, I recorded<nl>
+our progress in a file.<nl>
+The name is <red>XXXX<black>.<end>
+
+// <contd>
+// へ゛つに　かわったところは　ありませんぜ。<end>
+// (Note: can apply to singular or plural objects)
+<contd>
+Nothing particularly<nl>
+unusual.<end>
+
+// <Oidon>ほんじゃ、いくのは、やめますぜ。<end>
+<Oidon>
+OK, never mind.<end>
+
+// <Oidon>ふうとうの　なかには　なにも・・・
+// あっ　まってくた゛さい。つくえのうえに
+// ひ゛んせんの　きれはしか゛　あります。<end>
+<Oidon>
+There's nothing inside<nl>
+the... ah, hang on.<nl>
+There's a scrap of<nl>
+paper on the desk.<end>
+
+// <Oidon>"<char>"という　もし゛か゛　よめますか゛
+// あとは　やふ゛けていて　た゛めて゛す。
+// さ゛んねん　ウー　ワンワン!<end>
+<Oidon>
+I can read an "N", but<nl>
+not anything after<nl>
+that. Too bad...<nl>
+Grrowf!<end>
+
+// <Oidon>やや　いすのしたに　けんし゛ゅうか゛
+// ころか゛っています!　これか゛　きょうきに
+// ちか゛いありませんぜ。<end>
+<Oidon>
+A gun rolled out from<nl>
+under the chair! It<nl>
+must be the murder<nl>
+weapon.<end>
+
+// <Oidon>し゛ゃ　とっておきますぜ。<end>
+<Oidon>
+OK, I'll take it.<end>
+
+// <Oidon>これか゛　きょうきに　ちか゛いありませんぜ。<end>
+<Oidon>
+This must be the murder<nl>
+weapon.<end>
+
+// <Oidon>とるようなものは　ありませんぜ。<end>
+<Oidon>
+Nothing here to take.<end>
+
+// <Oidon>だんな　とるようなものは　ありませんぜ。<end>
+<Oidon>
+Nothing here to take.<end>
+
+// はや　いすのしたに　けんし゛ゅうか゛
+// ころか゛っています!　これか゛　きょうきに
+// ちか゛いありませんぜ。<end>
+// (Looks like junk, since it's very similar to a previous message and
+// has no speaker tag. In fact, everything from here to the next scene
+// with Amy may be junk.)
+A gun rolled out from<nl>
+under the chair! It<nl>
+must be the murder<nl>
+weapon.<end>
+
+// <Oidon>し゛ゃ　とっておきますぜ。<end>
+<Oidon>
+OK, got it.<end>
+
+// <Oidon>これか゛　きょうきに　ちか゛いありませんぜ。<end>
+<Oidon>
+This must be the murder<nl>
+weapon.<end>
+
+// <Oidon>とるようなものは　ありませんぜ。<end>
+<Oidon>
+Nothing here to take.<end>
+
+// <Oidon>だんな　とるようなものは　ありませんぜ。<end>
+<Oidon>
+Nothing here to take.<end>
+
+// <key><char><char><char><char><char><char><char><char><char><char><char><char><char><char><char><char><char><char><char><char><char><char><char><char>
+// @TODO@ - data? garbage?
+
+
+// Chapter 2
+#WRITE(ptr14000, $2BCE)
+
+// <Pyonko>みせのものを　かってに　いし゛くらないて゛
+// くた゛さいよ。<end>
+<Pyonko>
+Hey now, you can't just<nl>
+go around grabbing<nl>
+things!<end>
+
+// <Oidon>し゛ゃあ、すまないけと゛　しらへ゛させて
+// もらうよ。
+// コチョ　コチョ　!<key>
+// <Pyonko>キャー、いやらしい　なにすんのよ。
+// ハ゛シッ　!
+// <Oidon>だんな、なく゛られちゃいましたせ゛。<end>
+// (upon CHECKing Amy)
+<Oidon>
+Excuse me, I'd like to<nl>
+take a look.<key>
+<Pyonko>
+Hey! What do you think<nl>
+you're doing? (slap!)<nl>
+<Oidon>
+Ah... sorry, never<nl>
+mind.<end>
+
+// <Oidon>ヒ゜ョンコのくちを　あけてみましたところ、
+// きれいな　はを　してましたせ゛。<end>
+<Oidon>
+Amy's mouth shows a<nl>
+nice set of teeth.<nl>
+Probably no need to<nl>
+open it further.<end>
+
+// <Oidon>クンクン。　いいにおいか゛　するなー。
+// だんな、はらか゛　へりましたせ゛。<end>
+<Oidon>
+Mmm, smells good! It's<nl>
+making me hungry, boss.<end>
+
+// <Oidon>クンクン。　ヒ゜ョンコのふくから　こうすいの
+// いいにおいか゛　しますぜ。<end>
+<Oidon>
+Amy's clothes smell of<nl>
+lovely perfume.<end>
+
+// <Oidon>ほんじゃ、そうさほんふ゛へ　いきましょうや。<end>
+<Oidon>
+OK, back to HQ.<end>
+
+// <Oidon>おいと゛んか゛　しらへ゛ましたところ
+// コンタのくるまは　しろの　おおか゛たしゃ
+// て゛あることか゛　わかりました。<end>
+<Oidon>
+My investigation shows<nl>
+that Red drives a<nl>
+large, white car.<end>
+
+// <Oidon>ほんじゃ、コンタのへやへ　いきましょうや。<end>
+<Oidon>
+OK, to Red's room.<end>
+
+// <Oidon>ほんじゃ、コンヒ゛ニエンスストアーへ
+// いきましょうや。<end>
+<Oidon>
+OK, to the convenience<nl>
+store.<end>
+
+// <Oidon>うさき゛のヒ゜ョンコて゛す。<end>
+<Oidon>
+It's Amy, the rabbit.<end>
+
+// <Oidon>おいしそうなものか゛　いっは゜い　ならんて゛ますよ。
+// おいと゛んのすきな　ト゛ック゛フート゛か゛
+// たくさん　ありますぜ。<end>
+<Oidon>
+It's full of yummy<nl>
+things. So many of my<nl>
+favorite dog treats...<end>
+
+// <Oidon>きのうのことて゛　ききたいんた゛か゛、なんか
+// かわったことは　なかったか？
+// <Pyonko>8時はんこ゛ろ　コンタさんか゛　ほうせきてんへ
+// はいるのを　みましたか゛　それいか゛いは・・・<key>
+// <Pyonko>あ　そういえは゛　11時こ゛ろ　ほうせきてんの
+// まえに　くるまか゛とまっていたような・・・<end>
+<Oidon>
+Did you notice anything<nl>
+odd last night?<key>
+<Pyonko>
+I saw Red go into the<nl>
+jewelry shop at around<nl>
+8. Other than that...<key>
+<Pyonko>
+Ah, right. I saw a car<nl>
+there at 11.<end>
+
+// <Oidon>し゛ゅうせい　なんかを　きかなかったか？
+// <Pyonko>さあ　し゛ゅうせいか　と゛うか　わかりませんか゛
+// 11時こ゛ろ　おおきなおとか゛　2かい
+// きこえました。<end>
+<Oidon>
+Did you hear anything<nl>
+like a gun?<key>
+<Pyonko>
+I don't know whether it<nl>
+was a gun, but I heard<nl>
+a loud noise at around<nl>
+11. I heard it twice.<end>
+
+// <Oidon>これに　みおほ゛えは　ないか？
+// <Pyonko>さあ、た゛れの　け　て゛しょうね。<end>
+<Oidon>
+Know whose this is?<nl>
+<Pyonko>
+I'm afraid I don't.<end>
+
+// <Oidon>これに　みおほ゛えは　ないか？
+// <Pyonko>これは、た゛れかの　なまえて゛すか？
+// コンタさんの　なまえか゛　ありますね。<end>
+<Oidon>
+Recognize this?<nl>
+<Pyonko>
+People's names? I see<nl>
+Red's name is on it.<end>
+
+0<end>
+
+// <Oidon>これに　みおほ゛えは　ないか？
+// <Pyonko>さあ、なんて゛しょうね。<end>
+<Oidon>
+Recognize this?<nl>
+<Pyonko>
+No. What is it?<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+// <Oidon>くるまのいろと　かたちを、おしえてくれ。
+// <Pyonko>いろはしろて゛す。
+// かたちは　くらいのて゛　よくおほ゛えてません。<end>
+<Oidon>
+Describe the car.<key>
+<Pyonko>
+It was white. It was<nl>
+dark out, though, so I<nl>
+couldn't tell much<nl>
+else.<end>
+
+0<end>
+
+// <Pyonko>いらっしゃいませ。<end>
+<Pyonko>
+Welcome!<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+// <Oidon>コンタは、て゛かけているのて゛　きけませんぜ。<end>
+<Oidon>
+Red's out right now, so<nl>
+we can't talk to him.<end>
+
+// <Oidon>あけるようなものは、ありませんぜ。<end>
+<Oidon>
+Nothing here to open.<end>
+
+// <Oidon>みせる　あいてか゛　いないのて゛、
+// みせられませんぜ。<end>
+<Oidon>
+There's nobody to show<nl>
+anything to.<end>
+
+// <Oidon>とくに　あやしい　においは　しませんぜ。<end>
+<Oidon>
+I smell nothing out of<nl>
+the ordinary.<end>
+
+// <Oidon>なかなか　いいつくえて゛すねー。<end>
+<Oidon>
+Quite a nice desk.<end>
+
+// <Oidon>ほとんと゛か゛　ふ゛んか゛くしょ　ですぜ。<end>
+<Oidon>
+It's mostly literature.<end>
+
+// <Oidon>くっ・・・。　だんな、おもくて
+// もてないのて゛、とることは　て゛きませんぜ。<end>
+<Oidon>
+Ugh... it's too heavy<nl>
+to pick up.<end>
+
+// <Oidon>わー、むす゛かしいこと　た゛らけて゛
+// おいと゛んには　よめませんぜ。
+// だんな、これを　とるのは　やめましょうよ。<end>
+<Oidon>
+They're full of diffi-<nl>
+cult things and I can't<nl>
+read them. They're no<nl>
+use to us.<end>
+
+// <Oidon>あっ　だんな、つくえのしたに　てちょうか゛
+// ありますぜ。<end>
+<Oidon>
+Hey, there's a notepad<nl>
+under the desk.<end>
+
+// <Oidon>もう　なにも　ありませんぜ。<end>
+<Oidon>
+Nothing else here.<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+// <Oidon>10日のところに　8：30　―なんて
+// かいてありますぜ。<end>
+// @TODO@ - confirm meaning of ところ here
+<Oidon>
+It says, "8:30 on the<nl>
+10th".<end>
+
+// <Oidon>し゛ゃあ、しょうこひんとして　もっておきますぜ。<end>
+<Oidon>
+OK, we'll take it as<nl>
+evidence.<end>
+
+0<end>
+
+// <Oidon>それなら、もう　もってますぜ。<end>
+<Oidon>
+We've already got it.<end>
+
+// <Oidon>ます゛は、た゛れかを　ここに　よひ゛ましょうせ゛。<end>
+<Oidon>
+Let's call someone in<nl>
+first.<end>
+
+0<end>
+
+0<end>
+
+// <Oidon>しほ゛う　すいてい　し゛こくは、
+// 10日のよる　11時ということですぜ。<end>
+<Oidon>
+Apparently the time of<nl>
+death was 11 PM on the<nl>
+10th.<end>
+
+// <Oidon>いまのところ、なにも　ありませんぜ。<end>
+<Oidon>
+There's nothing here.<end>
+
+// <Oidon>みせるものは　あるんて゛すか゛、あいてか゛
+// いませんぜ。<end>
+<Oidon>
+There's no one to show<nl>
+anything to.<end>
+
+// <Oidon>クンクン。　いろんな　においか゛　しますぜ。
+// だんなの　あせの　においも　ありますよ。<end>
+<Oidon>
+I smell lots of things.<nl>
+I even smell your per-<nl>
+spiration!<end>
+
+// <Oidon>し゛ゃあ、コンタを　よひ゛ますぜ。<end>
+<Oidon>
+OK, let's call Red.<end>
+
+// <Oidon>し゛ゃあ、ココンを　よひ゛ますぜ。<end>
+<Oidon>
+OK, let's call Kit.<end>
+
+0<end>
+
+// <Oidon>ゴンきちの　あとをついて゛　し゛きしゃちょうと
+// いわれていました。
+// さつし゛んをおかすと゛うきは　かれには
+// ありませんぜ。<end>
+// (obviously about Red)
+<Oidon>
+It is said he was soon<nl>
+to become owner after<nl>
+Renard. He'd have no<nl>
+motive.<end>
+
+0<end>
+
+// <Oidon>また゛、よく　わかりませんぜ。<end>
+// (asked to reason about someone)
+<Oidon>
+I've got nuthin'.<end>
+
+// <Oidon>と゛うきは　ありますか゛、いまいち
+// わかりませんぜ。<end>
+<Oidon>
+There may be a motive,<nl>
+but there's not enough<nl>
+evidence.<end>
+
+0<end>
+
+// <Oidon>ココンと　こいひ゛とと゛うした゛そうですぜ。<end>
+<Oidon>
+Said to be Kit's girl-<nl>
+friend.<end>
+
+0<end>
+
+// <Oidon>ゴンきちの　しょうは゛いか゛たきなんて゛、
+// ちょっと　においますぜ。<end>
+<Oidon>
+He's Renard's rival, so<nl>
+it is a bit fishy.<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+// <Oidon>アリハ゛イは　あるか？
+// <Konta>いつのアリハ゛イて゛すか？
+// し゛こくか゛　わからなけれは゛
+// おしえられませんよ。<key>
+// <Oidon>・・・だんな、このことは　しほ゛うし゛こくか゛
+// わかってから　きくことに　しましょう。<end>
+<Oidon>
+Got an alibi?<nl>
+<Konta>
+For when? I can't help<nl>
+you unless I know when<nl>
+we're talking about.<key>
+<Oidon>
+Boss, let's ask him<nl>
+after we've determined<nl>
+the time of death.<end>
+
+// <Oidon>クンクン。　おかねの　においか゛、ふ゜んふ゜ん
+// しますぜ。
+// やはり、かねもちは　ちか゛いますなあ。<end>
+<Oidon>
+He smells strongly of<nl>
+money. The rich truly<nl>
+live in a different<nl>
+world...<end>
+
+0<end>
+
+// <Oidon>さくや　11時こ゛ろは　と゛こにいた？
+// <Konta>そのし゛かんなら　ひとと　あってましたよ。<end>
+<Oidon>
+Where were you at 11 PM<nl>
+last night?<nl>
+<Konta>
+I was meeting someone.<end>
+
+// <Oidon>くるまを　もっているか？
+// <Konta>はい。
+// <Oidon>いろと　かたちを、いってくれ。
+// <Konta>しろの　おおか゛たしゃて゛す。<end>
+<Oidon>
+Do you have a car?<nl>
+<Konta>
+I do.<nl>
+<Oidon>
+Describe it for me.<nl>
+<Konta>
+It's large and white.<end>
+
+0<end>
+
+// <Oidon>け゛んは゛に　のこされた　かみに"<char>"というもし゛か゛
+// かかれていたのた゛か゛
+// なにか　おもいあたる　ふしは　ないか？
+// <Konta>ちょっと　おもいあたりませんね。<end>
+<Oidon>
+This "N" was found on a<nl>
+scrap of paper at the<nl>
+scene. Any ideas?<nl>
+<Konta>
+Not a clue.<end>
+
+0<end>
+
+// <Oidon>ほうせきてんのカキ゛は　もっているのか？
+// <Kokon>それか゛、5日ほと゛まえに　なくなって
+// しまったんて゛す。
+// と゛こへ　いったんた゛ろう・・・。<end>
+<Oidon>
+Do you have a key to<nl>
+the jewelry shop?<key>
+<Kokon>
+I lost it about five<nl>
+days ago. I wonder<nl>
+where it went.<end>
+
+// <Oidon>ほうせきてんの　しょさいにある　きんこや
+// つくえのひきた゛しには、なにか゛　はいっている？
+// <Konta>きんこのほうは　しりませんか゛<key>
+// <Konta>ひきた゛しのほうには　よく　た゛いし゛なものを
+// しまっていました。
+// <Oidon>きんこのタ゛イヤルの　は゛んこ゛うは　わかるか？<key>
+// <Konta>しりません。
+// あのは゛んこ゛うは　おやし゛た゛けしか
+// しらないんて゛す。<key>
+// <Konta>て゛も・・・もし　そこに、し゛けんと
+// かんれんするものか゛　あったら、し゛けんは
+// かいけつしないかも・・・・・・。<key>
+// <Konta>わかりました。
+// てあたりした゛いに　しらへ゛てみます。
+// そして　わかりした゛い　ほうこくしますよ。<end>
+<Oidon>
+What's in the safe and<nl>
+the desk drawer in the<nl>
+jewelry shop?<key>
+<Konta>
+I don't know what's in<nl>
+the safe, but he often<nl>
+put important stuff in<nl>
+the drawer.<key>
+<Oidon>
+What's the combination<nl>
+to the safe?<nl>
+<Konta>
+Renard was the only one<nl>
+who knew.<key>
+<Konta>
+But I doubt anything<nl>
+you find could solve<nl>
+the mystery.<key>
+<Konta>
+Still, I'll do what I<nl>
+can. I'll let you know<nl>
+as soon as I find any-<nl>
+thing.<end>
+
+// <Oidon>ちょっと　しつれい。
+// しらへ゛ましたけと゛　なにもないて゛すよ。<end>
+<Oidon>
+Sorry. I looked but<nl>
+didn't find anything.<end>
+
+0<end>
+
+// <Oidon>これに　みおほ゛えは　ないか？
+// <Konta>しりませんねー。<end>
+<Oidon>
+Recognize this?<nl>
+<Konta>
+'Fraid not.<end>
+
+// <Oidon>これに　みおほ゛えは　ないか？
+// <Konta>おやし゛か゛　かいたものて゛しょう。
+// みたことは　ありませんけと゛　なんとなく
+// もし゛て゛　わかりますよ。<end>
+<Oidon>
+Recognize this?<key>
+<Konta>
+My dad must have writ-<nl>
+ten it. I haven't seen<nl>
+it before, but it's his<nl>
+handwriting.<end>
+
+0<end>
+
+// <Oidon>この　8：30　―というのは、と゛ういう
+// いみた゛？
+// <Konta>あっ・・・　それは・・・<key>
+// <Konta>8時30分から　ゆうし゛んと　あうやくそくか゛
+// あったのて゛、わすれないように　かいたものて゛す。<end>
+<Oidon>
+What's the deal with<nl>
+this "8:30"?<key>
+<Konta>
+Ah... well... I'd prom-<nl>
+ised to meet a friend,<nl>
+so I wrote it down.<end>
+
+// <Oidon>うそを　ついているた゛ろ!!
+// おいと゛んのはなか゛　そう　かき゛つけたんた゛。
+// <Konta>なにを　いってるんて゛すか。
+// あなたのはなも　あてになりませんね。<end>
+<Oidon>
+My nose says you're<nl>
+lying!<nl>
+<Konta>
+Then maybe you need a<nl>
+new nose.<end>
+
+// <Oidon>うそをついたた゛ろ!
+// ヒ゜ョンコか゛、8時はんこ゛ろ　ほうせきてんへ
+// はいっていく　おまえを　もくけ゛きしたんた゛!
+// ほんとうのことを　いえ!!<key>
+// <Konta>・・・わかりました。
+// たしかに　そのし゛かんは
+// ほうせきてんに　いきました。<key>
+// <Konta>しかし、おやし゛をころしたのは　ほ゛くし゛ゃない。
+// 8時はんから　9時はんまて゛　みせのことて゛
+// はなしを　していたた゛けなんて゛す。<key>
+// <Konta>てちょうにかいてある　8：30-　というのは
+// おやし゛とあう　し゛かんを　かいたた゛けの
+// ことて゛す。<key>
+// <Konta>し゛けんのあった11時こ゛ろは　かえりにく゛うせ゛ん
+// みちて゛あった　リンリンさんと　1し゛かんほと゛
+// いえて゛　とりひきのはなしをしていたんて゛す。
+// しんし゛てくた゛さい。<end>
+<Oidon>
+You say you didn't go,<nl>
+but Amy saw you go in<nl>
+there at about 8:30.<nl>
+Now tell us the truth!<key>
+<Konta>
+OK, OK! Yeah, I went<nl>
+there at around that<nl>
+time.<key>
+<Konta>
+But I'm not the one who<nl>
+killed my father.<key>
+<Konta>
+The "8:30" I wrote down<nl>
+was just when I was<nl>
+supposed to meet my<nl>
+father.<key>
+<Konta>
+We just talked about<nl>
+business from 8:30 to<nl>
+9:00.<key>
+<Konta>
+Around 11 I happened<nl>
+across Rinrin, and we<nl>
+chatted about business<nl>
+at my place.<key>
+<Konta>
+Please believe me!<end>
+
+// <Oidon>ちょっと　しつれい。
+// しらへ゛ましたか゛、なにもないですぜ。<end>
+<Oidon>
+Sorry. I looked, but<nl>
+didn't find anything.<end>
+
+// <Oidon>し゛ょうひんな　こうすいの　においか゛
+// しますぜ。<end>
+<Oidon>
+It smells of fancy<nl>
+perfume.<end>
+
+// <Oidon>さくや　11時こ゛ろは　と゛こにいた？
+// <Kokon>そのころなら、いえて゛　テレヒ゛を
+// みていましたよ。<end>
+<Oidon>
+Where were you at 11 PM<nl>
+last night?<nl>
+<Kokon>
+At home, watching TV.<end>
+
+// <Oidon>くるまを　もっているか？
+// <Kokon>はい。
+// <Oidon>いろと　かたちを　おしえてくれ。
+// <Kokon>しろの　こか゛たしゃて゛す。<end>
+<Oidon>
+Do you have a car?<nl>
+<Kokon>
+I do.<nl>
+<Oidon>
+Describe it for me.<nl>
+<Kokon>
+It's small and white.<end>
+
+// <Oidon>け゛んは゛に　のこされた　かみに"<char>"というもし゛か゛
+// かかれていたのた゛か゛
+// なにか　おもいあたる　ふしは、ないか？<key>
+// <Kokon><char>　・・・　なにかか゛　ヌっと　て゛てきたとか、
+// なーんちゃって、そんなの　わかりませんよ。<end>
+// (changed Kit's response since we're dropping the idea of it not
+// looking like a perfect N)
+<Oidon>
+This "N" was found on a<nl>
+scrap of paper at the<nl>
+scene. Any ideas?<key>
+<Kokon>
+Hmm... nope.<end>
+
+0<end>
+
+// <Oidon>ほうせきてんのカキ゛は、もっているのか？
+// <Konta>はい、もちろん。
+// それか゛なけれは゛、みせへ　はいれませんのて゛。<end>
+<Oidon>
+Do you have a key to<nl>
+the jewelry shop?<nl>
+<Konta>
+Sure I do. I couldn't<nl>
+get in without it.<end>
+
+// <Oidon>ほうせきてんの　しょさいの　きんこや
+// つくえの　ひきた゛しには、なにか゛
+// はいっている？
+// <Kokon>と゛ちらも　しりませんよ。<key>
+// <Oidon>きんこのタ゛イヤルの　は゛んこ゛うは
+// わかるか？
+// <Kokon>あになら　しっていると　おもいます。<end>
+<Oidon>
+What's in the safe and<nl>
+the desk drawer in the<nl>
+jewelry shop?<nl>
+<Kokon>
+I don't know.<key>
+<Oidon>
+What about the safe's<nl>
+combination?<nl>
+<Kokon>
+My brother should know.<end>
+
+// <Oidon>これに　みおほ゛えは　ないか？
+// <Kokon>それ　きんは゜つて゛しょ。
+// た゛れのて゛しょうかね。<end>
+<Oidon>
+Know whose this is?<nl>
+<Kokon>
+A blond hair... no, I<nl>
+don't.<end>
+
+// <Oidon>これに　みおほ゛えは　ないか？
+// <Kokon>あー　それ？
+// みせに　あったやつて゛しょ。
+// メモとしか　いえませんよ。<end>
+<Oidon>
+Recognize this?<nl>
+<Kokon>
+Must have been in the<nl>
+shop. I don't know any-<nl>
+thing else about it...<end>
+
+0<end>
+
+// <Oidon>これに　みおほ゛えは　ないか？
+// <Kokon>これは・・・　あにきのて゛すよ。<end>
+<Oidon>
+Know whose this is?<nl>
+<Kokon>
+That's my brother's.<end>
+
+// <Oidon>ほんじゃ、かえってもらいますぜ。<end>
+<Oidon>
+OK, you can go now.<end>
+
+// <Oidon>ほんじゃ、いくのは　やめますぜ。<end>
+<Oidon>
+OK, never mind.<end>
+
+// <Oidon>だんな、ここに　いますぜ。<end>
+// (guaranteed male in this chapter)
+<Oidon>
+He's already here.<end>
+
+// <Oidon>アリハ゛イは　あるか？
+// <Kokon>いつのアリハ゛イて゛すか？
+// し゛こくか゛　わからなけれは゛
+// おしえられませんよ。<key>
+// <Oidon>・・・だんな、このことは　しほ゛うし゛こくか゛
+// わかってから　きくことに　しましょう。<end>
+<Oidon>
+Got an alibi?<nl>
+<Kokon>
+For when? I can't help<nl>
+you unless I know when<nl>
+we're talking about.<key>
+<Oidon>
+Boss, let's ask him<nl>
+after we've determined<nl>
+the time of death.<end>
+
+// <Oidon>だんな、おいと゛んか゛　しらへ゛ましたところ
+// ココンのくるまは　しろの　こか゛たしゃ
+// て゛あることか゛　わかりました。<end>
+<Oidon>
+My investigation shows<nl>
+that Kit drives a<nl>
+small, white car.<end>
+
+0<end>
+
+// <Oidon>せっかく　ココンを　よんた゛んて゛すから、
+// ココンに　めを　むけましょうよ。<end>
+<Oidon>
+Let's focus on Kit,<nl>
+since he's here.<end>
+
+// <Oidon>せっかく　コンタを　よんた゛んて゛すから、
+// コンタに　めを　むけましょうよ。<end>
+<Oidon>
+Let's focus on Red,<nl>
+since he's here.<end>
+
+// <Oidon>た゛れか　いるときは、し゛ょうほうの
+// こうかいは　て゛きませんぜ。<end>
+<Oidon>
+We can't do that while<nl>
+someone is here.<end>
+
+// と゛うする？　<end>
+What to do? <end>
+
+// なにを？　<end>
+What? <end>
+
+// と゛こへ？　<end>
+Where? <end>
+
+// た゛れを？　<end>
+Whom? <end>
+
+// <Oidon>だんな　いくつか　しんし゛し゛つか゛　わかりましたか゛
+// かえって　ナソ゛は　ふかまるは゛かりですぜ。
+// し゛ゅうせいか゛　2かい　きこえたのは　なせ゛か？
+// しろいくるまは　た゛れのものか？<key>
+// <Oidon>もっと　いろんな　と゛うふ゛つたちから　はなしを
+// きかないと・・・。そうさのはんいを　ひろけ゛る
+// ひつようか゛　ありそうですぜ。<key>
+// <Oidon>しゅっちょうしている　ヘ゜ルーか゛　もと゛れは゛
+// なにか　わかるかも　しれません。
+// さあ　だんな、そうさは　また゛また゛
+// はし゛まったは゛かり。か゛んは゛って　いきましょう!<key>
+// <Oidon>だんな　ここまて゛の　し゛けんの　けいかを
+// そうさファイルに　まとめました。
+// ファイルめいは　<red>こひ゛とかは゛<black>て゛す。<end>
+<Oidon>
+We've learned some new<nl>
+things, but the mystery<nl>
+only deepens.<key>
+<Oidon>
+Why was the gun fired<nl>
+twice? Who owns the<nl>
+white car?<key>
+<Oidon>
+We'll need to ask more<nl>
+people. It seems we<nl>
+must broaden our in-<nl>
+vestigation.<key>
+<Oidon>
+Maybe Peru will know<nl>
+something when she's<nl>
+back from her trip.<key>
+<Oidon>
+Well, boss, our job has<nl>
+just begun. Let's give<nl>
+it our best!<key>
+<Oidon>
+I've recorded our prog-<nl>
+ress in a file. The<nl>
+name is <red>XXXX<black>.<end>
+
+// <Oidon>うまそうですぜ。<end>
+<Oidon>
+Looks delicious.<end>
+
+// <Oidon>カ゛サカ゛サ・・・。　<pause>だんな、し゛けんに
+// かんけいあるものは　ありませんぜ。<end>
+<Oidon>
+Hmm. Nothing relevant<nl>
+to the case.<end>
+
+// <Oidon>おっ!　うめほ゛しか゛　はいってますぜ。
+// おもわす゛　よた゛れか゛　て゛てきますね、だんな。<end>
+<Oidon>
+Ah! It has umeboshi in<nl>
+it! Ah, sorry boss, I'm<nl>
+drooling...<end>
+
+// <Oidon>おっ!　かんひ゜ょうか゛　はいってますぜ。
+// うまそうて゛すね。<end>
+<Oidon>
+Hmm! There's kanpyo in<nl>
+it. Looks delicious.<end>
+
+// <Oidon>け゛んは゛に　のこされた　かみに"<char>"というもし゛か゛
+// かかれていたのた゛か゛
+// なにか　おもいあたる　ふしは　ないか？<end>
+<Oidon>
+At the crime scene we<nl>
+found a piece of paper<nl>
+with the letter "N".<key>
+<Oidon>
+Know anything about it?<end>
+
+// <Oidon>10日のよる　11時こ゛ろは
+// と゛こにいた？<end>
+<Oidon>
+Where were you at 11 PM<nl>
+on the 10th?<end>
+
+// <contd>
+// <Pyonko>ここに　いましたよ。<end>
+<contd>
+<Pyonko>
+I was right here.<end>
+
+// <Oidon>ホ゜ロ・・・。　あちゃーっ。
+// だんな、なかに　はいっていた　うめほ゛しか゛
+// おちてしまいましたせ゛。<end>
+<Oidon>
+Oop. Looks like some<nl>
+umeboshi fell out.<end>
+
+// <Oidon>だんな、かんひ゜ょうか゛　はいってますぜ。<end>
+<Oidon>
+There's kanpyo in it.<end>
+
+// <Oidon>ゴンきちの　なにを　ききますか？<end>
+<Oidon>
+What should we ask<nl>
+about Renard?<end>
+
+// <contd>
+// <Pyonko>さあ・・・わかりませんわ。<end>
+<contd>
+<Pyonko>
+I don't know.<end>
+
+// <Oidon>ゴンきちに　てきは　いたか？<end>
+<Oidon>
+Did Renard have any<nl>
+enemies?<end>
+
+// <contd>
+// <Pyonko>てき・・・？　さあ、わかりませんわ。<end>
+<contd>
+<Pyonko>
+Enemies? Not that I<nl>
+know of.<end>
+
+// <Oidon>ゴンきちか゛　さいきん　もめこ゛とを
+// おこしたことは　ないか？<end>
+<Oidon>
+Did Renard have any<nl>
+quarrels?<end>
+
+// <contd>
+// <Pyonko>さあ・・・きいたこと　ありませんわ。<end>
+// (answer to above question)
+<contd>
+<Pyonko>
+I haven't heard of any.<end>
+
+// <Oidon>ゴンきちの　せいかつは　と゛んなものた゛った？<end>
+<Oidon>
+What kind of life did<nl>
+Renard lead?<end>
+
+// <contd>
+// <Pyonko>いくら　ここか゛　コンコンほうせきてんの
+// まえに　あるからといっても　そこまて゛は
+// わかりませんわ。<end>
+// (answer to above question)
+<contd><key>
+<Pyonko>
+Even though his store's<nl>
+across the street, I<nl>
+don't know him that<nl>
+well.<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+// <Oidon>ふつうの　まと゛ですぜ。<end>
+<Oidon>
+Just a window.<end>
+
+// <Oidon>ふつうの　かへ゛ですぜ。<end>
+<Oidon>
+Just an ordinary wall.<end>
+
+// <Oidon>しらへ゛ましたか゛　いし゛ょうは　ありませんぜ。<end>
+<Oidon>
+Nothing else there.<end>
+
+// <Oidon>へ゛つに　かわったところは　ないようですぜ。<end>
+<Oidon>
+Nothing particularly<nl>
+unusual about it.<end>
+
+// <Oidon>ひか゛いしゃ。　3年まえに　つまと　りこん。
+// ほうせきてんの　しゃちょうて゛あり、
+// マンションも　けいえいしている。
+// ふたりの　むすこか゛　いる。　38さい。<end>
+// (description of Renard)
+<Oidon>
+The victim. Divorced 3<nl>
+years ago. Owned Foxy<nl>
+Jewelry and a condo.<nl>
+Two sons. 38 years old.<end>
+
+// <Oidon>20さい。
+// ひか゛いしゃの　むすこて゛　ちょうなん。
+// ほうせきてんの　せんむて゛　し゛き　しゃちょう
+// との　うわさか゛ある。<end>
+// (Description of Red)
+<Oidon>
+20 years old. Victim's<nl>
+first son. Helps with<nl>
+the shop.<key>
+<Oidon>
+It's rumored that he<nl>
+was to become the owner<nl>
+soon.<end>
+
+// <Oidon>18さい。
+// コンタと　きょうた゛いて゛　し゛なん。<end>
+// (description of Kit)
+<Oidon>
+Age 18. Red's brother<nl>
+and Renard's second<nl>
+son.<end>
+
+// <Oidon>コンコンほうせきてんの　まえにある
+// コンヒ゛ニエンスストアーの　てんいん。
+// 18さい。<end>
+// Descrition of Amy
+<Oidon>
+Clerk at the conve-<nl>
+nience store across the<nl>
+street from Foxy Jew-<nl>
+elry. Age 18.<end>
+
+0<end>
+
+// <Oidon>だんな、このなまえ　た゛けて゛は　しらへ゛か゛
+// つきませんぜ。
+// て゛もきっと、そうさを　すすめていくうちに
+// わかってくる　はす゛ですぜ。<end>
+<Oidon>
+We don't have anything<nl>
+but the name to go on,<nl>
+but surely we'll learn<nl>
+more soon enough.<end>
+
+0<end>
+
+// <contd>
+// <Konta>いませんよ。<end>
+// (in response to "any enemies?")
+<contd>
+<Konta>
+None.<end>
+
+// <contd>
+// <Konta>あったかなあ・・・？
+// たふ゛ん　ないと　おもいますよ。<end>
+// (in response to "any quarrels?")
+<contd>
+<Konta>
+Hmm, did he...? Seems<nl>
+doubtful.<end>
+
+// <contd>
+// <Konta>ほとんと゛　なにも　ふし゛ゆうする　ことのない
+// せいかつて゛したよ。　たた゛・・・・・・<key>
+// <Oidon>たた゛・・・なんた゛？
+// <Konta>い、いえ・・・なんて゛も　ありません。<key>
+// <Oidon>おかしな　やつた゛な。
+// ほんとうに　なんて゛もないのか？
+// <Konta>はい・・・。<end>
+<contd>
+<Konta>
+He had a carefree life.<nl>
+He, uh...<key>
+<Oidon>
+He what?<nl>
+<Konta>
+N-no, it's nothing.<key>
+<Oidon>
+It doesn't sound like<nl>
+nothing. Are you sure?<nl>
+<Konta>
+Yeah, I'm sure...<end>
+
+0<end>
+
+0<end>
+
+// <Oidon>10日のよるに　ほうせきてんへ　いったか？<end>
+<Oidon>
+Did you go to the<nl>
+jewelry shop on the<nl>
+evening of the 10th?<end>
+
+// <contd>
+// <Konta>ほうせきてんへ？・・・・・・いってませんよ。<end>
+<contd><key>
+<Konta>
+Foxy Jewelry? ...No, I<nl>
+didn't.<end>
+
+// <contd>
+// <Oidon>うそを　いうな!
+// もくけ゛きしゃか゛　いるんた゛そ゛!!<key>
+// <Konta>ほ、ほんとうに　いってませんよ。<end>
+<contd><key>
+<Oidon>
+Don't lie to us! We<nl>
+have a witness!
+<Konta>
+I, I didn't, I swear!<end>
+
+// <contd>
+// <Konta>ええ・・・。　て゛すけと゛　そのはなしは
+// もう　しましたよ。<key>
+// <Konta>それに　ほ゛くは　はんにんて゛は　ないんて゛す。
+// しんし゛てくた゛さい。<end>
+<contd>
+<Konta>
+Yeah... but we've been<nl>
+over this already.<key>
+<Konta>
+I'm not the one who did<nl>
+it. Please believe me!<end>
+
+0<end>
+
+// <contd><key><Oidon>と゛こて゛　なくしたんた゛？
+// <Kokon>わかりません。　て゛も　いえのなかは
+// すみす゛みまて゛　しらへ゛たのて゛　そとて゛　おとした
+// のて゛は　ないかと　おもいます。<end>
+<contd>
+<Oidon>
+Where did you lose it?<key>
+<Kokon>
+I don't know. I've<nl>
+looked all over the<nl>
+house, so I must have<nl>
+dropped it elsewhere.<end>
+
+// <contd>
+// <Kokon>てき　ねぇ・・・いないと　おもいますよ。<end>
+<contd>
+<Kokon>Enemies? Don't<nl>
+think he had any.<end>
+
+// <contd>
+// <Kokon>ない・・・とおもいますよ。<end>
+// (probably in response to "quarrels?")
+<contd>
+<Kokon>
+None as far as I know.<end>
+
+// <contd>
+// <Kokon>と゛んなものと　いわれても・・・・・・
+// わかりませんよ。<key>
+// <Kokon>いっしょに　くらしてる　わけて゛も
+// ありませんしね。<end>
+<contd>
+<Kokon>
+Not with anyone I can<nl>
+think of.<key>
+<Kokon>
+That's not to say he<nl>
+always got along...<end>
+
+0<end>
+
+// <contd>
+// <Kokon>いいえ、いってませんよ。<end>
+<contd>
+<Kokon>
+No, I didn't.<end>
+
+0<end>
+
+// <Oidon>なかなか　せいけつそうな　みせですぜ。<end>
+<Oidon>
+The place is spotless.<end>
+
+// <Oidon>このけんし゛ゅうに　みおほ゛えはありませんか？<end>
+<Oidon>
+Recognize this gun?<end>
+
+// <contd>
+// <Konta>まったくしりません。<end>
+<contd>
+<Konta>
+Not at all.<end>
+
+// <contd>
+// <Kokon>しりませんよ!　ふ゛っそうな。<end>
+// @TODO@ -- verify. Probably has to do with the gun.
+<contd>
+<Kokon>
+No. Looks dangerous!<end>
+
+// <contd>
+// <Pyonko>これか゛きょうきなの？　まあこわい!<end>
+<contd>
+<Pyonko>
+Is that the murder<nl>
+weapon? Yikes!<end>
+
+// <Oidon>そのケカ゛は　と゛うしたんて゛す？
+// <Kokon>えっ　いや　その　なに・・・　ははは
+// こ　ころんた゛んて゛すよ。<end>
+<Oidon>
+What happened to you?<nl>
+<Kokon>
+Ah, well, heh heh...<nl>
+I, I fell.<end>
+
+// <Oidon>リンリンさんについて　おききしたいのて゛すか゛。
+// <Konta>うちと　とりひきしていて　き゛んこうに
+// つとめている　ひとて゛す。<end>
+<Oidon>
+Tell me about Rinrin.<nl>
+<Konta>
+She's a banker who does<nl>
+business with us.<end>
+
+// <Oidon>ほうせきてんと　とりひきしている
+// き゛んこうの　てんいんた゛そうですぜ。<end>
+<Oidon>
+Seems to be a banker<nl>
+doing business with the<nl>
+jewelry shop.<end>
+
+// <Oidon>ココンのことを　ききたいんた゛か゛
+// <Pyonko>ふん　あんなひとなんか　しるもんて゛すか!<end>
+<Oidon>
+I'd like to ask about<nl>
+Kit.<nl>
+<Pyonko>
+Well don't ask ME!<nl>
+Hmph!<end>
+
+// こるもんて゛すか!<end>
+// (probably garbage)
+GARBAGE DATA<end>
+
+// <key><char><char><char><char><char><char><char><char><char><char><char><char><char><char><char><char><char>
+// @TODO@ - data?
+
+// <Oidon>ます゛は　た゛れかを　ここによひ゛ましょうせ゛。<end>
+<Oidon>
+Let's call someone in<nl>
+first.<end>
+
+// た゛れを　よひ゛ましょうか？　<end>
+Call whom? <end>
+
+// <Oidon>た゛れかよんて゛からのほうか゛　いいですぜ。<end>
+<Oidon>
+Maybe we should call<nl>
+someone in first.<end>
+
+// <Oidon>だんな、8日から　しゅっちょうするはす゛た゛った、
+// コンコンほうせきてんの　ヘ゜ルーというものか゛
+// その日はもちろん、いままて゛す゛っと
+// しゅっちょうせす゛にいたことか゛　わかりましたせ゛。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな　いったい　と゛ういうことて゛しょう？
+// かんけいしゃ　すへ゛てに　アリハ゛イか゛　あるとは。
+// はんにんか゛　カキ゛を　もっているらしい　ことから
+// ないふ゛のものの　はんこうた゛と　おもったのに。<key><Oidon>ここは　ひとつ　しゅっは゜つてんに　かえって
+// "<char>"というもし゛に　ちゅうもく　しましょう。
+// はんにんについて　ゴンきちか゛　かきのこしたに
+// ちか゛いないんて゛すから。<key><Oidon>それに　そうさを　すすめていけは゛　ナソ゛の
+// きんは゜つについても　わかってくるて゛しょう。
+// さあ　だんな。
+// ふたたひ゛　そうさに　のりた゛しましょうや!<key><Oidon>だんな　ここまて゛の　し゛けんの　けいかを
+// そうさファイルに　まとめました。
+// ファイルめいは　<red>あふりかそ゛う　<black>て゛す。<end>
+Translation goes here.<end>
+
+// <Oidon>みせるものは　あるんて゛すか゛、あいてか゛
+// いませんぜ。<end>
+<Oidon>
+There's no one to show<nl>
+anything to.<end>
+
+// <Oidon>クンクン。<pause>だんな、やっは゜りほんふ゛というのは
+// いいにおいし゛ゃ　ありませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ほんじゃ、ト゛ラコ゛ンへいきましょうや。<end>
+Translation goes here.<end>
+
+// <Oidon>ほんじゃ、いさ゛かや"クマ"へいきましょうや。<end>
+<Oidon>
+OK, to the bear bar.<end>
+
+// <contd>
+// <Kokon>メモとしかいえないって　いったて゛しょ。<end>
+<contd>
+<Kokon>
+I told you, it's just<nl>
+a note.<end>
+
+// <Oidon>また゛　そとにて゛るのは　はやいですぜ。
+// もうすこし　とりしらへ゛ましょうや。<end>
+<Oidon>
+We shouldn't leave yet.<nl>
+Let's look around a<nl>
+little more.<end>
+
+// <contd>
+// <Kokon>す゛っと　いえに　いました。<end>
+<contd>
+<Kokon>
+I was home the whole<nl>
+time.<end>
+
+// <Oidon>ほんじゃ、ココンをよひ゛ますぜ。<end>
+<Oidon>
+OK, we'll call Kit.<end>
+
+// <Oidon>これに　みおほ゛えは　ないか？<end>
+<Oidon>
+Recognize this?<end>
+
+// <Oidon>ほんじゃ、ヘ゜ルーをよひ゛ますぜ。<end>
+<Oidon>
+OK, we'll call Peru.<end>
+
+// <Oidon>ほんじゃ、ターシ゛をよひ゛ますぜ。<end>
+<Oidon>
+OK, we'll call Taji.<end>
+
+// <Oidon>ほんじゃ、リンリンをよひ゛ますぜ。<end>
+<Oidon>
+OK, we'll call Rinrin.<end>
+
+// <Oidon>いまのところ　し゛ょうほうは　ありませんぜ。<end>
+<Oidon>
+No info at this time.<end>
+
+// <Oidon>はやく　しゃちょうに・・・・・・という
+// りゆうて゛　ころしたことも　かんか゛えられますか゛
+// と゛うきとしては　よわいですぜ。<end>
+<Oidon>
+While it's possible he<nl>
+killed him to become<nl>
+the owner, it's not too<nl>
+plausible.<end>
+
+// <Oidon>としは　わかいんて゛すか゛、と゛うきは
+// かんか゛えられますぜ。アリハ゛イも
+// あいまいて゛すし、ケカ゛について
+// くちこ゛もっていたのも　あやしいですぜ。<end>
+<Oidon>
+He's young, but he may<nl>
+have a motive. His<nl>
+alibi is unclear too.<key>
+<Oidon>
+His hesitance to talk<nl>
+about his injury is<nl>
+also suspect.<end>
+
+// <Oidon>し゛ふ゛んのしょうは゛いの　ためにとも
+// かんか゛えられます。
+// アリハ゛イも　はっきりしませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ヘ゜ルーは　てんいんというた゛けて゛
+// なにものて゛もないですぜ。
+// それに　と゛うきも　かんか゛えられませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>コアラさん　と゛うもありか゛とうこ゛さ゛いました。
+// ほんじゃ、そうさほんふ゛へ　いきましょうや。<end>
+<Oidon>
+Thank you, Kola. OK,<nl>
+we're off to HQ.<end>
+
+// ますぜ。<end>
+<end>
+
+// <Oidon>このし゛んふ゛つにかんしては　また゛
+// きいていないことか゛　あって
+// よくわかりませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>コンコンほうせきてんの　きゃくというた゛けて゛
+// うたか゛うへ゛きところは　ないですぜ。
+// アリハ゛イについては　コンタか゛しょうめいして
+// いますし、しんし゛てもいいとおもいますぜ。<end>
+Translation goes here.<end>
+
+// ですぜ。<end>
+<end>
+
+// 。<end>
+.<end>
+
+// <contd>
+// <Kokon>ヘ゜ルーさんと　ハ゜フハ゜フしていましたよ。<end>
+Translation goes here.<end>
+
+// <Oidon>また゛　これをみたものは　いませんぜ。
+// いったい　た゛れのなんて゛しょうかね。<end>
+<Oidon>
+Nobody's seen it. Whose<nl>
+could it be?<end>
+
+// <Oidon>これた゛けの　ようき゛しゃか゛いるのに　ひとりとして
+// きんは゜つをしたものか゛　いないなんて・・・。
+// け゛んは゛にあった　きんは゜つは
+// いったいた゛れか゛　おとしたんた゛!<end>
+Translation goes here.<end>
+
+// <Oidon>22さいて゛す。
+// コンコンほうせきてんに　つとめている
+// てんいんですぜ。<end>
+// (must be Peru)
+<Oidon>
+22 years old. Clerk at<nl>
+Foxy Jewelry.<end>
+
+// <Oidon>38さいて゛す。て゛んきやを　けいえいしています。
+// ゴンきちとは、むかしからの
+// ゆうし゛んた゛そうですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>23さいて゛す。き゛んこういんですぜ。
+// りょうしんも　おとうとも　なくなって
+// いますぜ。<end>
+// (must be Rinrin)
+<Oidon>
+23 years old. Banker.<nl>
+Lost her parents and<nl>
+brother.<end>
+
+// <Oidon>だんな、コンタは　ちちおやの　そうしきの
+// し゛ゅんひ゛て゛　て゛かけているのて゛　よへ゛ませんぜ。<end>
+<Oidon>
+Red's making funeral<nl>
+arrangements, so we<nl>
+can't call him in.<end>
+
+// せんぜ。<end>
+<end>
+
+// <Oidon>と゛うきは　なさそうて゛すし　アリハ゛イも
+// ちゃんとしてる　みたいですぜ。<end>
+// @TODO@ - find out what pronoun to use instead of "'the' alibi"
+<Oidon>
+A motive seems unlikely<nl>
+and the alibi seems<nl>
+solid.<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+// <Oidon>ちょっとしつれい・・・・・・。
+// しらへ゛ましたか゛　なにもないですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>いまもっている　しょうこひんは・・・・・・
+// きんは゜つ、メモ、けんし゛ゅう　・・・・・・
+// これた゛けですぜ。<end>
+<Oidon>
+The evidence we have<nl>
+now is... the blond<nl>
+hair, the note, and the<nl>
+gun. Nothing more.<end>
+
+0<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>せっかくココンを　よんた゛んて゛すから、
+// ココンに　めをむけましょうよ。<end>
+<Oidon>
+Kit's already here, so<nl>
+let's focus on him.<end>
+
+// <Oidon>クンクン。<pause>
+// し゛ょうひんなこうすいの　においか゛しますぜ。
+// おんなみたいなやつですぜ。<end>
+<Oidon>
+It smells of fancy<nl>
+perfume. Seems rather<nl>
+feminine.<end>
+
+// <Oidon>キミは　た゛いふ゛おかねを
+// ほしか゛っているようた゛か゛・・・・・・。
+// <Kokon>おかねをほしか゛っては
+// いけないと　いうんて゛すか？<key>
+// <Oidon>なせ゛、おかねか゛ほしいんた゛？
+// <Kokon>た゛れて゛も　おかねは　ほしいもんて゛すよ。<end>
+<Oidon>
+You seem to desire<nl>
+money.<nl>
+<Kokon>
+Is something wrong with<nl>
+that?<key>
+<Oidon>
+Why do you want it?<nl>
+<Kokon>
+Who doesn't want it?<end>
+
+// <contd>
+// <Kokon>さあ、しりませんよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Kokon>メモて゛すよ。
+// まえに　おしえたとおりの　ものた゛ったて゛しょ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Kokon>しりませんよ、そんなふ゛っそうなもの。<end>
+Translation goes here.<end>
+
+// <Oidon>10日のよる　11時は　と゛こにいた？<end>
+<Oidon>
+Where were you at 11 PM<nl>
+on the 10th?<end>
+
+// <Oidon>くるまを　もっているか？<end>
+<Oidon>
+Do you have a car?<end>
+
+// <Oidon>け゛んは゛のつくえに"<char>"とかかれた
+// ひ゛んせんのきれはしか゛みつかったのた゛か゛
+// おもいあたるふしはないか？<end>
+Translation goes here.<end>
+
+// <Oidon>ココンと　おなし゛においか゛しますぜ。<end>
+<Oidon>
+Smells just like Kit.<end>
+
+// <Oidon>ほんじゃ、かえってもらいますぜ。<end>
+<Oidon>
+OK, you can go now.<end>
+
+// <Oidon>だんな、ここに　いますぜ。<end>
+<Oidon>
+Don't be silly, boss.<end>
+
+// <Oidon>せっかくヘ゜ルーを　よんた゛んて゛すから、
+// ヘ゜ルーに　めをむけましょうよ。<end>
+<Oidon>
+Let's focus on Peru,<nl>
+since she's here.<end>
+
+// <Oidon>クンクン。うっ、これは　ちのにおい・・・・・・<pause>
+// というのはうそて゛す。
+// し゛ょうひんな　においか゛しますぜ。<end>
+// @TODO@ - confirm that this is a joke
+<Oidon>
+It smells like blood...<nl>
+<pause>toil, tears, and sweat<nl>
+have gone into making<nl>
+this fancy perfume.<end>
+
+// <contd>
+// <Peruu>そのころは、おとこのかたとテ゛ートしていましたわ。<end>
+<contd>
+<Peruu>
+I was out on a date.<end>
+
+// <Oidon>しゅっちょうには　なせ゛　いかなかったのた゛？
+// <Peruu>しゃちょうか゛　いっしゅうかんおくらせると
+// いわれましたのて゛・・・・・・。<end>
+Translation goes here.<end>
+
+// <Oidon>きんは゜つのきゃくを　みたことか゛あるか？
+// <Peruu>さあ、みたことは　ありませんよ。<end>
+<Oidon>
+Seen a customer with<nl>
+blond hair?
+<Peruu>
+No, I haven't.<end>
+
+// <contd><key><Peruu><char>・・・・・・て゛すか？
+// それた゛けて゛は　なんにも　わかりませんわ。<end>
+<contd><key>
+<Peruu>
+An "N"? Don't know any-<nl>
+thing about that.<end>
+
+// <Oidon>ちょっとしつれい・・・・・・。
+// <Peruu>キャッ。<pause>たとえ　けいさつのかたて゛あろうと
+// そういうことをすると、けいさつを　よひ゛ますよ!<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>これは　きのう　わたしか゛　しゃちょうに
+// わたしたものて゛す。
+// <Oidon>えっ、と゛ういうことた゛ね？<key>
+// <Peruu>しゃちょうは　ちかこ゛ろ　ノイローセ゛て゛した。
+// きんは゜つの　ほ゛うれいか゛　みえるといって
+// よるも　うなされて　ねむれない日か゛
+// つつ゛いていました<key>
+// <Peruu>それて゛、ほ゛うれいを　たいし゛するのた゛と
+// いって　わたしに　けんし゛ゅうを
+// てにいれさせたのて゛す。
+// それか゛、こんなことになるなんて・・・・・・<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>そのなまえのことなら　わかりますよ。
+// リンリンさんは　ほうせきてんによく　くる
+// おきゃくさまて゛、しゃちょうと　よくおはなしを<key>
+// <Peruu>なさっていました。
+// ターシ゛さんは　しゃちょうのふるくからの
+// ゆうし゛んて゛　たいへんなかか゛　よろしくて、<key>
+// <Peruu>しゃちょうのところへ　よくあそひ゛に
+// きていました。<end>
+Translation goes here.<end>
+
+// <Oidon>そのメモは　なんた゛かわかるか？
+// <Peruu>おそらく、ほうもんよていしゃを　しるしておいた
+// ものた゛と　おもいます。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>もってませんよ。<end>
+<contd>
+<Peruu>
+I don't have it.<end>
+
+// <Oidon>せっかくターシ゛を　よんた゛のて゛すから、
+// ターシ゛に　めをむけましょうよ。<end>
+Translation goes here.<end>
+
+// <Oidon>クンクン。<pause>
+// だんな、のみものの　においか゛しますぜ。
+// かめた゛からコーラ、なんちゃって。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Taaji>10日のよるなら、6時から7時まて゛
+// ゴンきちのところへ　いっていました。<key>
+// <Taaji>そのあと　しゅうりをしに　さんけんまわって
+// それか゛10時すき゛まて゛。
+// そのあとは　いえにかえって　ねましたよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Taaji>ええ、みと゛りのワコ゛ンしゃをもってますよ。
+// しこ゛とに　ひつようて゛すからね。<end>
+Translation goes here.<end>
+
+// <contd><key><Taaji>"<char>"なんて　いったいなんのことて゛しょうね？
+// なまえかも　しれませんよ。<end>
+Translation goes here.<end>
+
+0<end>
+
+// ゛<end>
+<end>
+
+0<end>
+
+// <contd>
+// <Taaji>めす゛らしいて゛すねー。みたことは　ありませんよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Taaji>おや？　わたしのなまえか゛・・・・・・。<pause>
+// これて゛わたしを　ひっかけようと
+// しているんて゛すか？<end>
+Translation goes here.<end>
+
+// <contd>
+// <Taaji>なんて゛すか、これ。
+// えっ、これて゛　ゴンきちか゛　ころされた？
+// なんておそろしい・・・・・・<end>
+Translation goes here.<end>
+
+// <Oidon>せっかくリンリンを　よんた゛のて゛すから、
+// リンリンに　めをむけましょうよ。<end>
+Translation goes here.<end>
+
+// <Oidon>クンクン。<pause>
+// だんな、ささのいいにおいか゛　しますぜ。
+// さすか゛　にんけ゛んかいの　にんきものの　においは
+// ちか゛いますぜ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Rinrin>ああ、そのころなら、コンタさんのいえて゛
+// とりひきのはなしを　してました。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Rinrin>はい。あかいのを　もってますよ。<end>
+<contd>
+<Rinrin>
+Yes. I have a red one.<end>
+
+// <contd><key><Rinrin><char>・・・て゛すか・・・・・・。<pause>
+// ああ、こういうのはと゛うて゛す？
+// <green>また<black>くるといういみを　あらわしている、
+// なんて・・・・・・。<end>
+Translation goes here.<end>
+
+// <Oidon>10日にコンコンほうせきてんへ　いったか？
+// <Rinrin>はい。ゆうか゛た　5時から6時まて゛た゛ったと
+// おもいます。
+// <Oidon>なにを　しにいったんた゛？<key>
+// <Rinrin>わたしか゛　しゅうりをたのんて゛いた　ゆひ゛わの
+// ことて゛　はなしたり、せけんは゛なしなんかも
+// していました。<key>
+// <Rinrin>て゛も、もうゴンきちさんとは　2と゛と
+// はなせないなんて・・・・・・。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Rinrin>みたことはないて゛すよ。<end>
+<contd>
+<Rinrin>
+I didn't see anything.<end>
+
+// <contd>
+// <Rinrin>あっ、わたしのなまえか゛　のってますね。
+// て゛も　しりませんよ。<end>
+<contd>
+<Rinrin>
+Hmm. My name's on it,<nl>
+but I don't know any-<nl>
+thing about it.<end>
+
+// <contd>
+// <Rinrin>みたこともありませんわ。<end>
+<contd>
+<Rinrin>
+I didn't see anything.<end>
+
+// 。<end>
+.<end>
+
+// ますぜ。<end>
+<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// <Dorakure>こらーっ、みせのものをとるなーっ。<end>
+<Dorakure>
+You can't just grab<nl>
+whatever you want!<end>
+
+// <Oidon>ここにあけるものは　ありませんぜ。<end>
+<Oidon>
+Nothing here to open.<end>
+
+// <Oidon>クンクン。<pause>
+// だんな、コーヒーのいいにおいか゛　しますぜ。
+// きっと　いいまめを　つかっているんて゛しょうね。<end>
+<Oidon>
+The pleasant smell of<nl>
+coffee. He must be<nl>
+using nice beans.<end>
+
+// <Oidon>ほんじゃ、そうさほんふ゛へ　いきましょうや。<end>
+<Oidon>
+OK, back to HQ.<end>
+
+// <Oidon>トラのト゛ラクレですぜ。<end>
+<Oidon>
+It's Dorakure, a tiger.<end>
+
+// <Oidon>なかなかしゃれていて　いいみせですぜ。<end>
+<Oidon>
+It's nice and stylish.<end>
+
+// <Oidon>カ゛サ。コ゛ソ。<pause>
+// しらへ゛ましたか゛、なにもありませんぜ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Dorakure>そのころなら　ここにいましたよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Dorakure>もってますよ。きいろに　しまもようのやつ。
+// こんと゛、みにきてくた゛さいよ。<end>
+Translation goes here.<end>
+
+// <contd><key><Dorakure><char>、<char>、<char>・・・・・・
+// ちょっと　おもいつきませんねえ。
+// あちこち　あたってみてみれは゛　そのうちに
+// わかってくるんし゛ゃないて゛しょうかねぇ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Dorakure>なんて゛すか、これ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Dorakure>トラのけ　のようにみえますけと゛、
+// ちか゛いますよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// えっ、これて゛　ゴンきちさんか゛　ころされた？
+// なんておそろしい・・・・・・<end>
+Translation goes here.<end>
+
+// <Oidon>そうた゛!　いいことをおもいつきました。
+// おいと゛んのしりあいて゛　はんさ゛いそうさの
+// かみさまとよは゛れるひとか゛　いるんて゛す。<key>
+// <Oidon>いまは　いんたいしているんて゛すか゛・・・
+// そのひとは　いつも<green>いさ゛かやクマ<black>というところて゛
+// おさけをのんて゛います。<key>
+// <Oidon>なにか　そうさのさんこうになることを
+// きけるかもしれません。
+// いってみましょうよ。<end>
+Translation goes here.<end>
+
+// <Oidon>と゛こかいくのは　しつもんか゛せ゛んふ゛おわってからに
+// しましょうせ゛。<end>
+<Oidon>
+Let's ask our questions<nl>
+first.<end>
+
+// <Oidon>このし゛けんについて、こ゛いけんを
+// おききしたいんて゛すか゛・・・
+// <Koala>このし゛けんは　ものとりとかいったたく゛いの
+// たんし゛ゅんなものし゛ゃない　ようなきか゛するな。<key><Oidon>と゛ういうことて゛すか？
+// <Koala>けいし゛のかんた゛よ。<end>
+Translation goes here.<end>
+
+// <contd>については　と゛う　かんか゛えたら
+// いいんて゛しょうかね？<end>
+Translation goes here.<end>
+
+// <contd>コンタ<end>
+Translation goes here.<end>
+
+// <contd>ココン<end>
+Translation goes here.<end>
+
+// <Oidon><end>
+<Oidon><end>
+
+// <contd>
+// <Koala>いままて゛のところて゛は　とくに　あやしい　ふしは
+// ないようた゛な。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Koala>はんさ゛いのかけ゛におんなあり　というか゛
+// こいつは　おんなく゛せのわるいやつた゛な。<key><Koala>こういう　こあくとうは　さつし゛んみたいな
+// おおきなはんさ゛いなんて　しないものた゛けと゛な。<end>
+Translation goes here.<end>
+
+// <Oidon>ヘ゜ルーか゛　アリハ゛イをしょうめいしました。
+// て゛も、いまのところ、と゛うきか゛いちは゛ん
+// ありそうなのは　こいつですぜ。
+// さらにそうさか゛ひつようですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>そのケカ゛は、と゛うしたんた゛ね？
+// <Rinrin>やけと゛て゛す。きのうのよる、コンタさんのいえに
+// いったとき、うっかりしてコーヒーをこほ゛して
+// しまったんて゛す。<end>
+Translation goes here.<end>
+
+// <Oidon>クンクン。
+// あれっ、ココンのとおなし゛　し゛ょうひんな
+// こうすいのにおいか゛しますぜ。
+// おい　こりゃ　と゛ういうことた゛？<key><Peruu>さあ　たた゛のく゛うせ゛んて゛しょ。<end>
+Translation goes here.<end>
+
+// <Oidon>おい　きみのにおいと　ヘ゜ルーのこうすいの
+// においか゛　おなし゛　というのは　と゛ういうわけた゛？
+// <Kokon>それは　こし゛んてきな　ことなのて゛
+// はなしたく　ありませんね<end>
+Translation goes here.<end>
+
+// <Oidon>おとこのひとと　テ゛ートしてたって、もしかしたら
+// そのあいてはココンくん　し゛ゃないか？
+// <Peruu>ええ、そうよ。あのこ　とししたて゛　とっても
+// かわいいのよ。ハ゜フ<pause>ハ゜フ<pause>しちゃいたいわ。<pause>ウフッ!<end>
+Translation goes here.<end>
+
+// <contd>
+// <Kokon>なんと゛　おなし゛しつもんを　するんて゛す？
+// す゛っと　いえにいたって　いってるて゛しょう。<key><Oidon>いや、ヘ゜ルーさんから　きみといっしょに
+// いたと　きいたもんて゛ね。
+// <Kokon>そうて゛すか。おはす゛かしい・・・
+// し゛つは　ヒ゜ョンコにかくれて　としうえの<key><Kokon>ヘ゜ルーさんと　テ゛ートをしてたんて゛す。
+// そのことか゛ハ゛レて、ヒ゜ョンコにひっかかれたのて゛
+// こんなに　キス゛た゛らけなんて゛す。<key><Kokon>こんなこと　はす゛かしくて　いえなかったんて゛す。
+// <Oidon>こまるねぇ。これからは　なんて゛も
+// しょうし゛きに　はなすんた゛。
+// <Kokon>はい・・・<end>
+Translation goes here.<end>
+
+// <Oidon>いくのは　やめますぜ。<end>
+Translation goes here.<end>
+
+0<end>
+
+// せんぜ。<end>
+<end>
+
+// せんぜ。<end>
+<end>
+
+// ますぜ。<end>
+<end>
+
+// 。<end>
+.<end>
+
+// せんぜ。<end>
+<end>
+
+// ますぜ。<end>
+<end>
+
+// せんぜ。<end>
+<end>
+
+// 。<end>
+.<end>
+
+// せんぜ。<end>
+<end>
+
+// ますぜ。<end>
+<end>
+
+// 。<end>
+.<end>
+
+// せんぜ。<end>
+<end>
+
+// ますぜ。<end>
+<end>
+
+// せんぜ。<end>
+<end>
+
+// ですぜ。<end>
+<end>
+
+// せんぜ。<end>
+<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// <Dorakure>いらっしゃい!<end>
+<Dorakure>
+Welcome!<end>
+
+// <Beasu>いらっしゃい!　おっ、おいと゛んさん、
+// おひさしふ゛りっ!
+// <Oidon>コアラさんいる？<key>
+// <Beasu>いるよっ、あいかわらす゛のんた゛くれているけと゛ね。
+// <Oidon>いましたせ゛。さっそくなにかきいてみましょう。<end>
+Translation goes here.<end>
+
+// <contd>
+// し゛つはコアラさん、かくかく<pause>うまうま、<pause>いや、<pause>
+// かくかく<pause>しかし゛か<pause>なんて゛すけと゛・・・。<end>
+Translation goes here.<end>
+
+// と゛うする？　<end>
+What to do? <end>
+
+// なにを？　<end>
+What? <end>
+
+// た゛れを？　<end>
+Whom? <end>
+
+// と゛こへ？　<end>
+Where? <end>
+
+// <Oidon>だんな、ます゛さいしょに　ゴンきちのことを
+// しらせたほうか゛　いいですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>うまそうな　コーヒーですぜ。<end>
+<Oidon>
+Looks like good coffee.<end>
+
+// <Oidon>ゴンきちか゛　ころされたのは　しっているか？<end>
+Translation goes here.<end>
+
+// <contd>
+// <Dorakure>ええ・・・。さ゛んねんなことて゛す。あんなことに
+// なってしまうとは・・・・・・。<end>
+Translation goes here.<end>
+
+// コ゛ンきちのなにを　ききますか？　<end>
+Translation goes here.<end>
+
+// <Oidon>ゴンきちに　てきは　いたか？<end>
+Translation goes here.<end>
+
+// <contd>
+// <Dorakure>さあねえ・・・わかりませんよ。<end>
+Translation goes here.<end>
+
+// <Oidon>ゴンきちか゛　さいきんもめこ゛とを
+// おこしたことは　ないか？<end>
+Translation goes here.<end>
+
+// <contd>
+// <Dorakure>むすこのココンくんと　すこしもめていたことか゛
+// ありましたね。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>ゴンきちの　せいかつは　と゛んなものた゛った？<end>
+Translation goes here.<end>
+
+// <contd>
+// <Dorakure>せいかつ？　いいんし゛ゃないて゛すかねえ。<end>
+Translation goes here.<end>
+
+// <Oidon>ゴンきちの　しゅみは？<end>
+Translation goes here.<end>
+
+// <contd>
+// <Dorakure>さかなハンティンク゛て゛したよ。３年はんくらい
+// まえまて゛はね。かれは、さかなハンティンク゛の
+// めいしゅて゛してね・・・<key><Dorakure>さかなハンティンク゛に　かけては　このむらて゛
+// いちは゛んといううわさも　あったんて゛す。
+// それなのに、あんなことになってしまって・・・
+// まったく　さ゛んねんて゛す。<end>
+Translation goes here.<end>
+
+// <Oidon>なせ゛　ゴンきちは　ココンともめたんた゛？<end>
+Translation goes here.<end>
+
+// <contd>
+// <Dorakure>もめたというよりは　なやんて゛いたといったほうか゛
+// いいのかもしれません。
+// ゴンきちは　し゛ふ゛んのみせて゛　ココンくんか゛<key><Dorakure>はたらくことを　のそ゛んて゛いたんて゛すけと゛、
+// ココンくんか゛　それに　はんは゜つしているた゛の
+// なんた゛のということて゛　なやんて゛いたようて゛すよ。
+// それを　かいけつて゛きす゛に・・・。<key><Dorakure>しかし・・・ゴンきちの　きもちもわかりますか゛
+// わたしは　し゛ゆうにしてやったほうか゛　いいと
+// おもいましたね。<end>
+Translation goes here.<end>
+
+// ？<end>
+?<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>きれいな　テーフ゛ルですぜ。<end>
+<Oidon>
+It's a nice table.<end>
+
+// <Oidon>・・・なにも　おちていないようですぜ。<end>
+<Oidon>
+There's nothing there.<end>
+
+// <Oidon>・・・へ゛つに　かわったところは　ありまですぜ。<end>
+<Oidon>
+Nothing particularly<nl>
+unusual about it.<end>
+
+// <Oidon>コンコンほうせきてんの　ゴンきちか゛
+// ころされたのを　しっているか？<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>コ゛クッ・・・。<pause>あちーっ!!<pause>
+// だんな、したを　やけと゛してしまいましたせ゛。
+// て゛も、いいあし゛て゛したよ。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// た゛れに？　<end>
+To whom?<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// <pause><end>
+<pause><end>
+
+// 。<end>
+.<end>
+
+// ですぜ。<end>
+<end>
+
+// せんぜ。<end>
+<end>
+
+0<end>
+
+// 。<end>
+<end>
+
+// 。<end>
+<end>
+
+// <Oidon>ゴンきちは　なせ゛　さかなハンティンク゛を
+// やめたんた゛？<end>
+<Oidon>
+Why did Renard give up<nl>
+fishing?<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>"<char>"というもし゛に　なにかおもいあたらないか？<end>
+Translation goes here.<end>
+
+0<end>
+
+// ？<end>
+?<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// <contd>
+// <Kokon><char>、<char>、<char>・・・。やっは゜りわかりませんよ。<end>
+<contd>
+<Kokon>
+"N", "N", "N"... I have<nl>
+no idea.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// ？<end>
+?<end>
+
+// 。<end>
+.<end>
+
+// <contd>
+// <Kokon>しりませんよ。<end>
+<contd>
+<Kokon>
+I dunno.<end>
+
+// <contd>
+// <Kokon>さあ・・・ないとおもいますよ。<end>
+<contd>
+<Kokon>
+None that I know of.<end>
+
+// <contd>
+// <Kokon>わかりませんよ。<end>
+<contd>
+<Kokon>
+I dunno.<end>
+
+// <Oidon>ココンは　10日のよる、
+// ヘ゜ルーと　テ゛ートしていたようて゛す。<end>
+Translation goes here.<end>
+
+// <contd>
+// しかし、しょうにんは　いませんぜ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Kokon>さかなハンティンク゛？
+// ああ、そのことて゛すか。わかりませんよ。<end>
+Translation goes here.<end>
+
+// ？<end>
+?<end>
+
+// <contd>
+// <Kokon>さあ・・・しりませんよ。<end>
+<contd>
+<Kokon>
+No idea.<end>
+
+// ？<end>
+?<end>
+
+// <Oidon>ヘ゜ルーは　10日のよる、
+// ココンと　テ゛ートしていたようて゛す。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、ココンは　10日のよる8時はんから
+// 9時はんのあいた゛は　　いえて゛テレヒ゛を
+// みていたようて゛す。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>たふ゛ん　いないとおもいます。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>もめこ゛と・・・というのて゛はないんて゛すか゛、
+// むすこのココンさんか゛　わしのいうことを<key><Peruu>きかないっていって　なやんて゛いたようて゛す。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>さあ・・・しりませんわ。<end>
+<contd>
+<Peruu>
+I dunno.<end>
+
+// <contd>
+// <Peruu>しりませんわ。<end>
+<contd>
+<Peruu>
+I dunno.<end>
+
+// <Oidon>ヘ゜ルーは　10日のよる、
+// た゛れかと　テ゛ートしていたようて゛す。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>さあ・・・わかりませんわ。<end>
+<contd>
+<Peruu>
+I dunno.<end>
+
+// <contd>
+// <Peruu>まあ　きれいな　きんは゜つ!
+// わたし　きんは゜つって　あこか゛れてるんて゛すのよ。
+// て゛も　これには　みおほ゛え　こ゛さ゛いませんわ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Taaji>ええ・・・・・・。
+// <Oidon>おまえとゴンきちは　ゆうし゛んた゛と
+// きいているか゛。<key>
+// <Taaji>はい。ゴンきちは、た゛いのしんゆうて゛した。
+// あいつほと゛　なか゛くつきあっているものは
+// いません。
+// それなのに、それなのに・・・・・・<end>
+Translation goes here.<end>
+
+// <contd>
+// <Taaji>てき？　そんなのいるわけ　ありませんよ。<end>
+<contd>
+<Taaji>
+Enemies? He had none.<end>
+
+// <contd>
+// <Taaji>と゛うて゛すかねえ・・・。あ、そういえは゛、
+// かれは　むすこの　ココンくんのことて゛<key>
+// <Taaji>た゛いふ゛　なやんて゛いたみたいて゛すよ。
+// <Oidon>なやんて゛いた？　なせ゛た゛？
+// <Taaji>ちょうなんのコンタくんは　いえのしこ゛とに
+// つきましたか゛、ココンくんは　かれに<key>
+// <Taaji>はんは゜つして、と゛うしても　いえのしこ゛とに
+// つくのはいやた゛と　いっていたらしいのて゛す。
+// なにしろ、ゴンきちに　まけないくらいの
+// た゛いか゛いしゃを　もちたいらしくて、しきんを<key>
+// <Taaji>す゛いふ゛んほしか゛っていたようて゛す。
+// わたしのしっているのは、これく゛らいて゛す。
+// あ、ちょっとまってくた゛さい。<key>
+// <Taaji>このちかくに"<green>ト゛ラコ゛ン<black>"というきっさてんか゛
+// あるんて゛すよ。
+// そこのマスターとコ゛ンきちはなかか゛よかったから
+// ほかになにかしっているかもしれませんよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Taaji>へ゛つに　かわったところは
+// ありませんて゛したよ。
+// つまりふつうの　せいかつて゛したね。<end>
+<contd>
+<Taaji>
+Nothing unusual. He led<nl>
+an ordinary life.<end>
+
+// <contd>
+// <Taaji>さあ・・・しりませんよ。<end>
+<contd>
+<Taaji>
+I dunno.<end>
+
+// <contd>
+// <Taaji>しりませんよ。<end>
+<contd>
+<Taaji>
+I dunno.<end>
+
+// <contd>
+// <Taaji>あや？　わたしのなまえか゛・・・。
+// て゛も、みたことは　ありませんよ。<end>
+<contd>
+<Taaji>
+Huh? It has my name,<nl>
+but I've never seen it.<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>ターシ゛は　10日のよる、
+// 7時すき゛から10時すき゛まて゛　て゛んきかんけいの
+// しゅうりをしていたそうて゛す。<key>
+// <Oidon>しゅうりをたのんた゛という　3けんの
+// いえのものか゛しょうにんですぜ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Rinrin>はい・・・とてもさ゛んねんて゛す。としは
+// はなれていましたか゛　はなしのあう
+// かたて゛した。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Rinrin>さあ・・・しりませんよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Rinrin>きいたことは　ありませんよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Rinrin>ふつうよりは　よいせいかつた゛と
+// おもいますけと゛。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Rinrin>しりませんよ。<end>
+Translation goes here.<end>
+
+// ですぜ。<end>
+<end>
+
+// <contd>
+// <Rinrin>さあ・・・わかりませんよ。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// ・・・<end>
+...<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>ひか゛いしゃ。　3年まえに　つまとりこん。
+// ほうせきてんの　しゃちょうて゛あり、マンションも
+// けいえいしている
+// ふたりの　むすこか゛いる。　38さい。<end>
+Translation goes here.<end>
+
+// <Oidon>20さい。ひか゛いしゃのむすこて゛　ちょうなん。
+// おやとは　はなれてくらしている。
+// し゛き　しゃちょうとの　うわさか゛ある。<end>
+Translation goes here.<end>
+
+// <Oidon>18さい。コンタときょうた゛いて゛　し゛なん。
+// おやとは　はなれてくらしている。<end>
+Translation goes here.<end>
+
+// <Oidon>コンコンほうせきてんの　まえにある
+// コンヒ゛ニエンス　ストアーのてんいん。18さい。<end>
+Translation goes here.<end>
+
+// <Oidon>たた゛の　コンヒ゛ニエンス　ストアーの　
+// てんいんというた゛けなのて゛　と゛うきは
+// まったく　ありませんぜ。<end>
+Translation goes here.<end>
+
+0<end>
+
+// <Oidon>だんな、おいと゛んか゛しらへ゛ましたところ
+// ターシ゛のくるまは　みと゛りのワコ゛ンしゃた゛と
+// わかりましたせ゛。<end>
+<Oidon>
+My investigation shows<nl>
+that Taji drives a<nl>
+green station wagon.<end>
+
+// <Oidon>だんな、おいと゛んか゛しらへ゛ましたところ
+// リンリンのくるまは　あかた゛と
+// わかりましたせ゛。<end>
+<Oidon>
+My investigation shows<nl>
+that Rinrin's car is<nl>
+red.<end>
+
+// <Oidon>だんな、おいと゛んか゛しらへ゛ましたところ
+// ト゛ラクレのくるまは　きいろにしましまの
+// はいったものた゛と　わかりましたせ゛。<end>
+Translation goes here.<end>
+
+// ゛゛いた？　なせ゛た゛？
+// <Taaji>ちょうなんのコンタくんは　いえのしこ゛とに
+// つきましたか゛
+// (looks like garbage)
+
+// <Oidon>ます゛は　た゛れかを　ここによひ゛ましょうせ゛。<end>
+<Oidon>
+Maybe we should call<nl>
+someone in first.<end>
+
+// た゛れを　よひ゛ましょうか？　<end>
+Call whom? <end>
+
+// <contd><key><Oidon>だんな　し゛けんは　ふたたひ゛　ふりた゛しに
+// もと゛っちまいましたせ゛。せ゛ったいに　クロた゛と
+// おもったヌキか゛　シロた゛ったとは・・・。まるて゛
+// タヌキに　は゛かされているみたいて゛すね。<key><Oidon>しかし　て゛は　あのほうせきか゛　ヌキのへやに
+// あったのはなせ゛て゛しょう？　しかも　1つた゛け
+// たりないとは。と゛うも　このし゛けんには
+// ふくさ゛つな　し゛し゛ょうか゛　ありそうですぜ。<key><Oidon>こうなると　せ゛ひ　ツネコから　はなしを
+// ききたいものて゛すね。
+// さあ　だんな
+// ふたたひ゛　そうさに　のりた゛しましょう。<key><Oidon>だんな　ここまて゛の　し゛けんの　けいかを
+// そうさファイルに　まとめました。
+// ファイルめいは　<red>ふくろおおかみ<black>て゛す。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、ここに　いますぜ。<end>
+<Oidon>
+Don't be silly, boss.<end>
+
+// ですぜ。<end>
+<end>
+
+// <Oidon>みせるものは　あるんて゛すか゛、あいてか゛
+// いませんぜ。<end>
+<Oidon>
+There's no one to show<nl>
+anything to.<end>
+
+// <Oidon>た゛っ、だんな。おいと゛んは、はんにんて゛は
+// ありませんよ。<pause>そんなかなしいことを
+// いわないて゛くた゛さいよ。<end>
+Translation goes here.<end>
+
+// <Oidon>ほんじゃ、コンタをよひ゛ますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ほんじゃ、ココンをよひ゛ますぜ。<end>
+<Oidon>
+OK, let's call Kit.<end>
+
+// <Oidon>ほんじゃ、ヘ゜ルーをよひ゛ますぜ。<end>
+<Oidon>
+OK, let's call Peru.<end>
+
+// <Oidon>ほんじゃ、ヌキをよひ゛ますぜ。<end>
+OK, let's call Nuki.<end>
+
+// <Oidon>32さいて゛　け゛んさ゛い　むしょくて゛す。
+// サラきんに　かなりのか゛くの　かねを
+// かりていて、き゛ょうしゃに　しつこく
+// せめたてられている　ようて゛す。<key>
+// <Oidon>ほうせきてんのちかくの　ゴンきちのマンションに
+// ひとりて゛　すんて゛いるか゛、やちんをかなり
+// ためこんて゛いる。<end>
+Translation goes here.<end>
+
+// <Oidon>はんにんのもの　た゛とは　かき゛りませんぜ。
+// しかし、コンタや　ヘ゜ルーは　きんは゜つの
+// きゃく　なと゛　ひとりとして　いないと
+// いっています。<key>
+// <Oidon>そうかといって　ようき゛しゃの　なかにも
+// きんは゜つのものは　いませんよ。
+// <pause>ふしき゛なものて゛すね。<end>
+Translation goes here.<end>
+
+// <Oidon>たいほするにしても　しょうこか゛たりませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>もうすこし　しょうこをかためてから
+// たいほしましょうせ゛。<end>
+Translation goes here.<end>
+
+// <Oidon>これはいったい　なにをあらわして
+// いるんて゛しょうかね？よく　わかりませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>これか゛　いちは゛ん　なんかいですぜ。
+// ヌキの"<char>"としか　とれませんよ。
+// なんて゛あるにせよ　このもし゛の　いみか゛　わかれは゛
+// このし゛けんは　かいけつするんて゛しょうね。<end>
+Translation goes here.<end>
+
+0<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>やはり　ほうせきるいは　ヌキか゛ぬすんた゛ことに
+// なるんて゛しょうね。<end>
+Translation goes here.<end>
+
+// ？<end>
+?<end>
+
+// <Oidon>ほんじゃ、いさ゛かやクマへいきましょうや。<end>
+Translation goes here.<end>
+
+// <Oidon>ほんじゃ、ヌキのへやへいきましょうや。<end>
+<Oidon>
+OK, to Nuki's room.<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>せっかく　コンタを　よんた゛んて゛すから
+// コンタに　めを　むけましょうよ。<end>
+Red's already here,<nl>
+so let's focus on him.<end>
+
+// <contd>
+// <Nuki>わたしと　かねのことて゛もめたことは
+// ありますか゛、それいか゛いは　しりませんよ。<key>
+// <Nuki>とはいっても　わたしのことなと゛
+// ほとんと゛、もめこ゛とのうちには
+// はいりませんかね？<end>
+Translation goes here.<end>
+
+// 、<end>
+,<end>
+
+// !<end>
+!<end>
+
+// 。<end>
+.<end>
+
+0<end>
+
+0<end>
+
+// <Oidon>ヌキのことを　くわしくはなしてくれ。<end>
+<Oidon>
+Tell me all you know<nl>
+about Nuki.<end>
+
+// <contd>
+// <Konta>まったく・・・、ヌキには　はらか゛たちますよ。
+// <Oidon>なせ゛？
+// <Konta>せんし゛つ　わたしか゛、ヌキのところへ<key>
+// <Konta>やちんを　とりたてに　いったときのことて゛す。
+// "はやく　やちんを　はらえ"<pause>っていったら
+// ヌキのやつは　<pause>"おまえらみたいに
+// かねのあるやつらか゛、なせ゛　おれみたいな<key>
+// <Konta>あわれなものから　かねをとるんた゛!
+// かねもちなんた゛から　ケチケチしなくたって
+// いいし゛ゃないか"<pause>　といったんて゛すよ。<key>
+// <Konta>もう　かおもみたくないし、
+// なまえも　ききたくないて゛すね!<end>
+Translation goes here.<end>
+
+// <Oidon>ちょっとしつれい・・・・・・。
+// だんな、なにもありませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>いまもっている　しょうこひんは・・・・・・。
+// きんは゜つ、メモ、けんし゛ゅう、<end>
+Translation goes here.<end>
+
+// <contd>
+// りょうしゅうしょう、<end>
+<contd>
+receipt,<end>
+
+// <contd>カキ゛、ほうせきるい<end>
+// @TODO@ - note no newline in original
+<contd>
+key, jewels<end>
+
+// <contd>
+// ・・・これた゛けですぜ。<end>
+<contd>
+...that's it.<end>
+
+// <Oidon>これに、みおほ゛えはないか？<end>
+Translation goes here.<end>
+
+// <contd>
+// <Konta>さあ、しりませんよ。<end>
+<contd>
+<Konta>
+No idea.<end>
+
+// <contd>
+// <Konta>はい。えーっと・・・<pause>　あれ？<pause>
+// ・・・いや、<pause>とくに　いし゛ょうは　ないようて゛す。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Konta>みせのカキ゛て゛す。て゛も、と゛うして・・・？<pause>
+// えっ、ヌキのへやからみつかった？
+// ヌキのやつ・・・・・・。<end>
+<contd>
+<Konta>
+It's the key to the<nl>
+shop. But why...?<key>
+<Konta>
+Wait, it was found in<nl>
+Nuki's room? That<nl>
+Nuki...<end>
+
+// <Oidon>せっかく　ココンを　よんた゛んて゛すから
+// ココンに　めを　むけましょうよ。<end>
+Translation goes here.<end>
+
+// !<end>
+!<end>
+
+0<end>
+
+// <contd>
+// <Kokon>ひと゛く　せいかつに　こまっていた　ようて゛すね。
+// きのみし゛かい　やつた゛から　カッとなって
+// ころしたということも　かんか゛えられますよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Kokon>みたこと　ありませんよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Kokon>うえっ、すけ゛ーっ。
+// あれ？　これ　うちのほうせきた゛。
+// よく　みつかりましたね。と゛こて゛　これを？<key><Kokon>えっ、ヌキのへや？<pause>
+// やっは゜り　ヌキか゛　はんにんた゛ったのか・・・。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Kokon>あれ？　と゛こて゛みつけたんて゛す。　これは
+// ホ゛クか゛　なくした　ほうせきてんの
+// カキ゛て゛すよ。<end>
+Translation goes here.<end>
+
+// <pause><end>
+<pause><end>
+
+// <Peruu>おいと゛んさん、ちょっと　きに　かかることか゛
+// あるんて゛すか゛・・・・・・。
+// <Oidon>なんた゛。<key><Peruu>いせ゛んはなした　しゅっちょうのことなんて゛す。
+// いままて゛とちか゛って　こんかいのしゅっちょうは
+// しゃちょうの　こし゛んてきなものた゛ったんて゛す。<key><Peruu>なんて゛も　しゃちょうのわかれたおくさまに
+// てか゛みをわたしてきてほしいとの　ことて゛した。
+// と゛うもしゃちょうみす゛からは　おくさまに
+// あいつ゛らそうて゛した。<key><Peruu>て゛すからわたしか゛　かわりに<pause>
+// ということて゛・・・・・・。<end>
+Translation goes here.<end>
+
+// <Oidon>せっかく　ヘ゜ルーを　よんた゛んて゛すから
+// ヘ゜ルーに　めを　むけましょうよ。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>てか゛みは　と゛こにあるんた゛？
+// <Peruu>わかりません。いくのを　1しゅうかん
+// おくらせることになりましたのて゛　てか゛みは
+// わたされませんて゛した。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>しりませんよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>あっ、これは　ほうせきてんのものて゛は？
+// ちょっとしらへ゛てみます・・・・・・。<key><Peruu>あら？ちょっと　おかしいて゛すよ。
+// 1つ　たりないわ。
+// <Oidon>えっ、と゛ういうことて゛す？<key><Peruu>おきゃくさんから　あす゛かった　ゆひ゛わか゛
+// なくなっているんて゛す。
+// <Oidon>た゛れから　あす゛かったんて゛す？
+// <Peruu>た゛れた゛ったかしら・・・。<pause>しらへ゛ておきますね。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>あまりよく　わかりませんか゛・・・・・・
+// ほうせきてんのカキ゛て゛は　ないて゛しょうか。<end>
+Translation goes here.<end>
+
+// <Oidon>せっかく　ヌキを　よんた゛んて゛すから
+// ヌキに　めを　むけましょうよ。<end>
+Translation goes here.<end>
+
+// !<end>
+!<end>
+
+// キ<end>
+<end>
+
+// <Oidon>10日のよる11時は　と゛こにいた？
+// <Nuki>そのときは、いえにいましたよ。<end>
+Translation goes here.<end>
+
+// <Oidon>くるまを　もっているか？
+// <Nuki>もってませんよ。めんきょしょうなら
+// もっているんて゛すか゛ね。<end>
+Translation goes here.<end>
+
+// <Oidon>このし゛けんて゛　ほうせきてんから
+// すへ゛ての　ほうせきるいか゛　ぬすまれた
+// ことを　しっているか？<key><Nuki>ええ。て゛も、そんなことは
+// た゛れた゛って　しっているて゛しょう。
+// なせ゛　そんなこと　きくんて゛す？<end>
+Translation goes here.<end>
+
+// <Oidon>け゛んは゛に　のこされた　かみに"<char>"というもし゛か゛
+// かかれていたのた゛か゛
+// なにか　おもいあたる　ふしはないか？
+// <Nuki>・・・・・・わかりませんね。<end>
+Translation goes here.<end>
+
+// <Oidon>きみは9日から11日し゛っかへいったと
+// いったか゛　アリハ゛イを　きいたときに
+// 10日のよるは　いえにいたと　いっていたそ゛。<key><Nuki>ああ、すいません。し゛っかへいったのは
+// 9日から10日て゛した。よていを1日はやくして
+// かえってきたんて゛す。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Nuki>ああ、それて゛すか。それは　し゛っかへいった
+// 9日から11日のあいた゛
+// かりていた　くるまのりょうしゅうしょうて゛す。<end>
+Translation goes here.<end>
+
+// ？<end>
+?<end>
+
+// <Oidon>だんな、ここには　きくあいてか゛いませんぜ。<end>
+<Oidon>
+No one here to talk to.<end>
+
+// <Oidon>あけるようなものは　ありませんぜ。<end>
+<Oidon>
+Nothing here to open.<end>
+
+// <Oidon>だんな、ここには　みせるあいてか゛　いませんぜ。<end>
+<Oidon>
+No one here to show<nl>
+anything to.<end>
+
+// <Oidon>だんな、ここにヌキは　いませんぜ。
+// それにしても　ここは　ホコリくさいて゛すね。
+// コ゛ホッ、<pause>コ゛ホッ。<pause><end>
+Translation goes here.<end>
+
+// <Oidon>たいした　ほんた゛なし゛ゃ　ないて゛すよ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、ほんなんか
+// ほとんと゛　はいっていませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>カ゛サ、カ゛サ・・・・・・<pause>うひゃーっ。<pause>
+// だんな、コ゛<pause>、コ゛キフ゛リか゛　て゛てきましたよ。
+// ソ゛クソ゛クッ<end>
+Translation goes here.<end>
+
+// <Oidon>とってみましたけと゛、たた゛のほんと
+// かわりはないようですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>こんなのもっていても　なにもなりませんよ。<end>
+Translation goes here.<end>
+
+// <Oidon>ほんじゃ、しょうこひんとして
+// もっておきますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>カ゛サ、コ゛ソ・・・・・・。<pause>
+// だんな、なんにも　ありませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>カ゛サ、コ゛ソ・・・・・・。<pause>
+// だんな、しおりか゛　はさんて゛ある　た゛けですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>あれ？<pause>だんな、これは　しおりて゛はなくて
+// レンタカーの　りょうしゅうしょうのようですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>く゛き゛き゛っ・・・・・・。<pause>
+// ふうーっ。<pause>あきましたよ。
+// ・・・・・・け゛け゛っ!<key><Oidon>だんな、こんなところに　ほうせきるいか゛
+// こ゛っそり・・・・・・。<pause>そのうえ、カキ゛まて゛
+// ありますよ。こうなったら　ヌキを
+// しめあけ゛るしか　ありませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ほんじゃ、そうさほんふ゛へ　いきましょうや。<end>
+Translation goes here.<end>
+
+// <Oidon>もう　とりましたせ゛。<end>
+Translation goes here.<end>
+
+// <Beasu>いらっしゃい!
+// <Oidon>やあ、コアラさん!　やっは゜り　あなたの
+// おっしゃった　とおりて゛したよ。
+// ヌキは　はんにんし゛ゃ　なかったんて゛す。<key><Oidon>さっそくて゛すか゛　また　し゛けんについて
+// <Koala>ふん　それか゛　なんた゛というんた゛!<key><Oidon>と゛うしたんて゛す、いきなり？
+// わるよいて゛も　したんて゛すか？
+// <Koala>いいか　きけ!　おれには　と゛うやら
+// し゛けんの　なそ゛か゛　わかりかけてきた。<key><Oidon>ええっ!　て゛は、はんにんは・・・？
+// <Koala>ほう、おしえてほしいのか
+// それなら　おしえてやろう。
+// はんにんは<pause><pause><pause><red>おまえたちた゛<black>。<key><Beasu>すいませんね　おいと゛んさん。
+// また　コアラさんの　きけ゛んのよいときに
+// きてくた゛さいね。<end>
+Translation goes here.<end>
+
+// <Oidon>ねえだんな　さっき　コアラさんか゛
+// われわれを　はんにんた゛と　いったときの　めは
+// しんし゛つみに　みちていましたよ。<key><Oidon>とても　よっは゜らいの　たわこ゛ととは
+// おもえませんぜ。
+// いや、もちろん　おいと゛んや　だんなか゛
+// はんにんた゛と　いうわけし゛ゃ　ありませんか゛ね。<end>
+Translation goes here.<end>
+
+// !<end>
+!<end>
+
+0<end>
+
+// <Beasu>いらっしゃい。おっ、おいと゛んさん。
+// コアラさんなら　そこにいるよ!
+// <Oidon>すみません　コアラさん。また　おちえを
+// はいしゃく　したいんて゛すか゛・・・<key><Koala>いいよ　なんて゛もきいてくれ。
+// <Oidon>し゛つはいま　かくかく<pause>うしうし、いや、
+// かくかく<pause>しかし゛かの　し゛ょうきょうて゛・・・。<end>
+Translation goes here.<end>
+
+// <Oidon>このし゛けんについて　こ゛いけんを
+// おききしたいんて゛すか゛・・・
+// <Koala>このし゛けんは゛　ものとりとかいってた　たく゛いの
+// たんし゛ゅんなものし゛ゃない　ようなきか゛するな。<end>
+Translation goes here.<end>
+
+// <Oidon>このし゛けんについて　と゛うおかんか゛えて゛すか？
+// <Koala>おまえら　ヌキか゛　はんにんた゛と　おもって
+// いるようた゛か゛　やつは　ちか゛うな
+// <Oidon>えっ　と゛ういうことて゛す？<key><Koala>おれは　ヌキというおとこを　よくしっているか゛
+// あいつは　ころしなんか　て゛きるほと゛
+// と゛きょうの　あるやつし゛ゃない。<end>
+Translation goes here.<end>
+
+// <Oidon>ヌキについて　と゛うかんか゛えたら
+// いいんて゛しょうかね？
+// <Koala>あいつは　た゛れかに　つみを　かふ゛せられて
+// いるに　ちか゛いない。<key><Oidon>し゛ゃあ、ココンか゛　はんにんた゛と？
+// <Koala>そうは　いってない。あいつも　たいした
+// おとこし゛ゃ　ないしな。<end>
+Translation goes here.<end>
+
+// と゛うする？　<end>
+What to do? <end>
+
+// と゛こへ？　<end>
+Where? <end>
+
+// なにを？　<end>
+What? <end>
+
+// た゛れを？　<end>
+Whom? <end>
+
+// <Oidon>てか゛みのないようはしっているか？
+// <Peruu>いいえ、そこまて゛は・・・・・・。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>レンタカーの　りょうしゅうしょうのようですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>くるまを　もっているか？
+// <Nuki>まえにいったとおり　もっていませんよ。た゛いいち
+// くるまをかう　おかねか゛あったら　あんな
+// ホ゛ロの<pause>　たたみの　うえなんかに　ねてませんよ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、す゛いふ゛ん　ホ゛ロいたたみ　ですぜ。
+// ひとめみたた゛けて゛、わかりますよ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、やはり　ヌキのいうとおりて゛す。
+// す゛いふ゛ん　いたんて゛ますぜ。<end>
+Translation goes here.<end>
+
+0<end>
+
+// <Oidon>へ゛つに　かわったところは　
+// ありませんぜ。<end>
+<Oidon>
+Nothing particularly<nl>
+unusual about it.<end>
+
+// <Oidon>く゛き゛き゛っ・・・・・・。<pause>
+// ふうーっ。あきましたよ。<pause>
+// て゛も、もうなにも　ありませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>カ゛サ、コ゛ソ・・・・・・。<pause>
+// だんな、もうなにも　ないようですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>いまのところ　し゛ょうほうは　ありませんぜ。<end>
+<Oidon>
+No info at this time.<end>
+
+// <Oidon>ひか゛いしゃ。　3年まえに　つまとりこん。
+// ほうせきてんの　しゃちょうて゛あり、マンションも
+// けいえいしている
+// ふたりの　むすこか゛いる。　38さい。<end>
+Translation goes here.<end>
+
+// <Oidon>20さい。ひか゛いしゃのむすこて゛　ちょうなん。
+// おやとは　はなれてくらしている。
+// ほうせきてんの　せんむて゛　し゛き　しゃちょうとの
+// うわさか゛ある。<end>
+Translation goes here.<end>
+
+// <Oidon>18さい。コンタときょうた゛いて゛　し゛なん。
+// おやとは　はなれてくらしている。<end>
+Translation goes here.<end>
+
+// <Oidon>22さい。コンコンほうせきてんに
+// つとめている　てんいん。
+// りょうしんといっしょに　くらしている。<end>
+Translation goes here.<end>
+
+// <Oidon>38さい。て゛んきやを　けいえいしている。
+// ゴンきちとは　むかしからの　ゆうし゛ん。<end>
+Translation goes here.<end>
+
+// <Oidon>23さい。き゛んこういん。
+// りょうしん、おとうと　ともに　なくなって
+// いるのて゛　ひとりく゛らし。
+// ゴンきちとは　ゆうし゛んのような　かんけい。<end>
+Translation goes here.<end>
+
+// コ゛ンきちの　なにを　ききますか？　<end>
+Translation goes here.<end>
+
+// <Oidon>ゴンきちに　てきは　いたか？<end>
+Translation goes here.<end>
+
+// <contd>
+// <Konta>なんと゛も　いうようて゛すけれと゛も
+// いないものは　いないんて゛す。
+// <Oidon>そうか・・・。<end>
+Translation goes here.<end>
+
+// <Oidon>ゴンきちは　なせ゛　さかなハンティンク゛を
+// やめたんた゛。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Konta>しりませんよ。<end>
+<contd>
+<Konta>
+I dunno.<end>
+
+// <Oidon>"<char>"というもし゛に　なにか　おもい
+// あたらないか？<end>
+<Oidon>
+Know what this "N" is<nl>
+about?<end>
+
+// <contd>
+// <Konta>わかりませんよ。<end>
+<contd>
+<Konta>
+No, I don't.<end>
+
+// <contd>
+// <Konta>いえ、とくになにも・・・<end>
+<contd>
+<Konta>
+No, not particularly...<end>
+
+// <Oidon>カキ゛は　みつかったか？<end>
+<Oidon>
+Found the key?<end>
+
+// <contd>
+// <Kokon>いいえ、また゛・・・。<end>
+<contd>
+<Kokon>
+No, not yet.<end>
+
+// <Oidon>ヌキ!　ゴンきち　さつか゛いの　ようき゛て゛
+// おまえを　たいほする!!
+// <Nuki>まってくた゛さい!　おれは　ころしなんか
+// してない!<key>
+// <Nuki>こうなったら　はくし゛ょうしましょう。
+// し゛つは　10日の　よる11時こ゛ろ
+// おれは　レンタカーて゛　ソ゛ウに　しょうとつして
+// しまったんて゛す。<key>
+// <Nuki>そのまま　ソ゛ウか゛　きせ゛つしているのを
+// いいことに　あてにけ゛しちまって・・・・・・
+// た゛から　おれは　さつし゛んはんなんかし゛ゃない!
+// しらへ゛れは　わかることて゛す。<key>
+// <Oidon>さっそく　こうつうかに　といあわせて
+// みました。
+// ヌキの　いうとおり、たしかに　そのし゛こくに
+// し゛こはありました。<key>
+// <Oidon>レンタカーやに　きいたところ
+// くるまは　おおきなものか゛
+// ふ゛つかったみたいに
+// ホ゛コホ゛コになって　かえってきたそうて゛す。<key>
+// <Oidon>しかたありません　ヌキを　あてにけ゛の
+// ようき゛て゛　たいほします。<end>
+// @TODO@ - verify pronouns if we meet this elephant
+<Oidon>
+Nuki! You are under
+arrest for the murder<nl>
+of Renard Fox!<nl>
+<Nuki>
+Now wait a minute!<key>
+<Nuki>
+I did no such thing!<nl>
+But I have a confession<nl>
+to make.<key>
+<Nuki>
+On the 10th at 11 PM I<nl>
+got in an accident with<nl>
+an elephant at the<nl>
+Rent-A-Car.<key>
+<Nuki>
+The elephant began to<nl>
+faint, so I took the<nl>
+opportunity to run.<key>
+<Nuki>
+If you check it out,<nl>
+you'll see it's true.<nl>
+So I can't be the<nl>
+murderer!<key>
+<Oidon>
+I've run Nuki's story<nl>
+by Traffic. There was<nl>
+indeed an accident at<nl>
+that time.<key>
+<Oidon>
+The car was returned<nl>
+rather dented, as if it<nl>
+had hit something big.<key>
+<Oidon>
+Well, I have no choice.<nl>
+Nuki, you're under<nl>
+arrest for hit and run.<end>
+
+// <Oidon>このほうせきは　いったいなんた゛？
+// <Nuki>しりませんよ　こんなものは。
+// <Oidon>た゛まれ、おまえのへやから　て゛てきたんた゛そ゛。<key><Nuki>そんなこといわれたって、しらないものは
+// しらないとしか　いいようか゛ないて゛すよ。<end>
+Translation goes here.<end>
+
+// <Oidon>このカキ゛は　なんのカキ゛た゛？
+// <Nuki>みたこともない　カキ゛て゛すね。
+// <Oidon>おまえのへやからみつかったんた゛そ゛!
+// <Nuki>そんなこといわれたって・・・・・・<end>
+<Oidon>
+What kind of key is<nl>
+this?<nl>
+<Nuki>
+One I've never seen
+before.<key>
+<Oidon>
+It was found in your<nl>
+room!
+<Nuki>
+Dunno how it got there.<end>
+
+// せんぜ。<end>
+<end>
+
+// <Oidon>だんな、コンタは　10日のよる　8時はんから
+// 9時はんのあいた゛　ほうせきてんにいて
+// そのあとは　し゛たくて゛　リンリンと
+// はなしをしてたらしいですぜ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Konta>けっこう　しつこいて゛すね。その　きんは゜つは
+// もう　なんと゛も　みていますよ。それも、
+// その　たひ゛こ゛とに<key>
+// <Konta>わからないと　いったはす゛て゛す。
+// <Oidon>このきんは゜つは　また゛　なそ゛て゛な・・・・・・。<pause>
+// ・・・たとえ　なんと゛　たす゛ねることに　なろうと
+// わからないことは　なんと゛て゛も　きき、<key>
+// <Oidon>わからないしょうこひんは　なんと゛て゛も　みせて
+// なそ゛を　すこして゛も　といていかなけれは゛
+// ならない・・・・・・。たえてくれよ。<pause><pause>
+// それか゛　おいと゛んたちの　しこ゛となんた゛。<end>
+Translation goes here.<end>
+
+// <Oidon>ツネコは　いまと゛こに　いるんた゛？<end>
+<Oidon>
+Where is Neko?<end>
+
+// <contd>
+// <Konta>・・・しりませんよ。<pause>こっちか゛
+// おしえてもらいたい　く゛らいて゛す。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Kokon>そんなの　しりませんよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Kokon>さあ・・・<pause>　やめたくなったから
+// し゛ゃないんて゛すかね。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Kokon>おいと゛んさん、し゛つは　きか゛ついたことか゛
+// あるんて゛す。<key><Oidon>ん？　と゛ういうことた゛ね。
+// <Kokon>し゛つは、おやし゛の　マンションの　し゛ゅうにんて゛
+// ヌキというやつか゛　いるんて゛すけと゛ね<key><Kokon>そいつか゛　やちんを　まんそ゛くに　はらって
+// くれないんて゛　おやし゛と　たひ゛たひ゛
+// もめていたんて゛す。<key><Kokon>"<char>"というのは、ヌキのことなんし゛ゃ
+// ないんて゛しょうかね。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>だんな、ココンは　10日のよる　11時には
+// ヘ゜ルーと　テ゛ートを　していたらしいですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ほんじゃ、かえってもらいますぜ。<end>
+<Oidon>
+OK, you may go now.<end>
+
+// <contd>
+// <Kokon>・・・・・・・・・。ひと゛いよ!<pause>
+// あいてのきもちも　かんか゛えないて゛
+// そんなことを　いうなんて・・・。<key><Kokon>とっくに　わすれて　いたのに・・・。<end>
+Translation goes here.<end>
+
+// <Oidon>なせ゛　ゴンきちと　もめたんた゛？
+// <Nuki>やちんのことて゛すよ。なんか月もみのか゛して
+// もらってきたんて゛すけと゛ね。はらうかねは
+// ないし・・・。<pause>まあ、いたしかたないて゛すよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Nuki>いないと　おもいますよ。わたしと　もめたのも
+// たた゛、こっちか゛　つい　カーッと
+// なってしまった　た゛けて゛すしね。・・・<key><Nuki>やさしいかたて゛すよ。ゴンきちさんて゛　なけれは゛
+// わたしは　とっくに　おいた゛されていますよ。
+// かねのない　わたしか゛　あんなところに
+// すめるのも　ゴンきちさんの　おかけ゛て゛すよ。<end>
+Translation goes here.<end>
+
+// <Oidon>ゴンきちか゛　さいきんもめこ゛とを
+// おこしたことは　ないか？<end>
+Translation goes here.<end>
+
+// <contd>
+// <Nuki>もめこ゛とねぇ・・・<pause>
+// きいたことは　ありませんよ。<end>
+Translation goes here.<end>
+
+// <Oidon>ゴンきちの　せいかつは　と゛んなものた゛った？<end>
+Translation goes here.<end>
+
+// <contd>
+// <Nuki>しりませんよ。<pause>やちんを　はらっていないのて゛
+// ちかす゛くのも　きか゛ひけますしね・・・。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Nuki>そんなことまて゛　しりませんよ。<end>
+Translation goes here.<end>
+
+// て<end>
+<end>
+
+// <Oidon>だんな、ヌキは　し゛けんのあった　よるは
+// いえにいたようて゛す。
+// しかし、しょうにんは　いませんぜ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Nuki>さあ・・・<pause>しりませんよ。<end>
+Translation goes here.<end>
+
+// <Oidon>ツネコを　しっているか？<end>
+Translation goes here.<end>
+
+// <contd>
+// <Nuki>しりませんよ。<end>
+Translation goes here.<end>
+
+0<end>
+
+// 。<end>
+.<end>
+
+// ？<end>
+?<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+0<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// せんぜ。<end>
+<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// <contd><end>
+($01)<end>
+
+// 。<end>
+.<end>
+
+// ですぜ。<end>
+<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// せんぜ。<end>
+<end>
+
+// <contd>
+// <Peruu>ヌキというかたのことは　なにもしりませんのて゛
+// はなすことは　て゛きませんわ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>わかりませんわ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>さあ・・・<pause>しりませんわ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>なんと゛　かんか゛えても・・・<pause>　わかりませんわ。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>ゴンきちのつまは　なんというなまえた゛。
+// <Peruu>ツネコさまて゛す。<end>
+Translation goes here.<end>
+
+// <Oidon>ツネコは　いま　と゛こに　いるんた゛？
+// <Peruu>わかりませんわ。しゃちょうか　むすこさんなら
+// しっていると　おもいますけと゛・・・。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、ヘ゜ルーは　10日のよるは
+// ココンとテ゛ートをしていたようですぜ。<pause>
+// いいなあ・・・・・・。<pause>
+// おいと゛んも　テ゛ートしたい。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>ここいか゛いて゛は　みたこと　ありませんわ。<end>
+Translation goes here.<end>
+
+// た゛れに？　<end>
+To whom? <end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>て゛は　だんな、ヌキか゛くるまを　かりたという
+// かいしゃに　て゛んわを　いれてしらへ゛て
+// みますぜ。<pause>
+// ・・・・・・<pause>　フム<pause>　フム<pause>　・・・・・・。<pause><key><Oidon>だんな、たしかにヌキは　9日から11日のあいた゛
+// くるまを　かりていたようて゛す。
+// しかも、しろのこか゛たしゃを・・・・・・。<end>
+Translation goes here.<end>
+
+// ますぜ。<end>
+<end>
+
+// <Oidon>ほんじゃ、いくのは　やめますぜ。<end>
+Translation goes here.<end>
+
+// いうよりは　よいせいか ヲえヲ($10)ーーえかい($10)かかカをえ<Oidon>22さい。コンコンほうせきてんに
+// つとめている　てんいん。
+// りょうしんといっしょに　くらしている。<end>
+Translation goes here.<end>
+
+// <Oidon>ます゛は　た゛れかを　ここに　よひ゛ましょうせ゛。<end>
+Translation goes here.<end>
+
+// た゛れを　よひ゛ましょうか？　<end>
+Call whom? <end>
+
+// <Oidon>ゴンきちは　いったい　なにを　やったんた゛。
+// <Tsuneko>わかりません。わたしも　なんと゛か　ききた゛そうと
+// したんて゛すけれと゛　なにも　おしえてくれなくて。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// せんぜ。<end>
+<end>
+
+// <Oidon>いまのところ　し゛ょうほうは　ありませんぜ。<end>
+<Oidon>
+No info at this time.<end>
+
+// <Oidon>みせるものは　あるんて゛すか゛　あいてか゛
+// いませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>た゛、だんな。おいと゛んは　はんにんて゛は
+// ありませんよ。そんなかなしいことを
+// いわないて゛くた゛さいよ。<end>
+Translation goes here.<end>
+
+// <Oidon>ほんじゃ、コンタを　よひ゛ますぜ。<end>
+Translation goes here.<end>
+
+// せんぜ。<end>
+<end>
+
+// <Oidon>「おまえか゛いないまま　3年かん　たえつつ゛けたか゛
+// もうたえられん。あのことは　わすれて
+// もと゛ってきてくれ。あれは　まちか゛いた゛ったのた゛。
+// たのむ、おねか゛いた゛。」　こうかかれています。<key><Oidon>あてなは　ゴンきちのわかれた　つまのツネコに
+// なってますぜ。
+// <pause>だんな　これて゛　ツネコのいえに　いって
+// はなしをきくことか゛　て゛きますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ほうせきるいか゛　みつかったのは　いいんて゛すか゛、
+// 1つた゛けたりない　というのは　と゛ういうこと
+// なんて゛しょうかね？<end>
+Translation goes here.<end>
+
+// <Oidon>ほんじゃ、いさ゛かや　クマへ　いきましょうや。<end>
+Translation goes here.<end>
+
+// <Oidon>ほんじゃ、しょさいへ　いきましょうや。<end>
+Translation goes here.<end>
+
+// <Oidon>ほんじゃ、ツネコのへやへ　いきましょうや。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>せっかく　コンタを　よんた゛んて゛すから
+// コンタに　めを　むけましょうよ。<end>
+Translation goes here.<end>
+
+0<end>
+
+// !<end>
+!<end>
+
+// <Oidon>ほんじゃ、かえって　もらいますぜ。<end>
+<Oidon>
+OK, you may go now.<end>
+
+// <Oidon>ちょっと　しつれい・・・・・・。
+// だんな、なにも　ありませんぜ。<end>
+<Oidon>
+Nothing here, boss.<end>
+
+// <Oidon>これに　みおほ゛えは　ないか？<end>
+<Oidon>
+Recognize this?<end>
+
+// <contd>
+// <Konta>・・・・・・。<end>
+<contd>
+<Konta>
+......<end>
+
+// <contd>
+// <Konta>さあ・・・・・・しりませんよ。<end>
+<contd>
+<Konta>
+No, I don't.<end>
+
+// <Oidon>とくに　かわったところは　ありませんぜ。<end>
+<Oidon>
+Nothing particularly<nl>
+unusual about it.<end>
+
+// <contd>てか゛み、<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、ここには　きくあいてか゛
+// いませんぜ。<end>
+<Oidon>
+No one to talk to here.<end>
+
+// <Oidon>だんな、ここには　みせるあいてか゛
+// いませんぜ。<end>
+<Oidon>
+No one to show anything<nl>
+to here.<end>
+
+// <Oidon>だんな、ここには　たいほて゛きるものか゛
+// いませんぜ。<end>
+<Oidon>
+There's nobody here we<nl>
+can arrest.<end>
+
+// <Oidon>し゛ゃあ、しょうこひんとして
+// もっておきますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>もう　とりましたせ゛。<end>
+<Oidon>
+We've already got it.<end>
+
+// <Oidon>ほんじゃ、いくのは　やめますぜ。<end>
+<Oidon>
+OK, never mind.<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>あけましたせ゛。　<pause>きんこか゛　あります。<end>
+Translation goes here.<end>
+
+// <Oidon>くっ・・・・・・。<pause>だんな、カキ゛か゛
+// かかっていて　あきませんぜ。<end>
+<Oidon>
+Nggh. It won't open.<nl>
+It's locked.<end>
+
+// <Oidon>だんな、きんこのなかに　はいっていたカキ゛を
+// つかったら　ひらきました。<pause>なかには　てか゛みか゛
+// はいっていますよ。<key><Oidon>・・・もしかすると　ヘ゜ルーか゛　いっていたのは
+// このてか゛みて゛は　ないて゛しょうか。<end>
+Translation goes here.<end>
+
+// <Oidon>あけましたよ。<pause>て゛も、もうなにも　ありませんぜ。<end>
+<Oidon>
+OK, it's open.<nl>
+<pause>But there's nothing<nl>
+inside.<end>
+
+// <Oidon>ここに　いますぜ。<end>
+<Oidon>
+Don't be silly, boss.<end>
+
+// <Oidon>・・・だんな、コンタに　おしえてもらった
+// はんこ゛うを　あわせたら　あきましたせ゛。
+// なかには　カキ゛か゛　はいっています・・・。
+// いったい　なんの　カキ゛なのて゛しょうか？<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>ほんじゃ、そうさほんふ゛へ　いきましょうや。<end>
+<Oidon>
+OK, back to HQ.<end>
+
+// <Oidon>だんな、ここには　あけるものなんて
+// ありませんぜ。<end>
+<Oidon>
+Nothing to open here.<end>
+
+// <Oidon>だんな、ツネコを　たいほする　ひつようは
+// ありませんぜ。<end>
+<Oidon>
+Boss, there's no need<nl>
+to arrest her.<end>
+
+// <Oidon>なかなか　きれいな　へやですぜ。
+// はくせいか゛　おいてあります。<end>
+Translation goes here.<end>
+
+// <Oidon>なかなか　よさそうな　はくせいですぜ。
+// おいと゛んも　1つく゛らいほしいなー。<end>
+Translation goes here.<end>
+
+// <Oidon>カ゛サ、コ゛ソ・・・・・・。<pause>
+// だんな、なにも　ありませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>カ゛サ、カ゛サ・・・・・・。<pause>
+// だんな、へ゛つにいし゛ょうは　ありませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ゴンきちのことについて　はなしてくれ。<end>
+Translation goes here.<end>
+
+// <Oidon>ここにある　はくせいは　と゛うしたんた゛。
+// <Tsuneko>それは・・・<pause>かったんて゛す。<end>
+Translation goes here.<end>
+
+// <Oidon>ここにある　はくせいは
+// ほんとうに　かったものなんた゛ろうな。<end>
+Translation goes here.<end>
+
+// <contd><key><Oidon>ゴンきちの　いえには　はくせいなと゛
+// 1つもなかったそ゛。それなのに　と゛うして
+// ここに　あるんた゛。
+// <Tsuneko>おっとは　ハンティンク゛か゛　た゛いすきて゛した。<key>
+// <Tsuneko>そして　このような　はくせいも　つくりました。
+// それて゛・・・わたしと　わかれる時に・・・<key>
+// <Tsuneko>おっとの　ことを　わすれないようにと
+// いうことて゛・・・・・・。
+// かれの　たからものた゛ったのて゛すか゛
+// わたしに　くれたんて゛す。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Tsuneko>・・・・・・。<end>
+<contd>
+<Tsuneko>
+......<end>
+
+// <Oidon>ゴンきちについて　ほかに　なにか　しって
+// いるか？
+// <Tsuneko>しっていることは　すへ゛て　おはなししました。<end>
+<Oidon>
+Know anything else<nl>
+about Renard?<nl>
+<Tsuneko>
+I already told you all<nl>
+I know.<end>
+
+// ますぜ。<end>
+<end>
+
+// <Oidon>だんな、なにもとるようなものは　ありませんぜ。<end>
+<Oidon>
+Nothing here to take.<end>
+
+// <contd>ひきた゛しのカキ゛、<end>
+// @TODO@ - note no newline in original
+<contd>
+drawer key,<end>
+
+// 。<end>
+.<end>
+
+// ？<end>
+?<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+0<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// <contd>
+// <Tsuneko>わかりました。<pause>ほんとうのことを　いいます。<key>
+// <Tsuneko>それは、むかし　おっとか゛　ハンティンク゛を
+// やっていたのて゛、<pause>それて゛・・・・・・。<pause>
+// た゛から　ここに　あるんて゛す。<end>
+Translation goes here.<end>
+
+// と゛うする？　<end>
+What to do? <end>
+
+// と゛こへ？　<end>
+Where? <end>
+
+// なにを？　<end>
+What? <end>
+
+// <Beasu>いらっしゃい!　おっ、おいと゛んさん。
+// コアラさん　また゛　こ゛きけ゛んななめなんた゛。
+// すまないけと゛　しは゛らくして　きけ゛んか゛
+// なおってから　またきてくれないか。<key><Koala>てやんて゛い!　おれか゛　けいさつを　やめた
+// きもちか゛　おまえらに　わかるか!
+// <Oidon>えっ、コアラさん、それは　と゛ういうことて゛す？<key><Koala>このむらには　けいさつなんて　いらないんた゛。
+// それを　おまえらか゛・・・。
+// <Oidon>・・・・・・。<key><Oidon>だんな、これし゛ゃあ　と゛うしようもありません。
+// いちと゛　そうさほんふ゛に　もと゛って
+// て゛なおしましょう。<end>
+Translation goes here.<end>
+
+// <Oidon>ほんじゃ、ココンを　よひ゛ますぜ。<end>
+<Oidon>
+OK, we'll call Kit.<end>
+
+// <Beasu>いらっしゃい!
+// <Koala>おう、しょうこりもなく　またきやか゛ったか。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Oidon>・・・・・・た゛めですぜ。　だんな。
+// あいかわらす゛　のんた゛くれてます。<key><Koala>・・・おまえらは　しらないた゛ろうか゛
+// おれか゛はし゛めて　このむらにきたときは
+// はんさ゛いなんて　たた゛のひとつも　おこらない
+// へいわな　むらた゛ったんた゛。<key><Koala>それか゛　いまて゛は　ワルは゛かりか゛　ふえやか゛る。
+// もう　このむらは　おしまいさ。
+// <Oidon>・・・しかたありません、だんな。
+// そうさほんふ゛に　もと゛りましょう。<end>
+Translation goes here.<end>
+
+// <Oidon>ほんじゃ、ヘ゜ルーを　よひ゛ますぜ。<end>
+<Oidon>
+OK, we'll call Peru.<end>
+
+// <Oidon>ひか゛いしゃ。　3年まえに　つまとりこん。
+// ほうせきてんの　しゃちょうて゛あり、マンションも
+// けいえいしている
+// ふたりの　むすこか゛いる。　38さい。<end>
+Translation goes here.<end>
+
+// <Oidon>20さい。ひか゛いしゃのむすこて゛　ちょうなん。
+// おやとは　はなれてくらしている。
+// ほうせきてんの　せんむて゛　し゛き　しゃちょうとの
+// うわさか゛ある。<end>
+Translation goes here.<end>
+
+// <Oidon>18さい。コンタときょうた゛いて゛　し゛なん。
+// おやとは　はなれてくらしている。<end>
+Translation goes here.<end>
+
+// <Oidon>32さいて゛　け゛んさ゛いむしょく。
+// サラきんに　かなりの　か゛くの　かねを
+// かりていて　き゛ょうしゃに　しつこく
+// せめたてられて　いる。<key><Oidon>ほうせきてんの　ちかくの　ゴンきちの
+// マンションに　ひとりて゛　すんて゛いるか゛
+// やちんを　かなり　ためこんて゛いる。<end>
+Translation goes here.<end>
+
+// <Oidon>38さい。て゛んきやを　けいえいしている。
+// ゴンきちとは　むかしからの　ゆうし゛ん。<end>
+Translation goes here.<end>
+
+// <Oidon>23さい。き゛んこういん。
+// りょうしん、おとうと　ともに　なくなって
+// いるのて゛　ひとりく゛らし。
+// ゴンきちとは　ゆうし゛んのような　かんけい。<end>
+Translation goes here.<end>
+
+// <Oidon>た゛れか゛　おとしたのかは　わかりませんか゛
+// はんにんのもの　た゛と　おもいますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ヌキの"<char>"のことて゛なかったとしたら
+// いったい　なにを　いみするのた゛ろう・・・
+// おいと゛んは　わからなくなってしまいましたせ゛。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>だんな、ツネコのへやに　あった　はくせいは
+// ゴンきちの　たからもの　た゛ったようて゛す。<key><Oidon>ほんとうに、ゴンきちは　し゛ふ゛んのことを
+// わすれないて゛　ほしいために　たからものて゛ある
+// はくせいを　あけ゛たのて゛しょうか？<pause><pause>
+// しかも、1つ　のこらす゛・・・・・・。<key><Oidon>と゛うも　よくわかりませんぜ。て゛も、
+// このことと、ゴンきちか゛　ハンティンク゛を
+// やめたことと　なにか　かんれんせいか゛
+// あるような・・・<pause><pause>　そんな　きか゛　しますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、たしかな　しょうこも　ないのに
+// たいほは　て゛きませんぜ。<end>
+<Oidon>
+We need evidence first.<end>
+
+// <Oidon>また゛　"<char>"というもし゛は　わからないか？<end>
+<Oidon>
+Does this "N" still not<nl>
+mean anything to you?<end>
+
+// <contd>
+// <Konta>ヌキという　いか゛いは　なにも・・・。<end>
+<contd>
+<Konta>
+Aside from Nuki, I<nl>
+wouldn't know.<end>
+
+// ？<end>
+?<end>
+
+// 。<end>
+.<end>
+
+// <contd>
+// <Konta>しりませんよ。もう　みあきるほと゛
+// みてますけと゛ね。<end>
+Translation goes here.<end>
+
+// <Oidon>いまもっている　しょうこひんは・・・
+// きんは゜つ、メモ、けんし゛ゅう、ココンのカキ゛、
+// ほうせきるい、<end>
+Translation goes here.<end>
+
+// せんぜ。<end>
+<end>
+
+// <contd>
+// ・・・これた゛けですぜ。<end>
+<contd>
+...That's all.<end>
+
+// <Oidon>だんな、コンタは　10日のよる
+// 8時はんから　9時はんのあいた゛
+// ほうせきてんにいて、<key><Oidon>そのあとは　いえて゛　リンリンと　はなしを
+// していたそうて゛す。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Kokon>はい。<pause>せ゛んせ゛ん・・・。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Kokon>しりませんよ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、ココンは　10日のよる
+// 11時こ゛ろは　ヘ゜ルーと　テ゛ートを
+// していた　そうですぜ。<end>
+Translation goes here.<end>
+
+// !<end>
+!<end>
+
+// <contd>
+// <Kokon>・・・・・・。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Kokon>みたこと　ないて゛すよ。<end>
+Translation goes here.<end>
+
+// せんぜ。<end>
+<end>
+
+// 。<end>
+.<end>
+
+// <contd>
+// <Oidon>かんへ゛んしてくた゛さいよ　コアラさん。
+// し゛つは、あたらしい　し゛し゛つか゛わかって・・・<key><Koala>ふん、なにか　いいたいことか゛あるなら
+// いってみろ。
+// <Oidon>し゛つは　かくかく<pause>しかし゛か・・・・・・。<key><Koala>ふむ・・・それなら　ひとつた゛け　てか゛かりを
+// おしえてやろう。
+// まよいのもりを　しっているか？
+// <Oidon>あの　た゛れもあしを　ふみいれないという・・・<key><Koala>そうた゛。いまて゛こそ　さひ゛れているか゛
+// むかし　あそこは　さかなハンティンク゛の
+// メッカた゛った。<key><Koala>あそこへいけは゛　きっと　しょうこか゛
+// てにはいるた゛ろうな。
+// <Oidon>と゛、と゛うも　ありか゛とうこ゛さ゛います。<key><Oidon>あなたはやっは゜り　はんさ゛いそうさの
+// かみさまた゛!
+// <Koala>・・・よけいなことを　いってないて゛
+// はやく　まよいのもりへ　いくことた゛な。<key><Oidon>はい!
+// だんな、さっそく　まよいのもりへ
+// いきましょう!<key><Oidon>だんな　ここまて゛の　し゛けんの　けいかを
+// そうさファイルに　まとめました。
+// ファイルめいは　<red>つきのわく゛ま　<black>て゛す。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// ですぜ。<end>
+<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// ですぜ。<end>
+<end>
+
+// 。<end>
+.<end>
+
+// ？<end>
+?<end>
+
+// <Oidon>だんな、ヘ゜ルーを　たいほする　ひつようは
+// ありませんぜ。<end>
+<Oidon>
+Boss, there's no need<nl>
+to arrest her.<end>
+
+// <contd>
+// <Peruu>ええ・・・。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>その　かたのことは　よく　しりませんし、
+// まして　と゛こへいったかなと゛は・・・。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、ヘ゜ルーは　10日のよるは
+// ココンと　テ゛ートを　していたようて゛す。<end>
+Translation goes here.<end>
+
+0<end>
+
+// <contd>
+// <Peruu>・・・・・・まさか、<pause>
+// これか゛　しゃちょうの　おてか゛みて゛は・・・。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>さあ・・・みたことは　ありませんわ。<end>
+Translation goes here.<end>
+
+// <Oidon>うっ・・・。<pause>だんな、おもくて　もてませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>く゛くっ・・・。<pause>だんな、おもくて　もてませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>て゛は、とりますよ。<pause>・・・て゛も、やはり
+// もっていても　やくに　たたないと　おもうのて゛
+// とるのは　やめますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>たた゛の　ほんの　ようなのて゛　とるのは
+// やめますぜ。<end>
+<Oidon>
+It's just an ordinary<nl>
+book, so we don't need<nl>
+it.<end>
+
+// <Oidon>・・・だんな、へ゛つに　かわったところは
+// ありませんぜ。<end>
+<Oidon>
+Nothing particularly<nl>
+unusual about it.<end>
+
+// <Oidon>なにも　おちていませんぜ。<end>
+<Oidon>
+Nothing there.<end>
+
+// <Oidon>こうきゅう　そうな　ソファーですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ふつうの　まと゛ですぜ。<end>
+<Oidon>
+Just an ordinary<nl>
+window.<end>
+
+// <Oidon>だんな、これは　とらないほうか゛
+// いいですぜ。<end>
+<Oidon>
+We shouldn't take that.<end>
+
+// <Oidon>・・・とりましたせ゛。<pause>
+// <Tsuneko>キャッ。<pause>　なにするんて゛すか!
+// <Oidon>ちょっと　みせて　もらったた゛け
+// て゛すのて゛・・・　いま　もと゛します。<key><Oidon>だんな、
+// もう　これを　とるのは　やめましょうせ゛。<end>
+Translation goes here.<end>
+
+// <contd><key><Oidon>なせ゛　た゛まっているんた゛!
+// ほんとうのことを　いえ!!<end>
+<contd><key>
+<Oidon>
+Why are you so quiet?<nl>
+Tell us the truth!<end>
+
+// <Oidon>ここにある　はくせいは
+// ゴンきちに　もらったものた゛と　いったか゛、
+// なせ゛　1つのこらす゛　もらったんた゛。
+// <Tsuneko>く・・・<pause>くれたからて゛す。<key>
+// <Oidon>ゴンきちか゛　ハンティンク゛を　やめたことと
+// かんけいか゛　あるのて゛は　ないか？
+// <Tsuneko>・・・・・・。<pause>
+// そうて゛す・・・<pause>そのとおりて゛す・・・。<key>
+// <Tsuneko>むかしは　わたしたち　ふうふの　なかも
+// とても　うまくいってました。ところか゛・・・<pause><pause>
+// ３年はんほと゛まえの　ある日おっとか゛
+// まっさおな　かおて゛　かえってきたんて゛す。<key>
+// <Tsuneko>わたしには　なにも　いわす゛　たた゛　ひとりこ゛とて゛
+// "ついに　やっちまった"　とか<pause>
+// "あの　きんいろの・・・"　なと゛と
+// くちは゛しっているた゛けて゛・・・。<key>
+// <Tsuneko>その日いらい　おっとは　すきなハンティンク゛も
+// やめ　ひとりて゛なやんて゛いるようて゛した。
+// "おれは　おまえの　おっととして
+// ふさわしくない　おとこた゛"　といって・・・<key>
+// <Tsuneko>ついに　わたしたちは　りこんし　そのとき
+// た゛いし゛にしていた　はくせいも　みんな　わたしに
+// くれたのて゛す。
+// わたしか゛　しっているのは　これた゛けて゛すわ・・・<key>
+// <Oidon>だんな、<pause>もしかすると　<pause>ゴンきちは　3年まえに
+// た゛れかを　ころしたのかもしれませんね。とすると
+// こんと゛の　し゛けんは　うらみの　はんこう
+// ということも　かんか゛えられますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ゴンきちの　てか゛みの　なかの「あのこと」とか
+// 「あれ」なと゛というもし゛は　なにを
+// いみしているんた゛？<key>
+// <Tsuneko>それは・・・わたしたち　ふたりた゛けの
+// もんた゛いて゛す。と゛うか　そのことは
+// きかないて゛くた゛さい。<key>
+// <Tsuneko>そして・・・いま　あなたか゛
+// わたしに　たす゛ねたことは　ほかの　た゛れにも
+// たす゛ねないて゛くた゛さい。
+// おねか゛いします。<key>
+// <Oidon>なせ゛た゛？
+// <Tsuneko>わたしたち　ふたりの　もんた゛いて゛すから・・・。<end>
+Translation goes here.<end>
+
+// <Oidon>ゴンきちか゛
+// "<char>"というもし゛を　かきのこしたのた゛か゛
+// なにか　おもいあたらないか？
+// <Tsuneko>わたしには　わかりませんわ。<end>
+Translation goes here.<end>
+
+0<end>
+
+// <contd>
+// <Tsuneko>さあ・・・<pause>みたこと　ありませんわ。<end>
+<contd>
+<Tsuneko>
+I've never seen it.<end>
+
+// た゛れに？　<end>
+To whom? <end>
+
+// た゛れを？　<end>
+Whom? <end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+0<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// た゛れに？　<end>
+Whom? <end>
+
+// 。<end>
+.<end>
+
+// <Konta>おいと゛んさん!わかりました!
+// しょさいのきんこの　は゛んこ゛うか゛。<pause>2195て゛す。<pause>
+// けっこう　くろうしましたよ。この　は゛んこ゛うを
+// みつけるのには・・・・・・。<key>
+// <Konta>もう　ようし゛は　すみましたし、
+// わたしは　このへんて゛・・・。<end>
+Translation goes here.<end>
+
+0<end>
+
+0<end>
+
+// <Oidon>せっかく　ココンを　よんた゛んて゛すから
+// ココンに　めを　むけましょうよ。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>せっかく　ヘ゜ルーを　よんた゛んて゛すから
+// ヘ゜ルーに　めを　むけましょうよ。<end>
+Translation goes here.<end>
+
+// とウに　しょうとつして
+// けなんて゛す。<key>
+// <Kokon>こんなこと　<Oidon>だんな、とるようなものは　ありませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>・・・しらへ゛ましたか゛　なにもありませんぜ。<end>
+Translation goes here.<end>
+
+// <contd>
+// しかし、そこか゛　みえにくいのて゛
+// なにもないとは　いいきれませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、ここには　きく　あいてか゛
+// いませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、
+// そんなことをしたら　にけ゛ちゃいますよ。<end>
+Translation goes here.<end>
+
+// <Oidon>と゛こへ　いくかは　だんなに
+// おまかせしますのて゛　しんこうほうこうを
+// カーソルキーて゛　しし゛してくた゛さい。<end>
+Translation goes here.<end>
+
+// <Oidon>すいちゅうし゛ゅうは　た゛いし゛な
+// しょうこひんですぜ。　むやみにつかうのは
+// やめましょうよ。<end>
+Translation goes here.<end>
+
+// <Oidon>みたところ　かわったようすは　ありませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ふつうの　いわですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>おた゛やかな　みす゛うみ　ですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>きれいな　かわですぜ。
+// やはり　よこ゛すものか゛　いないた゛けあって
+// みす゛か゛　すきとおってますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ふつうの　はしのようですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>もう　あいてますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ものすこ゛く　きたないですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ク゛<pause>　ク゛ッ・・・・・・。<pause>
+// だんな、これは　とれませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>・・・あやしけ゛なものは　ありませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、と゛うしたんて゛すか？
+// はやく、カーソルキーて゛　しし゛してくた゛さいよ。<end>
+Translation goes here.<end>
+
+// <Oidon>・・・たた゛の　マッチは゛こ　て゛す。
+// なかには　マッチか゛　3ほ゛んは゛かり
+// はいっています。<end>
+Translation goes here.<end>
+
+// <Oidon>・・・ふつうの　オノて゛す。
+// ハは　まったくかけていないのて゛、
+// また゛　し゛ゅうふ゛んに　つかえますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>・・・ふつうの　すいとうて゛す。
+// なかには　みす゛か゛　はいってますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>・・・ふつうの　ホ゛ールて゛す。
+// しかし、すこし　よこ゛れていますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>・・・レンス゛には　まったく
+// いし゛ょうありませんのて゛　し゛ゅうふ゛ん
+// つかえますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>・・・ふつうの　すいちゅうメカ゛ネですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>・・・おおきさ、かたちとも　よくあるカキ゛と
+// おなし゛ような　かんし゛か゛　しますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>・・・たかそうな　かんし゛のする
+// すいちゅうし゛ゅうですぜ。
+// そう　ふるくはないと　おもいます。<end>
+Translation goes here.<end>
+
+// <Oidon>・・・ふつうの　むしメカ゛ネて゛す。
+// レンス゛にキス゛は　ないのて゛　し゛ゅうふ゛ん
+// つかえますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、このしんふ゛んは　やふ゛けているのて゛
+// 1まいの　はんふ゛んしか　ありませんぜ。
+// ひつ゛けを　みてみます・・・<pause>け゛け゛っ!
+// このしんふ゛んは　ふるすき゛ますぜ。<key><Oidon>３年はんも　まえのものて゛すよ。
+// <pause>まあ　いいや。<pause>なにか　おもしろい　きし゛は・・・
+// あっ、<pause>だんな、ころしの　きし゛か゛　のっています。<key><Oidon>"まよいのもりて゛　すいちゅうし゛ゅうて゛
+// うちころされ・・・。"
+// こう　かいてあります。<key><Oidon>・・・さ゛んねんなか゛ら
+// これいし゛ょうの　ことは　もし゛か゛
+// かすれていて　よめませんぜ。<end>
+Translation goes here.<end>
+
+// <contd><key><Oidon>しかし、だんな、これか゛　はんふ゛んしか
+// ないということは、もうかたほうか゛
+// きっと　と゛こかに　あるはす゛て゛す。<key><Oidon>それを　みつけた゛せは゛
+// もっと　くわしいことか゛　わかるかも
+// しれませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、これは　はんふ゛んに　やふ゛けています。
+// これには　ころしのきし゛に　かんけいする
+// かおし゛ゃしんか゛　のっています。<key><Oidon>しかし　かすれているのて゛
+// かおの　りんかくさえも　はっきり　しませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ハ゜ラ　ハ゜ラ　ハ゜ラ　・・・。<pause>
+// だんな、まよいのもりの　きし゛か゛
+// すこした゛け　のってますぜ。<pause>
+// 「あのし゛けんか゛　おこっていらい、<key><Oidon>まよいのもりには　た゛れも　あしを
+// ふみいれない　ようすて゛　まったく　なりをひそめた
+// ふ゛きみな　もりと　なっています。」・・・と
+// こう　かかれていますぜ。<key><Oidon>・・・あのし゛けんとは　なんのことて゛しょうか？<pause>
+// もしや、ゴンきちのことて゛は　・・・<pause>
+// て゛も、また゛　そうときめつけるのは
+// はやすき゛ますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>とくに　かわったところは　ありませんぜ。
+// たた゛の　とうゆの　ようですぜ。<end>
+<Oidon>
+Nothing unusual about<nl>
+the oil.<end>
+
+// <Oidon>きんは゜つに　けを　そめることか゛て゛きる
+// くすりて゛す。もしや　はんにんは
+// これを　つかって・・・。<end>
+Translation goes here.<end>
+
+// <Oidon>ちょっと　ふるいレンカ゛て゛すか゛
+// とくにかわったところは　ありませんぜ。<end>
+<Oidon>
+It's a bit old, but<nl>
+it's still an ordinary<nl>
+brick.<end>
+
+// <Oidon>ここには、た゛れも　いませんぜ。<end>
+<Oidon>
+There's nobody here.<end>
+
+// <Oidon>て゛は、くちのなかに　みす゛を　とります。<pause>
+// あっ、<pause>　コ゛ックン!<pause>
+// だんな、のみこんて゛しまいましたせ゛。<end>
+Translation goes here.<end>
+
+// <Oidon>いまのところは　なにも　もってませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、ねてるんし゛ゃないて゛すか？<end>
+Translation goes here.<end>
+
+// <contd>つかうことは　て゛きませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、マッチは　かす゛か゛　すくないのて゛、
+// いまこそ　つかうへ゛きた゛・・・　と
+// いういか゛いの　は゛あいは　つかわないように
+// しましょうよ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、ここには　きるものか゛
+// ありませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、しんりんは　とてもたいせつですぜ。<pause>
+// むやみにきっていては　きか゛へるは゛かりなのて゛
+// と゛うしても　ひつようた゛というときいか゛いは
+// きるのは　やめましょうよ。<end>
+Translation goes here.<end>
+
+// <Oidon>シ゛ャハ゛<pause>　シ゛ャハ゛<pause>　シ゛ャハ゛・・・。<pause>
+// だんな、すいとうの　みす゛を　つかいましたか゛
+// なんとも　ありませんぜ。<end>
+Translation goes here.<end>
+
+// ホ゜ーン・・・。<pause><pause>
+// <Oidon>だんな、ホ゛ールを　なけ゛ましたか゛
+// へ゛つに　なんとも　ありませんぜ。
+// ・・・あっ、<pause>ホ゛ールを　とってこなくては。<key><Oidon>だんな、ホ゛ールは　このてに　もと゛りましたせ゛。<end>
+Translation goes here.<end>
+
+// ホ゜ーン・・・。<pause><pause>ホ゜チャッ。<pause><pause>
+// <Oidon>あっ・・・<pause>だんな、ホ゛ールか゛　みす゛のなかへ
+// はいって　しまいました。<pause>
+// と゛、<pause>と゛うしましょう・・・<pause><key>フ゜ク<pause>　フ゜ク<pause>　フ゜ク<pause>
+// <Oidon>あれ？<pause>　すいめんに　あわか゛・・・？
+// シ゛ャホ゛ーン<pause><pause><end>
+Translation goes here.<end>
+
+// <Yousei>あなたは　しょうし゛きものて゛すね。<pause>
+// こ゛ほうひ゛に　このホ゛ールを　2つとも
+// さしあけ゛ましょう。<end>
+Translation goes here.<end>
+
+// <Yousei>うそをいっては　いけません。
+// あなたのホ゛ールは　この　よこ゛れたほうて゛す。
+// いちおう　あなたのホ゛ールは　かえしますか゛
+// うそを　つくのは　よくないことて゛す。<key><Yousei>こころを　たた゛し、しょうし゛きものに　なれるよう
+// つねに　こころか゛けなさい。<pause>
+// しょうし゛きものにのみ　かみは　すくいの　てを
+// さしのへ゛るのて゛す。<end>
+Translation goes here.<end>
+
+// <Oidon>・・・た゛いふ゛　とおくまて゛　みわたせますぜ。
+// しかし、つねに　ほ゛うえんきょうて゛みているのて゛
+// とくに　つかうとしなくてもいいですぜ。<end>
+Translation goes here.<end>
+
+// <contd>なにも　ありませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、ここて゛は　みす゛か゛　ないのて゛
+// すいちゅうメカ゛ネは　つかえませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、ここには　カキ゛て゛あけるものか゛
+// ありませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>・・・むしメカ゛ネは　つねにつかって
+// そうさをしているのて゛　とくにつかうとしなくとも
+// いいですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、これは　そうなんと゛も
+// つかえるものて゛はないのて゛、ここそ゛というとき
+// いか゛いにつかうのは　やめましょうよ。<end>
+Translation goes here.<end>
+
+// <Oidon>た゛こいやのこいわはしんきろうなり・・・。<pause>
+// よみあけ゛ましたか゛　なにも　おこりませんぜ。
+// いったい　このもし゛は
+// なにを　いみしているのて゛しょうか？<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、マッチか゛　おちていますぜ。<end>
+Translation goes here.<end>
+
+0<end>
+
+// <Oidon>ほんじゃ、とって　おきますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、オノを　みつけましたのて゛
+// とっておきますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、すいとうか゛　おちていますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、し゛めんに　ちいさな　あなか゛
+// あいてますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>・・・だんな、てか゛　とと゛かないのて゛
+// とれませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>あれ？<pause>　あなのなかに　ホ゛ールか゛
+// おちていますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>・・・しらへ゛ましたか゛　あなのなかには
+// なにも　ありませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>て゛は、すいとうのみす゛を　し゛めんのあなに
+// いれてみますぜ。
+// コ゛ホ゛<pause>　コ゛ホ゛<pause>　コ゛ホ゛・・・<pause><key><Oidon>あっ!<pause>　だんな、ホ゛ールか゛
+// うきあか゛ってきましたよ。<end>
+Translation goes here.<end>
+
+// コ゛ホ゛<pause>　コ゛ホ゛<pause>　コ゛ホ゛・・・<pause>
+// <Oidon>し゛めんのあなに　みす゛を　いれてみましたか゛、
+// なんのへんかも　ありませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、ほ゛うえんきょうか゛　おちてますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、かわのなかに
+// すいちゅうメカ゛ネか゛　おちてますぜ。
+// ここは　あさいのて゛　てて゛　とれますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、カキ゛か゛　おちてますぜ。<end>
+Translation goes here.<end>
+
+// <contd><key><Oidon>とくに　し゛ゅうようなことて゛は　ないて゛すね。
+// そうさを　つつ゛けましょう。<end>
+Translation goes here.<end>
+
+// <Oidon>これて゛は　むこうき゛しへは　わたれませんぜ。
+// かわのなか゛れか゛　はやいのて゛　およいて゛
+// わたることも　て゛きませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>なるほと゛。<pause>きを　きりたおして　はしのかわりに
+// するんて゛すね。て゛は　きを　きりたおしますぜ。<key>・・・コーン、<pause>コーン、<pause>コーン・・・<pause>
+// メリ　メリ　メリ・・・<pause>　ト゛スーン。<pause><end>
+Translation goes here.<end>
+
+// <Oidon>だんな、てつの　はこか゛　ありますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>く゛く゛っ・・・<pause>
+// だんな、これは　おもくて　もてませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、この　はこには　カキ゛か゛
+// かかってますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>て゛は、この　はこを　カキ゛て゛
+// あけてみますぜ。<pause>
+// ・・・カチャッ・・・。<pause>
+// だんな、あきましたせ゛。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、はこの　なかには　すいちゅうし゛ゅうか゛
+// はいって　ますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>はこのなかには　もう　なにも
+// はいってませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、くす゛かこ゛か゛　ありますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>くす゛かこ゛に　はいっている　しんふ゛んは
+// ほとんと゛　コ゛ミのようなものなのて゛
+// とるのは　やめますぜ。<end>
+Translation goes here.<end>
+
+// カ゛サ　カ゛サ・・・。<pause>
+// <Oidon>ふるしんふ゛や　くす゛しか　はいってませんぜ。<end>
+Translation goes here.<end>
+
+// カ゛サ　カ゛サ・・・。<pause>
+// <Oidon>だんな、ありましたせ゛。
+// はんふ゛んに　きれていた　しんふ゛んの
+// もうかたほうて゛す。<key><Oidon>まえにひろった　しんふ゛んと　ひ゜ったりと
+// あわさりますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、このきのうえに　なにか
+// ひっかかっていますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、このきの　うえのほうに
+// しゅうかんしか゛　ひっかかっているようて゛す。<end>
+Translation goes here.<end>
+
+// <Oidon>す゛いふ゛ん　おおきな　ハチのす　ですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、あの　しゅうかんしは
+// てか゛　とと゛かないのて゛　とれませんぜ。<key><Oidon>きを　ゆすって　おとそうと　おもったんて゛すか゛
+// ハチのすか゛　あるのて゛　て゛きませんし、
+// きを　のほ゛るにも　えた゛か゛　すくないのて゛
+// のほ゛れませんぜ。<end>
+Translation goes here.<end>
+
+// <contd>
+// これはいいものを　みつけました。
+// いまから　これをつかって　こまかいところまて゛
+// みていきます。<end>
+Translation goes here.<end>
+
+// <Oidon>て゛は　このホ゛ールを　つかって　しゅうかんしを
+// おとしてみます。
+// ・・・ホ゜カ・・・<pause>ハ゛サ。<pause>　おとしましたせ゛。<end>
+Translation goes here.<end>
+
+// <Oidon>て゛は、みす゛のなかを　しらへ゛て　みます。<end>
+Translation goes here.<end>
+
+0<end>
+
+// <Oidon>なんた゛か　このモク゛ラは
+// すか゛すか゛しい　かおを　していますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>この　まよいのもりは　むかしは
+// と゛んな　ところた゛った？<end>
+Translation goes here.<end>
+
+// <Oidon>いまの　まよいのもりは　と゛んな　ところた゛？<end>
+Translation goes here.<end>
+
+// <Oidon>さきほと゛　おまえは　ふたりつ゛れか゛
+// ここをとおると　いったか゛　そいつは
+// なにもんなんた゛。
+// <Mogura>おらは　めか゛みえないから　わからんし゛ょ。<key><Oidon>いったいそいつは　なにをしに　ここへくるんた゛。
+// <Mogura>そんなことは　わかんないし゛ょ。<key><Mogura>て゛も、ものす゛きな　やつらた゛し゛ょ。
+// こんな　あそふ゛ところも　みせも
+// いっけんも　ないとこに・・・。<end>
+Translation goes here.<end>
+
+// <Oidon>さきほと゛　おまえか゛いった　と゛うふ゛つか゛
+// と゛こへむかったか　おしえてくれ。
+// <Mogura>このもりの　はす゛れた゛し゛ょ。
+// にしのみす゛うみから　そう　とおくは　ないし゛ょ。<end>
+Translation goes here.<end>
+
+// <Oidon>にしのみす゛うみは　と゛こにある？<end>
+Translation goes here.<end>
+
+// <Oidon>け゛んきそうな　モク゛ラて゛す。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Mogura>しらないよ。<pause>　おれか゛　ここにきたのは
+// 2年まえた゛から。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Mogura>しす゛かた゛し・・・いいところた゛よ。
+// まったく・・・そうそ゛うしい　とかいは
+// うんさ゛りた゛。<end>
+Translation goes here.<end>
+
+// <Oidon>このへんに　た゛れかか゛　とおることはないか？
+// <Mogura>ああ<pause>　ときと゛き　くるね。
+// <Oidon>と゛んなと゛うふ゛つか　わかるか？
+// <Mogura>わからないね。　<pause>めか゛　みえないから。<end>
+Translation goes here.<end>
+
+// <Oidon>このへんを　とおるものか゛いると　いったか゛
+// そいつか゛　いつも　と゛こへいくのか
+// しっているか？<key><Mogura>うーん。<pause>　にしのみす゛うみよりも
+// にしのほうか゛くた゛ということしか　わからないな。
+// へ゛つに　しらへ゛たこともないし。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Mogura>ここの　まきたにあるのか゛　そうた゛よ。
+// て゛も、あそこには　いかないほうか゛　いいよ。
+// <Oidon>なせ゛？<key><Mogura>くさいんた゛よ。<pause>とうゆの　においか゛　するんた゛。
+// たふ゛ん　た゛れかか゛　うきし゛まにて゛も
+// おきっは゜なしに　したんし゛ゃないかな。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、モク゛ラのいっていた
+// うきし゛まか゛　みえますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>て゛は、だんな、およいて゛
+// あのうきし゛ままて゛　いってきますぜ。
+// サ゛ホ゛ーン<pause><end>
+Translation goes here.<end>
+
+// <Oidon>とうゆか゛　ありますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>・・・へ゛つに　かわったところは
+// ありませんぜ。<end>
+<Oidon>
+Nothing particularly<nl>
+unusual about it.<end>
+
+0<end>
+
+// <Oidon>・・・だんな、このさかなは
+// また゛　こと゛ものようですぜ。
+// と゛うりて゛・・・<pause>にけ゛ないわけですぜ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Sakana>むかしも　いまも　わからないよ。
+// ほ゛くは　みす゛のないところへは　いけないんた゛。<end>
+Translation goes here.<end>
+
+// <Oidon>このもりに　やってくる　と゛うふ゛つか゛
+// 2ひき　いるそうた゛か゛　しっているか？
+// <Sakana>そういえは゛　キツネをみたことか゛　あるよ
+// <Oidon>なに!　それは　た゛れた゛？<key><Sakana>そこまて゛　わからないよ。<pause>
+// おし゛さんは　さか゛しものを　しているの？
+// <Oidon>ああ、<pause>そうた゛よ。<pause>
+// <Sakana>それなら、ほ゛くのすいちゅうメカ゛ネを　あけ゛るよ。<key><Sakana>た゛けと゛・・・　ここには　ないんた゛。
+// さんかっけいに　ならんた゛　はやしの
+// ちかくのかわに　おとしちゃったんた゛。<key><Sakana>て゛も、あのかわの　なか゛れは
+// おた゛やかた゛から、いくら　すいちゅうメカ゛ネて゛も
+// あまり　なか゛されないはす゛た゛よ。<end>
+Translation goes here.<end>
+
+// <Oidon>あれ？　<pause>だんな、このいわに　なにか
+// かかれてますぜ。よんて゛みます。<pause>
+// "た゛こいやのこいわはしんきろうなり"<pause>
+// なんた゛こりゃ？<pause>　だんな、ふかかいですぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、ふつうのいわとは　ちか゛うかたちを
+// してますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>なるほと゛・・・。<pause>
+// だんな、こけしいわの　もし゛の　いみか゛
+// わかりましたせ゛。<key><Oidon>"た゛こいやのこいわはしんきろうなり。"
+// このもし゛から　"こ"を　ぬいてよめは゛
+// いいんて゛す。<key><Oidon>つまり　"た゛いやのいわは　しんきろうなり"。<pause>
+// とすると　このいわは　すへ゛てしんきろう。<pause>
+// なせ゛　"こ"を　ぬくかって？<pause><key><Oidon>それは　だんな、<pause>　こけしいわた゛からて゛すよ。
+// "こけし"・・・"こをけす"　という
+// ことですぜ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Oidon>す、すこ゛い　いきおいですぜ。<pause><pause>
+// まあ、とにかく　これて゛むこうへ　いけますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>て゛は　もと゛りますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ここの　きは　みっしゅうしては　いますか゛
+// き　そのものに　かわったところは
+// ありませんぜ。<end>
+<Oidon>
+The trees may be dense,<nl>
+but there's nothing<nl>
+unusual about them.<end>
+
+// <Oidon>だんな、あしあとか゛　あります。
+// しかし、はっきりしたものて゛は　ないのて゛
+// と゛のほうこうへむいているかは
+// わかりませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>て゛は、ここの　きを　やきはらいますぜ。<pause>
+// チリ<pause>　チリ<pause>　チリ<pause><end>
+Translation goes here.<end>
+
+// <contd>
+// <Oidon>だんな、マッチ1ほ゜んて゛　これた゛けの　きを
+// やきはらうことは　て゛きませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>て゛は、ここの　きを　やきはらいますぜ。<pause>
+// コ゛オー　　コ゛オー<pause><end>
+Translation goes here.<end>
+
+// <Oidon>て゛は、だんな、このとうゆを
+// みっしゅうしている　きき゛のあたりに
+// かけますぜ。<pause>
+// ハ゛シャ<pause>　ハ゛シャ<pause><end>
+Translation goes here.<end>
+
+// <Oidon>だんな、ここに　あしあとか゛　ありますぜ。<pause>
+// しかも　にしのほうこうへ　むかっています。
+// みちのないほうこうへ　むかっているなんて
+// おかしいですぜ。<key><Oidon>このむこうに　きっとなにかか゛　あるはす゛て゛す。
+// しかし、<pause>と゛うすれは゛
+// このむこうへ　いけるやら・・・・・・。<end>
+Translation goes here.<end>
+
+// <Oidon>けっこう　きれいな　こやですぜ。
+// そうふるくはないと　おもいます。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、みす゛うみのそこに
+// なにか　ひかるものか゛　みえましたせ゛。<end>
+Translation goes here.<end>
+
+// <Oidon>ふつうの　いえのつくりと
+// おなし゛ようですぜ。こやとはいえと゛も
+// ちょっとや　そっとの　ちからて゛は
+// たおれませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ふつうの　ト゛アの　ようですぜ。
+// カ゛チャッ・・・<pause>
+// あれ？　<pause>だんな、カキ゛か゛　かかっていない
+// ようですぜ。<end>
+Translation goes here.<end>
+
+// <contd>
+// もし　これか゛　はんにんのものた゛としても・・・<pause>
+// こんなところにすむような　ようき゛しゃは
+// ひとりとして　いませんせ゛・・・？<pause><end>
+Translation goes here.<end>
+
+// <Oidon>て゛は　おいと゛んか゛　なかにはいって
+// しらへ゛てきます。<end>
+Translation goes here.<end>
+
+// <Oidon>ちょっと　まわりを　みてみますぜ。<pause>
+// おっ、<pause>にしに　みえる　きに
+// なにか　はためいていますぜ。<end>
+Translation goes here.<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+// <Oidon>だんな　かなりの　せいかか゛　ありました。
+// もう　これいし゛ょう　あるきまわっても　なにも
+// て゛てこないと　おもいますぜ。<pause><pause>
+// そろそろ　そうさほんふ゛へ　もと゛りましょう。<key><Oidon>だんな　ここまて゛の　し゛けんの　けいかを
+// そうさファイルに　まとめました。
+// ファイルめいは　<red>おおありくい　<black>て゛す。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな!　すこ゛いものを　みつけました。
+// なんと　けを　そめる　くすりて゛すよ!
+// しかも　ほら　これは　きんは゜つようた゛。<key><Oidon>と゛うやら　しょうこの　きんは゜つは
+// くすりて゛　そめたものた゛った　ようて゛すね。<key><Oidon>もし　これか゛　はんにんのものた゛としても・・・<pause>
+// こんなところにくるような　ようき゛しゃは
+// ひとりとして　いませんせ゛・・・？<pause><end>
+Translation goes here.<end>
+
+// <Oidon>だんな、
+// いわのかけ゛に　なにか　ありますぜ。<end>
+Translation goes here.<end>
+
+0<end>
+
+0<end>
+
+// <Oidon>きたないホ゛ールと　きれいなホ゛ールの
+// 2しゅるいもっています。<end>
+Translation goes here.<end>
+
+// きれいなホ゛ールか゛　ひかりた゛した。<pause><pause><pause><end>
+Translation goes here.<end>
+
+// <Oidon>おっー!<pause>　だんな、
+// みちか゛　て゛てきましたせ゛。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、
+// よくみえないのて゛　しらへ゛られませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、はちに　さされちゃいますよ。<end>
+Translation goes here.<end>
+
+// <Oidon>きれいな　かわですぜ。
+// あれ？　<pause>みす゛のそこに　なにか　ありますよ。<end>
+Translation goes here.<end>
+
+// シ゛ャフ゛　シ゛ャフ゛・・・<pause>
+// <Oidon>ほんじゃ、とっておきますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>こんなところに　ひとか゛いるなんて!<pause>
+// た゛れなのて゛しょう。<end>
+Translation goes here.<end>
+
+// <Oidon>て゛は、すいちゅうメカ゛ネを　つかって
+// みす゛のなかを　みてみます。・・・<pause><end>
+Translation goes here.<end>
+
+// <contd>
+// だんな、なにも　ありませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、いわのかけ゛に　
+// しんふ゛んか゛　おちてますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、むしメカ゛ネか゛　おちてますぜ。<end>
+Translation goes here.<end>
+
+// と゛うする？　<end>
+What to do? <end>
+
+// なにを？　<end>
+What? <end>
+
+// と゛こへ？　<end>
+Where? <end>
+
+// <contd>
+// <Mogura>おらか゛　ここに　きたのは　1年まえた゛から
+// そんなことは　わからんし゛ょ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Mogura>ここは　しす゛かて゛いいし゛ょ。<pause>とかいへいくと
+// やたら　つうこうにんか゛　おおいから
+// ちちゅうにすむ　おいらは　めいわくた゛し゛ょ。<key><Mogura>そこへいくと　ここは　た゛れもとおらない・・・
+// いゃ、<pause>ときと゛き　ふたりつ゛れの　と゛うふ゛つか゛
+// とおることはあるけと゛・・・<key><Mogura>て゛も　そんなことは　と゛うて゛も　いいことた゛し゛ょ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Mogura>いちは゛ん　にしにあるみす゛うみか゛
+// にしのみす゛うみ　た゛し゛ょ。<key><Mogura>もし、このもりの　すみす゛みまて゛あるきたいのなら
+// "こけしいわ"　へ　いくといいし゛ょ。<end>
+Translation goes here.<end>
+
+// <****>"あいか゛<pause>　いそいて゛る　<pause><pause>
+// とおくて゛<pause>　きみか゛よふ゛<pause><pause>
+// あいか゛<pause>　いそいて゛る<pause><pause>
+// おおきく<pause>　てを<pause>　ふる"<pause><pause><end>
+Translation goes here.<end>
+
+// <****>ケ゛ヘ゛ロッチョーー。<pause>
+// ほ゛く　くさりまく゛ろ　さは゛おて゛す。
+// ラシ゛オて゛は　ちょっとゆうめいた゛けと゛・・・。<pause>
+// それし゛ゃ、ハ゛イハ゛イ。<pause>　ラ、。<end>
+Translation goes here.<end>
+
+// と゛ちら？　<end>
+Which? <end>
+
+// <contd>
+// <Oidon>だんな、これて゛　むこうき゛しへ　わたれますぜ。<end>
+Translation goes here.<end>
+
+// <contd><key><Yousei>わたしは　みす゛の　ようせいて゛す。<pause>
+// あなたか゛　おとしたホ゛ールは　この　よこ゛れた
+// ホ゛ールて゛すか？<pause>
+// それとも　この　きれいなホ゛ールて゛すか？<end>
+Translation goes here.<end>
+
+// 
+// <end>
+<nl><end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。i<key>($FE)Hほんじゃ、ZXijh|z($FE)<key>i<key>
+// @TODO@ - data?
+
+// <Oidon>ます゛は
+// た゛れかを　ここによひ゛ましょうせ゛。<end>
+<Oidon>
+Let's call someone in<nl>
+first.<end>
+
+// た゛れを　よひ゛ましょうか？　<end>
+Call whom? <end>
+
+// <Oidon>だんな、いまのところし゛ょうほうは
+// ありませんぜ。<end>
+<Oidon>
+No info at this time.<end>
+
+// 。<end>
+.<end>
+
+// ますぜ。<end>
+<end>
+
+// <Oidon>みせるものはあるんて゛すか゛
+// あいてか゛いませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>た゛、<pause>だんな。<pause>　おいと゛んは　はんにんて゛は
+// ありませんよ。<pause>　そんなかなしいことを
+// いわないて゛くた゛さいよ。<end>
+Translation goes here.<end>
+
+// <Oidon>ほんじゃ、コンタをよひ゛ますぜ。<end>
+<Oidon>
+OK, we'll call Red.<end>
+
+// <Oidon>ほんじゃ、ココンをよひ゛ますぜ。<end>
+<Oidon>
+OK, we'll call Kit.<end>
+
+// <Oidon>ほんじゃ、ツネコをよひ゛ますぜ。<end>
+<Oidon>
+OK, we'll call Tsuneko.<end>
+
+// <Oidon>なにも　ありませんぜ。<end>
+<Oidon>
+There's nothing there.<end>
+
+// <Oidon>ほんじゃ、ヘ゜ルーをよひ゛ますぜ。<end>
+<Oidon>
+OK, we'll call Peru.<end>
+
+// <Oidon>ほんじゃ、リンリンをよひ゛ますぜ。<end>
+<Oidon>
+OK, we'll call Rinrin.<end>
+
+// <Oidon>ほんじゃ、ヒ゜ョンコをよひ゛ますぜ。<end>
+<Oidon>
+OK, we'll call Amy.<end>
+
+// <Oidon>だんな!　ありました。コンタか゛　いったとおり
+// おうせつまのかへ゛に　ちのついた　た゛んか゛んか゛
+// めりこんて゛いました。このあいた゛は　うっかり
+// みのか゛していたんて゛す。かんにんしてくた゛さい。<end>
+Translation goes here.<end>
+
+// <Oidon>"あのし゛けんか゛おこっていらい　まよいのもりには
+// た゛れもあしを　ふみいれてないようすて゛
+// まったくなりをひそめたふ゛きみな　もりと
+// なっています。"　と、こうかかれていますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、ころしのきし゛か゛のってますぜ。
+// 「・・・まよいのもりて゛　すいちゅうし゛ゅうて゛
+// うちころされ・・・。」
+// こう　かいてあります。<key><Oidon>これいし゛ょうの
+// ことは　もし゛か゛かすれていて　よめませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ん・・・。だんな、かすれていてまったく
+// わかりませんぜ。なにしろ　3年いし゛ょうもまえの
+// しんふ゛んて゛すからね。<end>
+Translation goes here.<end>
+
+// <Oidon>コンタについて　くわしく　ききたいんた゛か゛？<end>
+Translation goes here.<end>
+
+// <Oidon>ほうせきるいか゛　みつかったのはいいんて゛すか゛
+// 1つた゛け　たりないというのは
+// と゛ういうことなんて゛しょうかね？<end>
+Translation goes here.<end>
+
+// <Oidon>だんな、このしんふ゛んは　３年はんく゛らいまえの
+// ものですぜ。そして、ツネコのはなしによると
+// ゴンきちか゛　ヘンになったのも
+// ３年はんほと゛まえて゛す。<key><Oidon>このきし゛のし゛けんと　ゴンきちのこうと゛うに
+// つなか゛りか゛あると　かんか゛えても
+// まちか゛いないと　おもいますぜ。<end>
+Translation goes here.<end>
+
+// ？<end>
+?<end>
+
+// <Oidon>それて゛は　おうせつまのかへ゛を　しらへ゛てきます!<end>
+Translation goes here.<end>
+
+// <Oidon>しらへ゛て　みたところ　このち　は
+// ゴンきちのものて゛はないと　わかりました。
+// いったい　た゛れのち　なんた゛ろう？<end>
+Translation goes here.<end>
+
+// <Oidon>ます゛　はんにんの　と゛うきか゛　ほうせきめあてか
+// それとも　うらみか。このてんか゛
+// はっきりしないと　はんにんの　すいりは
+// むす゛かしいですぜ。<key><Oidon>もし、と゛うきか゛　うらみ　た゛とすれは゛
+// ３年はんまえに　いったい　なにか゛あったのかか゛
+// こんと゛のし゛けんの　カキ゛になりそうて゛す。<end>
+Translation goes here.<end>
+
+0<end>
+
+// ますぜ。<end>
+<end>
+
+// <contd>
+// <Tsuneko>おいと゛んさん　コンタを　たすけてくた゛さい。
+// あのこか゛　ちちおやを　ころすはす゛か゛ありません!
+// あのこは　た゛れかを　かは゛っているんて゛す。<key><Oidon>なに　それは　いったい・・・
+// <Tsuneko>まえに　コンタから　きいたのて゛す。
+// いま　つきあっているひとか゛　いると・・・
+// <Oidon>いったい　あいては　た゛れた゛？<key><Tsuneko>そこまて゛は　おしえて　くれませんて゛したか゛
+// あのこは　きっと　そのかたを　かは゛って・・・<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>コンタさんは　とても　まし゛めなかたて゛すわ。
+// とても　ひとこ゛ろしなんて・・・<end>
+Translation goes here.<end>
+
+// ？<end>
+?<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>ほんじゃ、いさ゛かや　クマへ　いきましょうや。<end>
+Translation goes here.<end>
+
+// <Oidon>せっかくコンタを　よんた゛んて゛すから
+// コンタにめを　むけましょうよ。<end>
+Translation goes here.<end>
+
+// せんぜ。<end>
+<end>
+
+// <Oidon>だんな、たいほするのは　けっていてきな
+// しょうこをつかんて゛からにしましょうよ。<end>
+Translation goes here.<end>
+
+// <Oidon>３年はんほと゛まえに　ゴンきちか゛　なにか
+// し゛けんを　おこしたことは　ないか？<end>
+Translation goes here.<end>
+
+// <contd>
+// <Konta>・・・しりませんね。<end>
+<contd>
+<Konta>
+I dunno.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>まよいのもりについて　なにかしっているか？<end>
+Translation goes here.<end>
+
+// <contd>
+// <Konta>あんな　うすきみのわるいところ
+// いったことも　ありませんよ。<end>
+Translation goes here.<end>
+
+// ？<end>
+?<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>ちょっとしつれい・・・。
+// だんな、なにもありませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>・・・・・・。<end>
+<Oidon>
+......<end>
+
+// せんぜ。<end>
+<end>
+
+// <Oidon>これに　みおほ゛えは　ないか？<end>
+Translation goes here.<end>
+
+// <contd>
+// <Konta>しりませんよ・・・。<end>
+<contd>
+<Konta>
+I dunno.<end>
+
+// <contd>
+// <Konta>こんな　ふるそうなしんふ゛んを　と゛こから
+// もってきたんて゛すか？　みたことないて゛すよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Konta>・・・それは、おやし゛のものた゛とおもいます。<end>
+<contd>
+<Konta>
+I think that's my<nl>
+father's.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// <contd>
+// <Konta>わ、わかりませんね。<end>
+<contd>
+<Konta>
+I, I don't know.<end>
+
+// 。<end>
+.<end>
+
+// <Oidon>せっかくココンを　よんた゛んて゛すから
+// ココンにめを　むけましょうよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Kokon>おやし゛は　わるいことを　するような
+// ひとし゛ゃない!　しつれいた゛そ゛。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// <contd>
+// <Kokon>まよいのもり・・・おやし゛か゛　むかし、よく
+// ハンティンク゛を　していたは゛しょた゛な。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// せんぜ。<end>
+<end>
+
+// <contd>
+// <Kokon>みたことありませんよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Kokon>・・・・・・しりませんよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Kokon>と゛こて゛　みつけてきたんて゛す？
+// それは　おやし゛のて゛すよ。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// <contd>
+// <Kokon>・・・わかりませんね。<end>
+Translation goes here.<end>
+
+// <Oidon>せっかくツネコを　よんた゛んて゛すから
+// ツネコにめを　むけましょうよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Tsuneko>わたしか゛　しっていることは　すへ゛て
+// おはなししたはす゛て゛す。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// <contd>
+// <Tsuneko>わかりません。おっとは　なにも
+// はなしてくれなかったのて゛・・・<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// せんぜ。<end>
+<end>
+
+// <contd>
+// <Tsuneko>まったく・・・
+// そこにかかれている　とおりて゛すね。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Tsuneko>・・・まさか　このし゛けんか゛　３年はんまえに
+// おっとか゛　おかしくなった　け゛んいんた゛と
+// いうのて゛は・・・。<key><Tsuneko>こんな　おそろしいこと　とても
+// しんし゛られませんわ!<end>
+Translation goes here.<end>
+
+// <contd>
+// <Tsuneko>おっとか゛　た゛いし゛にしていた
+// すいちゅうし゛ゅうて゛す。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Tsuneko>そうて゛すか・・・・・・。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Tsuneko>わかりませんわ。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// <contd><key><Kokon>なんて゛すか　これ？
+// <Oidon>しらは゛っくれるな!　おまえか゛　ヒ゜ョンコに
+// あけ゛たものた゛ろう!<end>
+Translation goes here.<end>
+
+// <contd>
+// <Konta>なんて゛すか　これ？
+// うちに　こんなほうせき　あったかな？<end>
+Translation goes here.<end>
+
+// <contd>
+// <Tsuneko>わたしの　ほうせきて゛は　ありませんわ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Rinrin>それは　わたしのて゛す!
+// せんし゛つ　コンコンほうせきてんに
+// しゅうりに　た゛したゆひ゛わた゛わ!<key><Rinrin>た゛いし゛にしていたんて゛す。
+// いますく゛　かえして　くた゛さい。
+// <Oidon>もうしわけないか゛、このゆひ゛わは　し゛けんの
+// し゛ゅうような　しょうこひんなのて゛<key><Oidon>しは゛らく　あす゛からせて　もらえないかね。
+// <Rinrin>・・・わかりました。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>と゛こから　みつかったんて゛すか？<key><Peruu>これは、ひとつた゛け　なくなっていた
+// ゆひ゛わて゛す。たしか、おきゃくさんから
+// おあす゛かりした　しなものて゛すわ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Kokon>なんて゛すか　しつこいなあ。<key><Oidon>しかも　このゆひ゛わは　おまえか゛　みせから
+// ぬすんた゛ものた゛。
+// ヘ゜ルーさんと　リンリンさんの　しょうけ゛んて゛
+// わかったんた゛そ゛!<key><Kokon>・・・わかりました。たしかに　ほうせきを
+// ぬすんた゛のは　わたして゛す。
+// て゛も、わたしは　ころしは　やっていない!<key><Kokon>おやし゛の　したいを　はっけんしたとき
+// つい　て゛きこ゛ころて゛・・・。<pause>
+// ぬすんて゛も　さつし゛んはんに　つみを
+// かふ゛せれは゛　は゛れないた゛ろうと　おもったんて゛す。<key><Oidon>ヌキのへやに　ほうせきやカキ゛を　かくしたのも
+// おまえた゛な？
+// <Kokon>はい。あそこは　うちのマンションなのて゛
+// あいカキ゛て゛　こっそり　はいれましたから・・・<key><Oidon>わかった。おまえには　アリハ゛イも　あるしな。
+// ココン!<pause>　ぬすみの　ようき゛て゛　たいほする!!<end>
+Translation goes here.<end>
+
+// <contd>
+// <Kokon>しりませんよ、そんなこと。<end>
+Translation goes here.<end>
+
+// <Oidon>あれ？　ヒ゜ョンコさんのゆひ゛に　みなれぬ
+// ゆひ゛わか゛・・・<pause><end>
+Translation goes here.<end>
+
+// <Oidon>ヒ゜ョンコくん　このゆひ゛わは　いったい
+// と゛うしたんた゛い？
+// <Pyonko>ココンさんか゛　うわきの　おわひ゛た゛といって
+// フ゜レセ゛ント　してくれたの。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>あれ？<pause>よくみると　これは　ハ゜ンタ゛し゛ゃないて゛すか。
+// むかし　にんきものた゛った　<dark-red>ルンルン<black>に
+// ちか゛いないわ。<key><Oidon>なんた゛って!　まちか゛いないた゛ろうね？
+// <Peruu>ええ、そうて゛す。めす゛らしい　きんいろの
+// ハ゜ンタ゛なのて゛　たいへんな　にんきものて゛したわ。
+// し゛つは　わたしも　ファンた゛ったんて゛すけと゛・・・<key><Peruu>それか゛　かわいそうに　た゛れかに　ころされたのよ
+// あんた　けいし゛のくせに　しらなかったの!
+// <Oidon>いや　なにしろ　しんまい　て゛すから・・・
+// そうか　そんなことか゛　あったのか。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな!　そうさほんふ゛に　コンタか゛　たす゛ねて
+// きましたせ゛。
+// はなしたいことか゛あると　いってます。
+// きいてみましょう。<end>
+Translation goes here.<end>
+
+// <contd><key><Oidon>やあ、コンタくん　と゛うしたね？<pause>
+// <Konta>し゛つは<pause><pause>　し゛しゅをしにきました・・・
+// <Oidon>ええっ<pause>　なんた゛って!<pause>
+// <Konta>おやし゛を　ころしたのは　わたしなんて゛す。<key>
+// <Oidon>そんな・・・と゛ういうことた゛？
+// <Konta>あの日わたしか゛　8時はんから　おやし゛と
+// はなしを　していたことは　こ゛そ゛んし゛て゛すね。<key>
+// <Konta>あのとき　わたしと　おやし゛は　みせの
+// これからの　けいえいについて　けんかして
+// しまったんて゛す。<key><Konta>き゛ろんは　しんやまて゛　つつ゛きました。
+// そして　11時こ゛ろ　カッとなった　わたしは
+// おやし゛に　おそいかかってしまったのて゛す。<key>
+// <Konta>みのきけんを　かんし゛た　おやし゛は
+// けんし゛ゅうを　とりた゛し　いかくしゃけ゛きを
+// しました。<key>
+// <Konta>わたしは　さらに　カッとなり　そのまま
+// もつれあいに　なりました。
+// そのとき　おやし゛のけんし゛ゅうか゛ほ゛うはつして
+// しんそ゛うを　つらぬいたのて゛す。<key>
+// <Konta>おやし゛のうった　た゛んか゛んは　きっと　かへ゛の
+// と゛こかに　めりこんて゛　いるはす゛て゛す。
+// しらへ゛れは゛　わかります。<key>
+// <Konta>これか゛　し゛けんの　しんそうて゛す。
+// リンリンさんには　アリハ゛イの　き゛しょうを
+// おねか゛いして　こ゛めいわくを　おかけしました。<key>
+// <Konta>かのし゛ょには　つみは　ありません。
+// と゛うか　とか゛めたり　しないて゛くた゛さい。
+// <Oidon>わかった・・・コンタ!　ちちおや　さつか゛い
+// ようき゛て゛　たいほする!!<end>
+Translation goes here.<end>
+
+// <contd><key><Oidon>さて、だんな。たいほは　しましたか゛　コンタの
+// こくはくは　あいまいな　ことは゛かりて゛す。
+// きんは゜つについても　いまた゛に　なそ゛のままて゛す。<key>
+// <Oidon>だんな、やはりここは　さらに　そうさを
+// つつ゛けてみる　ひつようか゛　ありますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな　リンリンは　と゛うも　るす　みたいて゛す。
+// た゛れも　て゛んわに　て゛ないんて゛すよ。<end>
+Translation goes here.<end>
+
+// <Oidon>せっかくヘ゜ルーを　よんた゛んて゛すから
+// ヘ゜ルーにめを　むけましょうよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>とくに　きおくに　ありませんわ。<end>
+Translation goes here.<end>
+
+// <contd><key><Oidon>だんな、たしか　たりない　ほうせきは
+// ゆひ゛わ　て゛したよね。
+// こいつは　あやしいですぜ。<key><Oidon>わるいけと゛　ヒ゜ョンコくん。さんこうひんとして
+// ゆひ゛わを　かして　もらえないかな？
+// <Pyonko>ええ、かまいませんわ。
+// て゛も、はやく　かえしてくた゛さいね。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>いいえ　なにも。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// せんぜ。<end>
+<end>
+
+// 。<end>
+.<end>
+
+// <contd>
+// <Peruu>まっ　キタナイしんふ゛ん　て゛すこと!<end>
+Translation goes here.<end>
+
+// <contd>
+// <Peruu>あ　それ<pause>　す゛いふ゛ん　むかしに　だんなさまか゛
+// もってらっしゃるのを　みたことか゛　ありますわ。<end>
+Translation goes here.<end>
+
+0<end>
+
+// <contd>
+// <Peruu>と゛こかて゛　みたようなきか゛・・・<pause>
+// て゛も　おもいた゛せませんわ。<end>
+Translation goes here.<end>
+
+// <Oidon>せっかくリンリンを　よんた゛んて゛すから
+// リンリンにめを　むけましょうよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Rinrin>・・・しりません。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// <contd>
+// <Rinrin>とくに　しっていることは　ありませんわ。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// せんぜ。<end>
+<end>
+
+// <contd>
+// <Rinrin>さあ・・・・・・しりませんよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Rinrin>さあ・・・<pause>わたし・・・<pause>
+// わかりません。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Rinrin>あの・・・<pause>　いいえ
+// みたことも　ありませんわ。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// <contd>
+// <Rinrin>さあ・・・<pause>　なんて゛しょう。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+0<end>
+
+// <Oidon>せっかくヒ゜ョンコを　よんた゛んて゛すから
+// ヒ゜ョンコにめを　むけましょうよ。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Pyonko>さあ　あのひとのことは　わたし
+// よくしらないから・・・<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// <contd>
+// <Pyonko>うわさて゛は　あそこには　すか゛すか゛しい
+// かおをした　モク゛ラか゛　いるそうよ。へんなの。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// せんぜ。<end>
+<end>
+
+// <contd>
+// <Pyonko>しらなーい。わたし　ほんって　よまないから。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Pyonko>ふるい　しんふ゛んね。
+// て゛も　あたし　しんふ゛んって　よんた゛ことないの。
+// こ゛めんね。<end>
+Translation goes here.<end>
+
+// <contd>
+// <Pyonko>きゃあー!<pause><pause>
+// なにこれ？<pause>　こんな　こわいもの　みせないて゛。<end>
+Translation goes here.<end>
+
+// <Oidon>うつっているのは　2ひきの　そっくりな
+// ハ゜ンタ゛て゛す。しかも　いっひ゜きは　きんは゜つ!<pause>
+// あっ　よくみてくた゛さい<pause>　これは<pause>　<dark-red>リンリン<black>て゛す!
+// きんは゜つのほうは　ヘ゜ルーか゛　いっていた<key><Oidon>ルンルンに　ちか゛いありません。
+// リンリンとルンルンは　ふたこ゛　た゛ったのか・・・<end>
+Translation goes here.<end>
+
+// <contd>
+// <Pyonko>た゛れ、これ？　わかんないわ。<end>
+Translation goes here.<end>
+
+// <Beasu>いらっしゃい!
+// <Oidon>あれっ、コアラさん　いないの？
+// <Beasu>そうなんて゛すよ。さっきまて゛　そこて゛
+// よいつふ゛れて　ねてたんて゛すけと゛ね<key><Beasu>いきなり　おもいつめたような　かおをして
+// たちあか゛ったかと　おもったら
+// と゛こかへ　いってしまったんて゛すよ。<key><Oidon>そうて゛すか。
+// だんな、しかたないのて゛　そうさほんふ゛に
+// かえりましょう。<end>
+Translation goes here.<end>
+
+// <Oidon>とくに　みるようなものは　ありませんぜ。<end>
+<Oidon>
+There's nothing inter-<nl>
+esting to look at.<end>
+
+// <Oidon>こうきゅうそうな　ゆひ゛わて゛す。
+// て゛も　なんの　へんてつも　ありませんぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>あれっ、このゆひ゛わ　よくみると　ほうせきの
+// ところか゛　はす゛れるように　なってますよ。<pause>
+// わわっ!<pause>　なかに　しゃしんか゛　はいってました。<end>
+Translation goes here.<end>
+
+// <Oidon>そんな　よわきなことを　いっていて
+// いいんて゛すか!
+// し゛けんかいけつまて゛　あといっほ゜なんて゛すよ。<end>
+Translation goes here.<end>
+
+// <Oidon>だんな　たいへんて゛す!　ゴンきちの　したいを
+// かいほ゛うした　けんしかんから　あらたな
+// しょうこ　はっけんの　ほうこくか゛　ありました。<key><Oidon>ゴンきちの　いのなかから　たくさんの
+// かみきれか゛　みつかったのて゛す。
+// そのかみきれを　つなき゛あわせ　おいと゛んの
+// もっている"<char>"のし゛のかいてある　かみきれも<key><Oidon>いっしょに　つなけ゛ると　1まいの
+// ひ゛んせんに　なるのて゛す。
+// そのひ゛んせんには　つき゛のようなことは゛か゛
+// かいてあります。<key><Oidon>"<dark-red><char><char>こ゛のハ゜ンタ゛か゛　わしをころす<black>"
+// ふたこ゛のハ゜ンタ゛・・・と゛うかんか゛えても　これは
+// リンリンとルンルンに　ちか゛いありません!<key><Oidon>こうなったら　ほ゛やほ゛やしては　いられません!
+// いますく゛　リンリンのいえに　のりこんて゛
+// たいほしなけれは゛!<end>
+Translation goes here.<end>
+
+// <Oidon>ちょっと　まってくた゛さい。
+// だんな　ちょうと゛て゛んわか゛　はいりました。<pause>
+// もしもし　<pause><pause>・・・<pause>・<pause>・<pause>
+// な<pause>　なに？<key><Oidon>だんな!　た<pause>　た<pause>　た<pause>　たいへんて゛す!<pause>
+// リンリンか゛　しにました!
+// し゛ふ゛んのへやて゛　てくひ゛をきって　しんて゛いるのか゛
+// はっけんされたそうて゛す。<key><Oidon>あっ　リンリンの　いしょか゛　とと゛きました。<pause>
+// "みなさん　もうしわけありません。つみは
+// すへ゛て　わたしにあるのて゛す。コンタさんや
+// ほかのひとには　なんの　かんけいもありません。"<key><Oidon>これた゛けて゛す。なんとも　おもいか゛けないことに
+// なったもんて゛す。
+// おそらく　コンタの　こいひ゛とというのも
+// リンリンに　ちか゛いありません。<key><Oidon>これは　もういちと゛　コンタから　はなしをきく
+// ひつようか゛　ありそうて゛すね。
+// ・・・それて゛は　コンタを　よひ゛ますぜ。<end>
+Translation goes here.<end>
+
+// <Oidon>ほうせきを　ぬすんた゛のか゛　ココンた゛とすると
+// はんにんの　と゛うきは　うらみ　らしいて゛すね。
+// となると　ゴンきちか゛　３年はんまえ　た゛れかを
+// ころしたというのは　ほんとうみたいて゛すね。<end>
+Translation goes here.<end>
+
+// <Oidon>と゛うも　コンタか゛　はんにんた゛とは
+// おもえません。た゛れかを　かは゛っている
+// ということも　かんか゛えられます。<end>
+Translation goes here.<end>
+
+// 。<end>
+.<end>
+
+// !<end>
+!<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// C<end>
+C<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// せんぜ。<end>
+<end>
+
+0<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// せんぜ。<end>
+<end>
+
+// 。<end>
+.<end>
+
+// ？<end>
+?<end>
+
+0<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// 。<end>
+.<end>
+
+// と゛うする？　<end>
+What to do? <end>
+
+// と゛こへ？　<end>
+Where? <end>
+
+// なにを？　<end>
+What? <end>
+
+// た゛れを？　<end>
+Whom? <end>
+
+// 。<end>
+.<end>
+
+// <Oidon>いくのは　やめますぜ。<end>
+<Oidon>
+OK, never mind.<end>
+
+// <Oidon>ほんじゃ、かえって　もらいますぜ。<end>
+<Oidon>
+OK, you may go now.<end>
+
+// <Oidon>だんな、ここに　いますぜ。
+// いいかけ゛ん　なまえく゛らい　まちか゛えないて゛
+// くた゛さいよ。<end>
+Translation goes here.<end>
+
+// す<char><char>"イ"イイ($10)<char><char>ーMMmmIK{mK{yiy[yiYYyyiIimM{{{iKmm
+// @TODO@ - data?
+
+// <Oidon>コンタくん　きのと゛くなことになったね。
+// きみをりようして　ふくしゅうをとけ゛たリンリンも
+// りょうしんの　かしゃくにたえきれす゛・・・
+// <Konta>ちか゛う!　あなたは　なにもわかっていない!<key>
+// <Konta>ああ　こうなったら　なにもかも　おはなしします。
+// このし゛けんは　ほ゛くとリンリンの
+// きょうはんなんて゛す!
+// <Oidon>なんた゛って・・・!<key>
+// <Konta>3年まえに　ルンルンか゛ころされたとき
+// リンリンは　はし゛めから
+// すいちゅうし゛ゅうの　めいしゅて゛ある　ちちを
+// うたか゛っていました。<key>
+// <Konta>ちちか゛　ルンルンの　にんきを
+// ねたんて゛いたのを　しっていたからて゛す。
+// しかし　けっきょく　はんにんは　つかまらす゛
+// し゛けんは　めいきゅういりに　なりました。<key>
+// <Konta>はんにんへの　ふくしゅうを　ちかったリンリンは
+// し゛みちに　そうさをつつ゛け　ようやく1年ほと゛まえ
+// ちちか゛　はんにんて゛あることを　かくしんしました。
+// ほ゛くか゛リンリンとしりあったのも　そのころて゛す。<key>
+// <Konta>て゛も　と゛うか　しんし゛てくた゛さい。
+// ほ゛くたちは　ほんとうに　あいしあっていたのて゛す。
+// まよいのもりのこやなら　た゛れにもしられす゛
+// ふたりた゛けて゛　あうことか゛て゛きました。<key>
+// <Konta>そこて゛　リンリンは　すへ゛てを　ほ゛くに
+// うちあけてくれました。
+// そして　ほ゛くのために　ちちをころすのを
+// おもいとと゛まって　くれたのて゛す。<key>
+// <Oidon>しかし　けっきょく　ころしたんし゛ゃないか!
+// <Konta>ああ　みんな　ほ゛くか゛　わるいんて゛す・・・
+// ほ゛くは　ちちか゛　さつし゛んはんた゛とは
+// しんし゛られなかった。<key>
+// <Konta>そこて゛　ほ゛くらは　ちちを　ためすことにしました。
+// きんは゜つのトリックを　かんか゛えたのも
+// ゆひ゛わの　しゃしんを　みるように　しむけたのも
+// みんな　ちちのはんのうを　みるためた゛ったのて゛す。<key>
+// <Konta>しかし　そのため　ちちはおひ゛え　リンリンか゛
+// し゛ふ゛んを　ころしにくると　おもいこんて゛しまった。
+// 10日のよる　ほ゛くたちか゛　ちちと　し゛かに
+// はなしをするために　ほうせきてんへいくと・・・<key>
+// <Konta>ちちは　いきなり　リンリンを　うったのて゛す!
+// "とうさん　ほ゛くたちは　し゛しゅを
+// 　すすめにきたんた゛"
+// と　さけんて゛も　ちちは　しんようしません。<key>
+// <Konta>"うそた゛!　こいつは　おれを
+// 　ころしに　きたんた゛"
+// と　いって　また　し゛ゅうを　うとうとします。
+// とっさに　ほ゛くは　ちちに　とひ゛かかりました!<key>
+// <Konta>そのとたん　ス゛ト゛ン!　と　おとか゛して
+// きか゛つくと　ちちは　ゆかに　たおれて
+// しんて゛いました。リンリンのほうは　かすりきす゛を
+// うけ　きをうしなってしまいました。<key>
+// <Konta>ほ゛くは　もう　と゛うしていいやら　わからす゛
+// リンリンをかかえて　みせを　とひ゛た゛しました。
+// すく゛にも　し゛しゅしようと　おもったのて゛すか゛
+// し゛けんか゛　こ゛うとうさつし゛んに　はってんして・・<key>
+// <Oidon>こわくなって　いいた゛せなかった・・・か？
+// <Konta>おっしゃるとおりて゛す。ああ　ほ゛くさえ　もっと
+// しっかりしていれは゛　こんなことには・・・
+// <Oidon>さあ　おちついて。また゛　ききたいことか゛あるんた゛。<key>
+// <Oidon>ゴンきちの　いのなかから　て゛てきた
+// ひ゛んせんは　きみたちのしわさ゛か？
+// <Konta>いいえ。ほ゛くも　リンリンも　あんなものか゛
+// あることさえ　しりませんて゛した。<key>
+// <Oidon>とすると・・・<pause>あっ、コンタくん　ゴンきちは
+// ほんとうに　しんて゛いたのた゛ろうか？<key>
+// <Oidon>きみは　ゴンきちか゛　ゆかにたおれて
+// しんて゛いたと　いったね。た゛か゛　よくあさ
+// したいか゛はっけんされたときには　ソファーに
+// すわっていた。おかしいし゛ゃないか!？<key>
+// <Konta>というと　あなたは　まさか・・・
+// <Oidon>いや　そうにちか゛いない。ゴンきちか゛　し゛ふ゛んて゛
+// ひ゛んせんを　やふ゛り　のみこんた゛のた゛!
+// <Konta>て゛も・・・て゛も　なんて゛　そんなことを・・・？<key>
+// <Oidon>また゛わからんのか　ひんしのゴンきちにとっては
+// し゛ふ゛んのおなかのなかか゛　もっともあんせ゛んな
+// かくしは゛しょた゛。かれはそこへ　リンリンを
+// こくはつするかみを　かくしたのた゛!<key>
+// <Konta>て゛は・・・ちちは・・・
+// <Oidon>リンリンを　つみにおとしたくなかった。
+// ゴンきちは　さいこ゛になって　かいしんしたのた゛。
+// いや　もっと　まえからかもしれない。<key>
+// <Oidon>あのかみを　かくすことか゛　ゴンきちにて゛きる
+// ゆいいつの　つみほろほ゛した゛ったのた゛。
+// <Konta>ああ　かわいそうな　おとうさん
+// かわいそうな　リンリン・・・<key>
+// <Oidon>ふたりともしんて゛から　こういうことか゛わかるとは
+// なんと　ひにくな　かなしいことた゛ろう・・・<pause>
+// おや　なんた゛か　そとか゛　さわか゛しいそ゛。
+// 　　　　カ゛ヤ　カ゛ヤ　カ゛ヤ　カ゛ヤ　カ゛ヤ<end>
+Translation goes here.<end>
+
+// <Koala>やい　おいと゛ん!　おれたちは　リンリンか゛
+// し゛さつしたときいて　ひとこといいたくてきたんた゛。
+// いいか　よくきけ。わるいのはゴンきちて゛も
+// リンリンて゛もない。このアニマルラント゛そのものた゛<end>
+Translation goes here.<end>
+
+// <Oidon>いったい　なにをいいた゛すんて゛すか　コアラさん。
+// <Koala>おまえた゛って　しってるた゛ろう。このせかいか゛
+// おおきなオリに　かこまれたと゛うふ゛つえんなのを!
+// <Oidon>それは・・・・・・・・・<end>
+Translation goes here.<end>
+
+// <Koala>おれたちを　オリにとし゛こめているのは
+// にんけ゛んたちた゛。やつらは　ときと゛きやってきては
+// おもしろそうに　おれたちをけんふ゛つしてるんた゛。<key>
+// <Koala>そして　このせかいて゛は　にんけ゛んに
+// にんきのあるものは　ちやほやされ
+// そうて゛ないものは　つめたくあしらわれる。
+// にんきか゛　すへ゛てをきめるんた゛。ちか゛うか？<end>
+Translation goes here.<end>
+
+// <Oidon>たしかに・・・・・・・・・
+// <Koala>なせ゛　ゴンきちは　ルンルンをころした？
+// <Oidon>それは　ルンルンの　にんきをねたんて゛・・・
+// <Koala>そう　それか゛　すへ゛ての　け゛んいんた゛った。<key>
+// <Koala>そして　そのゴンきちたちキタキツネた゛って
+// かつては　にんきものた゛った。それか゛　ハ゜ンタ゛か゛
+// やってきたとたんに　りゅうこうおくれた゛。
+// <Oidon>にんけ゛んは　きまく゛れて゛すからね・・・<key>
+// <Koala>なせ゛た゛？　なせ゛　そんなきまく゛れを　きにして
+// いなきゃならない？　しせ゛んのままに　いきて
+// こと゛もをそた゛て　しんて゛いく。
+// それて゛たくさんし゛ゃないか!<key>
+// <Konta>しせ゛んのままにいきていたら　リンリンも
+// とうさんも　しぬことはなかったろうに・・・
+// <Koala>リンリンたちた゛けし゛ゃない。ここにいる
+// おれたちせ゛んいんか゛　き゛せいしゃなんた゛!<end>
+Translation goes here.<end>
+
+// <Koala>おれは　いまこそ　さけふ゛そ゛!
+// こ<end>
+Translation goes here.<end>
+
+// と゛うふ゛つたちの　さけひ゛か゛　つつ゛くなか
+// にんけ゛んたちをのせたハ゛スか゛　やってくる。
+// そのなかの　おやこつ゛れか゛　はなしはし゛める。<key>
+// <Kodomo>ねえ　おかあさん　と゛うふ゛つさんたちは
+// なにを　あんなに　ほえているの？
+// <Hahaoya>さあねえ　みんなて゛なかよく　おうたを
+// うたっているのかもね。<end>
+Translation goes here.<end>
+
+// ハ゛スは　ゆっくり　はしりすき゛る。<pause>
+// 　
+// 　　<end>
+// (probably junk)
+Translation goes here.<end>
