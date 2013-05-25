@@ -13,13 +13,6 @@
 #CREATEPTR(ptr14000, "LINEAR", $C000, 16)
 
 
-// Replaces SRL A; OR C with NOP NOP NOP to disable bold font
-// Thanks to BiFi for this
-// @TODO@ -- move to ASM code file
-#JMP($2804, $2806)
-($00)($00)($00)
-
-
 // File menu
 // Line width is 12 chars
 #JMP($5A4, $5F4)
@@ -1425,7 +1418,7 @@ CANCEL<end>
 
 // <Oidon>ん？　ふうとうか゛　おいてありますぜ。<end>
 <Oidon>
-Huh. Somebody left an<nl>
+Huh.<pause> Somebody left an<nl>
 envelope on the table.<end>
 
 // <Oidon>タ゛イヤルしき　ですぜ。<end>
@@ -1439,7 +1432,7 @@ dial.<end>
 // て゛しょうなー。<end>
 <Oidon>
 I don't see anything<nl>
-there. But perhaps we<nl>
+there.<pause> But perhaps we<nl>
 should CHECK it out in<nl>
 more detail.<end>
 
@@ -1473,8 +1466,8 @@ evidence.<end>
 // <Oidon>うえにも　したにも、なにも　おいて
 // ありませんぜ。<end>
 <Oidon>
-There's nothing on it<nl>
-or under it.<end>
+Nothing on it, nothing<nl>
+under it.<end>
 
 0<end>
 0<end>
@@ -1494,13 +1487,13 @@ that.<end>
 // ここにはいないそうて゛す。<end>
 <Oidon>
 Half of it's torn up<nl>
-and crumpled. Look, it<nl>
+and crumpled.<pause> Look, it<nl>
 says something!<key>
 <Oidon>
-"Peru: if something<nl>
+"Peru:<pause> if something<nl>
 should happen to me,<nl>
 give this to the<nl>
-police. - Renard"<key>
+police.<pause> - Renard"<key>
 <Oidon>
 Peru's his assistant,<nl>
 but he's currently out<nl>
@@ -1528,9 +1521,9 @@ open.<end>
 // <Oidon>みせるものも　みせるあいても、た゛れも
 // いませんぜ。<end>
 <Oidon>
-You don't have anything<nl>
-to show or anyone to<nl>
-show it to.<end>
+You have nothing to<nl>
+show and no one to show<nl>
+it to.<end>
 
 // <Oidon>みせるあいては、た゛れも　いません。<end>
 <Oidon>
@@ -1541,7 +1534,7 @@ anything to.<end>
 // うーたまらん、だんなも　と゛うて゛す？<end>
 <Oidon>
 The pleasant scent of a<nl>
-cigar. Irresistible,<nl>
+cigar.<pause> Irresistible,<nl>
 don't you think?<end>
 
 // <Oidon>ほんじゃ、ほうせきてんへ　いきましょうや。<end>
@@ -1565,7 +1558,7 @@ OK, to headquarters.<end>
 // こ゛うとうさつし゛ん　て゛すね。<end>
 <Oidon>
 The jewels are all<nl>
-gone. So the killer was<nl>
+gone.<pause> So the killer was<nl>
 a robber...<end>
 
 0<end>
@@ -1599,8 +1592,8 @@ written on it.<end>
 // <Oidon>クンクン、かなり　そうし゛か゛　ゆきとと゛いてます。
 // ワックスの　いいにおいか゛、しますぜ。<end>
 <Oidon>
-(sniff, sniff)<nl>
-It's quite clean. The<nl>
+*sniff, sniff*<pause><nl>
+It's quite clean.<pause> The<nl>
 pleasant scent of wax.<end>
 
 0<end>
@@ -1612,8 +1605,8 @@ pleasant scent of wax.<end>
 // (HOW DO YOU FIND THIS?!)
 <Oidon>
 It's full of, ah, maga-<nl>
-zines. We can read 'em<nl>
-later. For the arti-<nl>
+zines.<pause> We can read 'em<nl>
+later.<pause> For the arti-<nl>
 cles, of course.<end>
 
 0<end>
@@ -1627,13 +1620,13 @@ cles, of course.<end>
 // かてるものなと゛　ありゃしませんぜ。<end>
 <Oidon>
 This chair and this<nl>
-desk make a lovely<nl>
-pair, don't they?<key>
+desk go well together,<nl>
+don't they?<key>
 <Oidon>
-But there's no pair<nl>
-more lovely than you<nl>
-and me. Platonically<nl>
-speaking, of course.<end>
+But no pair fits better<nl>
+than you and I.<pause><nl>
+Platonically speaking,<nl>
+of course.<end>
 
 // <Oidon>さいしょ　みたとおりですぜ。<end>
 <Oidon>
@@ -1654,7 +1647,7 @@ if a rather classy one.<end>
 // <Oidon>このきんこは・・・・・・。
 // タ゛イヤルしきですぜ。<end>
 <Oidon>
-This safe... it's the<nl>
+This safe...<pause> it's the<nl>
 kind with a dial.<end>
 
 0<end>
@@ -1662,7 +1655,7 @@ kind with a dial.<end>
 // <Oidon>んく゛き゛き゛っ、カキ゛か゛　かかってて　あきませんぜ。
 // だんなも　やってみて　くた゛さいよ。<end>
 <Oidon>
-Nngghh... it's locked.<end>
+Nngghh...<pause> it's locked.<end>
 
 // <Oidon>カキ゛か゛　なけれは゛、なんと゛やっても
 // おなし゛ですぜ。<end>
@@ -1811,7 +1804,7 @@ Nothing else here.<end>
 // カキ゛か゛　かかっています。<end>
 <Oidon>
 Rather stylish window.<nl>
-It's locked, though.<end>
+It's locked.<end>
 
 // <Oidon>とくに　かわったところは　ないようですぜ。<end>
 <Oidon>
@@ -1840,7 +1833,7 @@ of glass.<end>
 // しれませんね。<end>
 <Oidon>
 Doesn't look like it<nl>
-was forced open. Maybe<nl>
+was forced open.<pause> Maybe<nl>
 the perp had a key.<end>
 
 // <Oidon>へ゛つに　なんともありませんぜ。<end>
@@ -1878,7 +1871,7 @@ It won't budge.<end>
 // なにも　ないようですぜ。<end>
 // (searching a floor)
 <Oidon>
-...<nl>
+...<pause><nl>
 Nope, nothing.<end>
 
 // <Oidon>・・・<end>
@@ -1887,7 +1880,7 @@ Nope, nothing.<end>
 
 // <Oidon>ハ゜ラ　ハ゜ラ・・・<pause><end>
 <Oidon>
-(shuffle, shuffle)<end>
+*shuffle, shuffle*<pause><end>
 
 // <Oidon>カ゛ラ　カ゛ラ・・・。<pause>
 // のと゛かな　ふうけいか゛　みえます。
@@ -1919,13 +1912,13 @@ desk.<end>
 // おいておきますぜ。<end>
 <Oidon>
 They're just ordinary<nl>
-books. Let's just leave<nl>
+books.<pause> Let's just leave<nl>
 them here.<end>
 
 // <Oidon>あきましたよ。<pause>・・・だんな、こんなところに
 // きんこか゛ありますぜ。<end>
 <Oidon>
-It's open. Seems<nl>
+It's open.<pause> Seems<nl>
 there's a safe in here.<end>
 
 // <contd>
@@ -1933,7 +1926,7 @@ there's a safe in here.<end>
 // ほんた゛なに　すきまなと゛は　みられませんぜ。<end>
 // Describes bookcase. Follows "nothing particularly" line.
 <contd>
-Since he was rich, it's<nl>
+He was rich, so it's<nl>
 in great condition.<end>
 
 // <Oidon>だんな　なんた゛か　ナソ゛のおおい　し゛けんですぜ。
@@ -1961,7 +1954,7 @@ the door open?<key>
 <Oidon>
 The only clues the perp<nl>
 left are the hair and<nl>
-the gun. We'll have to<nl>
+the gun.<pause> We'll have to<nl>
 gather more info.<key>
 <Oidon>
 There's a convenience<nl>
@@ -1969,11 +1962,11 @@ store across the street<nl>
 from Foxy Jewelry.<key>
 <Oidon>
 Maybe they know some-<nl>
-thing. Let's check it<nl>
+thing.<pause> Let's check it<nl>
 out.<key>
 <Oidon>
 By the way, I recorded<nl>
-our progress in a file.<nl>
+our progress in a file.<pause><nl>
 The name is <red>XXXX<black>.<end>
 
 // <contd>
@@ -1992,7 +1985,7 @@ OK, never mind.<end>
 // ひ゛んせんの　きれはしか゛　あります。<end>
 <Oidon>
 There's nothing inside<nl>
-the... ah, hang on.<nl>
+the...<pause> ah, hang on.<pause><nl>
 There's a scrap of<nl>
 paper on the desk.<end>
 
@@ -2002,7 +1995,7 @@ paper on the desk.<end>
 <Oidon>
 I can read an "N", but<nl>
 not anything after<nl>
-that. Too bad...<nl>
+that. Too bad...<pause><nl>
 Grrowf!<end>
 
 // <Oidon>やや　いすのしたに　けんし゛ゅうか゛
@@ -2085,16 +2078,16 @@ Excuse me, I'd like to<nl>
 take a look.<key>
 <Pyonko>
 Hey! What do you think<nl>
-you're doing? (slap!)<nl>
+you're doing? *slap!*<nl>
 <Oidon>
-Ah... sorry, never<nl>
+Ah...<pause> sorry, never<nl>
 mind.<end>
 
 // <Oidon>ヒ゜ョンコのくちを　あけてみましたところ、
 // きれいな　はを　してましたせ゛。<end>
 <Oidon>
 Amy's mouth shows a<nl>
-nice set of teeth.<nl>
+nice set of teeth.<pause><nl>
 Probably no need to<nl>
 open it further.<end>
 
@@ -2141,7 +2134,7 @@ It's Amy, the rabbit.<end>
 // たくさん　ありますぜ。<end>
 <Oidon>
 It's full of yummy<nl>
-things. So many of my<nl>
+things.<pause> So many of my<nl>
 favorite dog treats...<end>
 
 // <Oidon>きのうのことて゛　ききたいんた゛か゛、なんか
@@ -2156,9 +2149,9 @@ odd last night?<key>
 <Pyonko>
 I saw Red go into the<nl>
 jewelry shop at around<nl>
-8. Other than that...<key>
+8.<pause> Other than that...<key>
 <Pyonko>
-Ah, right. I saw a car<nl>
+Ah, right.<pause> I saw a car<nl>
 there at 11.<end>
 
 // <Oidon>し゛ゅうせい　なんかを　きかなかったか？
@@ -2197,7 +2190,7 @@ Red's name is on it.<end>
 <Oidon>
 Recognize this?<nl>
 <Pyonko>
-No. What is it?<end>
+No.<pause> What is it?<end>
 
 0<end>
 
@@ -2213,7 +2206,7 @@ No. What is it?<end>
 <Oidon>
 Describe the car.<key>
 <Pyonko>
-It was white. It was<nl>
+It was white.<pause> It was<nl>
 dark out, though, so I<nl>
 couldn't tell much<nl>
 else.<end>
@@ -2285,7 +2278,7 @@ It's mostly literature.<end>
 // <Oidon>くっ・・・。　だんな、おもくて
 // もてないのて゛、とることは　て゛きませんぜ。<end>
 <Oidon>
-Ugh... it's too heavy<nl>
+Ugh...<pause> it's too heavy<nl>
 to pick up.<end>
 
 // <Oidon>わー、むす゛かしいこと　た゛らけて゛
@@ -2293,8 +2286,8 @@ to pick up.<end>
 // だんな、これを　とるのは　やめましょうよ。<end>
 <Oidon>
 They're full of diffi-<nl>
-cult things and I can't<nl>
-read them. They're no<nl>
+cult things I don't<nl>
+understand.<pause> They're no<nl>
 use to us.<end>
 
 // <Oidon>あっ　だんな、つくえのしたに　てちょうか゛
@@ -2382,7 +2375,7 @@ OK, let's call Kit.<end>
 <Oidon>
 It is said he was soon<nl>
 to become owner after<nl>
-Renard. He'd have no<nl>
+Renard.<pause> He'd have no<nl>
 motive.<end>
 
 0<end>
@@ -2442,7 +2435,7 @@ the time of death.<end>
 // やはり、かねもちは　ちか゛いますなあ。<end>
 <Oidon>
 He smells strongly of<nl>
-money. The rich truly<nl>
+money.<pause> The rich truly<nl>
 live in a different<nl>
 world...<end>
 
@@ -2478,7 +2471,7 @@ It's large and white.<end>
 <Oidon>
 This "N" was found on a<nl>
 scrap of paper at the<nl>
-scene. Any ideas?<nl>
+scene.<pause> Any ideas?<nl>
 <Konta>
 Not a clue.<end>
 
@@ -2493,7 +2486,7 @@ Do you have a key to<nl>
 the jewelry shop?<key>
 <Kokon>
 I lost it about five<nl>
-days ago. I wonder<nl>
+days ago.<pause> I wonder<nl>
 where it went.<end>
 
 // <Oidon>ほうせきてんの　しょさいにある　きんこや
@@ -2532,14 +2525,14 @@ you find could solve<nl>
 the mystery.<key>
 <Konta>
 Still, I'll do what I<nl>
-can. I'll let you know<nl>
+can.<pause> I'll let you know<nl>
 as soon as I find any-<nl>
 thing.<end>
 
 // <Oidon>ちょっと　しつれい。
 // しらへ゛ましたけと゛　なにもないて゛すよ。<end>
 <Oidon>
-Sorry. I looked but<nl>
+Sorry.<pause> I looked but<nl>
 didn't find anything.<end>
 
 0<end>
@@ -2559,7 +2552,7 @@ Recognize this?<nl>
 Recognize this?<key>
 <Konta>
 My dad must have writ-<nl>
-ten it. I haven't seen<nl>
+ten it.<pause> I haven't seen<nl>
 it before, but it's his<nl>
 handwriting.<end>
 
@@ -2574,7 +2567,7 @@ handwriting.<end>
 What's the deal with<nl>
 this "8:30"?<key>
 <Konta>
-Ah... well... I'd prom-<nl>
+Ah...<pause> well...<pause> I'd prom-<nl>
 ised to meet a friend,<nl>
 so I wrote it down.<end>
 
@@ -2609,7 +2602,7 @@ new nose.<end>
 <Oidon>
 You say you didn't go,<nl>
 but Amy saw you go in<nl>
-there at about 8:30.<nl>
+there at about 8:30.<pause><nl>
 Now tell us the truth!<key>
 <Konta>
 OK, OK! Yeah, I went<nl>
@@ -2837,7 +2830,7 @@ twice? Who owns the<nl>
 white car?<key>
 <Oidon>
 We'll need to ask more<nl>
-people. It seems we<nl>
+people.<pause> It seems we<nl>
 must broaden our in-<nl>
 vestigation.<key>
 <Oidon>
@@ -2846,11 +2839,11 @@ something when she's<nl>
 back from her trip.<key>
 <Oidon>
 Well, boss, our job has<nl>
-just begun. Let's give<nl>
+just begun.<pause> Let's give<nl>
 it our best!<key>
 <Oidon>
 I've recorded our prog-<nl>
-ress in a file. The<nl>
+ress in a file.<pause> The<nl>
 name is <red>XXXX<black>.<end>
 
 // <Oidon>うまそうですぜ。<end>
@@ -2860,7 +2853,7 @@ Looks delicious.<end>
 // <Oidon>カ゛サカ゛サ・・・。　<pause>だんな、し゛けんに
 // かんけいあるものは　ありませんぜ。<end>
 <Oidon>
-Hmm. Nothing relevant<nl>
+Hmm.<pause> Nothing relevant<nl>
 to the case.<end>
 
 // <Oidon>おっ!　うめほ゛しか゛　はいってますぜ。
@@ -2902,7 +2895,7 @@ I was right here.<end>
 // だんな、なかに　はいっていた　うめほ゛しか゛
 // おちてしまいましたせ゛。<end>
 <Oidon>
-Oop. Looks like some<nl>
+Oop.<pause> Looks like some<nl>
 umeboshi fell out.<end>
 
 // <Oidon>だんな、かんひ゜ょうか゛　はいってますぜ。<end>
@@ -3088,7 +3081,7 @@ doubtful.<end>
 // <Konta>はい・・・。<end>
 <contd>
 <Konta>
-He had a carefree life.<nl>
+He had a carefree life.<pause><nl>
 He, uh...<key>
 <Oidon>
 He what?<nl>
@@ -3096,9 +3089,9 @@ He what?<nl>
 N-no, it's nothing.<key>
 <Oidon>
 It doesn't sound like<nl>
-nothing. Are you sure?<nl>
+nothing.<nl>
 <Konta>
-Yeah, I'm sure...<end>
+It is, really.<end>
 
 0<end>
 
@@ -3135,11 +3128,11 @@ I, I didn't, I swear!<end>
 // しんし゛てくた゛さい。<end>
 <contd>
 <Konta>
-Yeah... but we've been<nl>
+Yeah...<pause> but we've been<nl>
 over this already.<key>
 <Konta>
 I'm not the one who did<nl>
-it. Please believe me!<end>
+it.<pause> Please believe me!<end>
 
 0<end>
 
@@ -3151,7 +3144,7 @@ it. Please believe me!<end>
 <Oidon>
 Where did you lose it?<key>
 <Kokon>
-I don't know. I've<nl>
+I don't know.<pause> I've<nl>
 looked all over the<nl>
 house, so I must have<nl>
 dropped it elsewhere.<end>
@@ -3211,7 +3204,7 @@ Not at all.<end>
 // @TODO@ -- verify. Probably has to do with the gun.
 <contd>
 <Kokon>
-No. Looks dangerous!<end>
+No.<pause> Looks dangerous!<end>
 
 // <contd>
 // <Pyonko>これか゛きょうきなの？　まあこわい!<end>
@@ -3226,7 +3219,7 @@ weapon? Yikes!<end>
 <Oidon>
 What happened to you?<nl>
 <Kokon>
-Ah, well, heh heh...<nl>
+Ah, well, heh heh...<pause><nl>
 I, I fell.<end>
 
 // <Oidon>リンリンさんについて　おききしたいのて゛すか゛。
@@ -3579,7 +3572,6 @@ since she's here.<end>
 // <Oidon>クンクン。うっ、これは　ちのにおい・・・・・・<pause>
 // というのはうそて゛す。
 // し゛ょうひんな　においか゛しますぜ。<end>
-// @TODO@ - confirm that this is a joke
 <Oidon>
 It smells like blood...<nl>
 <pause>toil, tears, and sweat<nl>

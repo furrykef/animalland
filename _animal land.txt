@@ -3,14 +3,6 @@ MURDER IN ANIMAL LAND
 Check if our bankswitching can interfere with interrupt handlers
 * The game installs an HTIMI (vblank interrupt) handler at $c102 (RAM).
 
-
-<Torbjorn> / <Oidon>クンクン。うっ、これは　ちのにおい・・・・・・<pause>
-<Torbjorn> / というのはうそて゛す。
-<Torbjorn> / し゛ょうひんな　においか゛しますぜ。<end>
-<Torbjorn> / @TODO@ - confirm that this is a joke
-<Torbjorn> <Oidon>
-<Torbjorn> Yep, it's a joke ;p
-
 <Torbjorn> / <Oidon>け゛んは゛に　のこされた　かみに"<char>"というもし゛か゛
 <Torbjorn> / かかれていたのた゛か゛
 <Torbjorn> / なにか　おもいあたる　ふしは、ないか？<key>
@@ -32,8 +24,6 @@ Check if our bankswitching can interfere with interrupt handlers
 <furrykef> Hmm, is it a pun on the word ぬっと? Sorry, I don't always get these things easily. ^^;;
 <Torbjorn> Little late now but yeah, it's a pun on ぬっと
 <furrykef> We can make note of it and come back to it later
-
-Change "(slap!)" to "*slap!*" and "(sniff, sniff)" to "*sniff, sniff*"
 
 
 Pointers
