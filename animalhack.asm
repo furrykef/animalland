@@ -143,17 +143,6 @@ forg    $20000
 org     $6000, $7fff
 
 PrintCharImpl:
-        ld      a, (pixel_offset)       ; If pixel offset is 8...
-        cp      8
-        jr      nz, .dont_bump
-        xor     a                       ; ...set it to 0 now...
-        ld      (pixel_offset), a 
-        ld      hl, (vram_addr)         ; ...and bump VRAM address up to next tile
-        ld      bc, (tile_increment)
-        add     hl, bc
-        ld      (vram_addr), hl
-
-.dont_bump:
         call    CalcCharWidth
 
         call    GetPtrToCharData
@@ -167,18 +156,21 @@ PrintCharImpl:
         ld      hl, (vram_addr)
         call    WriteColor
 
-        ; Now we get ready to actually draw the second tile
-        ld      hl, (vram_addr)         ; Bump VRAM address up to next tile
-        ld      bc, (tile_increment)
-        add     hl, bc
-        ld      (vram_addr), hl
-
+        ; Now draw the second one
+        call    BumpVramAddr
         call    GetPtrToCharData
         call    Write2ndTile
 
 .one_tile:
         ld      hl, (vram_addr)
         call    WriteColor
+
+        ld      a, (pixel_offset)       ; Is pixel offset 8 (we hit the tile boundary exactly)?
+        cp      8
+        ret     nz                      ; No; we're done here
+        xor     a                       ; Yes; set pixel offset to 0 and set VRAM addr to the next tile
+        ld      (pixel_offset), a 
+        call    BumpVramAddr
         ret
 
 
@@ -231,6 +223,13 @@ BumpPixelOffset:
         ret
 
 
+BumpVramAddr:
+        ld      hl, (vram_addr)         ; Bump VRAM address up to next tile
+        ld      bc, (tile_increment)
+        add     hl, bc
+        ld      (vram_addr), hl
+        ret
+
 Write1stTile:
         ld      b, 8
 .loop:
@@ -266,7 +265,7 @@ Write2ndTile:
         ld      b, 8
 .loop:
         push    bc
-        ld      a, (pixel_offset)       ; This loop does A = [DE] << (8 - pixel_offset)
+        ld      a, (pixel_offset)       ; This loop does A = [DE] << (char_width - pixel_offset)
         ld      b, a
         ld      a, (char_width)
         sub     a, b
