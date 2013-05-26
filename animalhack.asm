@@ -74,8 +74,18 @@ forg    $02964
 org     $4964, $4964
         nop                     ; add hl, bc    (BC is guaranteed to be 8)
 
-
 ; @TODO@ -- look for more instances of "call/jp $47ba/$4018" ($4018 jumps to $47ba)
+
+
+; Hook for first line of dialogue
+forg    $0275d
+org     $475d, $47ef
+        call    HandleFirstLineOfDialogue
+
+; Hook for newlines in main script
+forg    $02771
+org     $4771, $477a
+        jp      HandleNewline
 
 
 ; This is a reworked version of the display code from the original game,
@@ -136,6 +146,29 @@ PrintChar:
         pop     de
         pop     bc
         ret
+
+
+; The rest of this range is used as a place to put patches for other bits of code
+
+; This adds to the code that was at $475d
+HandleFirstLineOfDialogue:
+        xor     a
+        ld      (pixel_offset), a
+        ld      hl, $1008               ; The line the patch at $475d was patching over
+        ret
+
+; This adds to the code that was at $4771
+HandleNewline:
+        ld      a, ($f2fe)
+        add     a, 12
+        ld      ($f2fe), a
+
+        ; Now here's the bit we're adding
+        xor     a
+        ld      (pixel_offset), a
+
+        ; Back to your regularly scheduled program
+        jp      $4763
 
 
 ; Stuff from here on goes in ROM bank 16
@@ -226,6 +259,7 @@ BumpVramAddr:
         ld      (vram_addr), hl
         ret
 
+
 Write1stTile:
         ld      b, 8
 .loop:
@@ -312,13 +346,13 @@ char_widths:
         db      6, 6, 6, 6, 6, 5, 5, 6, 6, 2, 5, 5, 5, 6, 6, 6
 
         ;       P  Q  R  S  T  U  V  W  X  Y  Z  [  ¥  ]  ^  _
-        db      5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+        db      6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
 
         ;       `  a  b  c  d  e  f  g  h  i  j  k  l  m  n  o
         db      6, 6, 5, 5, 5, 5, 4, 5, 5, 2, 3, 5, 2, 6, 5, 5
 
         ;       p  q  r  s  t  u  v  w  x  y  z  {  |  }  ~
-        db      5, 5, 4, 5, 4, 5, 6, 6, 5, 5, 5, 6, 6, 6, 6, 0
+        db      5, 5, 4, 5, 4, 5, 5, 6, 5, 5, 5, 6, 6, 6, 6, 0
 
         db      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 

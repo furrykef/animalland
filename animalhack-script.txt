@@ -55,8 +55,8 @@ file.<end>
 // かっこうて゛　し゛ゅうて゛　しんそ゛うを
 // うたれて　そくしのし゛ょうたいて゛
 // あったらしい。<end>
-It was a day like any other<nl>
-in Animalville, a quiet, peaceful<nl>
+It was a day like any other in<nl>
+Animalville, a quiet, peaceful<nl>
 mountain village.<key>
 At least, it was until<nl>
 the murder of <green-on-black>Renard<nl>
@@ -90,7 +90,7 @@ his chest covered with<nl>
 blood. He'd been shot<nl>
 in the heart.<key>
 My partner <cyan-on-black>Andy<white-on-black> and I<nl>
-set out immediately to<nl>
+set out at once to<nl>
 investigate the case...<end>
 
 
