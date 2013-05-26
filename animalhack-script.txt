@@ -55,10 +55,9 @@ file.<end>
 // かっこうて゛　し゛ゅうて゛　しんそ゛うを
 // うたれて　そくしのし゛ょうたいて゛
 // あったらしい。<end>
-It was a day like any<nl>
-other in Animalville, a<nl>
-quiet, peaceful moun-<nl>
-tain village.<key>
+It was a day like any other<nl>
+in Animalville, a quiet, peaceful<nl>
+mountain village.<key>
 At least, it was until<nl>
 the murder of <green-on-black>Renard<nl>
 Fox<white-on-black>, the owner of Foxy<nl>
@@ -2576,8 +2575,8 @@ so I wrote it down.<end>
 // <Konta>なにを　いってるんて゛すか。
 // あなたのはなも　あてになりませんね。<end>
 <Oidon>
-My nose says you're<nl>
-lying!<nl>
+I smell something<nl>
+fishy.
 <Konta>
 Then maybe you need a<nl>
 new nose.<end>
@@ -2713,7 +2712,7 @@ My brother should know.<end>
 <Oidon>
 Know whose this is?<nl>
 <Kokon>
-A blond hair... no, I<nl>
+A blond hair...<pause> no, I<nl>
 don't.<end>
 
 // <Oidon>これに　みおほ゛えは　ないか？
@@ -2724,7 +2723,7 @@ don't.<end>
 Recognize this?<nl>
 <Kokon>
 Must have been in the<nl>
-shop. I don't know any-<nl>
+shop.<pause> I don't know any-<nl>
 thing else about it...<end>
 
 0<end>

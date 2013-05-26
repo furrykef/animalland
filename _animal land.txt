@@ -1,7 +1,16 @@
 MURDER IN ANIMAL LAND
 =====================
+<furrykef> Mm, what's the best place to get docs on the MSX, again?
+<~GuyveR800> map.grauw.nl
+
+http://www.z80.info/
+
+
 Check if our bankswitching can interfere with interrupt handlers
 * The game installs an HTIMI (vblank interrupt) handler at $c102 (RAM).
+
+<pause> inserts a pause that's much too long after most periods. We need to add a "short pause" code.
+
 
 <Torbjorn> / <Oidon>け゛んは゛に　のこされた　かみに"<char>"というもし゛か゛
 <Torbjorn> / かかれていたのた゛か゛
@@ -57,17 +66,35 @@ When done, submit to MSX sites:
 * msx.org
 
 
+Also submit the porn magazine easter egg to tcrf.net
+
+
 Hacking notes
 -------------
 #msxdev on irc.rizon.net
 
 http://bifi.msxnet.org/msxnet/tech/megaroms.html#ascii8 -- mapper info
 
-http://www.tni.nl/products/tniasm.html -- assembler by GuyveR800 from #msxdev
-
 Several codes print out multiple characters. The code that does this can possibly be leveraged for our own text compression.
 
 The bank at $6000 seems to always be set to ROM bank 0 ($00000-01fff). We can probably safely swap it out and back in during the text routines.
+
+
+RAM variables
+-------------
+<~GuyveR800> furrykef, It's a MSX1 game, so you can use the "RS232" area in the system RAM
+<~GuyveR800> it's a few hundred bytes
+<~GuyveR800> that RS232 area was repurposed for MSX2, because it remained unused for MSX1
+<~GuyveR800> so none of the routines the game uses will make use of it
+<furrykef> what region is that? I can't find it in these docs ^^;
+<~GuyveR800> FAF5-FB34
+<~GuyveR800> hmm not as large as I thought
+<~GuyveR800> (those addresses are inclusive)
+<furrykef> Ah, thanks
+<~GuyveR800> I think FAF5 means all kinds of things for the Kanji mode and stuff which was added in MSX2+ and/or MSX-DOS2
+<~GuyveR800> but again, none of that will be used by that MSX1 ROM game
+<@BiFi> FAF5-FAF8 are MSX2 addresses
+<@BiFi> FAF9-FAFD are kanji basic related and FAFC contain a few MSX2 and MSX2+ related things
 
 
 Intro text
@@ -151,6 +178,8 @@ Credits
 Kef Schecter - hacking and translation
 Torbjorn -- translation
 BiFi (#msxdev) - found code for making text bold so I could disable it
+
+Font is a variant of Tau's Custom Font
 
 Special thanks:
 * ##japanese on freenode

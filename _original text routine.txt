@@ -114,7 +114,7 @@ $47ba:
         xor     a               ; clear $f2ea (= bold flag)
         ld      (#f2ea),a
         pop     af
-        ex      de,hl           ; what's the point of this?
+        ex      de,hl
         cp      #21             ; If char to print is "!"...
         jr      z,++            ; ...make it bold
         cp      #80             ; Are we displaying the odd "nu" symbol?
