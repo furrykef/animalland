@@ -180,15 +180,12 @@ GetPtrToCharData:
         ld      a, (char_to_print)
         ex      de, hl
         ld      bc, font_data
-        ld      h, 0                    ; All this bit does is hl = a*8...
+        ld      h, 0                    ; HL = &font_data + A*8
         ld      l, a
-        sla     l
-        rl      h
-        sla     l
-        rl      h
-        sla     l
-        rl      h
-        add     hl, bc                  ; ...then adds the font's base address
+        add     hl, hl
+        add     hl, hl
+        add     hl, hl
+        add     hl, bc
         ex      de, hl
         ret
 
@@ -209,17 +206,16 @@ CalcCharWidth:
 ; Carry flag will be clear on exit if caller must draw another tile
 BumpPixelOffset:
         ; Bump up the pixel offset
-        ld      a, (pixel_offset)
-        ld      b, a
+        ld      hl, pixel_offset
         ld      a, (char_width)
-        add     a, b
-        ld      (pixel_offset), a
+        add     a, (hl)
+        ld      (hl), a
         cp      9                       ; Did we go past the tile boundary (not just the edge)?
         ret     c                       ; Return if not
 
         ; Yep, we did
         and     7                       ; carry flag will still be clear after this
-        ld      (pixel_offset), a
+        ld      (hl), a
         ret
 
 
