@@ -85,7 +85,7 @@ DrawCmdMenu:
         ld      d, 1                    ; Digit to display (e.g. the '1' in "1. TABLE")
 
 .draw_menu_item:
-        xor     a
+        ld      a, 3
         ld      (pixel_offset), a
         ld      a, (iy+0)
         inc     iy
@@ -126,7 +126,14 @@ DrawCmdMenu:
 forg    $02a33
 org     $4a33, $4a47
 HandleMenuNewline:
-        ; @XXX@
+        ; @TODO@ -- is it safe to just switch this bank?
+        ; Does the VBLANK interrupt handler depend on which bank is loaded?
+        ld      a, 16                   ; put ROM bank 16 in $6000-7fff
+        ld      ($6800),a
+        call    HandleMenuNewlineImpl
+        ld      a, 0                    ; switch back to ROM bank 0
+        ld      ($6800), a
+        call    DrawMenuLetters
         ret
 
 
@@ -217,13 +224,13 @@ HandleNewline:
 DrawMenuLetters:
         ld      a, $1b                  ; Set text color to black
         ld      (text_color), a
-        ld      a, (ix+0)               ; [IX] points to the char in the script
+        ld      a, (ix)                 ; [IX] points to the char in the script
         inc     ix
         add     a, $80                  ; Adjust it to MSX charset
         cp      CHAR_MNL                ; Is this the <mnl> code?
         jp      z, HandleMenuNewline    ; Branch if so
         call    PrintChar8              ; Print char
-        ld      a, (ix+0)               ; Get next char
+        ld      a, (ix)                 ; Get next char
         cp      CHAR_END                ; Is it <end>?
         jr      nz, DrawMenuLetters     ; Loop if not
         ret
@@ -234,6 +241,7 @@ forg    $20000
 org     $6000, $7fff
 
 PrintCharImpl:
+        ld      a, (char_to_print)
         call    CalcCharWidth
 
         call    GetPtrToCharData
@@ -281,10 +289,14 @@ GetPtrToCharData:
         ret
 
 
+; Inputs:
+;   A = char whose width we're calculating
+;
+; Outputs:
+;   char_width = A = width of char in pixels
 CalcCharWidth:
         push    hl
         ld      b, 0
-        ld      a, (char_to_print)
         ld      c, a
         ld      hl, char_widths
         add     hl, bc
@@ -383,6 +395,60 @@ WriteColor:
         ret
 
 
+; Inputs:
+;   IX = pointer to text on second line
+;   HL = VRAM address
+;
+; Outputs:
+;   HL = new VRAM address
+;   pixel_offset
+HandleMenuNewlineImpl:
+        ; Bump HL to point to first char of next line in VRAM
+        ; @FIXME@ - better way to express this?
+        ld      a, l
+        and     $3f
+        jr      z, .done_bumping
+        inc     hl
+        jr      HandleMenuNewlineImpl   ; loop
+.done_bumping:
+        call    CalcStrWidth
+        ld      a, $40                  ; A = $40 - A
+        sub     c                       ; (this is number of pixels to shift text right)
+        ld      c, a
+        and     7                       ; mod by 8 to get new pixel offset
+        ld      (pixel_offset), a
+        ld      a, c                    ; put str width back in A
+        and     not 7                   ; A -= (A % 8)  -- this is the VRAM offset to add
+        ld      c, a
+        add     hl, bc
+        ret
+
+
+; Inputs:
+;   IX = pointer to string
+;
+; Outputs:
+;   BC = width of string in pixels (B will be 0)
+CalcStrWidth:
+        push    ix
+        ld      bc, 0
+.loop:
+        ld      a, (ix)
+        cp      CHAR_END
+        jr      z, .done
+        add     $80                     ; convert to MSX charset
+        push    bc
+        call    CalcCharWidth
+        pop     bc
+        add     c
+        ld      c, a
+        inc     ix
+        jr      .loop
+.done:
+        pop     ix
+        ret
+
+
 font_data:
         incbin  "vwf.bin"
 
@@ -392,7 +458,9 @@ char_widths:
         ;       0  1  2  3  4  5  6  7  8  9  .  *
         db      7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 3, 4, 0, 0, 0, 0
 
-        db      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        ;       [first char here is <mnl> ("menu newline") control code]
+        ;       [displays as space when not in a menu]
+        db      3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
         ;       [first char here is space]
         ;       [asterisk in this row is not the one we use]
