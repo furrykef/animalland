@@ -3,6 +3,12 @@ incbin "animalland-expanded.rom"
 cpu z80
 
 
+; Control codes
+CHAR_BOLD_PERIOD:   equ     $0a
+CHAR_MNL:           equ     $10
+CHAR_END:           equ     $7f
+
+
 ; BIOS stuff
 RDVRM:          equ     $004a
 WRTVRM:         equ     $004d
@@ -17,15 +23,12 @@ char_to_print:  equ     $f2e1
 ; @TODO@ -- verify this region is safe, or considering using MSX2-specific system RAM (FAF5-FB34)
 org $e000
 
-; How many pixels to the right do we draw the next char?
-pixel_offset:   rb 1
-
-; How much we need to increment VRAM addr to get to the next tile on the right
-tile_increment: rw 1
-
+pixel_offset:   rb 1            ; How many pixels to the right do we draw the next char?
+tile_increment: rw 1            ; How much we need to increment VRAM addr to
+                                ; get to the next tile on the right
 vram_addr:      rw 1
-
 char_width:     rb 1
+str_width:      rb 1            ; for right-aligning in menus
 
 
 ; This code originally called PrintChar (where PrintChar8 is now) and bumped the VRAM pointer in the dialogue routine
@@ -58,22 +61,6 @@ org     $62ad, $62b0
         nop                     ; add hl, de
 
 
-; NOPping some VRAM bumps in menu code
-; After drawing digit (the "1" in "1.TABLE")
-forg    $02943
-org     $4943, $4943
-        nop                     ; add hl, bc    (BC is guaranteed to be 8)
-
-; After drawing period
-forg    $0294b
-org     $494b, $494b
-        nop                     ; add hl, bc    (BC is guaranteed to be 8)
-
-; After printing letter
-forg    $02964
-org     $4964, $4964
-        nop                     ; add hl, bc    (BC is guaranteed to be 8)
-
 ; @TODO@ -- look for more instances of "call/jp $47ba/$4018" ($4018 jumps to $47ba)
 
 
@@ -86,6 +73,61 @@ org     $475d, $47ef
 forg    $02771
 org     $4771, $477a
         jp      HandleNewline
+
+
+; Draws the command menu ("1. TABLE", etc.)
+; This is partially rewritten from the original game
+forg    $0291f
+org     $491f, $4980
+DrawCmdMenu:
+        ld      hl, $0600               ; VRAM address
+        ld      iy, $f302
+        ld      d, 1                    ; Digit to display (e.g. the '1' in "1. TABLE")
+
+.draw_menu_item:
+        xor     a
+        ld      (pixel_offset), a
+        ld      a, (iy+0)
+        inc     iy
+        ld      ix, ($f2f6)             ; Load IX with addr of char in the script
+        or      a
+        jr      z, .first_menu_item     ; Skip next line if already pointing to the first menu item
+        call    $4b11                   ; Adjust text pointer to Nth menu item
+.first_menu_item:
+        ld      a, $6b                  ; Set text color to orange
+        ld      (text_color), a
+        ld      a, d                    ; Number of menu item (in MSX charset)
+        call    PrintChar8              ; Display it
+        ld      a, CHAR_BOLD_PERIOD
+        call    PrintChar8
+        ld      bc, 8                   ; Need to align text so first letter starts on third tile
+        add     hl, bc                  ; (if we don't, colors will be wrong)
+        xor     a
+        ld      (pixel_offset), a
+        push    hl
+        call    DrawMenuLetters
+        pop     hl                      ; HL now points to after the '.' in VRAM
+        ld      bc, $70                 ; Bump VRAM to start of next menu item
+        add     hl, bc
+        xor     a
+        ld      (pixel_offset), a
+        inc     d
+        ld      a, 5                    ; Need to adjust VRAM addr after drawing 4th item
+        cp      d
+        jr      nz, .dont_adjust
+        ld      hl, $0e00
+.dont_adjust:
+        ld      a, (iy+00)              ; Is this the last menu entry?
+        cp      $ff
+        jr      nz, .draw_menu_item     ; Nope
+        jp      $4981
+
+
+forg    $02a33
+org     $4a33, $4a47
+HandleMenuNewline:
+        ; @XXX@
+        ret
 
 
 ; This is a reworked version of the display code from the original game,
@@ -148,7 +190,8 @@ PrintChar:
         ret
 
 
-; The rest of this range is used as a place to put patches for other bits of code
+; The rest of this range is used as a place to put patches for other bits of code and whatnot
+; (Basically stuff that must be in $4000-5fff)
 
 ; This adds to the code that was at $475d
 HandleFirstLineOfDialogue:
@@ -169,6 +212,21 @@ HandleNewline:
 
         ; Back to your regularly scheduled program
         jp      $4763
+
+
+DrawMenuLetters:
+        ld      a, $1b                  ; Set text color to black
+        ld      (text_color), a
+        ld      a, (ix+0)               ; [IX] points to the char in the script
+        inc     ix
+        add     a, $80                  ; Adjust it to MSX charset
+        cp      CHAR_MNL                ; Is this the <mnl> code?
+        jp      z, HandleMenuNewline    ; Branch if so
+        call    PrintChar8              ; Print char
+        ld      a, (ix+0)               ; Get next char
+        cp      CHAR_END                ; Is it <end>?
+        jr      nz, DrawMenuLetters     ; Loop if not
+        ret
 
 
 ; Stuff from here on goes in ROM bank 16

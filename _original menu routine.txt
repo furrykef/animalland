@@ -1,0 +1,69 @@
+$491f:
+        ld      hl, $0600               ; VRAM address
+        ld      iy, $f302
+        ld      d, '1'                  ; Digit to display (e.g. the '1' in "1.TABLE")
+
+.draw_menu_item:
+        ld      a, (iy+0)
+        inc     iy
+        ld      ix, ($f2f6)             ; Load IX with addr of char in the script
+        or      a
+        jr      z, +                    ; Skip next line if already pointing to the first menu item
+        call    $4b11                   ; Adjust text pointer to Nth menu item
++       ld      a, $6b                  ; Set text color to orange
+        ld      ($f301), a
+        ld      a, d                    ; Number of menu item (in MSX charset)
+        call    $47ba                   ; Display it
+        ld      bc, 8                   ; Bump VRAM address
+        add     hl, bc
+        push    bc
+        ld      a, '.'
+        call    $47ba
+        pop     bc                      ; BC is still 8
+        add     hl, bc                  ; Bump VRAM address
+        push    hl
+
+.draw_letters:
+        ld      a, $1b                  ; Set text color to black
+        ld      ($f301), a
+        ld      a, (ix+0)               ; [IX] points to the char in the script
+        inc     ix
+        add     a, $80                  ; Adjust it to MSX charset
+        cp      $23                     ; Is this the linebreak code (<pause> in main script)?
+        jp      z, $4a33                ; Branch if so
+        call    $47ba                   ; Print char
+        ld      bc, 8                   ; Bump VRAM address
+        add     hl, bc
+        ld      a, (ix+0)               ; Get next char
+        cp      $7f                     ; Is it <end>?
+        jr      nz, .draw_letters       ; Loop if not
+        pop     hl                      ; HL holds VRAM position as it was after
+                                        ; drawing the period and bumping
+        ld      bc, $70                 ; Bump VRAM to start of next menu item
+        add     hl, bc
+        inc     d
+        ld      a, '5'                  ; Need to adjust VRAM addr after drawing 4th item
+        cp      d
+        jr      nz, +
+        ld      hl, $0e00
++       ld      a, (iy+00)              ; Is this the last menu entry?
+        cp      $ff
+        jr      nz, .draw_menu_item     ; Nope
+        ; The rest is probably of no interest (PC here is $4981)
+
+
+; We get here when we get a linebreak code
+$4a33:
+        TO BE DONE (maybe)
+
+
+; Scan string until N <end> markers have been found, where N = A
+$4b11:
+        ld      b, a
+-       inc     ix
+        ld      a, (ix-1)
+        cp      $7f
+        jr      z, +
+        jr      -
++       djnz    -
+        ret

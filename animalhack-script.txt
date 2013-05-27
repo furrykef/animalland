@@ -165,123 +165,123 @@ MOM ($A2)
 // Commands
 #JMP($2C80, $363B)
 // みる<end>
-LOOK<end>
+Look<end>
 
 // とる<end>
-TAKE<end>
+Take<end>
 
 // しらへ゛る<end>
-CHECK<end>
+Check<end>
 
 // きく<end>
-ASK<end>
+Ask<end>
 
 // あける<end>
-OPEN<end>
+Open<end>
 
 // みせる<end>
-SHOW<end>
+Show<end>
 
 // ハナきかす<end>
-SNIFF<end>
+Sniff<end>
 
 // と゛こかいく<end>
-GO<end>
+Go<end>
 
 // よふ゛<end>
-CALL<end>
+Summon<end>
 
 // すいりする<end>
 // @TODO@ - guess
-REASON<end>
+Reason<end>
 
 // し゛ょうほう<end>
 // @TODO@ - guess
-INFO<end>
+Info<end>
 
 // テーフ゛ル<end>
-TABLE<end>
+Table<end>
 
 // ゆか<end>
-FLOOR<end>
+Floor<end>
 
 // いす<end>
-CHAIR<end>
+Chair<end>
 
 // ほうせきてん<end>
-SHOP<end>
+Shop<end>
 
 // しょさい<end>
-STUDY<end>
+Study<end>
 
 // おうせつま<end>
-PARLOR<end>
+Parlor<end>
 
 // そうさ<pause>6ほんふ゛<end>
 HQ<end>
 
 // ふうとう<end>
-ENVE-<pause>1LOPE<end>
+Envelope<end>
 
 // きんは゜つ<end>
-BLOND HAIR<end>
+Blond hair<end>
 
 // てんない<end>
-SHOP<end>
+Shop<end>
 
 // メモ<end>
-NOTE<end>
+Note<end>
 
 // つくえ<end>
-DESK<end>
+Desk<end>
 
 // ほんた゛な<end>
-BOOK-<pause>1CASE<end>
+Bookcase<end>
 
 // まと゛<end>
-WINDOW<end>
+Window<end>
 
 // ほん<end>
-BOOKS<end>
+Books<end>
 
 // つくえの<pause>4ひきた゛し<end>
-DRAWER<end>
+Drawer<end>
 
 // ほんた゛な<pause>3のとひ゛ら<end>
-BOOK-<pause>1CASE<end>
+Bookcase<end>
 
 // きんこ<end>
-SAFE<end>
+Safe<end>
 
 // コ゛ンきち<end>
-RENARD<end>
+Renard<end>
 
 // コンタ<end>
-RED<end>
+Red<end>
 
 // ココン<end>
-KIT<end>
+Kit<end>
 
 // ふうとう<pause>5のなかみ<end>
-ENV'S CONTENTS<end>
+Env's contents<end>
 
 // リンリン<end>
-RINRIN<end>
+Rinrin<end>
 
 // ターシ゛<end>
-TAJI<end>
+Taji<end>
 
 // かえす<end>
-LET GO<end>
+Release<end>
 
 // やっは゜り<pause>1いくのをやめる<end>
-CANCEL<end>
+Cancel<end>
 
 // かへ゛<end>
-WALL<end>
+Wall<end>
 
 // ト゛ア<end>
-DOOR<end>
+Door<end>
 
 // カ゛ラス<pause>6ケース<end>
 GLASS CASE<end>
@@ -307,11 +307,11 @@ GOODS<end>
 
 // さくやのこと<end>
 // @TODO@
-LAST<pause>1NIGHT<end>
+LAST NIGHT<end>
 
 // し゛ゅうせい<pause>4のこと<end>
 // @TODO@
-GUN-<pause>1SHOT<end>
+GUNSHOT<end>
 
 // きんは゜つ<end>
 BLOND HAIR<end>
@@ -360,7 +360,7 @@ HQ<end>
 RINRIN<end>
 
 // コンタのへや<end>
-RED'S<pause>1ROOM<end>
+RED'S ROOM<end>
 
 // コンヒ゛ニエ<pause>1ンスストアー<end>
 AMY'S SHOP<end>
@@ -399,8 +399,7 @@ RED<end>
 KIT<end>
 
 // ホ<end>
-// @TODO@ - ?
-HO<end>
+<end>
 
 // ヒ゜ョンコ<end>
 AMY<end>
@@ -439,10 +438,10 @@ CAR<end>
 SHOP<end>
 
 // おにき゛り<end>
-ONI-<pause>1GIRI<end>
+ONIGIRI<end>
 
 // のりまき<end>
-NORI-<pause>1MAKI<end>
+NORIMAKI<end>
 
 // コ゛ンきち<pause>5のこと<end>
 RENARD<end>
@@ -451,7 +450,7 @@ RENARD<end>
 ENEMY<end>
 
 // もめこ゛と<end>
-QUAR-<pause>1REL<end>
+QUARREL<end>
 
 // せいかつ<end>
 LIFE<end>
@@ -521,7 +520,7 @@ OPEN<end>
 REASON<end>
 
 // し゛んふ゛つ<end>
-CHAR-<pause>1ACTER
+CHARACTER
 
 // と<end>
 <end>
@@ -643,7 +642,7 @@ NOTE<end>
 
 // と<end>
 // @TODO@
-TO<end>
+<end>
 
 // きんは゜つ<end>
 BLOND HAIR<end>
@@ -658,7 +657,7 @@ INJURY<end>
 ENEMY<end>
 
 // もめこ゛と<end>
-QUAR-<pause>1REL<end>
+QUARREL<end>
 
 // せいかつ<end>
 LIFE<end>
@@ -706,7 +705,7 @@ AMY<end>
 <end>
 
 // さかな<pause>3ハンティンク゛<end>
-FISH-<pause>1ING<end>
+FISHING<end>
 
 // ゜<end>
 <end>
@@ -715,7 +714,7 @@ FISH-<pause>1ING<end>
 CAR<end>
 
 // コアラにきく<end>
-ASK<pause>1KOALA<end>
+ASK KOALA<end>
 
 // し゛けんに<pause>4ついて<end>
 MURDER<end>
@@ -793,7 +792,7 @@ JEWELS<end>
 BAR<end>
 
 // ヌキのへや<end>
-NUKI'SROOM<end>
+NUKI'S ROOM<end>
 
 // ヌキのこと<end>
 NUKI<end>
@@ -802,13 +801,13 @@ NUKI<end>
 GOODS<end>
 
 // りょうしゅう<pause>4しょう<end>
-RE-<pause>1CEIPT<end>
+RECEIPT<end>
 
 // カキ゛<end>
 KEY<end>
 
 // てか゛みの<pause>5ありか<end>
-LOC.OFLETTER<end>
+LOC. OF LETTER<end>
 
 // てか゛みの<pause>4ないよう<end>
 LETTER<end>
@@ -823,13 +822,13 @@ CAR<end>
 JEWEL<end>
 
 // ほんた゛な<end>
-BOOK-<pause>1CASE<end>
+BOOKCASE<end>
 
 // ほん<end>
 BOOKS<end>
 
 // しおり<end>
-BOOK-<pause>1MARK<end>
+BOOKMARK<end>
 
 // たたみ<end>
 // @TODO@ - ?
@@ -866,7 +865,7 @@ KEY<end>
 ENEMY<end>
 
 // さかな<pause>3ハンティンク゛<end>
-FISH-<pause>1ING<end>
+FISHING<end>
 
 // コ゛ンきちと<pause>1もめたりゆう<end>
 MOTIVE<end>
@@ -875,13 +874,13 @@ MOTIVE<end>
 LIFE<end>
 
 // もめこ゛と<end>
-QUAR-<pause>1REL<end>
+QUARREL<end>
 
 // ツネコのこと<end>
 NEKO<end>
 
 // コ゛ンきちの<pause>5つま<end>
-HIS<pause>1WIFE<end>
+HIS WIFE<end>
 
 // いくのを<pause>6やめる<end>
 CANCEL<end>
@@ -973,7 +972,7 @@ BAR<end>
 STUDY<end>
 
 // ツネコのへや<end>
-NEKO'S<pause>1ROOM<end>
+NEKO'S ROOM<end>
 
 // まよいのもり<end>
 FOREST<end>
@@ -988,7 +987,7 @@ NOTE<end>
 KEY<end>
 
 // ほんた゛なの<pause>3とひ゛ら<end>
-BOOK-<pause>1CASE<end>
+BOOKCASE<end>
 
 // つくえの<pause>4ひきた゛し<end>
 DRAWER<end>
@@ -1030,7 +1029,7 @@ PERU<end>
 RENARD<end>
 
 // し゛んふ゛つ<end>
-CHAR-<pause>1ACTER<end>
+CHARACTER<end>
 
 // しょうこひん<end>
 PROOF<end>
@@ -1063,7 +1062,7 @@ BLOND HAIR<end>
 DESK<end>
 
 // ほんた゛な<end>
-BOOK-<pause>1CASE<end>
+BOOKCASE<end>
 
 // いす<end>
 CHAIR<end>
@@ -1141,7 +1140,7 @@ BRIDGE<end>
 BRICK<end>
 
 // マッチは゛こ<end>
-MATCH-BOX<end>
+MATCHBOX<end>
 
 // オノ<end>
 // @TODO@ - ?
@@ -1154,10 +1153,10 @@ FLASK<end>
 BALL<end>
 
 // ほ゛うえん<pause>5きょう<end>
-TELE-<pause>1SCOPE<end>
+TELESCOPE<end>
 
 // すいちゅう<pause>4メカ゛ネ<end>
-GOG-<pause>1GLES<end>
+GOGGLES<end>
 
 // カキ゛<end>
 KEY<end>
@@ -1167,14 +1166,14 @@ KEY<end>
 DIVING<end>
 
 // むしメカ゛ネ<end>
-MAG.<pause>1GLASS<end>
+MAG. GLASS<end>
 
 // しんふ゛ん<end>
 NEWS<end>
 
 // しゃしんつき<pause>2しんふ゛ん<end>
 // @TODO@ - should be "news & photo"
-NEWS<pause>1PHOTO<end>
+NEWS PHOTO<end>
 
 // しゅうかんし<end>
 MAG<end>
@@ -1183,7 +1182,7 @@ MAG<end>
 OIL<end>
 
 // けそ゛め<pause>3く゛すり<end>
-HAIR<pause>1DYE<end>
+HAIR DYE<end>
 
 // こや<end>
 HUT<end>
@@ -1207,7 +1206,7 @@ SLATE<end>
 NEWS<end>
 
 // てつのはこ<end>
-IRON<pause>1BOX<end>
+IRON BOX<end>
 
 // し゛めんの<pause>6あな<end>
 HOLE<end>
@@ -1219,25 +1218,25 @@ MOLE<end>
 FISH<end>
 
 // なそ゛のひと<end>
-UNK.<pause>1PERSON<end>
+UNK. PERSON<end>
 
 // むかしの<pause>3まよいのもり<end>
-OLD<pause>1FOREST<end>
+OLD FOREST<end>
 
 // いまの<pause>4まよいのもり<end>
-FORESTTODAY<end>
+FOREST TODAY<end>
 
 // なそ゛の<pause>3と゛うふ゛つ<end>
-UNK.<pause>1ANIMAL<end>
+UNK. ANIMAL<end>
 
 // と゛うふ゛つ<pause>3のゆくえ<end>
-LOCA0<pause>1TION<end>
+LOCATION<end>
 
 // にしの<pause>5みす゛うみ<end>
 SOUTH LAKE<end>
 
 // くす゛れた<pause>6はし<end>
-BROKENBRIDGE<end>
+BROKEN BRIDGE<end>
 
 // よこ゛れた<pause>4ホ゛ール<end>
 DIRTY BALL<end>
@@ -1246,7 +1245,7 @@ DIRTY BALL<end>
 CLEAN BALL<end>
 
 // ハチのす<end>
-BEE-<pause>1HIVE<end>
+BEEHIVE<end>
 
 // いくのを<pause>6やめる<end>
 CANCEL<end>
@@ -1333,10 +1332,10 @@ PHOTO<end>
 JEWELS<end>
 
 // しんふ゛んの<pause>4きし゛<end>
-ART-<pause>1ICLE<end>
+ARTICLE<end>
 
 // ようき゛しゃ<end>
-SUS-<pause>PECT<end>
+SUSPECT<end>
 
 // はんにん<end>
 PERP<end>
@@ -1376,7 +1375,7 @@ DIVING<end>
 ARREST<end>
 
 // おうせつまの<pause>3かへ゛<end>
-PARLORWALL<end>
+PARLOR WALL<end>
 
 // と<end>
 <end>
@@ -1394,7 +1393,7 @@ JEWEL<end>
 <end>
 
 // た゛んか゛ん<pause>3の　ち<end>
-BULLETBLOOD<end>
+BULLET BLOOD<end>
 
 // しんふ゛んの<pause>5こと<end>
 NEWS<end>
@@ -2671,6 +2670,7 @@ It's small and white.<end>
 // なーんちゃって、そんなの　わかりませんよ。<end>
 // (changed Kit's response since we're dropping the idea of it not
 // looking like a perfect N)
+// @TODO@ -- ヌっと is actually a pun here
 <Oidon>
 This "N" was found on a<nl>
 scrap of paper at the<nl>
@@ -4431,13 +4431,13 @@ I don't recognize this, though<end>
 // あいつほと゛　なか゛くつきあっているものは
 // いません。
 // それなのに、それなのに・・・・・・<end>
-<Taiiji>
+<Taaji>
 Uhh.....
 <Oidon>
 We hear you two were friends.
 <Taaji>
 Yes. He was a very close friend.
-I've never known anyone for as long as I did him.
+I've never known anyone for as long as I knew him.
 And to think that he's gone now.....<end>
 
 // <contd>

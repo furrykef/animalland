@@ -46,6 +46,7 @@ A routine at 2C3A (4C3A in mem space) handles loading pointers for both menus an
 Release checklist
 -----------------
 * All passwords work.
+* Correct pointers are loaded for each password.
 * Correct passwords are given at the end of each chapter.
 * All menu item names correct and sensible in context
 * No menu item names overflow
@@ -101,31 +102,30 @@ RAM variables
 <@BiFi> FAF9-FAFD are kanji basic related and FAFC contain a few MSX2 and MSX2+ related things
 
 
+Potential dictionary entries
+----------------------------
+.[space]
+![space]
+,[space]
+?[space]
+The[space]
+the[space]
+ the
+ the[space]
+a[space]
+ a
+ a[space]
+an[space]
+ an
+ an[space]
+'s[space]
+boss
+[characters' names]
+
+
 Intro text
 ----------
 The game never switches a bank into A000-BFFF during the intro, so we can safely store our intro text there.
-
-
-Emboldenation
--------------
-While I've already implemented this, I'm keeping a record here partly so I'll remember how it works, partly so I can find where the font is loaded in case I want to implement simultaneous bold and un-bold fonts.
-
-<@BiFi> offset $27fa in the rom image is where that part starts
-<furrykef> BiFi -- huh, how did you work that out?
-<@BiFi> openmsx debugger :)
-<furrykef> yeah, but I'm looking at that code and have pretty much no idea what's going on
-<@BiFi> the core of the boldmaker is:
-<@BiFi> ld a,(de)
-<@BiFi> ld c,a
-<@BiFi> srl a
-<@BiFi> or c
-<@BiFi> call $4d
-<@BiFi> - read data from rom
-<@BiFi> - keep for later
-<@BiFi> - shift right
-<furrykef> ahhh... I get it
-<furrykef> SRL and OR to double up the pixels... pretty clever
-<furrykef> Yep. Three NOPs over the SRL and the OR and it's no longer bold
 
 
 "What?"
