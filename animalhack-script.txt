@@ -30,7 +30,7 @@ What's the<nl>
 file's name?<end>
 
 // <contd>ファイルめいは？　<END>
-($01)Password:<end>
+($01)File name:<end>
 
 // <contd><Oidon>それて゛は　そうさを
 // さいかいしましょう。<END>
@@ -41,7 +41,7 @@ let's go.<end>
 // ないですぜ。<END>
 ($01)<Oidon>
 No such<nl>
-file.<end>
+file, boss.<end>
 
 // Intro text
 // I cut this down just a hair so it would fit in the original space.
@@ -1708,8 +1708,8 @@ Two sons. 38 years old.<end>
 // (Description of Konta/Red)
 <Oidon>
 20 years old. Victim's<nl>
-first son. Helps with<nl>
-the shop.<key>
+first son. Managing<nl>
+director at the store.<key>
 <Oidon>
 It's rumored that he<nl>
 was to become the owner<nl>
@@ -1787,9 +1787,8 @@ Just an ordinary wall.<end>
 // とおって　このへやへ　はいってきたのて゛しょう。<end>
 <Oidon>
 Just an ordinary door.<nl>
-The killer must have<nl>
-used it to get in and<nl>
-out.<end>
+The killer must got in through
+here.<end>
 
 0<end>
 
@@ -1811,7 +1810,7 @@ Nothing else here.<end>
 // カキ゛か゛　かかっています。<end>
 <Oidon>
 Rather stylish window.<nl>
-It's locked, though.<end>
+It's locked.<end>
 
 // <Oidon>とくに　かわったところは　ないようですぜ。<end>
 <Oidon>
@@ -1955,8 +1954,8 @@ This is a rather myste-<nl>
 rious case, boss.<key>
 <Oidon>
 What's with the "N" on<nl>
-the paper? Whose hair<nl>
-did we find? Why was<nl>
+the paper? Who does the blond
+hair being to? Why was<nl>
 the door open?<key>
 <Oidon>
 The only clues the perp<nl>
@@ -2158,8 +2157,9 @@ I saw Red go into the<nl>
 jewelry shop at around<nl>
 8. Other than that...<key>
 <Pyonko>
-Ah, right. I saw a car<nl>
-there at 11.<end>
+Ah, that's right. I saw a car
+parked out there around 11.<nl>
+.<end>
 
 // <Oidon>し゛ゅうせい　なんかを　きかなかったか？
 // <Pyonko>さあ　し゛ゅうせいか　と゛うか　わかりませんか゛
@@ -2171,8 +2171,8 @@ like a gun?<key>
 <Pyonko>
 I don't know whether it<nl>
 was a gun, but I heard<nl>
-a loud noise at around<nl>
-11. I heard it twice.<end>
+a loud noise twice at<nl> 
+around 11 <end>
 
 // <Oidon>これに　みおほ゛えは　ないか？
 // <Pyonko>さあ、た゛れの　け　て゛しょうね。<end>
@@ -2211,10 +2211,10 @@ No. What is it?<end>
 // <Pyonko>いろはしろて゛す。
 // かたちは　くらいのて゛　よくおほ゛えてません。<end>
 <Oidon>
-Describe the car.<key>
+Please describe the car.<key>
 <Pyonko>
 It was white. It was<nl>
-dark out, though, so I<nl>
+dark out, so I<nl>
 couldn't tell much<nl>
 else.<end>
 
@@ -2286,7 +2286,7 @@ It's mostly literature.<end>
 // もてないのて゛、とることは　て゛きませんぜ。<end>
 <Oidon>
 Ugh... it's too heavy<nl>
-to pick up.<end>
+to pick up, boss.<end>
 
 // <Oidon>わー、むす゛かしいこと　た゛らけて゛
 // おいと゛んには　よめませんぜ。
@@ -2294,13 +2294,13 @@ to pick up.<end>
 <Oidon>
 They're full of diffi-<nl>
 cult things and I can't<nl>
-read them. They're no<nl>
+read them. They're of no<nl>
 use to us.<end>
 
 // <Oidon>あっ　だんな、つくえのしたに　てちょうか゛
 // ありますぜ。<end>
 <Oidon>
-Hey, there's a notepad<nl>
+Hey, boss, there's a notepad<nl>
 under the desk.<end>
 
 // <Oidon>もう　なにも　ありませんぜ。<end>
@@ -2343,7 +2343,7 @@ first.<end>
 // <Oidon>しほ゛う　すいてい　し゛こくは、
 // 10日のよる　11時ということですぜ。<end>
 <Oidon>
-Apparently the time of<nl>
+The estimated time of<nl>
 death was 11 PM on the<nl>
 10th.<end>
 
@@ -2361,16 +2361,16 @@ anything to.<end>
 // だんなの　あせの　においも　ありますよ。<end>
 <Oidon>
 I smell lots of things.<nl>
-I even smell your per-<nl>
-spiration!<end>
+Even smell your per-<nl>
+spiration, boss!<end>
 
 // <Oidon>し゛ゃあ、コンタを　よひ゛ますぜ。<end>
 <Oidon>
-OK, let's call Red.<end>
+OK, let's call Red in here.<end>
 
 // <Oidon>し゛ゃあ、ココンを　よひ゛ますぜ。<end>
 <Oidon>
-OK, let's call Kit.<end>
+OK, let's call Kit in here.<end>
 
 0<end>
 
@@ -2395,7 +2395,7 @@ I've got nuthin'.<end>
 // <Oidon>と゛うきは　ありますか゛、いまいち
 // わかりませんぜ。<end>
 <Oidon>
-There may be a motive,<nl>
+He may have a motive,<nl>
 but there's not enough<nl>
 evidence.<end>
 
@@ -2527,11 +2527,11 @@ to the safe?<nl>
 Renard was the only one<nl>
 who knew.<key>
 <Konta>
-But I doubt anything<nl>
-you find could solve<nl>
-the mystery.<key>
+But, it would help solve the<nl>
+case if anything of relevance<nl>
+is in there...<key>
 <Konta>
-Still, I'll do what I<nl>
+Arlight, I'll do what I<nl>
 can. I'll let you know<nl>
 as soon as I find any-<nl>
 thing.<end>
@@ -2539,8 +2539,8 @@ thing.<end>
 // <Oidon>ちょっと　しつれい。
 // しらへ゛ましたけと゛　なにもないて゛すよ。<end>
 <Oidon>
-Sorry. I looked but<nl>
-didn't find anything.<end>
+Excuse me for a second....<nl>
+Nothing here.<end>
 
 0<end>
 
@@ -2607,9 +2607,9 @@ new nose.<end>
 // いえて゛　とりひきのはなしをしていたんて゛す。
 // しんし゛てくた゛さい。<end>
 <Oidon>
-You say you didn't go,<nl>
-but Amy saw you go in<nl>
-there at about 8:30.<nl>
+You're lying!<nl>
+Amy saw you go in<nl>
+there at about 8:30!<nl>
 Now tell us the truth!<key>
 <Konta>
 OK, OK! Yeah, I went<nl>
@@ -2628,8 +2628,10 @@ We just talked about<nl>
 business from 8:30 to<nl>
 9:00.<key>
 <Konta>
-Around 11 I happened<nl>
-across Rinrin, and we<nl>
+At around 11  the time of 
+the incident I happened<nl>
+across Rinrin on my way 
+home, and we<nl>
 chatted about business<nl>
 at my place.<key>
 <Konta>
@@ -2638,7 +2640,8 @@ Please believe me!<end>
 // <Oidon>ちょっと　しつれい。
 // しらへ゛ましたか゛、なにもないですぜ。<end>
 <Oidon>
-Sorry. I looked, but<nl>
+Excuse me...
+I looked, but<nl>
 didn't find anything.<end>
 
 // <Oidon>し゛ょうひんな　こうすいの　においか゛
@@ -2730,9 +2733,9 @@ don't.<end>
 <Oidon>
 Recognize this?<nl>
 <Kokon>
-Must have been in the<nl>
-shop. I don't know any-<nl>
-thing else about it...<end>
+Oh, that?<nl>
+It was the in shop, wasn't it?<nl>
+It looks like a memo.<end>
 
 0<end>
 
@@ -2777,7 +2780,7 @@ the time of death.<end>
 // ココンのくるまは　しろの　こか゛たしゃ
 // て゛あることか゛　わかりました。<end>
 <Oidon>
-My investigation shows<nl>
+Boss, my investigation shows<nl>
 that Kit drives a<nl>
 small, white car.<end>
 
@@ -2828,7 +2831,7 @@ Whom? <end>
 // そうさファイルに　まとめました。
 // ファイルめいは　<red>こひ゛とかは゛<black>て゛す。<end>
 <Oidon>
-We've learned some new<nl>
+Boss, we've learned some new<nl>
 things, but the mystery<nl>
 only deepens.<key>
 <Oidon>
@@ -2866,14 +2869,14 @@ to the case.<end>
 // <Oidon>おっ!　うめほ゛しか゛　はいってますぜ。
 // おもわす゛　よた゛れか゛　て゛てきますね、だんな。<end>
 <Oidon>
-Ah! It has umeboshi in<nl>
-it! Ah, sorry boss, I'm<nl>
-drooling...<end>
+Ah! It has dried plum in<nl>
+it! Enough to make you drool,
+huh boss?<nl><end>
 
 // <Oidon>おっ!　かんひ゜ょうか゛　はいってますぜ。
 // うまそうて゛すね。<end>
 <Oidon>
-Hmm! There's kanpyo in<nl>
+Hmm! There's dried gourd in<nl>
 it. Looks delicious.<end>
 
 // <Oidon>け゛んは゛に　のこされた　かみに"<char>"というもし゛か゛
@@ -2902,12 +2905,12 @@ I was right here.<end>
 // だんな、なかに　はいっていた　うめほ゛しか゛
 // おちてしまいましたせ゛。<end>
 <Oidon>
-Oop. Looks like some<nl>
-umeboshi fell out.<end>
+Oops! The dried plum<nl>
+fell out, boss.<end>
 
 // <Oidon>だんな、かんひ゜ょうか゛　はいってますぜ。<end>
 <Oidon>
-There's kanpyo in it.<end>
+There's dried gourd in it.<end>
 
 // <Oidon>ゴンきちの　なにを　ききますか？<end>
 <Oidon>
@@ -2935,15 +2938,15 @@ know of.<end>
 // <Oidon>ゴンきちか゛　さいきん　もめこ゛とを
 // おこしたことは　ないか？<end>
 <Oidon>
-Did Renard have any<nl>
-quarrels?<end>
+Did Renard get in any<nl>
+fights recently?<end>
 
 // <contd>
 // <Pyonko>さあ・・・きいたこと　ありませんわ。<end>
 // (answer to above question)
 <contd>
 <Pyonko>
-I haven't heard of any.<end>
+I haven't heard anything.<end>
 
 // <Oidon>ゴンきちの　せいかつは　と゛んなものた゛った？<end>
 <Oidon>
@@ -2957,9 +2960,9 @@ Renard lead?<end>
 // (answer to above question)
 <contd><key>
 <Pyonko>
-Even though his store's<nl>
-across the street, I<nl>
-don't know him that<nl>
+His store may be<nl>
+across the street, but I<nl>
+really didn't know him that<nl>
 well.<end>
 
 0<end>
@@ -2998,7 +3001,7 @@ Just an ordinary wall.<end>
 
 // <Oidon>しらへ゛ましたか゛　いし゛ょうは　ありませんぜ。<end>
 <Oidon>
-Nothing else there.<end>
+Nothing unusual there.<end>
 
 // <Oidon>へ゛つに　かわったところは　ないようですぜ。<end>
 <Oidon>
@@ -3159,7 +3162,7 @@ dropped it elsewhere.<end>
 // <contd>
 // <Kokon>てき　ねぇ・・・いないと　おもいますよ。<end>
 <contd>
-<Kokon>Enemies? Don't<nl>
+<Kokon>Enemies? I don't<nl>
 think he had any.<end>
 
 // <contd>
@@ -3176,11 +3179,11 @@ None as far as I know.<end>
 // ありませんしね。<end>
 <contd>
 <Kokon>
-Not with anyone I can<nl>
-think of.<key>
+His life? I really<nl>
+can't say...<key>
 <Kokon>
-That's not to say he<nl>
-always got along...<end>
+It's not like we lived<nl>
+together or anything.<end>
 
 0<end>
 
@@ -3211,7 +3214,7 @@ Not at all.<end>
 // @TODO@ -- verify. Probably has to do with the gun.
 <contd>
 <Kokon>
-No. Looks dangerous!<end>
+No way! Get that thing away from me!<end>
 
 // <contd>
 // <Pyonko>これか゛きょうきなの？　まあこわい!<end>
@@ -3251,7 +3254,7 @@ jewelry shop.<end>
 I'd like to ask about<nl>
 Kit.<nl>
 <Pyonko>
-Well don't ask ME!<nl>
+How should I know anything about HIM?<nl>
 Hmph!<end>
 
 // こるもんて゛すか!<end>
@@ -3278,7 +3281,9 @@ someone in first.<end>
 // コンコンほうせきてんの　ヘ゜ルーというものか゛
 // その日はもちろん、いままて゛す゛っと
 // しゅっちょうせす゛にいたことか゛　わかりましたせ゛。<end>
-Translation goes here.<end>
+Boss, we've discovered that not only 
+was Peru Foxy Jewelry here the day of the 
+crime, she never even left for her trip..<end>
 
 // <Oidon>だんな　いったい　と゛ういうことて゛しょう？
 // かんけいしゃ　すへ゛てに　アリハ゛イか゛　あるとは。
@@ -3302,10 +3307,13 @@ anything to.<end>
 
 // <Oidon>クンクン。<pause>だんな、やっは゜りほんふ゛というのは
 // いいにおいし゛ゃ　ありませんぜ。<end>
-Translation goes here.<end>
+<Oidon>
+*sniff sniff*
+There's nothing like the smell of headquarters, right, boss?.<end>
 
 // <Oidon>ほんじゃ、ト゛ラコ゛ンへいきましょうや。<end>
-Translation goes here.<end>
+<Oidon>
+Ok, let's go to Dragon.<end>
 
 // <Oidon>ほんじゃ、いさ゛かや"クマ"へいきましょうや。<end>
 <Oidon>
@@ -3363,7 +3371,7 @@ No info at this time.<end>
 While it's possible he<nl>
 killed him to become<nl>
 the owner, it's not too<nl>
-plausible.<end>
+plausible of a motive.<end>
 
 // <Oidon>としは　わかいんて゛すか゛、と゛うきは
 // かんか゛えられますぜ。アリハ゛イも
@@ -3386,7 +3394,8 @@ Translation goes here.<end>
 // <Oidon>ヘ゜ルーは　てんいんというた゛けて゛
 // なにものて゛もないですぜ。
 // それに　と゛うきも　かんか゛えられませんぜ。<end>
-Translation goes here.<end>
+All we know about Peru is that she's a banker.
+Any motive would be unimaginable right now.<end>
 
 // <Oidon>コアラさん　と゛うもありか゛とうこ゛さ゛いました。
 // ほんじゃ、そうさほんふ゛へ　いきましょうや。<end>
@@ -3406,7 +3415,9 @@ Translation goes here.<end>
 // うたか゛うへ゛きところは　ないですぜ。
 // アリハ゛イについては　コンタか゛しょうめいして
 // いますし、しんし゛てもいいとおもいますぜ。<end>
-Translation goes here.<end>
+<Oidon>
+She's just a customer at the jewelry store so there's no reason to suspect her.
+Her alibi checks out with Red's too, so we can trust her.<end>
 
 // ですぜ。<end>
 <end>
@@ -3416,7 +3427,8 @@ Translation goes here.<end>
 
 // <contd>
 // <Kokon>ヘ゜ルーさんと　ハ゜フハ゜フしていましたよ。<end>
-Translation goes here.<end>
+<Kokon>
+I was puff-puffing with Peruu.<end>
 
 // <Oidon>また゛　これをみたものは　いませんぜ。
 // いったい　た゛れのなんて゛しょうかね。<end>
@@ -3441,7 +3453,9 @@ Foxy Jewelry.<end>
 // <Oidon>38さいて゛す。て゛んきやを　けいえいしています。
 // ゴンきちとは、むかしからの
 // ゆうし゛んた゛そうですぜ。<end>
-Translation goes here.<end>
+<Oidon>
+38 years old. Manages an electronics store.
+Said to be an old friend of Renard's.<end>
 
 // <Oidon>23さいて゛す。き゛んこういんですぜ。
 // りょうしんも　おとうとも　なくなって
@@ -3467,7 +3481,7 @@ can't call him in.<end>
 // @TODO@ - find out what pronoun to use instead of "'the' alibi"
 <Oidon>
 A motive seems unlikely<nl>
-and the alibi seems<nl>
+and her alibi seems<nl>
 solid.<end>
 
 0<end>
@@ -3478,14 +3492,16 @@ solid.<end>
 
 // <Oidon>ちょっとしつれい・・・・・・。
 // しらへ゛ましたか゛　なにもないですぜ。<end>
-Translation goes here.<end>
+<Oidon>
+Excuse me....
+I searched but found nothing.<end>
 
 // <Oidon>いまもっている　しょうこひんは・・・・・・
 // きんは゜つ、メモ、けんし゛ゅう　・・・・・・
 // これた゛けですぜ。<end>
 <Oidon>
 The evidence we have<nl>
-now is... the blond<nl>
+so far is... the blond<nl>
 hair, the note, and the<nl>
 gun. Nothing more.<end>
 
@@ -3533,16 +3549,19 @@ Who doesn't want it?<end>
 
 // <contd>
 // <Kokon>さあ、しりませんよ。<end>
-Translation goes here.<end>
+<Kokon>
+No idea.<end>
 
 // <contd>
 // <Kokon>メモて゛すよ。
 // まえに　おしえたとおりの　ものた゛ったて゛しょ。<end>
-Translation goes here.<end>
+<Kokon>
+It's a memo. I told you that already.<end>
 
 // <contd>
 // <Kokon>しりませんよ、そんなふ゛っそうなもの。<end>
-Translation goes here.<end>
+<Kokon>
+I don't know anything about that! Get it away!<end>
 
 // <Oidon>10日のよる　11時は　と゛こにいた？<end>
 <Oidon>
@@ -3556,7 +3575,8 @@ Do you have a car?<end>
 // <Oidon>け゛んは゛のつくえに"<char>"とかかれた
 // ひ゛んせんのきれはしか゛みつかったのた゛か゛
 // おもいあたるふしはないか？<end>
-Translation goes here.<end>
+<Oidon>We found this scrap of paper at the scene on a desk.
+Any ideas what "N" is?<end>
 
 // <Oidon>ココンと　おなし゛においか゛しますぜ。<end>
 <Oidon>
@@ -3582,7 +3602,7 @@ since she's here.<end>
 // @TODO@ - confirm that this is a joke
 <Oidon>
 It smells like blood...<nl>
-<pause>toil, tears, and sweat<nl>
+<pause>sweat, and tears<nl>
 have gone into making<nl>
 this fancy perfume.<end>
 
@@ -3595,7 +3615,8 @@ I was out on a date.<end>
 // <Oidon>しゅっちょうには　なせ゛　いかなかったのた゛？
 // <Peruu>しゃちょうか゛　いっしゅうかんおくらせると
 // いわれましたのて゛・・・・・・。<end>
-Translation goes here.<end>
+<Oidon>Why didn't you leave on your trip?
+<Peruu>I was told to postpone it for a week...<end>
 
 // <Oidon>きんは゜つのきゃくを　みたことか゛あるか？
 // <Peruu>さあ、みたことは　ありませんよ。<end>
@@ -3615,7 +3636,10 @@ thing about that.<end>
 // <Oidon>ちょっとしつれい・・・・・・。
 // <Peruu>キャッ。<pause>たとえ　けいさつのかたて゛あろうと
 // そういうことをすると、けいさつを　よひ゛ますよ!<end>
-Translation goes here.<end>
+<Oidon>
+Excuse me for a moment...
+<Peruu>Aahh!! <pause>Try something like that again
+and I'm calling the police!<end>
 
 // <contd>
 // <Peruu>これは　きのう　わたしか゛　しゃちょうに
@@ -3629,7 +3653,18 @@ Translation goes here.<end>
 // いって　わたしに　けんし゛ゅうを
 // てにいれさせたのて゛す。
 // それか゛、こんなことになるなんて・・・・・・<end>
-Translation goes here.<end>
+<Peruu>
+I gave that to the boss yesterday.
+<Oidon>
+Huh? What do you mean?
+<Peruu>
+He was very neurotic recently.
+He hadn't slept in days because he said he
+kept having nightmares about a blond ghost.
+<Peruu>So he had me get him a gun so he could
+exterminate the ghost. Who would have imagined
+it would come to this...
+<end>
 
 // <contd>
 // <Peruu>そのなまえのことなら　わかりますよ。
@@ -3640,22 +3675,30 @@ Translation goes here.<end>
 // ゆうし゛んて゛　たいへんなかか゛　よろしくて、<key>
 // <Peruu>しゃちょうのところへ　よくあそひ゛に
 // きていました。<end>
-Translation goes here.<end>
+<Peruu>
+I know those names. Rinrin is a customer 
+who would come by the shop 
+often to talk with the boss. Taaji is an old friend of the boss.
+He came by often to visit.<end>
 
 // <Oidon>そのメモは　なんた゛かわかるか？
 // <Peruu>おそらく、ほうもんよていしゃを　しるしておいた
 // ものた゛と　おもいます。<end>
-Translation goes here.<end>
+<Oidon>
+Know anything about the memo?
+<Peruu>
+It's probably a reminder of the boss's appointments.<end>
 
 // <contd>
 // <Peruu>もってませんよ。<end>
 <contd>
 <Peruu>
-I don't have it.<end>
+I don't have one.<end>
 
 // <Oidon>せっかくターシ゛を　よんた゛のて゛すから、
 // ターシ゛に　めをむけましょうよ。<end>
-Translation goes here.<end>
+<Oidon>
+Let's focus on Taaji since he's here.<end>
 
 // <Oidon>クンクン。<pause>
 // だんな、のみものの　においか゛しますぜ。
@@ -3668,16 +3711,22 @@ Translation goes here.<end>
 // <Taaji>そのあと　しゅうりをしに　さんけんまわって
 // それか゛10時すき゛まて゛。
 // そのあとは　いえにかえって　ねましたよ。<end>
-Translation goes here.<end>
+<Taaji>
+I was visiting Renard from 6 until 7.
+<Taaji>
+Then I had repairs to take care of here and there
+until past 10. After that I just went home and went to bed.<end>
 
 // <contd>
 // <Taaji>ええ、みと゛りのワコ゛ンしゃをもってますよ。
 // しこ゛とに　ひつようて゛すからね。<end>
-Translation goes here.<end>
+<Taaji>
+Yes, I have a green station wagon.
+I need it for my work.<end>
 
 // <contd><key><Taaji>"<char>"なんて　いったいなんのことて゛しょうね？
 // なまえかも　しれませんよ。<end>
-Translation goes here.<end>
+<contd><key><Taaji>What's the "N" for? Maybe it's a name.<end>
 
 0<end>
 
@@ -3688,34 +3737,44 @@ Translation goes here.<end>
 
 // <contd>
 // <Taaji>めす゛らしいて゛すねー。みたことは　ありませんよ。<end>
-Translation goes here.<end>
+<Taaji>
+Interesting! Never seen it before.<end>
 
 // <contd>
 // <Taaji>おや？　わたしのなまえか゛・・・・・・。<pause>
 // これて゛わたしを　ひっかけようと
 // しているんて゛すか？<end>
-Translation goes here.<end>
+<Taaji>
+Hey, that's my name...<pause>
+Is that why you called me in?<end>
 
 // <contd>
 // <Taaji>なんて゛すか、これ。
 // えっ、これて゛　ゴンきちか゛　ころされた？
 // なんておそろしい・・・・・・<end>
-Translation goes here.<end>
+<Taaji>What is that? 
+Wait, is that what Renard was killed with?
+How terrible.....<end>
 
 // <Oidon>せっかくリンリンを　よんた゛のて゛すから、
 // リンリンに　めをむけましょうよ。<end>
-Translation goes here.<end>
+<Oidon>
+Let's focus on Rinrin since she's here.<end>
 
 // <Oidon>クンクン。<pause>
 // だんな、ささのいいにおいか゛　しますぜ。
 // さすか゛　にんけ゛んかいの　にんきものの　においは
 // ちか゛いますぜ。<end>
-Translation goes here.<end>
+<Oidon>
+*sniff sniff*<pause>
+I detect a slight fragrance.
+Those of us popular amongst humans really are from a different world.<end>
 
 // <contd>
 // <Rinrin>ああ、そのころなら、コンタさんのいえて゛
 // とりひきのはなしを　してました。<end>
-Translation goes here.<end>
+<Rinrin>
+I was talking business with Red at his place around then.<end>
 
 // <contd>
 // <Rinrin>はい。あかいのを　もってますよ。<end>
@@ -3744,7 +3803,7 @@ Translation goes here.<end>
 // <Rinrin>みたことはないて゛すよ。<end>
 <contd>
 <Rinrin>
-I didn't see anything.<end>
+I've never seen it before.<end>
 
 // <contd>
 // <Rinrin>あっ、わたしのなまえか゛　のってますね。
@@ -3759,7 +3818,7 @@ thing about it.<end>
 // <Rinrin>みたこともありませんわ。<end>
 <contd>
 <Rinrin>
-I didn't see anything.<end>
+I've never seen that before.<end>
 
 // 。<end>
 .<end>
@@ -3805,7 +3864,7 @@ Nothing here to open.<end>
 // きっと　いいまめを　つかっているんて゛しょうね。<end>
 <Oidon>
 The pleasant smell of<nl>
-coffee. He must be<nl>
+coffee. Must be<nl>
 using nice beans.<end>
 
 // <Oidon>ほんじゃ、そうさほんふ゛へ　いきましょうや。<end>
@@ -3822,36 +3881,44 @@ It's nice and stylish.<end>
 
 // <Oidon>カ゛サ。コ゛ソ。<pause>
 // しらへ゛ましたか゛、なにもありませんぜ。<end>
-Translation goes here.<end>
+<Oidon>
+My investigation of this place turns up nothing unusual.<end>
 
 // <contd>
 // <Dorakure>そのころなら　ここにいましたよ。<end>
-Translation goes here.<end>
+<Dorakure>I was here.<end>
 
 // <contd>
 // <Dorakure>もってますよ。きいろに　しまもようのやつ。
 // こんと゛、みにきてくた゛さいよ。<end>
-Translation goes here.<end>
+<Dorakure>
+I do. It's yellow with stripes. Come take a look sometime!<end>
 
 // <contd><key><Dorakure><char>、<char>、<char>・・・・・・
 // ちょっと　おもいつきませんねえ。
 // あちこち　あたってみてみれは゛　そのうちに
 // わかってくるんし゛ゃないて゛しょうかねぇ。<end>
-Translation goes here.<end>
+<Dorakure>
+N, N, N.....
+Doesn't ring any bells. If you ask around
+you're find out eventually I'm sure.<end>
 
 // <contd>
 // <Dorakure>なんて゛すか、これ。<end>
-Translation goes here.<end>
+<Dorakure>
+What is that?<end>
 
 // <contd>
 // <Dorakure>トラのけ　のようにみえますけと゛、
 // ちか゛いますよ。<end>
-Translation goes here.<end>
+<Dorakure>
+It almost looks like Tiger hair, but it isn't.<end>
 
 // <contd>
 // えっ、これて゛　ゴンきちさんか゛　ころされた？
 // なんておそろしい・・・・・・<end>
-Translation goes here.<end>
+Is that what Renard was killed with?
+How awful......<end>
 
 // <Oidon>そうた゛!　いいことをおもいつきました。
 // おいと゛んのしりあいて゛　はんさ゛いそうさの
@@ -3862,7 +3929,9 @@ Translation goes here.<end>
 // <Oidon>なにか　そうさのさんこうになることを
 // きけるかもしれません。
 // いってみましょうよ。<end>
-Translation goes here.<end>
+<Oidon>
+That's right! I just thought of something.
+I have a friend who they call the .<end>
 
 // <Oidon>と゛こかいくのは　しつもんか゛せ゛んふ゛おわってからに
 // しましょうせ゛。<end>
@@ -3911,25 +3980,37 @@ Translation goes here.<end>
 // <Rinrin>やけと゛て゛す。きのうのよる、コンタさんのいえに
 // いったとき、うっかりしてコーヒーをこほ゛して
 // しまったんて゛す。<end>
-Translation goes here.<end>
+<Oidon>
+What happened to you?
+<Rinrin>
+It's a burn. I accidently spilled coffee last night when I was at Red's.<end>
 
 // <Oidon>クンクン。
 // あれっ、ココンのとおなし゛　し゛ょうひんな
 // こうすいのにおいか゛しますぜ。
 // おい　こりゃ　と゛ういうことた゛？<key><Peruu>さあ　たた゛のく゛うせ゛んて゛しょ。<end>
-Translation goes here.<end>
+<Oidon>
+Hey, it smells like the same fancy perfume Kit had on. What's the deal?
+<Peruu>
+It's probably just a coincidence.<end>
 
 // <Oidon>おい　きみのにおいと　ヘ゜ルーのこうすいの
 // においか゛　おなし゛　というのは　と゛ういうわけた゛？
 // <Kokon>それは　こし゛んてきな　ことなのて゛
 // はなしたく　ありませんね<end>
-Translation goes here.<end>
+<Oidon>
+Hey, you and Peruu smell of the same perfume. What's the deal?
+<Kokon>
+It's personal. I'd rather not talk about it.<end>
 
 // <Oidon>おとこのひとと　テ゛ートしてたって、もしかしたら
 // そのあいてはココンくん　し゛ゃないか？
 // <Peruu>ええ、そうよ。あのこ　とししたて゛　とっても
 // かわいいのよ。ハ゜フ<pause>ハ゜フ<pause>しちゃいたいわ。<pause>ウフッ!<end>
-Translation goes here.<end>
+// @TODO@ -- [translate puff puff]
+<Oidon>
+You said you were on a date. Were you with Kit?
+<Peruu>Yes. He's younger than me and so cute! I just wanna puff-puff him!<end>
 
 // <contd>
 // <Kokon>なんと゛　おなし゛しつもんを　するんて゛す？
@@ -3942,7 +4023,18 @@ Translation goes here.<end>
 // <Oidon>こまるねぇ。これからは　なんて゛も
 // しょうし゛きに　はなすんた゛。
 // <Kokon>はい・・・<end>
-Translation goes here.<end>
+<Kokon>
+How many times do you need to ask? I told you, I was home all night.
+<Oidon>
+No, Peruu tells us you two were together that night.
+<Kokon>
+Oh, I see. This is embarassing...
+To tell the truth, I was seeing Peruu behind Amy's back.
+She ended up finding out and now I've got all these scratches.
+I couldn't say anything, it was too embarassing.
+<Oidon>
+That's no good. We're going to need you to tell the truth from here on.
+<Kokon>Ok...<end>
 
 // <Oidon>いくのは　やめますぜ。<end>
 Translation goes here.<end>
@@ -4040,44 +4132,52 @@ Translation goes here.<end>
 Looks like good coffee.<end>
 
 // <Oidon>ゴンきちか゛　ころされたのは　しっているか？<end>
-Translation goes here.<end>
+<Oidon>
+Do you know that Renard was murdered?.<end>
 
 // <contd>
 // <Dorakure>ええ・・・。さ゛んねんなことて゛す。あんなことに
 // なってしまうとは・・・・・・。<end>
-Translation goes here.<end>
+<Dorakure>
+Yes. Such a shame to go that way....<end>
 
 // コ゛ンきちのなにを　ききますか？　<end>
-Translation goes here.<end>
+What about Renard?<end>
 
 // <Oidon>ゴンきちに　てきは　いたか？<end>
-Translation goes here.<end>
+<Oidon>
+Did Renard have any enemies?<end>
 
 // <contd>
 // <Dorakure>さあねえ・・・わかりませんよ。<end>
-Translation goes here.<end>
+<Dorakure>
+I don't know.<end>
 
 // <Oidon>ゴンきちか゛　さいきんもめこ゛とを
 // おこしたことは　ないか？<end>
-Translation goes here.<end>
+Did Renard get in any fights recently?<end>
 
 // <contd>
 // <Dorakure>むすこのココンくんと　すこしもめていたことか゛
 // ありましたね。<end>
-Translation goes here.<end>
+<Dorakure>
+He did have some trouble with his son Kit recently.<end>
 
 // 。<end>
 .<end>
 
 // <Oidon>ゴンきちの　せいかつは　と゛んなものた゛った？<end>
-Translation goes here.<end>
+<Oidon>
+What kind of life did Renard lead?<end>
 
 // <contd>
 // <Dorakure>せいかつ？　いいんし゛ゃないて゛すかねえ。<end>
-Translation goes here.<end>
+<Dorakure>
+His life? Must have been nice I suppose.<end>
 
 // <Oidon>ゴンきちの　しゅみは？<end>
-Translation goes here.<end>
+<Oidon>
+What were Renard's hobbies?<end>
 
 // <contd>
 // <Dorakure>さかなハンティンク゛て゛したよ。３年はんくらい
@@ -4086,10 +4186,15 @@ Translation goes here.<end>
 // いちは゛んといううわさも　あったんて゛す。
 // それなのに、あんなことになってしまって・・・
 // まったく　さ゛んねんて゛す。<end>
-Translation goes here.<end>
+<Dorakure>
+Fish hunting. At least until 3 years ago...
+He used to be a pro. Even rumored to be the best in town.
+To think that it would end like this....
+It's such a shame.<end>
 
 // <Oidon>なせ゛　ゴンきちは　ココンともめたんた゛？<end>
-Translation goes here.<end>
+<Oidon>
+Why were Renard and Kit fighting?<end>
 
 // <contd>
 // <Dorakure>もめたというよりは　なやんて゛いたといったほうか゛
@@ -4100,7 +4205,12 @@ Translation goes here.<end>
 // それを　かいけつて゛きす゛に・・・。<key><Dorakure>しかし・・・ゴンきちの　きもちもわかりますか゛
 // わたしは　し゛ゆうにしてやったほうか゛　いいと
 // おもいましたね。<end>
-Translation goes here.<end>
+<Dorakure>
+I wouldn't say they were fighting, but more like having trouble.
+Renard wanted Kit to work in the store, but Kit refused to.
+They never resolved it...
+I understand how Renard felt, but to be honest, 
+I think he should have just let Kit have his freedom.<end>
 
 // ？<end>
 ?<end>
@@ -4123,7 +4233,7 @@ unusual about it.<end>
 
 // <Oidon>コンコンほうせきてんの　ゴンきちか゛
 // ころされたのを　しっているか？<end>
-Translation goes here.<end>
+Do you know that Renard of Foxy Jewelry has been murdered?.<end>
 
 // 。<end>
 .<end>
@@ -4137,7 +4247,9 @@ Translation goes here.<end>
 // <Oidon>コ゛クッ・・・。<pause>あちーっ!!<pause>
 // だんな、したを　やけと゛してしまいましたせ゛。
 // て゛も、いいあし゛て゛したよ。<end>
-Translation goes here.<end>
+<Oidon>
+*gulp*<pause>YOOOOOOOWWWWWW!!
+Boss, I've burnt my tongue. Darn good coffee though.<end>
 
 // 。<end>
 .<end>
@@ -4192,7 +4304,8 @@ fishing?<end>
 .<end>
 
 // <Oidon>"<char>"というもし゛に　なにかおもいあたらないか？<end>
-Translation goes here.<end>
+<Oidon>
+Know anything about the letter "N"?<end>
 
 0<end>
 
@@ -4248,7 +4361,7 @@ Translation goes here.<end>
 
 // <contd>
 // しかし、しょうにんは　いませんぜ。<end>
-Translation goes here.<end>
+But we have no witnesses..<end>
 
 // <contd>
 // <Kokon>さかなハンティンク゛？
@@ -4278,12 +4391,14 @@ Translation goes here.<end>
 
 // <contd>
 // <Peruu>たふ゛ん　いないとおもいます。<end>
-Translation goes here.<end>
+<Peruu>
+I don't think so.<end>
 
 // <contd>
 // <Peruu>もめこ゛と・・・というのて゛はないんて゛すか゛、
 // むすこのココンさんか゛　わしのいうことを<key><Peruu>きかないっていって　なやんて゛いたようて゛す。<end>
-Translation goes here.<end>
+<Peruu>
+Not exactly a fight...<key><Peruu>but he did complain that his son never listens to him.<end>
 
 // <contd>
 // <Peruu>さあ・・・しりませんわ。<end>
@@ -4299,7 +4414,9 @@ I dunno.<end>
 
 // <Oidon>ヘ゜ルーは　10日のよる、
 // た゛れかと　テ゛ートしていたようて゛す。<end>
-Translation goes here.<end>
+<Oidon>
+It appears that on the night of the 10th 
+Peruu was on a date.<end>
 
 // <contd>
 // <Peruu>さあ・・・わかりませんわ。<end>
@@ -4311,7 +4428,9 @@ I dunno.<end>
 // <Peruu>まあ　きれいな　きんは゜つ!
 // わたし　きんは゜つって　あこか゛れてるんて゛すのよ。
 // て゛も　これには　みおほ゛え　こ゛さ゛いませんわ。<end>
-Translation goes here.<end>
+<Peruu>
+Oh, how beautiful! I love blond hair!
+I don't recognize this, though<end>
 
 // <contd>
 // <Taaji>ええ・・・・・・。
@@ -4321,7 +4440,14 @@ Translation goes here.<end>
 // あいつほと゛　なか゛くつきあっているものは
 // いません。
 // それなのに、それなのに・・・・・・<end>
-Translation goes here.<end>
+<Taiiji>
+Uhh.....
+<Oidon>
+We hear you two were friends.
+<Taaji>
+Yes. He was a very close friend.
+I've never known anyone for as long as I did him.
+And to think that he's gone now.....<end>
 
 // <contd>
 // <Taaji>てき？　そんなのいるわけ　ありませんよ。<end>
@@ -4347,7 +4473,19 @@ Enemies? He had none.<end>
 // あるんて゛すよ。
 // そこのマスターとコ゛ンきちはなかか゛よかったから
 // ほかになにかしっているかもしれませんよ。<end>
-Translation goes here.<end>
+<Taaji>
+Hmm.....actually, he seemed pretty troubled with his son, Kit.
+<Oidon>
+Troubled? Why's that?
+<Taaji>
+The older son Red started working for the business, but Kit refused to. 
+It seems he was after money to start his own business to compete with his father's.
+That's all I know.
+Ah, hold on..
+<Taaji>
+There's a cafe nearby called <green>Dragon<black>.
+Renard was was good friends with the owner there, so he might know something.
+<end>
 
 // <contd>
 // <Taaji>へ゛つに　かわったところは
@@ -4386,26 +4524,32 @@ but I've never seen it.<end>
 // しゅうりをしていたそうて゛す。<key>
 // <Oidon>しゅうりをたのんた゛という　3けんの
 // いえのものか゛しょうにんですぜ。<end>
-Translation goes here.<end>
+<Oidon>
+On the night on the 10th, Taaji was doing electrical repairs from after 7 to past 10.
+We've got witnesses from 3 houses that requested his service.<end>
 
 // <contd>
 // <Rinrin>はい・・・とてもさ゛んねんて゛す。としは
 // はなれていましたか゛　はなしのあう
 // かたて゛した。<end>
-Translation goes here.<end>
+<Rinrin>
+Yes...it's so sad. We got along very well despite our age difference.<end>
 
 // <contd>
 // <Rinrin>さあ・・・しりませんよ。<end>
-Translation goes here.<end>
+<Rinrin>
+No idea.<end>
 
 // <contd>
 // <Rinrin>きいたことは　ありませんよ。<end>
-Translation goes here.<end>
+<Rinrin>
+I haven't heard anything.<end>
 
 // <contd>
 // <Rinrin>ふつうよりは　よいせいかつた゛と
 // おもいますけと゛。<end>
-Translation goes here.<end>
+<Rinrin>
+A better one than most in my opinion...<end>
 
 // <contd>
 // <Rinrin>しりませんよ。<end>
@@ -4431,16 +4575,29 @@ Translation goes here.<end>
 // ほうせきてんの　しゃちょうて゛あり、マンションも
 // けいえいしている
 // ふたりの　むすこか゛いる。　38さい。<end>
-Translation goes here.<end>
+The victim. Divorced 3<nl>
+years ago. Owned Foxy<nl>
+Jewelry and a condo.<nl>
+Two sons. 38 years old.<end>
 
 // <Oidon>20さい。ひか゛いしゃのむすこて゛　ちょうなん。
 // おやとは　はなれてくらしている。
 // し゛き　しゃちょうとの　うわさか゛ある。<end>
-Translation goes here.<end>
+20 years old. Victim's<nl>
+first son. Managing<nl>
+director at the store.<key>
+<Oidon>
+It's rumored that he<nl>
+was to become the owner<nl>
+soon.<end>
+
 
 // <Oidon>18さい。コンタときょうた゛いて゛　し゛なん。
 // おやとは　はなれてくらしている。<end>
-Translation goes here.<end>
+<Oidon>
+Age 18. Red's younger<nl>
+brother. Lives away from home.<nl>
+<end>
 
 // <Oidon>コンコンほうせきてんの　まえにある
 // コンヒ゛ニエンス　ストアーのてんいん。18さい。<end>
@@ -4449,7 +4606,8 @@ Translation goes here.<end>
 // <Oidon>たた゛の　コンヒ゛ニエンス　ストアーの　
 // てんいんというた゛けなのて゛　と゛うきは
 // まったく　ありませんぜ。<end>
-Translation goes here.<end>
+She's just a convenience store clerk.
+She'd have no motive.<end>
 
 0<end>
 
@@ -4472,7 +4630,8 @@ red.<end>
 // <Oidon>だんな、おいと゛んか゛しらへ゛ましたところ
 // ト゛ラクレのくるまは　きいろにしましまの
 // はいったものた゛と　わかりましたせ゛。<end>
-Translation goes here.<end>
+<Oidon>
+My investigation shows that Dorakure drives a striped, yellow car.<end>
 
 // ゛゛いた？　なせ゛た゛？
 // <Taaji>ちょうなんのコンタくんは　いえのしこ゛とに
@@ -4766,7 +4925,8 @@ Translation goes here.<end>
 
 // <Oidon>せっかく　ヌキを　よんた゛んて゛すから
 // ヌキに　めを　むけましょうよ。<end>
-Translation goes here.<end>
+<Oidon>
+We've got Nuki here, so let<end>
 
 // !<end>
 !<end>
@@ -5029,7 +5189,8 @@ Translation goes here.<end>
 Translation goes here.<end>
 
 // <Oidon>ゴンきちに　てきは　いたか？<end>
-Translation goes here.<end>
+<Oidon>
+Did Renard have any enemies?<end>
 
 // <contd>
 // <Konta>なんと゛も　いうようて゛すけれと゛も
@@ -5895,7 +6056,7 @@ Translation goes here.<end>
 
 // <contd>
 // <Kokon>しりませんよ。<end>
-Translation goes here.<end>
+I dunno.<end>
 
 // <Oidon>だんな、ココンは　10日のよる
 // 11時こ゛ろは　ヘ゜ルーと　テ゛ートを
@@ -7138,7 +7299,8 @@ Translation goes here.<end>
 <end>
 
 // <Oidon>これに　みおほ゛えは　ないか？<end>
-Translation goes here.<end>
+<Oidon>
+Recognize this?.<end>
 
 // <contd>
 // <Konta>しりませんよ・・・。<end>
