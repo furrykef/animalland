@@ -6723,7 +6723,8 @@ Translation goes here.<end>
 Translation goes here.<end>
 
 // <Oidon>て゛は、みす゛のなかを　しらへ゛て　みます。<end>
-Translation goes here.<end>
+<Oidon>
+Ok, let's search the water.<end>
 
 0<end>
 
