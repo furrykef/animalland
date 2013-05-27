@@ -1,5 +1,8 @@
 MURDER IN ANIMAL LAND
 =====================
+Make sure we add a hook for "PUSH SPACE KEY !" to ensure pixel_offset is always 0 when it's drawn
+
+
 <furrykef> Mm, what's the best place to get docs on the MSX, again?
 <~GuyveR800> map.grauw.nl
 
@@ -60,6 +63,7 @@ Release checklist
     <nl>$
     <key>$
     <end>$
+* hacking notes.txt is up to date
 
 
 When done, submit to MSX sites:

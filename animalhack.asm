@@ -243,7 +243,7 @@ BumpPixelOffset:
         ld      a, (char_width)
         add     a, (hl)
         ld      (hl), a
-        cp      9                       ; Did we go past the tile boundary (not just the edge)?
+        cp      9                       ; Did we go past the tile boundary (not just at the edge)?
         ret     c                       ; Return if not
 
         ; Yep, we did
@@ -330,7 +330,9 @@ font_data:
 
 
 char_widths:
-        db      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        ;       [the digits and period here are bold]
+        ;       0  1  2  3  4  5  6  7  8  9  .  *
+        db      7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 3, 4, 0, 0, 0, 0
 
         db      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
@@ -356,8 +358,7 @@ char_widths:
 
         db      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
-        ;          *
-        db      0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        db      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
         db      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
