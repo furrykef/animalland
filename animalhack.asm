@@ -137,6 +137,18 @@ HandleMenuNewline:
         ret
 
 
+; This tells the name tag routine to check for a colon, not a Japanese open-quote mark, as the end-of-nametag marker
+forg    $2795
+org     $4795, $4796
+        cp      ':'
+
+; This bit of code gets executed after displaying a name tag in the main script
+; It originally just jumped to $47a1 (the part in the fetch char routine after fetching a char)
+forg    $025e4
+org     $4534, $4536
+;        jp      AfterDisplayingNameTag
+
+
 ; This is a reworked version of the display code from the original game,
 ; found at $027ba in ROM, $47ba in CPU space. The original routine did
 ; NOT increment the VRAM pointer on exit; our version does (and so all
@@ -222,18 +234,58 @@ HandleNewline:
 
 
 DrawMenuLetters:
-        ld      a, $1b                  ; Set text color to black
+        ld      a, $1b                      ; Set text color to black
         ld      (text_color), a
-        ld      a, (ix)                 ; [IX] points to the char in the script
+        ld      a, (ix)                     ; [IX] points to the char in the script
         inc     ix
-        add     a, $80                  ; Adjust it to MSX charset
-        cp      CHAR_MNL                ; Is this the <mnl> code?
-        jp      z, HandleMenuNewline    ; Branch if so
-        call    PrintChar8              ; Print char
-        ld      a, (ix)                 ; Get next char
-        cp      CHAR_END                ; Is it <end>?
-        jr      nz, DrawMenuLetters     ; Loop if not
+        add     a, $80                      ; Adjust it to MSX charset
+        cp      CHAR_MNL                    ; Is this the <mnl> code?
+        jp      z, HandleMenuNewline        ; Branch if so
+        call    PrintChar8                  ; Print char
+        ld      a, (ix)                     ; Get next char
+        cp      CHAR_END                    ; Is it <end>?
+        jr      nz, DrawMenuLetters         ; Loop if not
         ret
+
+
+; Stuff in this part goes in the precious free space at the end of the $02000-03fff bank
+forg    $03fda
+org     $5fda, $5fff
+
+AfterDisplayingNameTag:
+        call    PrintChar64                 ; A contains a colon; print it
+
+        xor     a
+        ld      (pixel_offset), a
+
+        ; Now we need to update the VRAM address
+        ; The correct address is one of:
+        ;   $11c8   -- first line of dialogue in main game
+        ;   $11d4   -- second line
+        ;   $11e0   -- third line
+        ;   $11ec   -- fourth line
+        ;   $09c8   -- name tag on password dialogue
+
+        ; Bump VRAM pointer to point to correct place
+.loop:
+        ld      a, h
+        cp      $09
+        jr      z, .check_lsb
+        cp      $11
+        jr      z, .check_lsb
+        ld      bc, 64
+        add     hl, bc
+        jr      .loop
+
+.check_lsb:
+        ; Now we know the VRAM addr is either 09xx or 11xx
+        cp      $c8
+        jr      c, .loop
+        cp      $ec
+        jr      nc, .loop
+        inc     ix                          ; Bump the script pointer...
+        ld      a, (ix)                     ; ...and get ready to print the first char
+        jp      $47a1
 
 
 ; Stuff from here on goes in ROM bank 16
@@ -404,7 +456,7 @@ WriteColor:
 ;   pixel_offset
 HandleMenuNewlineImpl:
         ; Bump HL to point to first char of next line in VRAM
-        ; @FIXME@ - better way to express this?
+        ; @TODO@ - better way to express this?
         ld      a, l
         and     $3f
         jr      z, .done_bumping

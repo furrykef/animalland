@@ -19,84 +19,130 @@ Here is the script fetch routine:
 ; Possibly reserved:
 ;   BC
 $45e7:
-        ld      a,(ix+#00)      ; This is where we load the next char from the script
+        ld      a,(ix+$00)      ; This is where we load the next char from the script
         inc     ix              ; Bump the index
-        cp      #7f             ; Is this the <end> code?
-        jp      nz,#476d        ; Jump if not
+        cp      $7f             ; Is this the <end> code?
+        jp      nz,$476d        ; Jump if not
         ; It is; this does not concern us, however
 
 
-$476d:  cp      #7e             ; Is this the newline code?
-        jr      nz,#477b        ; Jump if not
+$476d:  cp      $7e             ; Is this the newline code?
+        jr      nz,$477b        ; Jump if not
+        ; It is; this does not concern us yet
+
+$477b:  cp      $ff             ; Is this the <key> code?
+        jr      nz,$4784        ; Jump if not
         ; It is; this does not concern us yet
 
 
-$477b:  cp      #ff             ; Is this the <key> code?
-        jr      nz,#4784        ; Jump if not
-        ; It is; this does not concern us yet
-
-
-$4784:  cp      #fe             ; Is this a character name tag (e.g. <Oidon>)?
-        jr      nz,#47a1        ; Jump if not
-        ; It is; this does not concern us yet
+$4784:  cp      $fe             ; Is this a character name tag (e.g. <Oidon>)?
+        jr      nz,$47a1        ; Jump if not
+        ; It is
+        ld      hl, ($f2fe)
+        ld      de, $80
+        add     hl, de
+        jp      $45a7
 
 
 $47a1:
         ; I presume here we have a normal char, dict code, or color code
         ld      b,a             ; $f2d0 -> $f301 (text color). Dunno what the purpose is yet.
-        ld      a,(#f2d0)
-        ld      (#f301),a
+        ld      a,($f2d0)
+        ld      ($f301),a
         ld      a,b
-        jp      #4616
+        jp      $4616
 
 
-$4616:  add     a,#80           ; convert char to MSX charset
-        cp      #23             ; originally $a3 -- <pause>
-        jr      z,#464f
-        cp      #24             ; originally $a4 -- ellipsis
-        jr      z,#465d
-        cp      #25             ; originally $a5 -- ですぜ。 ("desu ze." dict code)
-        jr      z,#4669
+$4616:  add     a,$80           ; convert char to MSX charset
+        cp      $23             ; originally $a3 -- <pause>
+        jr      z,$464f
+        cp      $24             ; originally $a4 -- ellipsis
+        jr      z,$465d
+        cp      $25             ; originally $a5 -- ですぜ。 ("desu ze." dict code)
+        jr      z,$4669
         ; ... skipping more such special cases, incl. color codes ...
 $464c:  ; By this point, we SHOULD have an honest-to-god letter to draw
-        jp      #47ac
+        jp      $47ac
 
 
 $47ac:  ld      b,a             ; $f2d0 -> $f301 (text_color) again
-        ld      a,(#f2d0)
-        ld      (#f301),a
+        ld      a,($f2d0)
+        ld      ($f301),a
         ld      a,b
-        call    #4847           ; We'll call this DoChar
-        jp      #476a
+        call    $4847           ; We'll call this DoChar
+        jp      $476a
 
 
-$476a:  jp      #45e7           ; go back to start of script fetch routine
+$476a:  jp      $45e7           ; go back to start of script fetch routine
 
+
+; We get here after the end of the bit at $4784
+; This displays a character name tag
+$45a7:
+        ld      a, (ix)         ; Get the character name ID
+        inc     ix
+        push    ix
+        push    af
+        ld      b, a
+        ld      a, ($f2f3)
+        cp      b
+        jr      z, +
+        ld      b, 0            ; Minimum delay
+        call    $470a           ; Delay function
++       pop     af
+        ld      ($f2f3), a      ; store character name ID in $f2f3
+        ld      ix, $453b
+        or      a
+        jr      z, $45db
+        ld      b, a
+-       ld      a, (ix)
+        inc     ix
+        cp      $a2
+        jr      nz, -
+        djnz    -
+        ld      a, ($f2d2)
+        ld      ($f301),a       ; Text color
+        jp      $4792
+
+$4792:
+-       ld      a, (ix)
+        cp      $a2             ; Check for end-of-name code (will render as Japanese open-quote)
+        jp      z, $45e0        ; End of name
+        call    $4847           ; DoChar
+        inc     ix
+        jr      -
+        ; Execution continues at $47a1, elsewhere in this file
+
+
+$45e0:
+        pop     ix
+        add     a, $80          ; Convert to MSX charset
+        jp      $47a1
 
 
 ; DoChar
 $4847:  push    af
         push    bc
-        ld      b,#07           ; execute the following loop 7 times
--       ld      a,(#f2d5)       ; usually $ff
-        call    #0135           ; CHGSND
+        ld      b,$07           ; execute the following loop 7 times
+-       ld      a,($f2d5)       ; usually $ff
+        call    $0135           ; CHGSND
         xor     a               ; clear A
-        call    #0135           ; CHGSND
+        call    $0135           ; CHGSND
         djnz    -
-        ld      b,#12           ; looks like a delay amount
-        call    #470a           ; looks like a delay function
+        ld      b,$12           ; looks like a delay amount
+        call    $470a           ; looks like a delay function
         pop     bc
         pop     af
-        cp      #de             ; handle dakuten
-        jr      z,#4885
-        cp      #df             ; handle handakuten
-        jr      z,#489e
-        jr      #48b7
+        cp      $de             ; handle dakuten
+        jr      z,$4885
+        cp      $df             ; handle handakuten
+        jr      z,$489e
+        jr      $48b7
 
 
-$48b7:  call    #47ba           ; PrintChar
+$48b7:  call    $47ba           ; PrintChar
         push    bc
-        ld      bc,#0040        ; bump VRAM pointer to next char in pattern table
+        ld      bc,$0040        ; bump VRAM pointer to next char in pattern table
         add     hl,bc
         pop     bc
         ret                     ; exit back to the end of the fetch routine or wherever
@@ -106,28 +152,28 @@ $48b7:  call    #47ba           ; PrintChar
 ; The actual char display routine!
 ; A = character to print (in ASCII-like MSX charset)
 $47ba:
-        ld      (#f2e1),a       ; put char to display in $f2e1
+        ld      ($f2e1),a       ; put char to display in $f2e1
         push    bc
         push    de
         push    hl
         push    af
         xor     a               ; clear $f2ea (= bold flag)
-        ld      (#f2ea),a
+        ld      ($f2ea),a
         pop     af
         ex      de,hl
-        cp      #21             ; If char to print is "!"...
+        cp      $21             ; If char to print is "!"...
         jr      z,++            ; ...make it bold
-        cp      #80             ; Are we displaying the odd "nu" symbol?
+        cp      $80             ; Are we displaying the odd "nu" symbol?
         jr      nz,+            ; Skip next couple instructions if not
-        ld      hl,#4b09        ; We are; copy char from $4b09 instead of BIOS
+        ld      hl,$4b09        ; We are; copy char from $4b09 instead of BIOS
         jr      _skip_bios
-+       cp      #30             ; Is character in Latin alphabet?
++       cp      $30             ; Is character in Latin alphabet?
         jr      c,+
-        cp      #7b
+        cp      $7b
         jr      nc,+
-++      ld      (#f2ea),a       ; It is; set bold flag
-+       ld      bc,(#0004)      ; BC = addr of BIOS font
-        ld      h,#00           ; All this bit does is hl = a*8...
+++      ld      ($f2ea),a       ; It is; set bold flag
++       ld      bc,($0004)      ; BC = addr of BIOS font
+        ld      h,$00           ; All this bit does is hl = a*8...
         ld      l,a
         sla     l
         rl      h
@@ -140,48 +186,46 @@ _skip_bios:
         ex      de,hl
         push    hl
         pop     bc
-        ld      hl,(#f2d6)      ; This is almost certainly unused (this is the only instance of D6 F2 in the ROM)
+        ld      hl,($f2d6)      ; This is almost certainly unused (this is the only instance of D6 F2 in the ROM)
         add     hl,bc
-        ld      b,#08
-        ld      a,(#f2ea)       ; check bold flag
+        ld      b,$08
+        ld      a,($f2ea)       ; check bold flag
         or      a
         jr      z,_not_bold
 -       ld      a,(de)
-        ; This is the "emboldenator"; we've NOPped a couple lines out in our hack
         ld      c,a
-        srl     a               ; (NOPped out)
-        or      c               ; (NOPped out)
-        ; end emboldenator
-        call    #004d           ; WRTVRM
+        srl     a               ; Make char bold by shifting it one pixel to the right...
+        or      c               ; ...and combining with original
+        call    $004d           ; WRTVRM
         inc     hl
         inc     de
         djnz    -
         jr      +
 _not_bold:
 -       ld      a,(de)
-        call    #004d           ; WRTVRM
+        call    $004d           ; WRTVRM
         inc     hl
         inc     de
         djnz    -
 +       pop     hl              ; restore hl to the value it had coming in
         push    hl
-        ld      de,#2000
+        ld      de,$2000
         add     hl,de
-        ld      b,#08
--       ld      a,(#f301)       ; this must be the text color
-        call    #004d           ; WRTVRM
+        ld      b,$08
+-       ld      a,($f301)       ; this must be the text color
+        call    $004d           ; WRTVRM
         inc     hl
         djnz    -
-        ld      a,(#f2e1)       ; Put char we've displayed back in A
-        cp      #a1             ; These insert a delay after certain punctuation symbols
-        call    z,#4708
-        cp      #a4
-        call    z,#4708
-        cp      #3f
-        call    z,#4708
-        cp      #21
-        call    z,#4708
-        call    #4c56
+        ld      a,($f2e1)       ; Put char we've displayed back in A
+        cp      $a1             ; These insert a delay after certain punctuation symbols
+        call    z,$4708
+        cp      $a4
+        call    z,$4708
+        cp      $3f
+        call    z,$4708
+        cp      $21
+        call    z,$4708
+        call    $4c56
         pop     hl
         pop     de
         pop     bc
