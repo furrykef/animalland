@@ -1410,7 +1410,7 @@ CANCEL<end>
 
 
 // Game script
-#JMP($14000, $1F92E)
+#JMP($14000, $16FFF)
 
 // <Oidon>ん？　ふうとうか゛　おいてありますぜ。<end>
 <Oidon>
@@ -2017,7 +2017,7 @@ Nothing here to take.<end>
 Nothing here to take.<end>
 
 
-// Chapter 2
+//******** CHAPTER 2 ********//
 #WRITE(ptr14000, $2BCE)
 
 // <Pyonko>みせのものを　かってに　いし゛くらないて゛
@@ -3000,7 +3000,7 @@ son.<end>
 // <Oidon>コンコンほうせきてんの　まえにある
 // コンヒ゛ニエンスストアーの　てんいん。
 // 18さい。<end>
-// Descrition of Amy
+// Description of Amy
 <Oidon>
 Clerk at the conve-<nl>
 nience store across the<nl>
@@ -3213,12 +3213,11 @@ Kit.<nl>
 How should I know anything about HIM?<nl>
 Hmph!<end>
 
-// こるもんて゛すか!<end>
-// (probably garbage)
-GARBAGE DATA<end>
 
-// <key><char><char><char><char><char><char><char><char><char><char><char><char><char><char><char><char><char>
-// @TODO@ - data?
+//******** CHAPTER 3 ********//
+// @XXX@ -- need to set up proper JMPs for each chapter
+// For now just put it all in the rest of ROM...
+#JMP($18000, $1FFFFF)
 
 // <Oidon>ます゛は　た゛れかを　ここによひ゛ましょうせ゛。<end>
 <Oidon>
@@ -3265,7 +3264,7 @@ anything to.<end>
 // いいにおいし゛ゃ　ありませんぜ。<end>
 <Oidon>
 *sniff sniff*
-There's nothing like the smell of headquarters, right, boss?.<end>
+There's nothing like the smell of headquarters, right, boss?<end>
 
 // <Oidon>ほんじゃ、ト゛ラコ゛ンへいきましょうや。<end>
 <Oidon>
