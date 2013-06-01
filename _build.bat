@@ -1,4 +1,6 @@
 @echo off
+pwgen.py
+if errorlevel 1 goto error
 C:\MFS\tniasm\tniasm multibank.asm multibank.out
 if errorlevel 1 goto error
 copy tniasm.sym multibank.sym

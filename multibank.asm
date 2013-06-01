@@ -46,6 +46,26 @@ str_width:      rb 1            ; for right-aligning in menus
 org $8000 + MULTIBANK_OFFSET, $bfff
 
 
+; @XXX@ -- lowercase input not working properly.
+; It will display as uppercase, but still be lowercase in memory.
+HandlePasswordChar:
+        cp      'A'
+        jp      c, $637c                ; below A-Z range; reject
+        cp      'Z' + 1
+        jr      c, .accept
+        ;cp      'a'
+        ;jp      c, $637c                ; between A-Z and a-z range; reject
+        ;cp      'z' + 1
+        ;jr      c, .cap_and_accept
+        jp      $637c                   ; above a-z range; reject
+
+.cap_and_accept:
+        add     a, 'A' - 'a'
+
+.accept:
+        jp      $6381
+
+
 ; This adds to the code that was at $475d
 HandleFirstLineOfDialogue:
         xor     a
@@ -83,18 +103,18 @@ DrawMenuLetters:
 
 
 AfterDisplayingNameTag:
-        call    PrintChar64                 ; A contains a colon; print it
+        push    af
 
         xor     a
         ld      (pixel_offset), a
 
         ; Now we need to update the VRAM address
         ; The correct address is one of:
-        ;   $11c8   -- first line of dialogue in main game
-        ;   $11d4   -- second line
-        ;   $11e0   -- third line
-        ;   $11ec   -- fourth line
-        ;   $09c8   -- name tag on password dialogue
+        ;   $1188   -- first line of dialogue in main game
+        ;   $1194   -- second line
+        ;   $11a0   -- third line
+        ;   $11ac   -- fourth line
+        ;   $0988   -- name tag on password dialogue
 
         ; Bump VRAM pointer to point to correct place
 .loop:
@@ -103,18 +123,20 @@ AfterDisplayingNameTag:
         jr      z, .check_lsb
         cp      $11
         jr      z, .check_lsb
+.loop_tail:
         ld      bc, 64
         add     hl, bc
         jr      .loop
 
 .check_lsb:
         ; Now we know the VRAM addr is either 09xx or 11xx
-        cp      $c8
-        jr      c, .loop
-        cp      $ec
-        jr      nc, .loop
-        inc     ix                          ; Bump the script pointer...
-        ld      a, (ix)                     ; ...and get ready to print the first char
+        ld      a, l
+        cp      $88
+        jr      c, .loop_tail
+        cp      $ac
+        jr      nc, .loop_tail
+
+        pop     af
         jp      $47a1
 
 

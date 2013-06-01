@@ -23,6 +23,18 @@ SetUpBanks:
         ret
 
 
+; Replace the original game's password table with ours
+forg    $0044d
+org     $644d, $648a
+include "passwords.inc"
+
+
+forg    $00378
+org     $6378, $637b
+        jp      HandlePasswordChar
+        nop
+
+
 ; This code originally called PrintChar (where PrintChar8 is now) and bumped the VRAM pointer in the dialogue routine
 forg    $028b7
 org     $48b7, $48bf
@@ -124,7 +136,7 @@ org     $4795, $4796
 ; It originally just jumped to $47a1 (the part in the fetch char routine after fetching a char)
 forg    $025e4
 org     $4534, $4536
-;        jp      AfterDisplayingNameTag
+        jp      AfterDisplayingNameTag
 
 
 ; This is where the original game's PrintChar routine was. We'll just hook it to PrintChar8

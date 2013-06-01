@@ -277,6 +277,18 @@ NAUTILUS
 BASILISK
 PENGUIN
 SEAGULL
+COLLIE
+MUZZLE
+KOKO
+TANUKI (use for the chapter that introduces Nuki!)
+
+For the ending:
+DENOUEMENT (but this flouts the 8-char max)
+GNIDNE ("ending" backwards)
+SPOILERS
+IMACHEAT
+VICTOLY
+INSTAWIN
 
 
 Misc
