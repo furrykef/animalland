@@ -46,21 +46,21 @@ str_width:      rb 1            ; for right-aligning in menus
 org $8000 + MULTIBANK_OFFSET, $bfff
 
 
-; @XXX@ -- lowercase input not working properly.
-; It will display as uppercase, but still be lowercase in memory.
 HandlePasswordChar:
         cp      'A'
         jp      c, $637c                ; below A-Z range; reject
         cp      'Z' + 1
         jr      c, .accept
-        ;cp      'a'
-        ;jp      c, $637c                ; between A-Z and a-z range; reject
-        ;cp      'z' + 1
-        ;jr      c, .cap_and_accept
+        cp      'a'
+        jp      c, $637c                ; between A-Z and a-z range; reject
+        cp      'z' + 1
+        jr      c, .cap_and_accept
         jp      $637c                   ; above a-z range; reject
 
 .cap_and_accept:
         add     a, 'A' - 'a'
+        ld      (hl), a                 ; put the adjusted char in the buffer
+                                        ; (otherwise it will only LOOK capitalized)
 
 .accept:
         jp      $6381

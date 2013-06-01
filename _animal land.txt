@@ -1,21 +1,5 @@
 MURDER IN ANIMAL LAND
 =====================
-An important issue with banks!
-
-I'm thinking the original game loads the script into two banks, $8000-9fff and $a000-bfff, and each chapter is fully contained within these two banks (i.e. no bankswitching during a chapter). We need to verify is this is true. If not, there could be serious issues, since some code (even in the original game) assumes that incrementing the text pointer will not cross the $bfff boundary.
-
-
-[The following offsets are in CPU space]
-<@BiFi> the decoder routine starts on address $6401
-<@BiFi> it jumps to it once you press enter
-<@BiFi> the input wait ends on address $635a (where you press a key and from where it'll be checked for validity
-<@BiFi> $644d contains the password table
-<@BiFi> it encodes the next character with the subtracted value of the previous character
-
-Example:
-91 68 F6 AD 42 1D 12 02 decodes to 91 F9 EF 9C DE FB 0D 0F = あるまし゛ろ($0d)($0f)
-
-
 Make sure we add a hook for "PUSH SPACE KEY !" to ensure pixel_offset is always 0 when it's drawn
 
 
