@@ -24,6 +24,7 @@ CHAR_END:           equ     $7f
 ; BIOS stuff
 RDVRM:          equ     $004a
 WRTVRM:         equ     $004d
+FILVRM:         equ     $0056
 
 ; Variables from the original game
 text_color:     equ     $f301
@@ -65,8 +66,19 @@ HandlePasswordChar:
 
 .accept:
         push    af
+
         xor     a
         ld      (pixel_offset), a
+
+        ; If we don't do this next bit, the char will be overstruck
+        ; thanks to our VWF code
+        ; Note that A is still zero here
+        push    hl
+        ld      hl, ($f200)             ; Get VRAM pointer
+        ld      bc, 64
+        call    FILVRM
+        pop     hl
+
         pop     af
         jp      $6381
 
