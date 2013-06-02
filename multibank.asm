@@ -61,8 +61,13 @@ HandlePasswordChar:
         add     a, 'A' - 'a'
         ld      (hl), a                 ; put the adjusted char in the buffer
                                         ; (otherwise it will only LOOK capitalized)
+        add     a, $50                  ; display it with monospace font
 
 .accept:
+        push    af
+        xor     a
+        ld      (pixel_offset), a
+        pop     af
         jp      $6381
 
 
