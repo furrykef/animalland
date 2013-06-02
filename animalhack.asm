@@ -59,13 +59,20 @@ org     $4a60, $4a66
 ; NOPping the VRAM bump in title screen code
 forg    $002ad
 org     $62ad, $62b0
-        nop                     ; ld de, 8
-        nop
-        nop
-        nop                     ; add hl, de
+;        nop                     ; ld de, 8
+;        nop
+;        nop
+;        nop                     ; add hl, de
 
 
 ; @TODO@ -- look for more instances of "call/jp $47ba/$4018" ($4018 jumps to $47ba)
+
+
+; Since we use colon instead of Japanese open-quote for dialogue tags now
+; This code is used to scan the list of dialogue tags
+forg    $025cc
+org     $45cc, $45cd
+        cp ':'
 
 
 ; Hook for first line of dialogue

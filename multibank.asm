@@ -70,8 +70,8 @@ HandlePasswordChar:
         xor     a
         ld      (pixel_offset), a
 
-        ; If we don't do this next bit, the char will be overstruck
-        ; thanks to our VWF code
+        ; Clear the character that was there in VRAM.
+        ; If we don't, our VWF code will cause it to be overstruck.
         ; Note that A is still zero here
         push    hl
         ld      hl, ($f200)             ; Get VRAM pointer

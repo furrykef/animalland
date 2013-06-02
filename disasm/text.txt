@@ -92,17 +92,25 @@ $45a7:
 +       pop     af
         ld      ($f2f3), a      ; store character name ID in $f2f3
         ld      ix, $453b
-        or      a
+        or      a               ; Is the speaker Oidon?
         jr      z, $45db
-        ld      b, a
+        ld      b, a            ; Go through list until we hit the name we're looking for
 -       ld      a, (ix)
         inc     ix
-        cp      $a2
+        cp      $a2             ; Japanese open-quote
         jr      nz, -
         djnz    -
         ld      a, ($f2d2)
-        ld      ($f301),a       ; Text color
+$45d5:  ld      ($f301),a       ; Text color
         jp      $4792
+
+
+; We get here after "is the speaker Oidon?"
+; This seems to have to do with the text color
+$45db:
+        ld      a, ($f2d1)
+        jr      $45d5
+
 
 $4792:
 -       ld      a, (ix)
