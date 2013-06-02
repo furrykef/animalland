@@ -55,12 +55,9 @@ HandlePasswordChar:
         cp      'a'
         jp      c, $637c                ; between A-Z and a-z range; reject
         cp      'z' + 1
-        jr      c, .cap_and_accept
-        jp      $637c                   ; above a-z range; reject
-
-.cap_and_accept:
-        add     a, 'A' - 'a'
-        ld      (hl), a                 ; put the adjusted char in the buffer
+        jp      nc, $637c               ; above a-z range; reject
+        add     a, 'A' - 'a'            ; letter is lowercase; capitalize it
+        ld      (hl), a                 ; put the capitalized char in the buffer
                                         ; (otherwise it will only LOOK capitalized)
         add     a, $50                  ; display it with monospace font
 
@@ -75,7 +72,7 @@ HandlePasswordChar:
         ; Note that A is still zero here
         push    hl
         ld      hl, ($f200)             ; Get VRAM pointer
-        ld      bc, 64
+        ld      bc, 8
         call    FILVRM
         pop     hl
 
