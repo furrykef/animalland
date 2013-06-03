@@ -459,11 +459,16 @@ char_widths:
         ;       p  q  r  s  t  u  v  w  x  y  z  {  |  }  ~
         db      5, 5, 4, 5, 4, 5, 5, 6, 5, 5, 5, 6, 6, 6, 6, 0
 
-        db      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        ;       [first char here is the odd "N"-like character]
+        ;       [after skipping a control code, next 5 are "PRESS SPACE"]
+        db      7, 0, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
-        db      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        ;       [monospace font for passwords]
+        ;          A  B  C  D  E  F  G  H  I  J  K  L  M  N  O
+        db      0, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8
 
-        db      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        ;       P  Q  R  S  T  U  V  W  X  Y  Z
+        db      8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0
 
         db      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 

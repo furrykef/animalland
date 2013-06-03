@@ -1958,7 +1958,7 @@ out.<key>
 <Oidon>
 By the way, I recorded<nl>
 our progress in a file.<pause><nl>
-The name is <red>XXXX<black>.<pause> Be sure to write down the name so you won't forget!<end>
+The name is <m:M><m:A><m:L><m:L><m:A><m:R><m:D>.<pause> Be sure to write down the name so you won't forget!<end>
 
 // <contd>
 // へ゛つに　かわったところは　ありませんぜ。<end>

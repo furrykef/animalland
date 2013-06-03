@@ -39,21 +39,35 @@ org     $6378, $637b
 forg    $028b7
 org     $48b7, $48bf
         call    PrintChar64
-        nop                     ; push bc
-        nop                     ; ld bc, 64
+        nop                         ; push bc
+        nop                         ; ld bc, 64
         nop
         nop
-        nop                     ; add hl, bc
-        nop                     ; pop bc
+        nop                         ; add hl, bc
+        nop                         ; pop bc
 
-; Again for "PUSH SPACE KEY !"
-forg    $02a60
-org     $4a60, $4a66
+; Prints "PRESS SPACE" (formerly "PUSH SPACE KEY !")
+forg    $02a56
+org     $4a56, $4a6a
+        xor     a
+        ld      (pixel_offset), a
+        ld      hl, $13b8           ; VRAM address
+        ld      de, PressSpace
+        ld      b, PressSpaceLen
+.loop:
+        ld      a, (de)
         call    PrintChar64
-        nop                     ; ld bc, 64
-        nop
-        nop
-        nop                     ; add hl, bc
+        inc     de
+        djnz    .loop
+        jr      $4a6b
+
+
+; The "PRESS SPACE" string, unencoded
+forg    $02aa4
+org     $4aa4, $4ab3
+PressSpace:
+        db $82, $83, $84, $85, $86
+PressSpaceLen:  equ $ - PressSpace
 
 
 ; NOPping the VRAM bump in title screen code

@@ -1,7 +1,6 @@
 MURDER IN ANIMAL LAND
 =====================
-Make sure we add a hook for "PUSH SPACE KEY !" to ensure pixel_offset is always 0 when it's drawn
-
+Ensure "PRESS SPACE" is properly centered
 
 <furrykef> Mm, what's the best place to get docs on the MSX, again?
 <~GuyveR800> map.grauw.nl
@@ -45,9 +44,10 @@ A routine at 2C3A (4C3A in mem space) handles loading pointers for both menus an
 
 Release checklist
 -----------------
-* All passwords work.
-* Correct pointers are loaded for each password.
-* Correct passwords are given at the end of each chapter.
+* All passwords work
+* All passwords given in monospace font in game script
+* Correct pointers are loaded for each password
+* Correct passwords are given at the end of each chapter
 * All menu item names correct and sensible in context
 * No menu item names overflow
 * No "Translation goes here" in script
@@ -57,7 +57,6 @@ Release checklist
 * Make sure I've never mixed up Kokon and Konta
 * Password text input never overflows on-screen boundary
 * No significant @TODO@'s in code or script
-* All hyphenation is according to rules: http://www.melbpc.org.au/pcupdate/9100/9112article4.htm
 * All lines in main script conform to one of these regexes:
     ^$      [blank line]
     ^//     [comment]
@@ -74,7 +73,7 @@ When done, submit to MSX sites:
 * msx.org
 
 
-Also submit the porn magazine easter egg and ending password to tcrf.net
+Also submit the porn magazine easter egg and possibly ending password to tcrf.net
 
 
 Hacking notes
