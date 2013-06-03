@@ -68,6 +68,13 @@ org     $62ad, $62b0
 ; @TODO@ -- look for more instances of "call/jp $47ba/$4018" ($4018 jumps to $47ba)
 
 
+; This erases the "PUSH SPACE KEY !" message.
+; The original routine just wrote over it with spaces. No good with our VWF.
+forg    $02a7e
+org     $4a7e, $4a80
+        jp      ErasePushSpaceKey
+
+
 ; Since we use colon instead of Japanese open-quote for dialogue tags now
 ; This code is used to scan the list of dialogue tags
 forg    $025cc

@@ -80,6 +80,21 @@ HandlePasswordChar:
         jp      $6381
 
 
+ErasePushSpaceKey:
+        ld      hl, $10b8
+        ld      b, 28
+        xor     a
+.loop:
+        push    bc
+        ld      bc, 8
+        call    FILVRM
+        pop     bc
+        ld      de, 64
+        add     hl, de
+        djnz    .loop
+        jp      $4a8e
+
+
 ; This adds to the code that was at $475d
 HandleFirstLineOfDialogue:
         xor     a
