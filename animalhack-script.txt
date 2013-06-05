@@ -19,8 +19,7 @@
 // <contd><Oidon>だんな、そうさファイルの
 // なまえ　なんて゛したっけ？<END>
 ($01)<Oidon>
-What's the<nl>
-file's name?<end>
+What's the file's name?<end>
 
 // <contd>ファイルめいは？　<END>
 ($01)Password:<end>
@@ -32,8 +31,7 @@ file's name?<end>
 // <contd><Oidon>だんな、そんなファイル
 // ないですぜ。<END>
 ($01)<Oidon>
-No such<nl>
-file, boss.<end>
+No such file, boss.<end>
 
 // Intro text
 // I cut this down just a hair so it would fit in the original space.
@@ -2320,11 +2318,11 @@ spiration, boss!<end>
 
 // <Oidon>し゛ゃあ、コンタを　よひ゛ますぜ。<end>
 <Oidon>
-OK, let's call Red in here.<end>
+OK, let's summon Red.<end>
 
 // <Oidon>し゛ゃあ、ココンを　よひ゛ますぜ。<end>
 <Oidon>
-OK, let's call Kit in here.<end>
+OK, let's summon Kit.<end>
 
 0<end>
 
@@ -3224,12 +3222,11 @@ Let's call someone in<nl>
 first.<end>
 
 // た゛れを　よひ゛ましょうか？　<end>
-Call whom? <end>
+Summon whom? <end>
 
 // <Oidon>た゛れかよんて゛からのほうか゛　いいですぜ。<end>
 <Oidon>
-Maybe we should call<nl>
-someone in first.<end>
+Maybe we should call someone in first.<end>
 
 // <Oidon>だんな、8日から　しゅっちょうするはす゛た゛った、
 // コンコンほうせきてんの　ヘ゜ルーというものか゛
@@ -3296,7 +3293,7 @@ time.<end>
 
 // <Oidon>ほんじゃ、ココンをよひ゛ますぜ。<end>
 <Oidon>
-OK, we'll call Kit.<end>
+OK, we'll summon Kit.<end>
 
 // <Oidon>これに　みおほ゛えは　ないか？<end>
 <Oidon>
@@ -3304,15 +3301,15 @@ Recognize this?<end>
 
 // <Oidon>ほんじゃ、ヘ゜ルーをよひ゛ますぜ。<end>
 <Oidon>
-OK, we'll call Peru.<end>
+OK, we'll summon Peru.<end>
 
 // <Oidon>ほんじゃ、ターシ゛をよひ゛ますぜ。<end>
 <Oidon>
-OK, we'll call Taji.<end>
+OK, we'll summon Taji.<end>
 
 // <Oidon>ほんじゃ、リンリンをよひ゛ますぜ。<end>
 <Oidon>
-OK, we'll call Rinrin.<end>
+OK, we'll summon Rinrin.<end>
 
 // <Oidon>いまのところ　し゛ょうほうは　ありませんぜ。<end>
 <Oidon>
@@ -3332,13 +3329,9 @@ plausible of a motive.<end>
 // あいまいて゛すし、ケカ゛について
 // くちこ゛もっていたのも　あやしいですぜ。<end>
 <Oidon>
-He's young, but he may<nl>
-have a motive. His<nl>
-alibi is unclear too.<key>
+He's young, but he may have a motive. His alibi is sketchy too.<key>
 <Oidon>
-His hesitance to talk<nl>
-about his injury is<nl>
-also suspect.<end>
+His hesitance to talk about his injury is also suspect.<end>
 
 // <Oidon>し゛ふ゛んのしょうは゛いの　ためにとも
 // かんか゛えられます。
@@ -3423,20 +3416,15 @@ brother.<end>
 // <Oidon>だんな、コンタは　ちちおやの　そうしきの
 // し゛ゅんひ゛て゛　て゛かけているのて゛　よへ゛ませんぜ。<end>
 <Oidon>
-Red's making funeral<nl>
-arrangements, so we<nl>
-can't call him in.<end>
+Red's making funeral arrangements, so we can't call him in.<end>
 
 // せんぜ。<end>
 <end>
 
 // <Oidon>と゛うきは　なさそうて゛すし　アリハ゛イも
 // ちゃんとしてる　みたいですぜ。<end>
-// @TODO@ - find out what pronoun to use instead of "'the' alibi"
 <Oidon>
-A motive seems unlikely<nl>
-and her alibi seems<nl>
-solid.<end>
+A motive seems unlikely and her alibi seems solid.<end>
 
 0<end>
 
@@ -3480,9 +3468,7 @@ let's focus on him.<end>
 // し゛ょうひんなこうすいの　においか゛しますぜ。
 // おんなみたいなやつですぜ。<end>
 <Oidon>
-It smells of fancy<nl>
-perfume. Seems rather<nl>
-feminine.<end>
+He smells of fancy perfume. Seems rather feminine.<end>
 
 // <Oidon>キミは　た゛いふ゛おかねを
 // ほしか゛っているようた゛か゛・・・・・・。
@@ -3491,11 +3477,9 @@ feminine.<end>
 // <Oidon>なせ゛、おかねか゛ほしいんた゛？
 // <Kokon>た゛れて゛も　おかねは　ほしいもんて゛すよ。<end>
 <Oidon>
-You seem to desire<nl>
-money.<nl>
+You seem to desire money.<nl>
 <Kokon>
-Is something wrong with<nl>
-that?<key>
+Is something wrong with that?<key>
 <Oidon>
 Why do you want it?<nl>
 <Kokon>
@@ -3609,7 +3593,8 @@ Agh!<pause> I don't care if you're police. Try something like that again and I'm
 <Peruu>
 I gave that to the boss yesterday.
 <Oidon>
-Go on...
+You did? Why?
+<key>
 <Peruu>
 He was very neurotic recently.
 He hadn't slept in days because he said he
@@ -3868,7 +3853,7 @@ I do. It's yellow with stripes. Come take a look sometime!<end>
 <Dorakure>
 N, N, N.....
 Doesn't ring any bells. If you ask around
-you're find out eventually I'm sure.<end>
+you'll find out eventually I'm sure.<end>
 
 // <contd>
 // <Dorakure>なんて゛すか、これ。<end>

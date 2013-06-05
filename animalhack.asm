@@ -35,6 +35,12 @@ org     $6378, $637b
         nop
 
 
+; Clear password dialogue after "No such file, boss."
+forg    $0434
+org     $6434, $6436
+        call    ClearPasswordDialogueAndPrintString
+
+
 ; This code originally called PrintChar (where PrintChar8 is now) and bumped the VRAM pointer in the dialogue routine
 forg    $028b7
 org     $48b7, $48bf

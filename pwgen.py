@@ -17,10 +17,10 @@ def process(line):
     line = line.strip()
     tagged_line = line + '\x0D\x0F'
     values = []
-    last = '\0'
+    previous = '\0'
     for ch in tagged_line:
-        values.append(str(ord(ch) - ord(last)))
-        last = ch
+        values.append(str(ord(ch) - ord(previous)))
+        previous = ch
     return "; {0}\nDB {1}\n".format(line, ",".join(values))
 
 

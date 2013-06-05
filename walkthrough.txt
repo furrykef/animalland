@@ -1,6 +1,14 @@
 This is only the bare minimum needed to get through the game.
 
+A walkthrough in Japanese is here: http://www.d1.dion.ne.jp/~gake/koryaku/animal/animal.htm
 
+Chapter 1
+---------
 Victim's room:
 * Look table (find envelope)
 * Take envelope
+* Check envelope (find note from Gonkichi to Peruu)
+* Check chair (find gun)
+* Take gun
+* Check floor (find blond hair)
+* Take blond hair

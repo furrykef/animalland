@@ -1,5 +1,10 @@
 QUESTIONS & ANSWERS
 -------------------
+We can't call 'em "frequently asked questions" because then we would be lying.
+
+Q: The game said something about a file to record my progress. Where are the files stored?
+A: They aren't. The names are really passwords.
+
 Q: Is there any way to go back to the title screen after choosing "continue"?
 A: None that we've found. Reset your MSX.
 

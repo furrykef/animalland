@@ -80,6 +80,30 @@ HandlePasswordChar:
         jp      $6381
 
 
+ClearPasswordDialogueAndPrintString:
+        push    hl
+        push    de
+        push    af
+        ld      hl, $0888
+        ld      de, 64                  ; VRAM pointer increment
+        ld      a, 17                   ; 17 columns to erase
+        ld      b, a
+        xor     a
+        ld      (pixel_offset), a
+.loop:
+        push    bc
+        ld      bc, 20                  ; 20 rows of pixels to erase
+        call    FILVRM                  ; A is still 0
+        add     hl, de                  ; bump VRAM pointer
+        pop     bc
+        djnz    .loop
+        pop     af
+        pop     de
+        pop     hl
+        call    $4003                   ; print string
+        ret
+
+
 ErasePushSpaceKey:
         ld      hl, $10b8
         ld      b, 28
