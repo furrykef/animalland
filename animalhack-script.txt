@@ -4451,7 +4451,7 @@ Troubled? Why's that?
 The older son Red started working for the business, but Kit refused to. 
 It seems he was after money to start his own business to compete with his father's.
 That's all I know.
-Ah, hold on..
+Ah, hold on...
 <Taaji>
 There's a cafe nearby called <green>Dragon<black>.
 Renard was was good friends with the owner there, so he might know something.

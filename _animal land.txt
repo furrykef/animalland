@@ -37,6 +37,36 @@ Check if our bankswitching can interfere with interrupt handlers
 <furrykef> We can make note of it and come back to it later
 
 
+<Torbjorn> Well in the forest you come across this stone tablet that has writing on it
+<Torbjorn> it says た゛こいやのこいわはしんきろうなり on it
+<Torbjorn> so nothing can be made of it for now and you move on
+<Torbjorn> then you come to a point where your path is blocked by rocks and this dialog happens
+<Torbjorn> / <Oidon>なるほと゛・・・。<pause>
+<Torbjorn> / だんな、こけしいわの　もし゛の　いみか゛
+<Torbjorn> / わかりましたせ゛。<key><Oidon>"た゛こいやのこいわはしんきろうなり。"
+<Torbjorn> / このもし゛から　"こ"を　ぬいてよめは゛
+<Torbjorn> / いいんて゛す。<key><Oidon>つまり　"た゛いやのいわは　しんきろうなり"。<pause>
+<Torbjorn> / とすると　このいわは　すへ゛てしんきろう。<pause>
+<Torbjorn> / なせ゛　"こ"を　ぬくかって？<pause><key><Oidon>それは　だんな、<pause>　こけしいわた゛からて゛すよ。
+<Torbjorn> / "こけし"・・・"こをけす"　という
+<Torbjorn> / ことですぜ。<end>
+<Torbjorn> So essentially, the name of the kind of rock the stone tablet is made of is referred to as Kokeshi Iwa
+<Torbjorn> Looking on google it seems to be a stone that has a towering appearence to it
+<Torbjorn> like a Kokeshi doll
+<Torbjorn> but anyways, since the stone is Kokeshi stone(iwa), they take it in a literal sense
+<Torbjorn> ko keshi
+<Torbjorn> which would be ko wo kesu koto, meaning erase the ko
+<furrykef> What an obtuse pun :P
+<Torbjorn> so erase the "ko" in that reading on the stone and it makes sense
+<Torbjorn> yeah :P
+<Torbjorn> but anyways since no literal translation would work something unique has to be made up for the Engish translation
+<furrykef> Is it essential to the plot?
+<Torbjorn> not really :P
+<furrykef> Don't have to lose much sleep over it then :P
+<Torbjorn> All it does it tell you that all other rocks are an illusion and makes them move out of your path
+<Torbjorn> disappear rather
+
+
 Pointers
 --------
 A routine at 2C3A (4C3A in mem space) handles loading pointers for both menus and script. They're passed in via registers. Trap all calls to it.
@@ -212,8 +242,8 @@ People:
   ペルー                               - Peru (maybe Pelu)
   ツネコ (female fox)                  - ???
   コアラ                               - ???
-  ベアス                               - ???
-  ドラクレ (tiger)                      - Dora (if female), Draco/Drago/Drake (if male) -- maybe think of a more tigery name
+  ベアス (bear)                        - Bjorn? Ursula? Can't tell if female.
+  ドラクレ (tiger)                      - Draco/Drago/Drake -- maybe think of a more tigery name
 
 Places:
   どうぶつの　むら              - Animalville

@@ -1,6 +1,7 @@
-This is only the bare minimum needed to get through the game.
+This is only the bare minimum needed to get through the game, or close to it, anyway.
 
 A walkthrough in Japanese is here: http://www.d1.dion.ne.jp/~gake/koryaku/animal/animal.htm
+
 
 Chapter 1
 ---------
@@ -12,3 +13,37 @@ Victim's room:
 * Take gun
 * Check floor (find blond hair)
 * Take blond hair
+...
+
+
+Chapter 2
+---------
+...
+
+
+Chapter 3
+---------
+NB: when questioning people, also show them the gun, memo, and blond hair
+
+* Question Kokon thoroughly
+* Sniff Kokon (identify perfume smell)
+* Seek info at HQ (Peruu becomes available)
+* Sniff Peruu (identify perfume as the perfume Kokon had on him)
+* Question Peruu thoroughly
+** Asking about alibi reveals she was on a date
+** Showing gun reveals she gave it to Gonkichi
+** Showing memo unlocks Taaji and Rinrin
+* Ask Kokon about his alibi (says it's personal)
+* Ask Peruu about her alibi again (find out her date was with Kokon)
+* Ask Kokon about alibi (find out he'd lied before since he was with Peruu)
+* Question Taaji thoroughly
+** Asking about Gonchiki's quarrels unlocks Dragon Cafe
+* Question Rinrin thoroughly
+* Go to Dragon Cafe
+* Question Dorakure thoroughly
+* Ask Kokon about money
+* "Reason" at HQ
+
+[missing some steps above]
+
+You should now go to the bear bar
