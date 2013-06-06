@@ -1524,9 +1524,8 @@ anything to.<end>
 // <Oidon>はまきの　いいにおいか゛　しますぜ。
 // うーたまらん、だんなも　と゛うて゛す？<end>
 <Oidon>
-Just the pleasant scent of my<nl>
-cigar.<pause> Irresistible,<nl>
-don't you think?<end>
+Just the pleasant scent of my cigar.<nl>
+Irresistible, don't you think?<end>
 
 // <Oidon>ほんじゃ、ほうせきてんへ　いきましょうや。<end>
 <Oidon>

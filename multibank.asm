@@ -164,42 +164,35 @@ DrawMenuLetters:
         ret
 
 
-AfterDisplayingNameTag:
-        push    af
+; This replaces the bit of code that was at $4792 ($02792 in ROM space)
+; IX is a pointer to the name to display
+; HL contains the address in VRAM to write to
+DisplayNameTag:
+        push    hl
 
         xor     a
         ld      (pixel_offset), a
 
-        ; Now we need to update the VRAM address
-        ; The correct address is one of:
-        ;   $1188   -- first line of dialogue in main game
-        ;   $1194   -- second line
-        ;   $11a0   -- third line
-        ;   $11ac   -- fourth line
-        ;   $0988   -- name tag on password dialogue
-
-        ; Bump VRAM pointer to point to correct place
+        ; This loop prints the name
 .loop:
-        ld      a, h
-        cp      $09
-        jr      z, .check_lsb
-        cp      $11
-        jr      z, .check_lsb
-.loop_tail:
-        ld      bc, 64
-        add     hl, bc
-        jr      .loop
-
-.check_lsb:
-        ; Now we know the VRAM addr is either 09xx or 11xx
-        ld      a, l
-        cp      $88
-        jr      c, .loop_tail
-        cp      $ac
-        jr      nc, .loop_tail
-
+        ld      a, (ix)
+        push    af
+        call    $4847                       ; DoChar
+        inc     ix
         pop     af
-        jp      $47a1
+        cp      ':'
+        jr      nz, .loop
+
+        ; Now put the text cursor where it belongs for dialogue
+        xor     a
+        ld      (pixel_offset), a
+        pop     hl
+        ld      bc, 5*64
+        add     hl, bc
+
+        ; Now we go on our merry way
+        pop     ix                          ; restore pointer to script
+        jp      $45e7                       ; FetchAndPrintChar
 
 
 ; This is a reworked version of the display code from the original game,

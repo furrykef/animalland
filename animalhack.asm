@@ -181,11 +181,9 @@ forg    $2795
 org     $4795, $4796
         cp      ':'
 
-; This bit of code gets executed after displaying a name tag in the main script
-; It originally just jumped to $47a1 (the part in the fetch char routine after fetching a char)
-forg    $025e4
-org     $4534, $4536
-        jp      AfterDisplayingNameTag
+forg    $02792
+org     $4792, $4794
+        jp      DisplayNameTag
 
 
 ; This is where the original game's PrintChar routine was. We'll just hook it to PrintChar8
