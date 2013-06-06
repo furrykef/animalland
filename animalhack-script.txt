@@ -4135,7 +4135,7 @@ Looks like good coffee.<end>
 
 // <Oidon>ゴンきちか゛　ころされたのは　しっているか？<end>
 <Oidon>
-Do you know that Renard was murdered?.<end>
+Do you know that Renard was murdered?<end>
 
 // <contd>
 // <Dorakure>ええ・・・。さ゛んねんなことて゛す。あんなことに
@@ -4688,7 +4688,7 @@ And why is one piece missing? This case is more complicated than we thought.<key
 If only we could talk with Tsuneko.
 Anyways, let's get back on this case, boss.<key>
 <Oidon>
-I've saved our progress in a file. I labeled it <red>Owlnuts<black><end>
+I've saved our progress in a file. I labeled it <red>Owlnuts<black>.<end>
 
 // <Oidon>だんな、ここに　いますぜ。<end>
 <Oidon>
@@ -4700,29 +4700,29 @@ Don't be silly, boss.<end>
 // <Oidon>みせるものは　あるんて゛すか゛、あいてか゛
 // いませんぜ。<end>
 <Oidon>
-There's no one to show<nl>
-anything to.<end>
+There's no one to show anything to.<end>
 
 // <Oidon>た゛っ、だんな。おいと゛んは、はんにんて゛は
 // ありませんよ。<pause>そんなかなしいことを
 // いわないて゛くた゛さいよ。<end>
 <Oidon>
-B, boss! I'm not the criminal!
+B-boss! I'm not the criminal!
 Don't say such things!<end>
 
 // <Oidon>ほんじゃ、コンタをよひ゛ますぜ。<end>
 <Oidon>
-Ok, let's call Red..<end>
+Ok, let's call Red.<end>
 
 // <Oidon>ほんじゃ、ココンをよひ゛ますぜ。<end>
 <Oidon>
 OK, let's call Kit.<end>
 
 // <Oidon>ほんじゃ、ヘ゜ルーをよひ゛ますぜ。<end>
-<Oidon
+<Oidon>
 OK, let's call Peru.<end>
 
 // <Oidon>ほんじゃ、ヌキをよひ゛ますぜ。<end>
+<Oidon>
 OK, let's call Nuki.<end>
 
 // <Oidon>32さいて゛　け゛んさ゛い　むしょくて゛す。
@@ -4982,7 +4982,7 @@ the store key I lost.<end>
 Andy, there's something that concerns me...
 <Oidon>
 What is it?
-<key
+<key>
 <Peruu>
 It's about my trip we talked about before.
 It was a more personal trip for the boss than usual.
@@ -4990,7 +4990,7 @@ It was a more personal trip for the boss than usual.
 <Peruu>
 He wanted me to deliver a letter to his wife for him.
 It seemed he had problems seeing her himself.
-<key<
+<key>
 <Peruu>
 So I was to go in his place...<end>
 
@@ -5377,7 +5377,7 @@ unusual about it.<end>
 // <Oidon>く゛き゛き゛っ・・・・・・。<pause>
 // ふうーっ。あきましたよ。<pause>
 // て゛も、もうなにも　ありませんぜ。<end>
-<<Oidon>
+<Oidon>
 Ugh.....<pause>
 Whew! It's open.<pause>
 But there's nothing else here.<end>
@@ -5385,7 +5385,7 @@ But there's nothing else here.<end>
 // <Oidon>カ゛サ、コ゛ソ・・・・・・。<pause>
 // だんな、もうなにも　ないようですぜ。<end>
 <Oidon>
-Let's have a look here...>pause>
+Let's have a look here...<pause>
 Nothing else here, boss.<end>
 
 // <Oidon>いまのところ　し゛ょうほうは　ありませんぜ。<end>
@@ -5668,7 +5668,7 @@ OK, you may go now.<end>
 // あいてのきもちも　かんか゛えないて゛
 // そんなことを　いうなんて・・・。<key><Kokon>とっくに　わすれて　いたのに・・・。<end>
 <contd>
-Kokon>
+<Kokon>
 .......How mean!<pause>
 How could you be so disrespectful of my feelings and ask
 something like that!?<key>
@@ -5884,7 +5884,7 @@ should know.<end>
 On the night of the 10th, Peruu was on a date with Kit.<pause>
 Must be fun...<pause>
 Wish I had a date too.
-<<end>
+<end>
 
 // <contd>
 // <Peruu>ここいか゛いて゛は　みたこと　ありませんわ。<end>
@@ -5949,7 +5949,7 @@ what we can find out.<pause>
 .....<pause> Hmm<pause> Hmm<pause>......<pause><key>
 <Oidon>
 Boss, it seems Nuki did in fact rent a car from the 9th to the 11th.
-A　small, white car.....<end>
+A small, white car.....<end>
 
 // ますぜ。<end>
 <end>
@@ -6980,7 +6980,7 @@ The lense is unscathed so it should still be usable.<end>
 // かすれていて　よめませんぜ。<end>
 <Oidon>
 It's torn up. I can only make out half a page.
-I'll look for the date...<page>!!!
+I'll look for the date...<pause>!!!
 This paper is too old.<key>
 <Oidon>
 It's from 3 and a half years ago.<pause> Hmm...<pause>

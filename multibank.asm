@@ -86,7 +86,7 @@ ClearPasswordDialogueAndPrintString:
         push    af
         ld      hl, $0888
         ld      de, 64                  ; VRAM pointer increment
-        ld      a, 17                   ; 17 columns to erase
+        ld      a, 17                   ; 17 columns of tiles to erase
         ld      b, a
         xor     a
         ld      (pixel_offset), a
@@ -100,6 +100,15 @@ ClearPasswordDialogueAndPrintString:
         pop     af
         pop     de
         pop     hl
+        call    $4003                   ; print string
+        ret
+
+
+ClearPixelOffsetAndPrintString:
+        push    af
+        xor     a
+        ld      (pixel_offset), a
+        pop     af
         call    $4003                   ; print string
         ret
 

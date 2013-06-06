@@ -35,10 +35,25 @@ org     $6378, $637b
         nop
 
 
-; Clear password dialogue after "No such file, boss."
-forg    $0434
+; Set pixel_offset to 0 before printing "What's the file's name, boss?"
+forg    $002ef
+org     $62ef, $62f1
+        call    ClearPixelOffsetAndPrintString
+
+; Clear password dialogue when printing "No such file, boss."
+forg    $00434
 org     $6434, $6436
         call    ClearPasswordDialogueAndPrintString
+
+; Clear password dialogue when printing "OK, let's go."
+forg    $0043f
+org     $643f, $6441
+        call    ClearPasswordDialogueAndPrintString
+
+; Set pixel_offset to 0 before printing "Password:"
+forg    $00302
+org     $6302, $6304
+        call    ClearPixelOffsetAndPrintString
 
 
 ; This code originally called PrintChar (where PrintChar8 is now) and bumped the VRAM pointer in the dialogue routine
