@@ -22,7 +22,7 @@
 What's the file's name?<end>
 
 // <contd>ファイルめいは？　<END>
-($01)Password:<end>
+($01)Password:  <end>
 
 // <contd><Oidon>それて゛は　そうさを
 // さいかいしましょう。<END>
