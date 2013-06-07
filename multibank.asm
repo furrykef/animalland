@@ -19,6 +19,7 @@ MULTIBANK_OFFSET:           equ     $4000 - MULTIBANK_REGION_SIZE
 CHAR_BOLD_PERIOD:   equ     $0a
 CHAR_MNL:           equ     $10
 CHAR_END:           equ     $7f
+CHAR_BOLD_COLON:    equ     $ca
 
 
 ; BIOS stuff
@@ -170,7 +171,7 @@ DrawMenuLetters:
 DisplayNameTag:
         push    hl
 
-        xor     a
+        ld      a, 1
         ld      (pixel_offset), a
 
         ; This loop prints the name
@@ -180,7 +181,7 @@ DisplayNameTag:
         call    $4847                       ; DoChar
         inc     ix
         pop     af
-        cp      ':'
+        cp      CHAR_BOLD_COLON
         jr      nz, .loop
 
         ; Now put the text cursor where it belongs for dialogue
@@ -496,12 +497,17 @@ char_widths:
         ;       P  Q  R  S  T  U  V  W  X  Y  Z
         db      8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0
 
-        db      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        ;       [bold font]
+        ;       A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P
+        db      7, 7, 7, 7, 6, 6, 7, 7, 3, 6, 6, 6, 8, 7, 7, 7
+
+        ;       Q  R  S  T  U  V  W  X  Y  Z  :  ?
+        db      7, 7, 7, 7, 7, 7, 8, 7, 7, 7, 3, 7, 0, 0, 0, 0
 
         db      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
-        db      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        ;       a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p
+        db      7, 6, 6, 6, 6, 5, 6, 6, 3, 4, 6, 3, 8, 6, 6, 6
 
-        db      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-
-        db      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        ;       q  r  s  t  u  v  w  x  y  z  {  |  }  ~
+        db      6, 5, 6, 5, 6, 6, 8, 6, 6, 6, 0, 0, 0, 0, 0, 0

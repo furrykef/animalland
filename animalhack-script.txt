@@ -1,7 +1,7 @@
-#VAR(ascii, TABLE)
 #VAR(tbl, TABLE)
-#ADDTBL("ascii.tbl", ascii)
+#VAR(bold, TABLE)
 #ADDTBL("animalhacke.tbl", tbl)
+#ADDTBL("animalhacke-bold.tbl", bold)
 #ACTIVETBL(tbl)
 
 // Used for menu commands
@@ -19,7 +19,8 @@
 // <contd><Oidon>だんな、そうさファイルの
 // なまえ　なんて゛したっけ？<END>
 ($01)<Oidon>
-What's the file's name?<end>
+What's the file's<nl>
+name?<end>
 
 // <contd>ファイルめいは？　<END>
 ($01)Password:  <end>
@@ -93,7 +94,7 @@ investigate the case...<end>
 
 // Character names (used for dialogue tags)
 #JMP($253B, $25A4)
-#ACTIVETBL(ascii)
+#ACTIVETBL(bold)
 // おいどん
 Andy:
 
@@ -316,28 +317,28 @@ BLOND HAIR<end>
 NOTE<end>
 
 // みる<end>
-LOOK<end>
+Look<end>
 
 // とる<end>
-TAKE<end>
+Take<end>
 
 // しらへ゛る<end>
-CHECK<end>
+Check<end>
 
 // きく<end>
-ASK<end>
+Ask<end>
 
 // あける<end>
-OPEN<end>
+Open<end>
 
 // みせる<end>
-SHOW<end>
+Show<end>
 
 // ハナきかす<end>
-SNIFF<end>
+Sniff<end>
 
 // と゛こかいく<end>
-GO<end>
+Go<end>
 
 // よふ゛<end>
 CALL<end>
@@ -2031,14 +2032,12 @@ things!<end>
 // <Oidon>だんな、なく゛られちゃいましたせ゛。<end>
 // (upon CHECKing Amy)
 <Oidon>
-Excuse me, I'd like to<nl>
-take a look.<key>
+Excuse me, I'd like to take a look.<key>
 <Pyonko>
-Hey! What do you think<nl>
-you're doing? *slap!*<nl>
+Hey! What do you think you're doing?<nl>
+*slap!*<nl>
 <Oidon>
-Ah...<pause> sorry, never<nl>
-mind.<end>
+Ah...<pause> sorry, never mind.<end>
 
 // <Oidon>ヒ゜ョンコのくちを　あけてみましたところ、
 // きれいな　はを　してましたせ゛。<end>

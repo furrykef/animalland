@@ -114,7 +114,7 @@ org     $4a7e, $4a80
 ; This code is used to scan the list of dialogue tags
 forg    $025cc
 org     $45cc, $45cd
-        cp ':'
+        cp      CHAR_BOLD_COLON
 
 
 ; Hook for first line of dialogue
