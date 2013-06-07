@@ -56,6 +56,12 @@ org     $6302, $6304
         call    ClearPixelOffsetAndPrintString
 
 
+; Replace the code that displays prompts ("What to do?" etc.)
+forg    $029a2
+org     $49a2, $49a4
+        jp      DisplayPrompt
+
+
 ; This code originally called PrintChar (where PrintChar8 is now) and bumped the VRAM pointer in the dialogue routine
 forg    $028b7
 org     $48b7, $48bf

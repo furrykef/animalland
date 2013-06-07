@@ -101,23 +101,23 @@ Andy:
 // ココン
 Kit:
 
-// コンタ - @TODO@
+// コンタ
 Red:
 
-// ツネコ - @TODO@
-Neko:
+// ツネコ
+Vixy:
 
-// タージ
+// タージ - @TODO@
 Taji:
 
 // ペルー
 Peru:
 
-// リンリン - @TODO@
-Rinrin:
+// リンリン
+Ling:
 
 // ピョンコ
-Amy:
+Bunnie:
 
 // ヌキ
 Nuki:
@@ -125,8 +125,8 @@ Nuki:
 // コアラ
 Koala:
 
-// ベアス - @TODO@
-Beasu:
+// ベアス
+Teddy:
 
 :
 
@@ -1752,16 +1752,16 @@ OK, let's have a look<nl>
 at the people involved.<end>
 
 // と゛うする？　<end>
-What to do? <end>
+What to do?<end>
 
 // なにを？　<end>
-What? <end>
+What?<end>
 
 // と゛こへ？　<end>
-Where? <end>
+Where?<end>
 
 // た゛れを　しらへ゛る？　<end>
-Check whom? <end>
+Check whom?<end>
 
 // <Oidon>ふつうの　かへ゛ですぜ。<end>
 <Oidon>
@@ -2122,7 +2122,7 @@ like a gun?<key>
 I don't know whether it<nl>
 was a gun, but I heard<nl>
 a loud noise twice at<nl> 
-around 11 <end>
+around 11.<end>
 
 // <Oidon>これに　みおほ゛えは　ないか？
 // <Pyonko>さあ、た゛れの　け　て゛しょうね。<end>
@@ -2756,16 +2756,16 @@ We can't do that while<nl>
 someone is here.<end>
 
 // と゛うする？　<end>
-What to do? <end>
+What to do?<end>
 
 // なにを？　<end>
-What? <end>
+What?<end>
 
 // と゛こへ？　<end>
-Where? <end>
+Where?<end>
 
 // た゛れを？　<end>
-Whom? <end>
+Whom?<end>
 
 // <Oidon>だんな　いくつか　しんし゛し゛つか゛　わかりましたか゛
 // かえって　ナソ゛は　ふかまるは゛かりですぜ。
@@ -3201,11 +3201,9 @@ jewelry shop.<end>
 // <Oidon>ココンのことを　ききたいんた゛か゛
 // <Pyonko>ふん　あんなひとなんか　しるもんて゛すか!<end>
 <Oidon>
-I'd like to ask about<nl>
-Kit.<nl>
+I'd like to ask about Kit.<nl>
 <Pyonko>
-How should I know anything about HIM?<nl>
-Hmph!<end>
+Well don't ask ME! Hmph!<end>
 
 
 //******** CHAPTER 3 ********//
@@ -3219,7 +3217,7 @@ Let's call someone in<nl>
 first.<end>
 
 // た゛れを　よひ゛ましょうか？　<end>
-Summon whom? <end>
+Summon whom?<end>
 
 // <Oidon>た゛れかよんて゛からのほうか゛　いいですぜ。<end>
 <Oidon>
@@ -4112,16 +4110,16 @@ Wait, I mean *whisper whisper*, *mumble mumble*
 <end>
 
 // と゛うする？　<end>
-What to do? <end>
+What to do?<end>
 
 // なにを？　<end>
-What? <end>
+What?<end>
 
 // た゛れを？　<end>
-Whom? <end>
+Whom?<end>
 
 // と゛こへ？　<end>
-Where? <end>
+Where?<end>
 
 // <Oidon>だんな、ます゛さいしょに　ゴンきちのことを
 // しらせたほうか゛　いいですぜ。<end>
@@ -4660,7 +4658,7 @@ Maybe we should call<nl>
 someone in first.<end>
 
 // た゛れを　よひ゛ましょうか？　<end>
-Call whom? <end>
+Call whom?<end>
 
 // <contd><key><Oidon>だんな　し゛けんは　ふたたひ゛　ふりた゛しに
 // もと゛っちまいましたせ゛。せ゛ったいに　クロた゛と
@@ -5317,16 +5315,16 @@ I didn't say that. He's no big deal himself either.<key>
 <end>
 
 // と゛うする？　<end>
-What to do? <end>
+What to do?<end>
 
 // と゛こへ？　<end>
-Where? <end>
+Where?<end>
 
 // なにを？　<end>
-What? <end>
+What?<end>
 
 // た゛れを？　<end>
-Whom? <end>
+Whom?<end>
 
 // <Oidon>てか゛みのないようはしっているか？
 // <Peruu>いいえ、そこまて゛は・・・・・・。<end>
@@ -5890,7 +5888,7 @@ Wish I had a date too.
 I've never seen it anywhere besides here.<end>
 
 // た゛れに？　<end>
-To whom? <end>
+To whom?<end>
 
 // 。<end>
 .<end>
@@ -5965,7 +5963,7 @@ Translation goes here.<end>
 Let's get someone in here first.<end>
 
 // た゛れを　よひ゛ましょうか？　<end>
-Call whom? <end>
+Call whom?<end>
 
 // <Oidon>ゴンきちは　いったい　なにを　やったんた゛。
 // <Tsuneko>わかりません。わたしも　なんと゛か　ききた゛そうと
@@ -6299,13 +6297,13 @@ My husband used to hunt and<pause> ....well....<pause>
 here they are.<end>
 
 // と゛うする？　<end>
-What to do? <end>
+What to do?<end>
 
 // と゛こへ？　<end>
-Where? <end>
+Where?<end>
 
 // なにを？　<end>
-What? <end>
+What?<end>
 
 // <Beasu>いらっしゃい!　おっ、おいと゛んさん。
 // コアラさん　また゛　こ゛きけ゛んななめなんた゛。
@@ -6771,10 +6769,10 @@ I wouldn't know.<end>
 I've never seen it.<end>
 
 // た゛れに？　<end>
-To whom? <end>
+To whom?<end>
 
 // た゛れを？　<end>
-Whom? <end>
+Whom?<end>
 
 // 。<end>
 .<end>
@@ -6797,7 +6795,7 @@ Whom? <end>
 .<end>
 
 // た゛れに？　<end>
-Whom? <end>
+Whom?<end>
 
 // 。<end>
 .<end>
@@ -7255,7 +7253,7 @@ It's locked, boss.<end>
 // だんな、あきましたせ゛。<end>
 <Oidon>
 Ok, let's try opening it with this key.<pause>
-.......<pause>
+...*click*...<pause>
 It opened, boss.<end>
 
 // <Oidon>だんな、はこの　なかには　すいちゅうし゛ゅうか゛
@@ -7387,7 +7385,7 @@ A happy-looking mole.<end>
 <contd>
 <Mogura>
 Don't know.<pause>
-I've only been here since 2 years ago.<end>
+I've only been here for two years.<end>
 
 // <contd>
 // <Mogura>しす゛かた゛し・・・いいところた゛よ。
@@ -7396,7 +7394,7 @@ I've only been here since 2 years ago.<end>
 <contd>
 <Mogura>
 It's quiet...I like it.
-Who needs all the hustle and bustle of the city.<end>
+Who needs all the hustle and bustle of the city?<end>
 
 // <Oidon>このへんに　た゛れかか゛　とおることはないか？
 // <Mogura>ああ<pause>　ときと゛き　くるね。
@@ -7409,7 +7407,7 @@ Oh,<pause> sometimes, sure.
 <Oidon>
 Know what kind of animals?
 <Mogura>
-No clue. <pause>I'm blind, afterall.<end>
+No clue.<pause> I'm blind, after all.<end>
 
 // <Oidon>このへんを　とおるものか゛いると　いったか゛
 // そいつか゛　いつも　と゛こへいくのか
@@ -7506,6 +7504,7 @@ It's a different shape than the others.<end>
 // なせ゛　"こ"を　ぬくかって？<pause><key><Oidon>それは　だんな、<pause>　こけしいわた゛からて゛すよ。
 // "こけし"・・・"こをけす"　という
 // ことですぜ。<end>
+// @TODO@ -- finish translation
 <Oidon>
 Now I get it...<pause>
 Boss, I've figured out the meaning behind the reading on the rock.<key>
@@ -7679,13 +7678,13 @@ There's a newspaper by this rock, boss.<end>
 Translation goes here.<end>
 
 // と゛うする？　<end>
-What to do? <end>
+What to do?<end>
 
 // なにを？　<end>
-What? <end>
+What?<end>
 
 // と゛こへ？　<end>
-Where? <end>
+Where?<end>
 
 // <contd>
 // <Mogura>おらか゛　ここに　きたのは　1年まえた゛から
@@ -7729,7 +7728,7 @@ Translation goes here.<end>
 Translation goes here.<end>
 
 // と゛ちら？　<end>
-Which? <end>
+Which?<end>
 
 // <contd>
 // <Oidon>だんな、これて゛　むこうき゛しへ　わたれますぜ。<end>
@@ -7770,7 +7769,7 @@ Let's call someone in<nl>
 first.<end>
 
 // た゛れを　よひ゛ましょうか？　<end>
-Call whom? <end>
+Call whom?<end>
 
 // <Oidon>だんな、いまのところし゛ょうほうは
 // ありませんぜ。<end>
@@ -8567,16 +8566,16 @@ C<end>
 .<end>
 
 // と゛うする？　<end>
-What to do? <end>
+What to do?<end>
 
 // と゛こへ？　<end>
-Where? <end>
+Where?<end>
 
 // なにを？　<end>
-What? <end>
+What?<end>
 
 // た゛れを？　<end>
-Whom? <end>
+Whom?<end>
 
 // 。<end>
 .<end>

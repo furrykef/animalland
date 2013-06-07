@@ -50,17 +50,17 @@ org $8000 + MULTIBANK_OFFSET, $bfff
 
 HandlePasswordChar:
         cp      'A'
-        jp      c, $637c                ; below A-Z range; reject
+        jp      c, $637c                    ; below A-Z range; reject
         cp      'Z' + 1
         jr      c, .accept
         cp      'a'
-        jp      c, $637c                ; between A-Z and a-z range; reject
+        jp      c, $637c                    ; between A-Z and a-z range; reject
         cp      'z' + 1
-        jp      nc, $637c               ; above a-z range; reject
-        add     a, 'A' - 'a'            ; letter is lowercase; capitalize it
-        ld      (hl), a                 ; put the capitalized char in the buffer
-                                        ; (otherwise it will only LOOK capitalized)
-        add     a, $50                  ; display it with monospace font
+        jp      nc, $637c                   ; above a-z range; reject
+        add     a, 'A' - 'a'                ; letter is lowercase; capitalize it
+        ld      (hl), a                     ; put the capitalized char in the buffer
+                                            ; (otherwise it will only LOOK capitalized)
+        add     a, $50                      ; display it with monospace font
 
 .accept:
         push    af
@@ -72,7 +72,7 @@ HandlePasswordChar:
         ; If we don't, our VWF code will cause it to be overstruck.
         ; Note that A is still zero here
         push    hl
-        ld      hl, ($f200)             ; Get VRAM pointer
+        ld      hl, ($f200)                 ; Get VRAM pointer
         ld      bc, 8
         call    FILVRM
         pop     hl
@@ -86,22 +86,22 @@ ClearPasswordDialogueAndPrintString:
         push    de
         push    af
         ld      hl, $0888
-        ld      de, 64                  ; VRAM pointer increment
-        ld      a, 17                   ; 17 columns of tiles to erase
+        ld      de, 64                      ; VRAM pointer increment
+        ld      a, 17                       ; 17 columns of tiles to erase
         ld      b, a
         xor     a
         ld      (pixel_offset), a
 .loop:
         push    bc
-        ld      bc, 20                  ; 20 rows of pixels to erase
-        call    FILVRM                  ; A is still 0
-        add     hl, de                  ; bump VRAM pointer
+        ld      bc, 20                      ; 20 rows of pixels to erase
+        call    FILVRM                      ; A is still 0
+        add     hl, de                      ; bump VRAM pointer
         pop     bc
         djnz    .loop
         pop     af
         pop     de
         pop     hl
-        call    $4003                   ; print string
+        call    $4003                       ; print string
         ret
 
 
@@ -110,8 +110,34 @@ ClearPixelOffsetAndPrintString:
         xor     a
         ld      (pixel_offset), a
         pop     af
-        call    $4003                   ; print string
+        call    $4003                       ; print string
         ret
+
+
+DisplayPrompt:
+        ld      a, 1
+        ld      (pixel_offset), a
+
+.display_string:
+        ld      a, (ix)
+        inc     ix
+        cp      CHAR_END
+        jr      z, .done_displaying
+        add     a, $80                      ; decode char
+        call    $4847                       ; display it
+        jr      .display_string
+
+.done_displaying:
+        ; Now we want to bump to the next tile boundary
+        ; This way we won't get any discoloration from attribute clash
+        xor     a
+        ld      (pixel_offset), a
+        ld      bc, 64
+        add     hl, bc
+
+        ; Done
+        jp      $49b2
+        
 
 
 ErasePushSpaceKey:
@@ -133,7 +159,7 @@ ErasePushSpaceKey:
 HandleFirstLineOfDialogue:
         xor     a
         ld      (pixel_offset), a
-        ld      hl, $1008               ; The line the patch at $475d was patching over
+        ld      hl, $1008                   ; The line the patch at $475d was patching over
         ret
 
 ; This adds to the code that was at $4771
@@ -509,5 +535,5 @@ char_widths:
         ;       a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p
         db      7, 6, 6, 6, 6, 5, 6, 6, 3, 4, 6, 3, 7, 6, 6, 6
 
-        ;       q  r  s  t  u  v  w  x  y  z  {  |  }  ~
+        ;       q  r  s  t  u  v  w  x  y  z
         db      6, 5, 6, 5, 6, 6, 7, 6, 6, 6, 0, 0, 0, 0, 0, 0
