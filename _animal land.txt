@@ -1,5 +1,8 @@
 MURDER IN ANIMAL LAND
 =====================
+The けいさつ graphic begins at $0bb0c (probably as part of a larger graphic). The け appears in the pattern table as 44 9e 84 84 84 a4 48 00, but appears in the ROM as 44 9e 03 84 84 a4 48 00. The 03 appears to be a repeat code. The second 84 seems to mark the end of the RLE code in some way (its shared value with the previous value appears to be a coincidence).
+
+
 The ending (at least) loads bank 15 ($1e000-1ffff) into $6000. Not sure why. We may want to consider leaving this bank alone.
 
 

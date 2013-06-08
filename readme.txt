@@ -8,6 +8,8 @@ WARNING: Here be spoilers!
 
 * Some jokes and other ideas didn't translate. One of the most notable is the "N" that is written on the scrap of paper early in the game was originally a katakana "nu". A minor plot point was that this sloppily written character could also be interpreted as a kanji meaning "again" or "later" -- perhaps whoever wrote it intended to return! About the best we could do was suggest it could be a "Z" rather than an "N".
 
+* The name of The Dragon Cafe may have had a dual meaning. The name was spelled "Doragon" in Japanese, and Renard's and Drago's original names were "Gonkichi" and "Dorakure". So "Doragon" could be read as a portmanteau: "Dora[kure]-Gon[kichi]".
+
 * There is a tortured pun involving a stone you find in the Forest Maze. You are told to find the "Kokeshi Rock". A Japanese player would expect to find a rock in the shape of a Japanese kokeshi doll. Instead, what you actually find is a rock with an inscription that almost makes sense, but not quite. Your partner realizes the inscription makes sense if you remove the letter "ko" -- the word "kokeshi" has a second meaning of "erase the 'ko'".
 
 

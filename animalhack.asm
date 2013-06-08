@@ -35,6 +35,71 @@ org     $6378, $637b
         nop
 
 
+; Code that switches banks
+; This code is sensitive! It can be jumped into at multiple places,
+; and the script will overwrite several pointers. We must take care not
+; to change anything but pointers and bank numbers.
+forg    $02bb8
+org     $4bb8, $4c24
+        ; Chapter 1
+        xor     a
+        ld      h, 10                       ; bank number
+        ld      de, 0                       ; command table pointer
+                                            ; (will be overwritten by script)
+                                            ; (file offset for this number is $02bbc)
+        ld      bc, $8000                   ; text pointer
+        call    $4c3a
+        jp      $68a0
+
+        ; Chapter 2
+        xor     a
+        ld      h, 12
+        ld      de, 0                       ; $02bcb (file offset for this number)
+        ld      bc, $8000
+        call    $4c3a
+        jp      $6f30
+
+        ; Chapter 3
+        ld      a, 3
+        ld      h, 14
+        ld      de, 0                       ; $02bdb
+        ld      bc, $8000
+        call    $4c3a
+        jp      $6000
+
+        ; Chapter 4
+        ld      a, 1
+        ld      h, 16
+        ld      de, 0                       ; $02beb
+        ld      bc, $8000
+        call    $4c3a
+        jp      $7640
+
+        ; Chapter 5
+        ld      a, 2
+        ld      h, 18
+        ld      de, 0                       ; $02bfb
+        ld      bc, $8000
+        call    $4c3a
+        jp      $7800
+
+        ; Chapter 6
+        ld      a, 3
+        ld      h, 20
+        ld      de, 0                       ; $02c0b
+        ld      bc, $8000
+        call    $4c3a
+        jp      $6b20
+
+        ; Chapter 7
+        xor     a
+        ld      h, 22
+        ld      de, 0                       ; $02c1a
+        ld      bc, $8000
+        call    $4c3a
+        jp      $7840
+
+
 ; Set pixel_offset to 0 before printing "What's the file's name, boss?"
 forg    $002ef
 org     $62ef, $62f1

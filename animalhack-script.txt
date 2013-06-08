@@ -9,8 +9,8 @@
 #CREATEPTR(cmdptr, "LINEAR", $-2000, 16)
 
 // Used for script
-#VAR(ptr14000, CUSTOMPOINTER)
-#CREATEPTR(ptr14000, "LINEAR", $C000, 16)
+//#VAR(ptr14000, CUSTOMPOINTER)
+//#CREATEPTR(ptr14000, "LINEAR", $C000, 16)
 
 
 // File menu
@@ -2015,7 +2015,7 @@ Nothing here to take.<end>
 
 
 //******** CHAPTER 2 ********//
-#WRITE(ptr14000, $2BCE)
+#JMP($18000, $1AFFF)
 
 // <Pyonko>みせのものを　かってに　いし゛くらないて゛
 // くた゛さいよ。<end>
@@ -2108,8 +2108,7 @@ jewelry shop at around<nl>
 8.<pause> Other than that...<key>
 <Pyonko>
 Ah, that's right. I saw a car
-parked out there around 11.<nl>
-.<end>
+parked out there around 11.<end>
 
 // <Oidon>し゛ゅうせい　なんかを　きかなかったか？
 // <Pyonko>さあ　し゛ゅうせいか　と゛うか　わかりませんか゛
@@ -3209,7 +3208,7 @@ Well don't ask ME! Hmph!<end>
 //******** CHAPTER 3 ********//
 // @XXX@ -- need to set up proper JMPs for each chapter
 // For now just put it all in the rest of ROM...
-#JMP($18000, $1FFFFF)
+#JMP($1C000, $1FFFFF)
 
 // <Oidon>ます゛は　た゛れかを　ここによひ゛ましょうせ゛。<end>
 <Oidon>
