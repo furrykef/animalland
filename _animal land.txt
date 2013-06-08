@@ -1,15 +1,13 @@
 MURDER IN ANIMAL LAND
 =====================
-Ensure "PRESS SPACE" is properly centered
+The ending (at least) loads bank 15 ($1e000-1ffff) into $6000. Not sure why. We may want to consider leaving this bank alone.
+
 
 <furrykef> Mm, what's the best place to get docs on the MSX, again?
 <~GuyveR800> map.grauw.nl
 
 http://www.z80.info/
 
-
-Check if our bankswitching can interfere with interrupt handlers
-* The game installs an HTIMI (vblank interrupt) handler at $c102 (RAM).
 
 <pause> inserts a pause that's much too long after most periods. We need to add a "short pause" code.
 
@@ -65,6 +63,15 @@ Check if our bankswitching can interfere with interrupt handlers
 <furrykef> Don't have to lose much sleep over it then :P
 <Torbjorn> All it does it tell you that all other rocks are an illusion and makes them move out of your path
 <Torbjorn> disappear rather
+
+
+<Torbjorn> So in the ending Koala is talking and eventually he says this
+<Torbjorn> / <Koala>おれは　いまこそ　さけふ゛そ゛!
+<Torbjorn> / こ<end>
+<Torbjorn> At the こ there it's supposed to be a whole new line with starting with ここ
+<Torbjorn> but there rest isn't to be found
+<Torbjorn> so I'm wondering if maybe it got lost in the script in pieces or something
+<Torbjorn> there's also some more lines in all katakana afterwards that I can't find
 
 
 Pointers

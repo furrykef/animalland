@@ -97,13 +97,11 @@ PressSpace:
 PressSpaceLen:  equ $ - PressSpace
 
 
-; NOPping the VRAM bump in title screen code
-forg    $002ad
-org     $62ad, $62b0
-;        nop                     ; ld de, 8
-;        nop
-;        nop
-;        nop                     ; add hl, de
+; Removes the VRAM bump in title screen code
+forg    $002a7
+org     $62a7, $62ab
+        call    $4018
+        jr      $62a2
 
 
 ; @TODO@ -- look for more instances of "call/jp $47ba/$4018" ($4018 jumps to $47ba)

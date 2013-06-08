@@ -3486,7 +3486,7 @@ He smells of fancy perfume. Seems rather feminine.<end>
 <Oidon>
 You seem to desire money.<nl>
 <Kokon>
-Is something wrong with that?<key>
+Is that a crime?<key>
 <Oidon>
 Why do you want it?<nl>
 <Kokon>
@@ -3994,10 +3994,10 @@ It's personal. I'd rather not talk about it.<end>
 // そのあいてはココンくん　し゛ゃないか？
 // <Peruu>ええ、そうよ。あのこ　とししたて゛　とっても
 // かわいいのよ。ハ゜フ<pause>ハ゜フ<pause>しちゃいたいわ。<pause>ウフッ!<end>
-// @TODO@ -- [translate puff puff]
 <Oidon>
 You said you were on a date. Were you with Kit?
-<Peruu>Yes. He's younger than me and so cute! I just wanna puff-puff him!<end>
+<Peruu>
+Yes. He's younger than me and so cute! I just wanna give him some "puff-puff"!<end>
 
 // <contd>
 // <Kokon>なんと゛　おなし゛しつもんを　するんて゛す？
@@ -4011,20 +4011,21 @@ You said you were on a date. Were you with Kit?
 // しょうし゛きに　はなすんた゛。
 // <Kokon>はい・・・<end>
 <Kokon>
-How many times do you need to ask? I told you, I was home all night.
+How many times do you need to ask? I told you, I was home all night.<key>
 <Oidon>
-No, Peruu tells us you two were together that night.
+Ah, but Peruu tells us you two were together that night.
 <Kokon>
-Oh, I see. This is embarassing...
+OK, you've got me. This is embarrassing...
 To tell the truth, I was seeing Peruu behind Amy's back.
 She ended up finding out and now I've got all these scratches.
-I couldn't say anything, it was too embarassing.
+I couldn't say anything, it was too embarrassing.
 <Oidon>
 That's no good. We're going to need you to tell the truth from here on.
-<Kokon>Ok...<end>
+<Kokon>OK...<end>
 
 // <Oidon>いくのは　やめますぜ。<end>
-Translation goes here.<end>
+<Oidon>
+OK, never mind.<end>
 
 0<end>
 
