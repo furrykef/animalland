@@ -107,8 +107,8 @@ Red:
 // ツネコ
 Vixy:
 
-// タージ - @TODO@
-Taji:
+// タージ
+Lenny:
 
 // ペルー
 Peru:
@@ -130,13 +130,13 @@ Teddy:
 
 :
 
-// ドラクレ - @TODO@
-Dora:
+// ドラクレ
+Drago:
 
 :
 
-// ようせい - @TODO@
-Elf:
+// ようせい
+Fairy:
 
 // モグラ
 Mole:
@@ -151,10 +151,10 @@ Fish:
 All:
 
 // こども
-Kid:
+Child:
 
 // ははおや
-Mom:
+Mother:
 
 #ACTIVETBL(tbl)
 
@@ -476,6 +476,10 @@ TAJI<end>
 // ほうせきてん<pause>2へいったか<end>
 SHOP<end>
 
+
+// Menu items for chapter 3
+#WRITE(cmdptr, $2BDB)
+
 // あける<end>
 OPEN<end>
 
@@ -722,6 +726,10 @@ RED<end>
 // ココンに<pause>5ついて<end>
 KIT<end>
 
+
+// Menu items for chapter 4
+#WRITE(cmdptr, $2BEB)
+
 // あける<end>
 OPEN<end>
 
@@ -917,6 +925,10 @@ NUKI<end>
 
 <end>
 
+
+// Menu items for chapter 5
+#WRITE(cmdptr, $2BFB)
+
 // あける<end>
 OPEN<end>
 
@@ -1091,6 +1103,10 @@ LETTER<end>
 // はんにんの<pause>6こと<end>
 PERP<end>
 
+
+// Menu items for chapter 6
+#WRITE(cmdptr, $2C0B)
+
 // みる<end>
 LOOK<end>
 
@@ -1255,6 +1271,10 @@ DOOR<end>
 
 // もと゛る<end>
 GO BACK<end>
+
+
+// Menu items for chapter 7
+#WRITE(cmdptr, $2C1A)
 
 // あける<end>
 OPEN<end>
@@ -2032,7 +2052,8 @@ things!<end>
 // <Oidon>だんな、なく゛られちゃいましたせ゛。<end>
 // (upon CHECKing Amy)
 <Oidon>
-Excuse me, I'd like to take a look.<key>
+Excuse me, I'd like to take a look.<nl>
+Standard procedure.<key>
 <Pyonko>
 Hey! What do you think you're doing?<nl>
 *slap!*<nl>
@@ -3206,9 +3227,7 @@ Well don't ask ME! Hmph!<end>
 
 
 //******** CHAPTER 3 ********//
-// @XXX@ -- need to set up proper JMPs for each chapter
-// For now just put it all in the rest of ROM...
-#JMP($1C000, $1FFFFF)
+#JMP($1C000, $1EFFF)
 
 // <Oidon>ます゛は　た゛れかを　ここによひ゛ましょうせ゛。<end>
 <Oidon>
@@ -4010,14 +4029,14 @@ Yes. He's younger than me and so cute! I just wanna give him some "puff-puff"!<e
 // しょうし゛きに　はなすんた゛。
 // <Kokon>はい・・・<end>
 <Kokon>
-How many times do you need to ask? I told you, I was home all night.<key>
+I'm telling you, I was home all night. God, we've been over this!<key>
 <Oidon>
 Ah, but Peruu tells us you two were together that night.
 <Kokon>
-OK, you've got me. This is embarrassing...
+OK, you've got me. How embarrassing...
 To tell the truth, I was seeing Peruu behind Amy's back.
 She ended up finding out and now I've got all these scratches.
-I couldn't say anything, it was too embarrassing.
+It's not exactly something I like to talk about.
 <Oidon>
 That's no good. We're going to need you to tell the truth from here on.
 <Kokon>OK...<end>
@@ -4155,6 +4174,7 @@ I don't know.<end>
 
 // <Oidon>ゴンきちか゛　さいきんもめこ゛とを
 // おこしたことは　ないか？<end>
+<Oidon>
 Did Renard get in any fights recently?<end>
 
 // <contd>
@@ -4510,13 +4530,13 @@ an ordinary life.<end>
 // <Taaji>さあ・・・しりませんよ。<end>
 <contd>
 <Taaji>
-I dunno.<end>
+I don't know.<end>
 
 // <contd>
 // <Taaji>しりませんよ。<end>
 <contd>
 <Taaji>
-I dunno.<end>
+I don't know.<end>
 
 // <contd>
 // <Taaji>あや？　わたしのなまえか゛・・・。
@@ -4647,10 +4667,9 @@ red.<end>
 <Oidon>
 My investigation shows that Dorakure drives a striped, yellow car.<end>
 
-// ゛゛いた？　なせ゛た゛？
-// <Taaji>ちょうなんのコンタくんは　いえのしこ゛とに
-// つきましたか゛
-// (looks like garbage)
+
+//******** CHAPTER 4 ********//
+#JMP($20000, $22FFF)
 
 // <Oidon>ます゛は　た゛れかを　ここによひ゛ましょうせ゛。<end>
 <Oidon>
@@ -5512,14 +5531,14 @@ of Renard Fox!<nl>
 Now wait a minute!<key>
 <Nuki>
 I did no such thing!<nl>
-I guess I better make a confession.<key>
+But I do have a confession to make.<key>
 <Nuki>
-On the 10th at 11 PM I<nl>
+On the 10th at 11 PM, I<nl>
 got in an accident with<nl>
 an elephant in my rental car.<key>
 <Nuki>
-The elephant was knocked unconscious
-, so I took the<nl>
+The elephant was knocked unconscious,
+so I took the<nl>
 opportunity to run....<key>
 <Nuki>
 If you check it out,<nl>
@@ -5538,7 +5557,7 @@ all beat up and dented, as if it<nl>
 had hit something big.<key>
 <Oidon>
 Well, I have no choice.<nl>
-Nuki, you're under<nl>i
+Nuki, you're under<nl>
 arrest for hit and run.<end>
 
 // <Oidon>このほうせきは　いったいなんた゛？
@@ -5953,7 +5972,11 @@ A small, white car.....<end>
 // <Oidon>ほんじゃ、いくのは　やめますぜ。<end>
 Translation goes here.<end>
 
-// いうよりは　よいせいか ヲえヲ($10)ーーえかい($10)かかカをえ<Oidon>22さい。コンコンほうせきてんに
+
+//******** CHAPTER 5 ********//
+#JMP($24000, $26FFF)
+
+// <Oidon>22さい。コンコンほうせきてんに
 // つとめている　てんいん。
 // りょうしんといっしょに　くらしている。<end>
 Translation goes here.<end>
@@ -6832,9 +6855,11 @@ Let's focus on Kit since he's here already.<end>
 // ヘ゜ルーに　めを　むけましょうよ。<end>
 Let's focus on Peruu since we got her here.<end>
 
-// とウに　しょうとつして
-// けなんて゛す。<key>
-// <Kokon>こんなこと　<Oidon>だんな、とるようなものは　ありませんぜ。<end>
+
+//******** CHAPTER 6 ********//
+#JMP($28000, $2AFFF)
+
+// <Oidon>だんな、とるようなものは　ありませんぜ。<end>
 Translation goes here.<end>
 
 // <Oidon>・・・しらへ゛ましたか゛　なにもありませんぜ。<end>
@@ -7759,8 +7784,9 @@ Translation goes here.<end>
 // 。<end>
 .<end>
 
-// 。i<key>($FE)Hほんじゃ、ZXijh|z($FE)<key>i<key>
-// @TODO@ - data?
+
+//******** CHAPTER 7 ********//
+#JMP($2C000, $2EFFF)
 
 // <Oidon>ます゛は
 // た゛れかを　ここによひ゛ましょうせ゛。<end>
