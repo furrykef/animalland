@@ -108,7 +108,7 @@ Red:
 Vixy:
 
 // タージ
-Lenny:
+Len:
 
 // ペルー
 Peru:
@@ -496,7 +496,6 @@ GO<end>
 CALL<end>
 
 // すいりする<end>
-// @TODO@
 REASON<end>
 
 // し゛ょうほう<end>
@@ -521,7 +520,7 @@ OPEN<end>
 REASON<end>
 
 // し゛んふ゛つ<end>
-CHARACTER
+CHARACTER<end>
 
 // と<end>
 <end>
@@ -543,8 +542,7 @@ DRAGON<end>
 BAR<end>
 
 // や<end>
-// @TODO@ - ?
-YA<end>
+<end>
 
 // しょうこひん<end>
 PROOF<end>
@@ -583,6 +581,7 @@ SHOP<end>
 HQ<end>
 
 // ん<end>
+<end>
 
 // け<end>
 <end>
@@ -642,7 +641,6 @@ SHOP<end>
 NOTE<end>
 
 // と<end>
-// @TODO@
 <end>
 
 // きんは゜つ<end>
@@ -655,7 +653,7 @@ COFFEE<end>
 INJURY<end>
 
 // てき<end>
-ENEMY<end>
+ENEMIES<end>
 
 // もめこ゛と<end>
 QUARREL<end>
@@ -664,7 +662,7 @@ QUARREL<end>
 LIFE<end>
 
 // しゅみ<end>
-HOBBY<end>
+HOBBIES<end>
 
 // テーフ゛ル<end>
 TABLE<end>
