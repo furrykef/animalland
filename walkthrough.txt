@@ -35,15 +35,16 @@ NB: when questioning people, also show them the gun, memo, and blond hair
 ** Showing memo unlocks Taaji and Rinrin
 * Ask Kokon about his alibi (says it's personal)
 * Ask Peruu about her alibi again (find out her date was with Kokon)
-* Ask Kokon about alibi (find out he'd lied before since he was with Peruu)
 * Question Taaji thoroughly
 ** Asking about Gonchiki's quarrels unlocks Dragon Cafe
 * Question Rinrin thoroughly
 * Go to Dragon Cafe
 * Question Dorakure thoroughly
+* Ask Kokon about alibi (find out he'd lied before since he was with Peruu)
 * Ask Kokon about money
 * "Reason" at HQ
 
-[missing some steps above]
+This should take you to the Bear Bar
 
-You should now go to the bear bar
+* Question Koala thoroughly
+* Return to HQ to end the chapter

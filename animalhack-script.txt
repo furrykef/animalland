@@ -56,10 +56,9 @@ No such file, boss.<end>
 It was a day like any other in<nl>
 Animalville, a quiet, peaceful<nl>
 mountain village.<key>
-At least, it was until<nl>
-the murder of <green-on-black>Renard<nl>
-Fox<white-on-black>, the owner of Foxy<nl>
-Jewelry.<end>
+At least, it was until the murder<nl>
+of <R><e><n><a><r><d> <F><o><x>, the owner of<nl>
+Foxy Jewelry.<end>
 
 // はっけんしゃは、かれのむすこて゛
 // し゛なんの　<green>ココン<white>た゛った。<key>
@@ -74,22 +73,19 @@ Jewelry.<end>
 // わたしは、すく゛さま　ちゅうし゛つな
 // ふ゛かて゛ある　いぬの"<cyan>おいと゛ん<white>"と　ともに
 // このし゛けんの　そうさにのりた゛すことにした。<end>
-He was discovered by<nl>
-<green-on-black>Kit<white-on-black>, his son.<key>
+He was discovered by <K><i><t>,<nl>
+his son.<key>
 Kit entered the jewelry<nl>
 store at about 11 AM on<nl>
 the day after the<nl>
 murder.<key>
-The door was unlocked.<nl>
-When he went in, he saw<nl>
-his father in his<nl>
-chair,<key>
-his chest covered with<nl>
-blood. He'd been shot<nl>
-in the heart.<key>
-My partner <cyan-on-black>Andy<white-on-black> and I<nl>
-set out at once to<nl>
-investigate the case...<end>
+The door was unlocked. When he<nl>
+went in, he saw his father in<nl>
+his chair, his chest covered<nl>
+with blood.<key>
+He'd been shot in the heart.<nl>
+My partner <A><n><d><y> and I set out<nl>
+at once to investigate the case...<end>
 
 
 // Character names (used for dialogue tags)
@@ -189,11 +185,9 @@ Go<end>
 Summon<end>
 
 // すいりする<end>
-// @TODO@ - guess
-Reason<end>
+Ponder<end>
 
 // し゛ょうほう<end>
-// @TODO@ - guess
 Info<end>
 
 // テーフ゛ル<end>
@@ -260,13 +254,14 @@ Red<end>
 Kit<end>
 
 // ふうとう<pause>5のなかみ<end>
-Env's contents<end>
+Contents<mnl>
+of envelope<end>
 
 // リンリン<end>
-Rinrin<end>
+Ling<end>
 
 // ターシ゛<end>
-Taji<end>
+Lentulus<end>
 
 // かえす<end>
 Release<end>
@@ -281,40 +276,38 @@ Wall<end>
 Door<end>
 
 // カ゛ラス<pause>6ケース<end>
-GLASS CASE<end>
+Glass case<end>
 
 // ほうせき<pause>5は゛こ<end>
-JEWEL BOX<end>
+Jewel box<end>
 
 // ひ゛んせん<end>
-PAPER<end>
+Paper<end>
 
 // けんし゛ゅう<end>
-GUN<end>
+Gun<end>
 
 
 // Menu items for chapter 2
 #WRITE(cmdptr, $2BCB)
 
 // てんいん<end>
-CLERK<end>
+Clerk<end>
 
 // しょうひん<end>
-GOODS<end>
+Goods<end>
 
 // さくやのこと<end>
-// @TODO@
-LAST NIGHT<end>
+Last night<end>
 
 // し゛ゅうせい<pause>4のこと<end>
-// @TODO@
-GUNSHOT<end>
+Gunshot<end>
 
 // きんは゜つ<end>
-BLOND HAIR<end>
+Blond hair<end>
 
 // メモ<end>
-NOTE<end>
+Note<end>
 
 // みる<end>
 Look<end>
@@ -341,140 +334,139 @@ Sniff<end>
 Go<end>
 
 // よふ゛<end>
-CALL<end>
+Summon<end>
 
 // すいりする<end>
-// @TODO@
-REASON<end>
+Ponder<end>
 
 // し゛ょうほう<end>
-INFO<end>
+Info<end>
 
 // そうさ<pause>6ほんふ゛<end>
 HQ<end>
 
 // リンリン<pause>6のこと<end>
-RINRIN<end>
+Ling<end>
 
 // コンタのへや<end>
-RED'S ROOM<end>
+Red's room<end>
 
 // コンヒ゛ニエ<pause>1ンスストアー<end>
-AMY'S SHOP<end>
+Amy's shop<end>
 
 // て<end>
-HAND<end>
+Hand<end>
 
 // てちょう<end>
-PAD<end>
+Notepad<end>
 
 // ココンのこと<end>
-KIT<end>
+Kit<end>
 
 // くるまのいろ<end>
-CAR'S COLOR<end>
+Color of car<end>
 
 // リンリン<end>
-RINRIN<end>
+Ling<end>
 
 // けんし゛ゅう<end>
-GUN<end>
+Gun<end>
 
 // ね<end>
-SOUND<end>
+Sound<end>
 
 // つくえ<end>
-DESK<end>
+Desk<end>
 
 // ほん<end>
-BOOKS<end>
+Books<end>
 
 // コンタ<end>
-RED<end>
+Red<end>
 
 // ココン<end>
-KIT<end>
+Kit<end>
 
 // ホ<end>
 <end>
 
 // ヒ゜ョンコ<end>
-AMY<end>
+Amy<end>
 
 // アリハ゛イ<end>
-ALIBI<end>
+Alibi<end>
 
 // くるまのこと<end>
-CAR<end>
+Car<end>
 
 // 「($00)」という<pause>1もし゛のこと<end>
-"N"<end>
+<char><end>
 
 // ゆ<end>
-WATER<end>
+Water<end>
 
 // カキ゛のこと<end>
-KEY<end>
+Key<end>
 
 // しょさい<pause>5のこと<end>
-STUDY<end>
+Study<end>
 
 // ケカ゛のこと<end>
-INJURY<end>
+Injury<end>
 
 // やっは゜り<pause>1いくのをやめる<end>
-CANCEL<end>
+Cancel<end>
 
 // かえす<end>
-LET GO<end>
+Release<end>
 
 // くるま<end>
-CAR<end>
+Car<end>
 
 // てんない<end>
-SHOP<end>
+Shop<end>
 
 // おにき゛り<end>
-ONIGIRI<end>
+Onigiri<end>
 
 // のりまき<end>
-NORIMAKI<end>
+Norimaki<end>
 
 // コ゛ンきち<pause>5のこと<end>
-RENARD<end>
+Renard<end>
 
 // てき<end>
-ENEMY<end>
+Enemies<end>
 
 // もめこ゛と<end>
-QUARREL<end>
+Quarrels<end>
 
 // せいかつ<end>
-LIFE<end>
+Life<end>
 
 // しゅみ<end>
-HOBBY<end>
+Hobbies<end>
 
 // まと゛<end>
-WINDOW<end>
+Window<end>
 
 // かへ゛<end>
-WALL<end>
+Wall<end>
 
 // コ゛ンきち<end>
-RENARD<end>
+Renard<end>
 
 // リンリン<end>
-RINRIN<end>
+Ling<end>
 
 // ターシ゛<end>
-TAJI<end>
+Lentulus<end>
 
 // ゛<end>
 <end>
 
 // ほうせきてん<pause>2へいったか<end>
-SHOP<end>
+Shop<end>
 
 
 // Menu items for chapter 3
@@ -496,7 +488,7 @@ GO<end>
 CALL<end>
 
 // すいりする<end>
-REASON<end>
+Ponder<end>
 
 // し゛ょうほう<end>
 INFO<end>
@@ -517,7 +509,7 @@ ASK<end>
 OPEN<end>
 
 // すいりする<end>
-REASON<end>
+Ponder<end>
 
 // し゛んふ゛つ<end>
 CHARACTER<end>
@@ -566,7 +558,7 @@ TRIP<end>
 HAIR<end>
 
 // 「($00)」という<pause>1もし゛のこと<end>
-"N"<end>
+<char><end>
 
 // くるまのこと<end>
 CAR<end>
@@ -605,21 +597,21 @@ HQ<end>
 <end>
 
 // コンタ<end>
-RED<end>
+Red<end>
 
 // ココン<end>
-KIT<end>
+Kit<end>
 
 <end>
 
 // ヘ゜ルー<end>
-PERU<end>
+Peru<end>
 
 // ターシ゛<end>
-TAJI<end>
+Lentulus<end>
 
 // リンリン<end>
-RINRIN<end>
+Ling<end>
 
 // ン<end>
 <end>
@@ -656,7 +648,7 @@ INJURY<end>
 ENEMIES<end>
 
 // もめこ゛と<end>
-QUARREL<end>
+Quarrels<end>
 
 // せいかつ<end>
 LIFE<end>
@@ -671,7 +663,7 @@ TABLE<end>
 FLOOR<end>
 
 // リンリンの<pause>3こと<end>
-RINRIN<end>
+Ling<end>
 
 // コ゛ンきち<end>
 RENARD<end>
@@ -683,7 +675,7 @@ RENARD<end>
 <end>
 
 // かえす<end>
-LET GO<end>
+Release<end>
 
 // いくのを<pause>5やめる<end>
 CANCEL<end>
@@ -744,7 +736,7 @@ GO<end>
 CALL<end>
 
 // すいりする<end>
-REASON<end>
+Ponder<end>
 
 // し゛ょうほう<end>
 INFO<end>
@@ -780,7 +772,7 @@ BLOND HAIR<end>
 <end>
 
 // 「($00)」という<pause>3もし゛<end>
-"N"<end>
+<char><end>
 
 // ん<end>
 <end>
@@ -810,7 +802,8 @@ RECEIPT<end>
 KEY<end>
 
 // てか゛みの<pause>5ありか<end>
-LOC. OF LETTER<end>
+Location<mnl>
+of letter<end>
 
 // てか゛みの<pause>4ないよう<end>
 LETTER<end>
@@ -844,16 +837,16 @@ WINDOW<end>
 RENARD<end>
 
 // ターシ゛<end>
-TAJI<end>
+Lentulus<end>
 
 // リンリン<end>
-RINRIN<end>
+Ling<end>
 
 // コ゛ンきちの<pause>5こと<end>
 RENARD<end>
 
 // 「($00)」という<pause>1もし゛のこと<end>
-"N"<end>
+<char><end>
 
 // カキ゛のこと<end>
 KEY<end>
@@ -871,13 +864,14 @@ ENEMY<end>
 FISHING<end>
 
 // コ゛ンきちと<pause>1もめたりゆう<end>
-MOTIVE<end>
+Dispute<mnl>
+with Renard<end>
 
 // せいかつ<end>
-LIFE<end>
+Life<end>
 
 // もめこ゛と<end>
-QUARREL<end>
+Quarrels<end>
 
 // ツネコのこと<end>
 NEKO<end>
@@ -910,7 +904,7 @@ HQ<end>
 JEWEL KEY<end>
 
 // かえす<end>
-LET GO<end>
+Release<end>
 
 // ほんふ゛へ<pause>3もと゛る<end>
 GO TO HQ<end>
@@ -943,7 +937,7 @@ GO<end>
 CALL<end>
 
 // すいりする<end>
-REASON<end>
+Ponder<end>
 
 // し゛ょうほう<end>
 INFO<end>
@@ -1027,7 +1021,7 @@ KIT<end>
 TAJI<end>
 
 // リンリン<end>
-RINRIN<end>
+Ling<end>
 
 // ヘ゜ルー<end>
 PERU<end>
@@ -1045,7 +1039,7 @@ PROOF<end>
 ALIBI<end>
 
 // かえす<end>
-LET GO<end>
+Release<end>
 
 // いくのを<pause>6やめる<end>
 CANCEL<end>
@@ -1054,13 +1048,13 @@ CANCEL<end>
 BLOND HAIR<end>
 
 // 「($00)」という<pause>4もし゛<end>
-"N"<end>
+<char><end>
 
 // リ<end>
 <end>
 
 // 「($00)」という<pause>1もし゛のこと<end>
-"N"<end>
+<char><end>
 
 // え<end>
 <end>
@@ -1290,7 +1284,7 @@ GO<end>
 CALL<end>
 
 // すいりする<end>
-REASON<end>
+Ponder<end>
 
 // し゛ょうほう<end>
 INFO<end>
@@ -1326,7 +1320,7 @@ RING<end>
 PERU<end>
 
 // リンリン<end>
-RINRIN<end>
+Ling<end>
 
 // ヒ゜ョンコ<end>
 AMY<end>
@@ -1420,14 +1414,14 @@ NEWS<end>
 <end>
 
 // かえす<end>
-LET GO<end>
+Release<end>
 
 // いくのを<pause>6やめる<end>
 CANCEL<end>
 
 
 // Game script
-#JMP($14000, $16FFF)
+#JMP($20000, $22FFF)
 
 // <Oidon>ん？　ふうとうか゛　おいてありますぜ。<end>
 <Oidon>
@@ -1445,7 +1439,7 @@ dial.<end>
 <Oidon>
 I don't see anything<nl>
 there.<pause> But perhaps we<nl>
-should "check" it out in<nl>
+should <c><h><e><c><k> it out in<nl>
 more detail.<end>
 
 // <Oidon>みるた゛けし゛ゃ、よくわかりませんぜ。<end>
@@ -1500,10 +1494,8 @@ Half of it's torn up<nl>
 and crumpled.<pause> Look, it<nl>
 says something!<key>
 <Oidon>
-"Peru:<pause> if something<nl>
-should happen to me,<nl>
-give this to the<nl>
-police.<pause> - Renard"<key>
+"Peru: if something should happen to me, give this to the police.<pause><nl>
+Signed, Renard"<key>
 <Oidon>
 Peru's his assistant,<nl>
 but she's currently out<nl>
@@ -2033,7 +2025,7 @@ Nothing here to take.<end>
 
 
 //******** CHAPTER 2 ********//
-#JMP($18000, $1AFFF)
+#JMP($24000, $26FFF)
 
 // <Pyonko>みせのものを　かってに　いし゛くらないて゛
 // くた゛さいよ。<end>
@@ -2823,7 +2815,7 @@ it our best!<key>
 <Oidon>
 I've recorded our prog-<nl>
 ress in a file.<pause> The<nl>
-name is <red>XXXX<black>.<end>
+name is <m:X><m:X><m:X><m:X>.<end>
 
 // <Oidon>うまそうですぜ。<end>
 <Oidon>
@@ -3225,7 +3217,7 @@ Well don't ask ME! Hmph!<end>
 
 
 //******** CHAPTER 3 ********//
-#JMP($1C000, $1EFFF)
+#JMP($28000, $2AFFF)
 
 // <Oidon>ます゛は　た゛れかを　ここによひ゛ましょうせ゛。<end>
 <Oidon>
@@ -3271,7 +3263,7 @@ There's no doubt Renard left it behind in reference to the killer.
 We'll no doubt learn more about the blond hair as we continue our investigation as well.
 Alright, boss. Let's get cracking on this case again!
 I've saved our progress in a file.
-The file name is <red>African Elephant<black>.<end>
+The file's name is <m:X><m:X><m:X><m:X>.<end>
 
 // <Oidon>みせるものは　あるんて゛すか゛、あいてか゛
 // いませんぜ。<end>
@@ -3654,7 +3646,7 @@ It's probably a reminder of the boss's appointments.<end>
 
 // <contd>
 // <Peruu>もってませんよ。<end>
-// @TODO@ -- context?
+// I think she's being asked if she has a car
 <contd>
 <Peruu>
 I don't have one.<end>
@@ -3915,7 +3907,7 @@ criminal investigation.<key>
 <Oidon>
 He's since retired....
 He's always goes drinking at a place called
-the <green>Bear Bar<black><key>
+the <B><e><a><r> <B><a><r>.<key>
 <Oidon>
 He might be able to help with the investigation.
 Let's give him a visit.<end>
@@ -3942,8 +3934,8 @@ It's a detective's intuition.<end>
 
 // <contd>については　と゛う　かんか゛えたら
 // いいんて゛しょうかね？<end>
-//@TODO@ -- Translate properly in relation to below names--
-What do you think about *name*.<end>
+// This appears after one of the below names
+ strikes you as what sort of person?<end>
 
 // <contd>コンタ<end>
 <contd>
@@ -3959,16 +3951,18 @@ Kit<end>
 // <contd>
 // <Koala>いままて゛のところて゛は　とくに　あやしい　ふしは
 // ないようた゛な。<end>
+// Koala's thoughts on Konta
 Nothing particularly suspicious so far.<end>
 
 // <contd>
 // <Koala>はんさ゛いのかけ゛におんなあり　というか゛
 // こいつは　おんなく゛せのわるいやつた゛な。<key><Koala>こういう　こあくとうは　さつし゛んみたいな
 // おおきなはんさ゛いなんて　しないものた゛けと゛な。<end>
+// Koala's thoughts on Kokon
 <Koala>
 There's a woman involved in the crime, and he's got a bad habit with women.
 <Koala>
-Little brats like him don't usually commit such huge crimes though...<end>
+Little brats like him don't usually commit such serious crimes though...<end>
 
 // <Oidon>ヘ゜ルーか゛　アリハ゛イをしょうめいしました。
 // て゛も、いまのところ、と゛うきか゛いちは゛ん
@@ -4361,25 +4355,29 @@ no idea.<end>
 
 // <contd>
 // <Kokon>しりませんよ。<end>
+// I think this is in response to "Does Gonkichi have any enemies?"
 <contd>
 <Kokon>
-I dunno.<end>
+Heck if I know.<end>
 
 // <contd>
 // <Kokon>さあ・・・ないとおもいますよ。<end>
+// In response to "Has Gonkichi had any quarrels?"
 <contd>
 <Kokon>
 None that I know of.<end>
 
 // <contd>
 // <Kokon>わかりませんよ。<end>
+// I think this is in response to "What kind of life did Gonkichi lead?"
 <contd>
 <Kokon>
-I dunno.<end>
+Not something I know much about.<end>
 
 // <Oidon>ココンは　10日のよる、
 // ヘ゜ルーと　テ゛ートしていたようて゛す。<end>
-Translation goes here.<end>
+<Oidon>
+It seems Kit was on a date with Peru on the evening of the 10th.<end>
 
 // <contd>
 // しかし、しょうにんは　いませんぜ。<end>
@@ -4389,7 +4387,9 @@ But we have no witnesses...<end>
 // <contd>
 // <Kokon>さかなハンティンク゛？
 // ああ、そのことて゛すか。わかりませんよ。<end>
-Translation goes here.<end>
+<contd>
+<Kokon>
+Fish-hunting? I don't really know anything about it.<end>
 
 // ？<end>
 ?<end>
@@ -4410,7 +4410,8 @@ Translation goes here.<end>
 // <Oidon>だんな、ココンは　10日のよる8時はんから
 // 9時はんのあいた゛は　　いえて゛テレヒ゛を
 // みていたようて゛す。<end>
-Translation goes here.<end>
+<Oidon>
+It seems Kit was home watching TV from 8:30 PM to 9:30 PM on the 10th.<end>
 
 // <contd>
 // <Peruu>たふ゛ん　いないとおもいます。<end>
@@ -4423,7 +4424,9 @@ I don't think so.<end>
 // むすこのココンさんか゛　わしのいうことを<key><Peruu>きかないっていって　なやんて゛いたようて゛す。<end>
 <contd>
 <Peruu>
-Not exactly a fight...<key><Peruu>but he did complain that his son never listens to him.<end>
+Not exactly a fight...<key>
+<Peruu>
+But he did complain that his son never listens to him.<end>
 
 // <contd>
 // <Peruu>さあ・・・しりませんわ。<end>
@@ -4511,7 +4514,7 @@ It seems he was after money to start his own business to compete with his father
 That's all I know.
 Ah, hold on...
 <Taaji>
-There's a cafe nearby called <green>Dragon<black>.
+There's a cafe nearby called <D><r><a><g><o><n>.
 Renard was was good friends with the owner there, so he might know something.
 <end>
 
@@ -4572,9 +4575,10 @@ No idea.<end>
 
 // <contd>
 // <Rinrin>きいたことは　ありませんよ。<end>
+// When asked if Gonkichi had any quarrels
 <contd>
 <Rinrin>
-I haven't heard anything.<end>
+I haven't heard anything like that.<end>
 
 // <contd>
 // <Rinrin>ふつうよりは　よいせいかつた゛と
@@ -4667,7 +4671,7 @@ My investigation shows that Dorakure drives a striped, yellow car.<end>
 
 
 //******** CHAPTER 4 ********//
-#JMP($20000, $22FFF)
+#JMP($2C000, $2EFFF)
 
 // <Oidon>ます゛は　た゛れかを　ここによひ゛ましょうせ゛。<end>
 <Oidon>
@@ -4701,7 +4705,7 @@ And why is one piece missing? This case is more complicated than we thought.<key
 If only we could talk with Tsuneko.
 Anyways, let's get back on this case, boss.<key>
 <Oidon>
-I've saved our progress in a file. I labeled it <red>Owlnuts<black>.<end>
+I've saved our progress in a file. I labeled it <m:X><m:X><m:X><m:X>.<end>
 
 // <Oidon>だんな、ここに　いますぜ。<end>
 <Oidon>
@@ -5242,17 +5246,18 @@ Welcome!
 <Oidon>
 Hey, Koala! You were right. Nuki isn't the criminal.<key>
 <Oidon>
-I hate to be so sudden, but we were hoping you could....
-<Koala>Pff, what about it, then!?<key>
+I hate to be so sudden, but we were hoping you could...
+<Koala>
+Pff, what about it, then!?<key>
 <Oidon>
 What's with you all of a sudden? Have to much to drink?
 <Koala>
 Listen here! I think I've begun to understand the mystery behind this case.<key>
 <Oidon>
-What!? Then, who's the criminal?
+What!? Well, who's the culprit?
 <Koala>
 Oh, you really want to know, don't you? Fine, I'll tell you.
-The criminal is<pause><pause><pause><red> you guys!<black><key>
+The culprit is...<pause><pause><pause> <y><o><u> <g><u><y><s>!<key>
 <Beasu>
 Sorry, Andy. You'd best come back when he's in a better mood.<end>
 
@@ -5972,7 +5977,7 @@ Translation goes here.<end>
 
 
 //******** CHAPTER 5 ********//
-#JMP($24000, $26FFF)
+#JMP($30000, $32FFF)
 
 // <Oidon>22さい。コンコンほうせきてんに
 // つとめている　てんいん。
@@ -6554,7 +6559,7 @@ Actually, we got some new information...<key>
 <Koala>
 Hmph, if you got something to say just spit it out already.
 <Oidon>
-Actually, *whisper*<pause>*mumble*......<key>
+Actually, *whisper*<pause> *mumble*......<key>
 <Koala>
 Hmm...In that case I might be able to help.
 Do you know about the Lost Forest?
@@ -6575,7 +6580,7 @@ Quit your yapping and get to that forest.<key>
 OK! Let's get going to the Lost Forest, boss!<key>
 <Oidon>
 I've saved our progress so far in a file.
-The file name is <red>Black Bear<black>.<end>
+The file name is <m:X><m:X><m:X><m:X>.<end>
 
 // 。<end>
 .<end>
@@ -6855,7 +6860,7 @@ Let's focus on Peruu since we got her here.<end>
 
 
 //******** CHAPTER 6 ********//
-#JMP($28000, $2AFFF)
+#JMP($34000, $36FFF)
 
 // <Oidon>だんな、とるようなものは　ありませんぜ。<end>
 Translation goes here.<end>
@@ -7784,7 +7789,7 @@ Translation goes here.<end>
 
 
 //******** CHAPTER 7 ********//
-#JMP($2C000, $2EFFF)
+#JMP($38000, $3AFFF)
 
 // <Oidon>ます゛は
 // た゛れかを　ここによひ゛ましょうせ゛。<end>

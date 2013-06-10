@@ -16,10 +16,10 @@ forg    $01f90
 org     $7f90, $7fff
 SetUpBanks:
         ld      ($6000), a
-        ld      a, 11               ; Put the $16000-$17fff bank into $a000-bfff
+        ld      a, $11              ; Put the $22000-$23fff bank into $a000-bfff
         ld      ($7800), a
-        ld      ($f2dd), a          ; Tell game to restore $8000-bfff to bank 11
-                                    ; after the "GRAVE MESSAGE" intro
+        ld      ($f2dd), a          ; Tell game to restore $8000-bfff to bank $11
+                                    ; after temporarily switching banks in the intro
         ret
 
 
@@ -43,7 +43,7 @@ forg    $02bb8
 org     $4bb8, $4c24
         ; Chapter 1
         xor     a
-        ld      h, 10                       ; bank number
+        ld      h, $10                      ; bank number
         ld      de, 0                       ; command table pointer
                                             ; (will be overwritten by script)
                                             ; (file offset for this number is $02bbc)
@@ -53,7 +53,7 @@ org     $4bb8, $4c24
 
         ; Chapter 2
         xor     a
-        ld      h, 12
+        ld      h, $12
         ld      de, 0                       ; $02bcb (file offset for this number)
         ld      bc, $8000
         call    $4c3a
@@ -61,7 +61,7 @@ org     $4bb8, $4c24
 
         ; Chapter 3
         ld      a, 3
-        ld      h, 14
+        ld      h, $14
         ld      de, 0                       ; $02bdb
         ld      bc, $8000
         call    $4c3a
@@ -69,7 +69,7 @@ org     $4bb8, $4c24
 
         ; Chapter 4
         ld      a, 1
-        ld      h, 16
+        ld      h, $16
         ld      de, 0                       ; $02beb
         ld      bc, $8000
         call    $4c3a
@@ -77,7 +77,7 @@ org     $4bb8, $4c24
 
         ; Chapter 5
         ld      a, 2
-        ld      h, 18
+        ld      h, $18
         ld      de, 0                       ; $02bfb
         ld      bc, $8000
         call    $4c3a
@@ -85,7 +85,7 @@ org     $4bb8, $4c24
 
         ; Chapter 6
         ld      a, 3
-        ld      h, 20
+        ld      h, $1a
         ld      de, 0                       ; $02c0b
         ld      bc, $8000
         call    $4c3a
@@ -93,7 +93,7 @@ org     $4bb8, $4c24
 
         ; Chapter 7
         xor     a
-        ld      h, 22
+        ld      h, $1c
         ld      de, 0                       ; $02c1a
         ld      bc, $8000
         call    $4c3a
@@ -262,18 +262,6 @@ PrintChar8_hook:
         jp      PrintChar8
 
 
-forg $14000 + MULTIBANK_OFFSET
-org $a000, $bfff
-incbin "multibank.out"
-
-forg $18000 + MULTIBANK_OFFSET
-org $a000, $bfff
-incbin "multibank.out"
-
-forg $1c000 + MULTIBANK_OFFSET
-org $a000, $bfff
-incbin "multibank.out"
-
 forg $20000 + MULTIBANK_OFFSET
 org $a000, $bfff
 incbin "multibank.out"
@@ -287,5 +275,17 @@ org $a000, $bfff
 incbin "multibank.out"
 
 forg $2c000 + MULTIBANK_OFFSET
+org $a000, $bfff
+incbin "multibank.out"
+
+forg $30000 + MULTIBANK_OFFSET
+org $a000, $bfff
+incbin "multibank.out"
+
+forg $34000 + MULTIBANK_OFFSET
+org $a000, $bfff
+incbin "multibank.out"
+
+forg $38000 + MULTIBANK_OFFSET
 org $a000, $bfff
 incbin "multibank.out"

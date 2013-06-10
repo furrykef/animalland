@@ -2,6 +2,8 @@ MURDER IN ANIMAL LAND
 =====================
 The けいさつ graphic begins at $0bb0c (probably as part of a larger graphic). The け appears in the pattern table as 44 9e 84 84 84 a4 48 00, but appears in the ROM as 44 9e 03 84 84 a4 48 00. The 03 appears to be a repeat code. The second 84 seems to mark the end of the RLE code in some way (its shared value with the previous value appears to be a coincidence).
 
+I discussed it with BiFi and he suggested each sequence of bytes is preceded by a code. The code is of the form 1xxxxxxx (where xxxxxxx is a count) if the next few bytes should be printed verbatim; 0xxxxxxx if the next byte should be repeated N times (RLE).
+
 
 The ending (at least) loads bank 15 ($1e000-1ffff) into $6000. Not sure why. We may want to consider leaving this bank alone.
 
@@ -144,32 +146,6 @@ RAM variables
 <@BiFi> FAF9-FAFD are kanji basic related and FAFC contain a few MSX2 and MSX2+ related things
 
 
-Potential dictionary entries
-----------------------------
-.[space]
-![space]
-,[space]
-?[space]
-The[space]
-the[space]
- the
- the[space]
-a[space]
- a
- a[space]
-an[space]
- an
- an[space]
-'s[space]
-boss
-[characters' names]
-
-
-Intro text
-----------
-The game never switches a bank into A000-BFFF during the intro, so we can safely store our intro text there.
-
-
 "What?"
 -------
 The "なにを？" prompt could be translated as "Choose an item."
@@ -223,7 +199,7 @@ Credits
 -------
 Kef Schecter - hacking and translation
 Torbjorn -- translation
-BiFi (#msxdev) - found code for making text bold so I could disable it; helped with password routine
+BiFi (#msxdev) - found code for making text bold so I could disable it; helped with password routine; helped with graphics compression
 
 Font is a variant of Tau's Custom Font
 
