@@ -1,8 +1,8 @@
 # Written for Python 2.7
 import sys
 
-INFILENAME = "passwords.txt"
-OUTFILENAME = "passwords.inc"
+INFILENAME = "passwords.in"
+OUTFILENAME = "passwords.out.inc"
 
 
 def main():

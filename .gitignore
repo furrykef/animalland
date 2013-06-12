@@ -3,4 +3,4 @@
 tniasm.*
 multibank.out
 multibank.sym
-passwords.inc
+passwords.out.inc

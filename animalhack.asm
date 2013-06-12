@@ -26,7 +26,7 @@ SetUpBanks:
 ; Replace the original game's password table with ours
 forg    $0044d
 org     $644d, $648a
-include "passwords.inc"
+include "passwords.out.inc"
 
 
 forg    $00378

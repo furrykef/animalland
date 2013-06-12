@@ -3,6 +3,7 @@
 *.txt text
 *.md text
 *.asm text
+*.in text
 
 *.tbl text eol=crlf
 *.bat text eol=crlf
