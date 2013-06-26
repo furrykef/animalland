@@ -258,7 +258,7 @@ PrintChar:
         push    de
 
         ld      a, (char_to_print)
-        call    CalcCharWidth
+        call    GetCharWidth
 
         call    GetPtrToCharData
         call    Write1stTile
@@ -319,11 +319,11 @@ GetPtrToCharData:
 
 
 ; Inputs:
-;   A = char whose width we're calculating
+;   A = char whose width we're looking up
 ;
 ; Outputs:
 ;   char_width = A = width of char in pixels
-CalcCharWidth:
+GetCharWidth:
         push    hl
         ld      b, 0
         ld      c, a
@@ -468,7 +468,7 @@ CalcStrWidth:
         jr      z, .done
         add     $80                     ; convert to MSX charset
         push    bc
-        call    CalcCharWidth
+        call    GetCharWidth
         pop     bc
         add     c
         ld      c, a

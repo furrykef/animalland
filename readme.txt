@@ -2,12 +2,14 @@ Running the game
 ----------------
 RUN THE GAME AT NTSC SPEED (60 Hz)! This is the speed at which the game was designed to run. It is fine if you have to emulate a Japanese MSX to do so. If run at PAL speed (50 Hz), the music will be slower, not to mention the game in general.
 
-If your emulator asks for the ROM type, there should be an option like "ASCII 8kbyte". Choose that one. Chances are, though, that the game will autodetect the ROM type correctly. You'll know if it doesn't (the game will not run at all with the wrong ROM type).
+If your emulator or flash cart asks for the ROM type, there should be an option like "ASCII 8kbyte" or "ASCII8". Choose that one. Chances are, though, that the game will autodetect the ROM type correctly. You'll know if it doesn't, since the game will not run at all with the wrong ROM type.
 
 
 Translation notes
 -----------------
-WARNING: Here be minor spoilers!
+Our general philosophy when translating is that making the text natural and entertaining is more important than making it an accurate reflection of the original Japanese. After all, if you want an authentic Japanese experience, you're only going to get it by playing the game in Japanese. That said, we have tried our best to preserve the spirit of the original game, and most of the concessions we've made are pretty minor.
+
+Here are some of the particular issues we ran into when translating. WARNING: Here be minor spoilers!
 
 * Many character names were changed. For example, Renard was originally named Gonkichi, and Kit was originally named Kokon. "Gon" and "kon" are fox noises in Japanese, and "ko-" is often a prefix meaning "little" or "offspring". (For example, a "koinu" is a puppy, and the Koopalings in the Mario series are called "Kokuppa".) So we chose "Renard", which is French for "fox", and of course a fox's offspring is called a "kit". We didn't manage to capture the nuance of every name, and a couple of names were pulled out of a hat.
 
