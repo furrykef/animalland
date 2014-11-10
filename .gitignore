@@ -1,6 +1,8 @@
 *.rom
 *.bak
 tniasm.*
-multibank.out
-multibank.sym
-passwords.out.inc
+*.sym
+*.out
+*.out.*
+*.pyc
+*.pyo

@@ -1,4 +1,6 @@
 @echo off
+chars.py
+if errorlevel 1 goto error
 pwgen.py
 if errorlevel 1 goto error
 C:\MFS\tniasm\tniasm multibank.asm multibank.out

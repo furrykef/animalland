@@ -3186,11 +3186,12 @@ weapon? Yikes!<end>
 // <Oidon>そのケカ゛は　と゛うしたんて゛す？
 // <Kokon>えっ　いや　その　なに・・・　ははは
 // こ　ころんた゛んて゛すよ。<end>
+// NOTE: "I fell" is the default lame excuse used in Japanese to explain away an injury
 <Oidon>
 What happened to you?<nl>
 <Kokon>
 Ah, well, heh heh...<pause><nl>
-I, I fell.<end>
+I, ah, walked into a door.<end>
 
 // <Oidon>リンリンさんについて　おききしたいのて゛すか゛。
 // <Konta>うちと　とりひきしていて　き゛んこうに
