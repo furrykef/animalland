@@ -46,7 +46,7 @@ org     $4bb8, $4c24
         ld      h, $10                      ; bank number
         ld      de, 0                       ; command table pointer
                                             ; (will be overwritten by script)
-                                            ; (file offset for this number is $02bbc)
+                                            ; (file offset for this operand is $02bbc)
         ld      bc, $8000                   ; text pointer
         call    $4c3a
         jp      $68a0
@@ -54,7 +54,7 @@ org     $4bb8, $4c24
         ; Chapter 2
         xor     a
         ld      h, $12
-        ld      de, 0                       ; $02bcb (file offset for this number)
+        ld      de, 0                       ; $02bcb (file offset for this operand)
         ld      bc, $8000
         call    $4c3a
         jp      $6f30
@@ -248,7 +248,7 @@ DrawCmdMenu:
 ; This tells the name tag routine to check for a colon, not a Japanese open-quote mark, as the end-of-nametag marker
 forg    $2795
 org     $4795, $4796
-        cp      ':'
+        cp      CHAR_BOLD_COLON
 
 forg    $02792
 org     $4792, $4794

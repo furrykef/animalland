@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Written for Python 2.7
+# Written for Python 3.4
 import sys
 
 
@@ -18,7 +18,7 @@ CHAR_WIDTHS = [
 
 #       [first char here is space]
 #       [asterisk in this row is not the one we use]
-#           !  "  #  $  %  &  '  (  )  *  +  ,  -  .  /
+#          !  "  #  $  %  &  '  (  )  *  +  ,  -  .  /
         3, 2, 5, 6, 6, 6, 6, 3, 3, 3, 6, 6, 3, 5, 2, 4,
 
 #       0  1  2  3  4  5  6  7  8  9  :  ;  <  =  >  ?
@@ -41,7 +41,7 @@ CHAR_WIDTHS = [
         7, 0, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 
 #       [monospace font for passwords]
-#       A  B  C  D  E  F  G  H  I  J  K  L  M  N  O
+#          A  B  C  D  E  F  G  H  I  J  K  L  M  N  O
         0, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
 
 #       P  Q  R  S  T  U  V  W  X  Y  Z
@@ -67,7 +67,7 @@ CHAR_WIDTHS = [
 def main():
     with open(CHAR_WIDTHS_FILENAME, 'wb') as f:
         for char_width in CHAR_WIDTHS:
-            f.write(chr(char_width))
+            f.write(bytes([char_width]))
 
 
 if __name__ == '__main__':

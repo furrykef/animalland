@@ -2,21 +2,6 @@ The font is a 1bpp raw file named vwf.bin. It can be edited in tools such as Til
 
 The "no" symbol (a circle with a slash through it) appears in the font for characters that correspond to control codes; it's useless to put anything there except as an easter egg. (It's possible we didn't find all of 'em, so always check to see if your special character will display.) The character $10 in the charset ($90 in the game script) is also a control code for menus, though it's blank, because it also gets displayed (as a space).
 
+Atlas is used to insert the script.
 
-Script format
--------------
-The script is in an extended Atlas format. conv_script.py converts it to pure Atlas format for insertion, as well as formatting it for linewrapping and optionally producing a preview image for every block of text in the script (intended for use with an image viewing utility to quickly flip through all the text blocks).
-
-There are some commands that the utility uses, which are stripped out during conversion. They all use ## to clearly distinguish them from Atlas commands, which take a single #. Note that, unlike Atlas commands, these do NOT use parentheses.
-
-##SECTION <name>
-Names the section. This names the folder that all the preview images for this section goes into. Thus, <name> must be a valid filename.
-
-##MENUS
-Format items as menu items.
-
-##DIALOGUE
-Format items as game dialogue.
-
-##MAXLINES <n>
-Blocks must take no more than <n> lines until the next ##MAXLINES command. This counts both explicit line breaks and line wrapping. The default is 4.
+The game's text formatting routine is pretty smart. It can wrap lines automatically, and it will automatically prompt for a keypress if the text goes on too long. It's even smart enough not to prompt for a keypress in the middle of a sentence, except for a logical pausing point such as a comma. If your text goes on too long with no place where it can pause, the game will print an error message with diagnostic information. You would almost have to be doing it on purpose or writing very badly indeed for this to happen.

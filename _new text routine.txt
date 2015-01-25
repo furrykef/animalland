@@ -1,0 +1,66 @@
+Characters that are allowed to end an utterance: ?!.,:;)]”
+
+These MUST be followed by a space. We don't want an ellipsis to be broken, for instance.
+
+If an utterance cannot fit on the screen, we wait for a keypress. We memorize who spoke last, then put their name at the start of the next block of text. If nobody spoke, we remember that too.
+
+If the utterance cannot fit on the screen and the cursor is at the start of the block, there is a problem with the script. In this case we print an error message with the address of the offending text.
+
+
+P-code for printing a string
+----------------------------
+def PrintString():
+    if not DoesNextUtteranceFit():
+        WaitForKeypress()               # Should clear screen and reset cursor pos too
+        RepeatLastNameTag()
+    if not DoesNextUtteranceFit():
+        PrintNoFitError()
+    ???
+
+
+# If print is true, print to screen as we go. Otherwise, do not print and only advance cursor
+def AdvanceWord(print):
+    if not DoesWordFit():
+        Newline()
+    else:
+        ???
+
+
+def DoesWordFit():
+    push pos
+    push charptr
+    while True:
+        char = *charptr++
+        if char in [' ', CHR_END]:
+            if pos overflowed:
+                pop charptr
+                pop pos
+                return false
+            else:
+                pop charptr
+                pop pos
+                return true
+        else:
+            pos += width of char
+
+
+def DoesNextUtteranceFit():
+    push pos
+    push charptr
+    while True:
+        AdvanceWord(false)
+        if posy > MAX_POS:
+            pop charptr
+            pop pos
+            return false
+        char = *charptr--
+        prev_char = *charptr
+        if char == CHR_END:
+            pop charptr
+            pop pos
+            return true
+        if char == ' ':
+            if prev_char in "?!.,:;)]”":
+                pop charptr
+                pop pos
+                return true

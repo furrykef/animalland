@@ -2,7 +2,7 @@ Running the game
 ----------------
 RUN THE GAME AT NTSC SPEED (60 Hz)! This is the speed at which the game was designed to run. It is fine if you have to emulate a Japanese MSX to do so. If run at PAL speed (50 Hz), the music will be slower, not to mention the game in general.
 
-If your emulator or flash cart asks for the ROM type, there should be an option like "ASCII 8kbyte" or "ASCII8". Choose that one. Chances are, though, that the game will autodetect the ROM type correctly. You'll know if it doesn't, since the game will not run at all with the wrong ROM type.
+If your emulator or flash cart asks for the ROM type, there should be an option like "ASCII 8kbyte" or "ASCII8". Choose that one. Chances are, though, that the emulator will autodetect the ROM type correctly. You'll know if it doesn't, since the game will not run at all with the wrong ROM type.
 
 
 Translation notes
@@ -21,7 +21,7 @@ Here are some of the particular issues we ran into when translating. WARNING: He
 
 * The name of The Dragon Cafe may have had a dual meaning. The name was spelled "Doragon" in Japanese, and Renard's and Drago's original names were "Gonkichi" and "Dorakure". So "Doragon" could be read as a portmanteau: "Dora[kure]-Gon[kichi]".
 
-* There is a tortured pun involving a stone you find in the Forest Maze. You are told to find the "Kokeshi Rock". A Japanese player would expect to find a rock in the shape of a Japanese kokeshi doll. Instead, what you actually find is a rock with an inscription that almost makes sense, but not quite. Your partner realizes the inscription makes sense if you remove the letter "ko" -- the word "kokeshi" has a second meaning of "erase the 'ko'".
+* There is a tortured pun involving a stone you find in the Forest Maze. You are told to find the "Kokeshi Rock". A Japanese player would expect to find a rock in the shape of a Japanese kokeshi doll. Instead, what you actually find is a rock with an inscription that almost makes sense, but not quite. Your partner realizes the inscription makes sense if you remove the letter "ko" -- the word "kokeshi" has a second meaning of "erasing the 'ko'".
 
 
 QUESTIONS & ANSWERS

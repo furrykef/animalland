@@ -53,12 +53,8 @@ No such file, boss.<end>
 // かっこうて゛　し゛ゅうて゛　しんそ゛うを
 // うたれて　そくしのし゛ょうたいて゛
 // あったらしい。<end>
-It was a day like any other in<nl>
-Animalville, a quiet, peaceful<nl>
-mountain village.<key>
-At least, it was until the murder<nl>
-of <R><e><n><a><r><d> <F><o><x>, the owner of<nl>
-Foxy Jewelry.<end>
+It was a day like any other in Animalville, a quiet, peaceful mountain village.<key>
+At least, it was until the murder of <R><e><n><a><r><d> <F><o><x>, the owner of Foxy Jewelry.<end>
 
 // はっけんしゃは、かれのむすこて゛
 // し゛なんの　<green>ココン<white>た゛った。<key>
@@ -73,19 +69,10 @@ Foxy Jewelry.<end>
 // わたしは、すく゛さま　ちゅうし゛つな
 // ふ゛かて゛ある　いぬの"<cyan>おいと゛ん<white>"と　ともに
 // このし゛けんの　そうさにのりた゛すことにした。<end>
-He was discovered by <K><i><t>,<nl>
-his son.<key>
-Kit entered the jewelry<nl>
-store at about 11 AM on<nl>
-the day after the<nl>
-murder.<key>
-The door was unlocked. When he<nl>
-went in, he saw his father in<nl>
-his chair, his chest covered<nl>
-with blood.<key>
-He'd been shot in the heart.<nl>
-My partner <A><n><d><y> and I set out<nl>
-at once to investigate the case...<end>
+He was discovered by <K><i><t>, his son.<key>
+Kit entered the jewelry store at about 11 AM on the day after the murder.<key>
+The door was unlocked. When he went in, he saw his father in his chair, his chest covered with blood.<key>
+He'd been shot in the heart. My partner <A><n><d><y> and I set out at once to investigate the case...<end>
 
 
 // Character names (used for dialogue tags)
@@ -156,7 +143,10 @@ Mother:
 
 
 // Commands
+
+// Chapter 1
 #JMP($2C80, $363B)
+#WRITE(cmdptr, $2BBC)
 // みる<end>
 Look<end>
 

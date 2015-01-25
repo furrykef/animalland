@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Written for Python 2.7
+# Written for Python 3.4
 import sys
 
 INFILENAME = "passwords.in"
