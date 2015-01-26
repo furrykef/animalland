@@ -4450,7 +4450,7 @@ I dunno.<end>
 <contd>
 <Peruu>
 Oh, how beautiful! I love blond hair!
-I don't recognize this, though<end>
+I don't recognize this, though.<end>
 
 // <contd>
 // <Taaji>ええ・・・・・・。
@@ -4467,7 +4467,7 @@ Uhh.....
 We hear you two were friends.
 <Taaji>
 Yes. He was a very close friend.
-I've never known anyone for as long as I knew him.
+I've never known anyone as long as I knew him.
 And to think that he's gone now.....<end>
 
 // <contd>
@@ -7356,7 +7356,7 @@ face.<end>
 // <Oidon>この　まよいのもりは　むかしは
 // と゛んな　ところた゛った？<end>
 <Oidon>
-What did the Lost Woods used to be like?<end>
+What were the Lost Woods like in the past?<end>
 
 // <Oidon>いまの　まよいのもりは　と゛んな　ところた゛？<end>
 <Oidon>

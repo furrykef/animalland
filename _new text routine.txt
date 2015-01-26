@@ -1,66 +1,70 @@
-Characters that are allowed to end an utterance: ?!.,:;)]”
-
-These MUST be followed by a space. We don't want an ellipsis to be broken, for instance.
-
-If an utterance cannot fit on the screen, we wait for a keypress. We memorize who spoke last, then put their name at the start of the next block of text. If nobody spoke, we remember that too.
-
-If the utterance cannot fit on the screen and the cursor is at the start of the block, there is a problem with the script. In this case we print an error message with the address of the offending text.
+The idea here is we first copy the text into a buffer, inserting newlines and the "wait for key" code at appropriate places as we do so. Then our old text routine is used to print the text inside this buffer. The "pseudocursor" is a copy of the VRAM cursor (since we don't adjust the real VRAM cursor except when drawing to the screen).
 
 
-P-code for printing a string
-----------------------------
-def PrintString():
-    if not DoesNextUtteranceFit():
-        WaitForKeypress()               # Should clear screen and reset cursor pos too
-        RepeatLastNameTag()
-    if not DoesNextUtteranceFit():
-        PrintNoFitError()
-    ???
+Algorithm
+---------
+Try to copy a word to the buffer, updating the pseudocursor as we go. If we overflow the right margin, back up to the start of the word, print a newline, and try again. Anytime we put out a newline, check if we've overflowed the textbox. If so, put <key> at the start of the buffer, set the pseudocursor to the upper left, and start over. If the buffer already starts with <key> when we go to put one there, we are in an infinite loop and we should print an error message. Stop if we reach the end of an utterance, otherwise, jump back to the beginning of this routine.
+
+CopyWord leaves the text pointer at the start of the next space or other word boundary character. If it is a space, it will copy this space the next time it's called unless the cursor is at the left margin; in that case, the space is skipped.
 
 
-# If print is true, print to screen as we go. Otherwise, do not print and only advance cursor
-def AdvanceWord(print):
-    if not DoesWordFit():
-        Newline()
-    else:
-        ???
+P-code
+------
+FormatText:
+        start_txtptr = txtptr
+        start_bufptr = &buffer[0]
+        bufptr = start_bufptr
+Word:
+        old_txtptr = txtptr
+        old_bufptr = bufptr
+        CopyWord()
+        if cur_x > MAX_CUR_X:
+            txtptr = old_txtptr
+            bufptr = old_bufptr
+            jmp NL
+        if *txtptr == '<end>':
+            *bufptr = *txtptr
+            return
+        if *txtptr == '<nl>':
+            txtptr++
+            jmp NL
+        if *txtptr == '<key>':
+            cur_x = 0
+            cur_y = 0
+            *bufptr++
+            jmp KeyOrNL
+        if (*txtptr == ' ' and *(txtptr-1) in "?!.,:;)]”"):
+            cur_x += width of *bufptr
+            *bufptr++ = *txtptr++
+KeyOrNL:    start_txtptr = txtptr
+            start_bufptr = bufptr
+        jmp Word
 
 
-def DoesWordFit():
-    push pos
-    push charptr
-    while True:
-        char = *charptr++
-        if char in [' ', CHR_END]:
-            if pos overflowed:
-                pop charptr
-                pop pos
-                return false
-            else:
-                pop charptr
-                pop pos
-                return true
-        else:
-            pos += width of char
+CopyWord:
+        if *txtptr == ' ':
+            if cur_x > 0:
+                cur_x += width of *bufptr
+                *bufptr = *txtptr++
+            bufptr++
+        elif *txtptr == '<key>':
+            *bufptr++ = *txtptr++
+        while *txtptr not in [' ', '<key>', '<end>']:
+            cur_x += width of *bufptr
+            *bufptr++ = *txtptr++
 
 
-def DoesNextUtteranceFit():
-    push pos
-    push charptr
-    while True:
-        AdvanceWord(false)
-        if posy > MAX_POS:
-            pop charptr
-            pop pos
-            return false
-        char = *charptr--
-        prev_char = *charptr
-        if char == CHR_END:
-            pop charptr
-            pop pos
-            return true
-        if char == ' ':
-            if prev_char in "?!.,:;)]”":
-                pop charptr
-                pop pos
-                return true
+NL:
+        *bufptr++ = '<nl>'
+        cur_x = 0
+        cur_y++
+        if cur_y > MAX_CUR_Y:
+            # Check for infinite loop
+            if *start_bufptr == '<key>':
+                PrintErrorAndCrash()
+            # Naw, we're good
+            bufptr = start_bufptr
+            *bufptr++ = '<key>'
+            cur_y = 0
+            txtptr = start_txtptr
+        jmp Word

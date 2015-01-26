@@ -15,10 +15,12 @@ MULTIBANK_REGION_SIZE:      equ     $1000
 MULTIBANK_OFFSET:           equ     $4000 - MULTIBANK_REGION_SIZE
 
 
-; Control codes
+; Control and character codes
 CHAR_BOLD_PERIOD:   equ     $0a
 CHAR_MNL:           equ     $10
+CHAR_NEWLINE:       equ     $7e
 CHAR_END:           equ     $7f
+CHAR_SPACE:         equ     $a0
 CHAR_BOLD_COLON:    equ     $ca
 
 
@@ -43,6 +45,11 @@ tile_increment: rw 1            ; How much we need to increment VRAM addr to
 vram_addr:      rw 1
 char_width:     rb 1
 str_width:      rb 1            ; for right-aligning in menus
+
+; These are the "pseudocursor" used in the text formatting routine.
+; They are not used during text display.
+cur_x:          rb 1            ; this is in pixels, not columns
+cur_y:          rb 1            ; ditto, but in rows, not pixels
 
 
 org $8000 + MULTIBANK_OFFSET, $bfff
@@ -159,6 +166,8 @@ ErasePushSpaceKey:
 HandleFirstLineOfDialogue:
         xor     a
         ld      (pixel_offset), a
+        ld      (cur_x), a
+        ld      (cur_y), a
         ld      hl, $1008                   ; The line the patch at $475d was patching over
         ret
 
