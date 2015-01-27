@@ -17,25 +17,25 @@ FormatText:
 Word:
         old_txtptr = txtptr
         old_bufptr = bufptr
-        CopyWord()
-        if cur_x > MAX_CUR_X:
+        call CopyWord
+        if cur_x > BOX_WIDTH:
             txtptr = old_txtptr
             bufptr = old_bufptr
-            jmp NL
+            call NL
+            jmp Word
         if *txtptr == '<end>':
             *bufptr = *txtptr
             return
         if *txtptr == '<nl>':
             txtptr++
-            jmp NL
+            call NL
+            jmp KeyOrNL
         if *txtptr == '<key>':
             cur_x = 0
             cur_y = 0
-            *bufptr++
+            *bufptr++ = *txtptr++
             jmp KeyOrNL
         if (*txtptr == ' ' and *(txtptr-1) in "?!.,:;)]”"):
-            cur_x += width of *bufptr
-            *bufptr++ = *txtptr++
 KeyOrNL:    start_txtptr = txtptr
             start_bufptr = bufptr
         jmp Word
@@ -47,9 +47,7 @@ CopyWord:
                 cur_x += width of *bufptr
                 *bufptr = *txtptr++
             bufptr++
-        elif *txtptr == '<key>':
-            *bufptr++ = *txtptr++
-        while *txtptr not in [' ', '<key>', '<end>']:
+        while *txtptr not in [' ', '<nl>', '<key>', '<end>']:
             cur_x += width of *bufptr
             *bufptr++ = *txtptr++
 
@@ -61,10 +59,11 @@ NL:
         if cur_y > MAX_CUR_Y:
             # Check for infinite loop
             if *start_bufptr == '<key>':
-                PrintErrorAndCrash()
+                call PrintError
             # Naw, we're good
             bufptr = start_bufptr
             *bufptr++ = '<key>'
+            cur_x = 0
             cur_y = 0
             txtptr = start_txtptr
         jmp Word
