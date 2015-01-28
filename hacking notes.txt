@@ -9,10 +9,10 @@ The game's text formatting routine is pretty smart. It can wrap lines automatica
 
 Text formatting algorithm
 -------------------------
-The text formatting algorithm is more complicated than in most games. As in most games, it will stop and ask the user to press a key if the text won't fit in the box. What it won't do, though, is do this in the middle of a sentence, except at a logical stopping point such as a comma.
+The text formatting algorithm is more complicated than in most games. As in most games, it will stop and ask the user to press a key if the text won't fit in the box. What it won't do, though, is do this in the middle of a sentence, except at a logical stopping point such as a comma. So we'll use the term "stopping point" to refer to these points.
 
 The code for this is a little difficult to follow, especially since the code has to deal with horizontal word wrapping as well, so we will explain it here.
 
-The formatter copies an entire block of text into a buffer. The formatter's job is to insert codes for newlines and "press a key" at appropriate places during the copy. The buffer is large enough for any reasonably sized blocks of text.
+Every time the text routine is told to print a space, first we check what the previous character was. If it was a period, exclamation point, or one of a few other symbols, we are at a stopping point, in which case we scan the rest of the string to the next stopping point to see if the text will fit in the block. If so, the space remains a space. Otherwise, it becomes <key> (the wait-for-keypress code).
 
-As the formatter copies text, it checks if it overflows the right margin. If it does, it moves the word to the next line. It continues in this fashion until it reaches the end of an utterance -- that is, until we reach a point that is acceptable to wait for a key. Let's call this a "stopping point". But we don't want to wait for a keypress at the end of every utterance, only when the next utterance does not fit. So it continues until the text goes beyond the bottom margin. When this happens, a "wait for keypress" is inserted at the last stopping point and the copying resumes from that point.
+If the space did not become <key> (either because the next utterance fit the block or because the space wasn't a stopping point), we next have to determine if the next word fits the line. If not, the space becomes <nl> (newline).

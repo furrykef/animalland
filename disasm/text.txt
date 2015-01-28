@@ -25,11 +25,17 @@ $45e7:
         jp      nz,$476d        ; Jump if not
         ; It is; this does not concern us, however
 
-
+$4763:  ld      hl,($f2fe)      ; Get Y coordinate
+        ld      de,$01c0        ; VRAM address
+        add     hl,de
+        jp      $45e7           ; jump back to start of routine
 $476d:  cp      $7e             ; Is this the newline code?
         jr      nz,$477b        ; Jump if not
-        ; It is; this does not concern us yet
-
+        ; This is a newline
+$4771:  ld      a,($f2fe)       ; $f2fe += 12. Updating a Y coordinate
+        add     a,$0c
+        ld      ($f2fe),a
+        jr      $4763
 $477b:  cp      $ff             ; Is this the <key> code?
         jr      nz,$4784        ; Jump if not
         ; It is; this does not concern us yet

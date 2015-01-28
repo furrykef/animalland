@@ -30,14 +30,16 @@ WRTVRM:         equ     $004d
 FILVRM:         equ     $0056
 
 ; Variables from the original game
+cur_y:          equ     $f2fe
 text_color:     equ     $f301
 
 ; This variable was used for this purpose in the original code
 char_to_print:  equ     $f2e1
 
 ; Other variables
-; @TODO@ -- verify this region is safe, or considering using MSX2-specific system RAM (FAF5-FB34)
-org $e000
+; RS232 RAM is FAF5-FB34 inclusive
+; This region is safe to use for MSX1 games
+org $faf5
 
 pixel_offset:   rb 1            ; How many pixels to the right do we draw the next char?
 tile_increment: rw 1            ; How much we need to increment VRAM addr to
@@ -46,10 +48,9 @@ vram_addr:      rw 1
 char_width:     rb 1
 str_width:      rb 1            ; for right-aligning in menus
 
-; These are the "pseudocursor" used in the text formatting routine.
-; They are not used during text display.
-cur_x:          rb 1            ; this is in pixels, not columns
-cur_y:          rb 1            ; ditto, but in rows, not pixels
+; The X position of the text cursor in the main textbox in pixels
+; (The Y position is tracked with cur_y, above)
+cur_x:          rb 1
 
 
 org $8000 + MULTIBANK_OFFSET, $bfff
@@ -144,7 +145,6 @@ DisplayPrompt:
 
         ; Done
         jp      $49b2
-        
 
 
 ErasePushSpaceKey:
@@ -167,19 +167,24 @@ HandleFirstLineOfDialogue:
         xor     a
         ld      (pixel_offset), a
         ld      (cur_x), a
-        ld      (cur_y), a
-        ld      hl, $1008                   ; The line the patch at $475d was patching over
+        ld      hl, $1008                   ; the line the patch at $475d was patching over
         ret
 
 ; This adds to the code that was at $4771
 HandleNewline:
-        ld      a, ($f2fe)
+        ; These three lines are from the original routine
+        ld      a, (cur_y)
         add     a, 12
-        ld      ($f2fe), a
+        ld      (cur_y), a
 
-        ; Now here's the bit we're adding
+        cp      $38                         ; are we overflowing the bottom margin?
+        jp      z, $477f                    ; jump to <key> handler if so
+
+        ; Not overflowing bottom margin
+        ; Set up a couple vars for our own text code
         xor     a
         ld      (pixel_offset), a
+        ld      (cur_x), a        
 
         ; Back to your regularly scheduled program
         jp      $4763
@@ -293,7 +298,7 @@ PrintChar:
         cp      8
         jr      nz, .done               ; No; we're done here
         xor     a                       ; Yes; set pixel offset to 0 and set VRAM addr to the next tile
-        ld      (pixel_offset), a 
+        ld      (pixel_offset), a
         call    BumpVramAddr
 
 .done:

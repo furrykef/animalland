@@ -1415,7 +1415,7 @@ CANCEL<end>
 
 // <Oidon>ん？　ふうとうか゛　おいてありますぜ。<end>
 <Oidon>
-Huh. Somebody left an envelope on the<nl>table.<end>
+Huh. Somebody left an envelope on the table.<end>
 
 // <Oidon>タ゛イヤルしき　ですぜ。<end>
 // (This refers to a safe.)
