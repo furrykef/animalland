@@ -22,6 +22,12 @@ CHAR_NEWLINE:       equ     $7e
 CHAR_END:           equ     $7f
 CHAR_SPACE:         equ     $a0
 CHAR_BOLD_COLON:    equ     $ca
+CHAR_KEY:           equ     $ff
+
+
+; Misc. constants
+RIGHT_MARGIN:       equ     184
+WIDTH_OF_SPACE:     equ     3
 
 
 ; BIOS stuff
@@ -50,6 +56,7 @@ str_width:      rb 1            ; for right-aligning in menus
 
 ; The X position of the text cursor in the main textbox in pixels
 ; (The Y position is tracked with cur_y, above)
+; This is only used in handling word wrapping
 cur_x:          rb 1
 
 
@@ -264,7 +271,6 @@ PrintChar64:
         pop     bc
         ; Fall through to PrintChar
 
-
 PrintChar:
         ld      (char_to_print), a
         ld      (vram_addr), hl
@@ -273,6 +279,10 @@ PrintChar:
 
         ld      a, (char_to_print)
         call    GetCharWidth
+        ld      b, a                    ; Add the width to the cursor
+        ld      a, (cur_x)
+        add     a, b
+        ld      (cur_x), a
 
         call    GetPtrToCharData
         call    Write1stTile
@@ -337,6 +347,8 @@ GetPtrToCharData:
 ;
 ; Outputs:
 ;   char_width = A = width of char in pixels
+;
+; Clobbers BC, preserves HL
 GetCharWidth:
         push    hl
         ld      b, 0
@@ -490,6 +502,57 @@ CalcStrWidth:
         jr      .loop
 .done:
         pop     ix
+        ret
+
+
+; This replaces code at $025e7
+; This is the top of FetchAndPrintChar, namely the fetch part.
+FetchCharWithLinewrapping:
+        ld      a, (ix+0)                   ; the line our hook replaced
+
+        cp      CHAR_SPACE
+        ret     nz
+
+        ; This is a space; check if the next word fits on the line.
+        ; If so, the space will remain a space.
+        ; If not, it will become a newline.
+        push    bc                          ; GetCharWidth clobbers BC
+        push    de
+        push    ix
+        ld      a, (cur_x)
+        add     a, WIDTH_OF_SPACE
+        cp      RIGHT_MARGIN
+        jr      nc, .overflowed
+        ld      d, a                        ; D will store the running X position
+        inc     ix
+.loop:
+        ld      a, (ix+0)
+        inc     ix
+        cp      CHAR_SPACE
+        jr      z, .fits
+        cp      CHAR_NEWLINE
+        jr      z, .fits
+        cp      CHAR_KEY
+        jr      z, .fits
+        cp      CHAR_END
+        jr      z, .fits
+        call    GetCharWidth
+        add     a, d                        ; Update running X coordinate
+        cp      RIGHT_MARGIN
+        jr      nc, .overflowed
+        ld      d, a
+        jp      .loop
+
+.overflowed:
+        ld      a, CHAR_NEWLINE
+        jr      .done
+
+.fits:
+        ld      a, CHAR_SPACE
+.done:
+        pop     ix
+        pop     de
+        pop     bc
         ret
 
 

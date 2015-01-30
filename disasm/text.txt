@@ -21,7 +21,7 @@ Here is the script fetch routine:
 $45e7:
         ld      a,(ix+$00)      ; This is where we load the next char from the script
         inc     ix              ; Bump the index
-        cp      $7f             ; Is this the <end> code?
+$45ec:  cp      $7f             ; Is this the <end> code?
         jp      nz,$476d        ; Jump if not
         ; It is; this does not concern us, however
 

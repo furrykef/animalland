@@ -1420,23 +1420,17 @@ Huh. Somebody left an envelope on the table.<end>
 // <Oidon>タ゛イヤルしき　ですぜ。<end>
 // (This refers to a safe.)
 <Oidon>
-It's the kind with a<nl>
-dial.<end>
+It's the kind with a dial.<end>
 
 // <Oidon>みたところ、なにも　おちてませんぜ。
 // おいと゛んのしこ゛とは、やっは゜　めより　はな
 // て゛しょうなー。<end>
 <Oidon>
-I don't see anything<nl>
-there.<pause> But perhaps we<nl>
-should <c><h><e><c><k> it out in<nl>
-more detail.<end>
+I don't see anything there.<pause> But perhaps we should <c><h><e><c><k> it out in more detail.<end>
 
 // <Oidon>みるた゛けし゛ゃ、よくわかりませんぜ。<end>
 <Oidon>
-I'll need more than a<nl>
-mere glance to find<nl>
-anything.<end>
+I'll need more than just a look to find anything.<end>
 
 // <Oidon>なんた゛か、す゛いふ゛ん　おおきな　いすて゛す。<end>
 <Oidon>
@@ -1452,24 +1446,21 @@ The more you look, the more it stays the same.<end>
 
 // <Oidon>て゛は、しょうこひんとして　もっておきます。<end>
 <Oidon>
-OK, we'll use this as<nl>
-evidence.<end>
+OK, we'll use this as evidence.<end>
 
 0<end>
 
 // <Oidon>うえにも　したにも、なにも　おいて
 // ありませんぜ。<end>
 <Oidon>
-Nothing on it, nothing<nl>
-under it.<end>
+Nothing on it, nothing under it.<end>
 
 0<end>
 0<end>
 
 // <Oidon>もう　しらへ゛ましたせ゛。<end>
 <Oidon>
-We've already checked<nl>
-that.<end>
+We've already checked that.<end>
 
 // <Oidon>くしゃくしゃて゛　はんふ゛ん　やふ゛れています。
 // やっ　なにか　かかれている!
@@ -1480,16 +1471,12 @@ that.<end>
 // いまは　しゅっちょうに　て゛かけていて
 // ここにはいないそうて゛す。<end>
 <Oidon>
-Half of it's torn up<nl>
-and crumpled.<pause> Look, it<nl>
-says something!<key>
+Half of it's torn up and crumpled.<pause> Look, it says something!<key>
 <Oidon>
 "Peru: if something should happen to me, give this to the police.<pause><nl>
 Signed, Renard"<key>
 <Oidon>
-Peru's his assistant,<nl>
-but she's currently out<nl>
-on a business trip.<end>
+Peru's his assistant, but she's currently out on a business trip.<end>
 
 0<end>
 
@@ -1497,41 +1484,33 @@ on a business trip.<end>
 // さては、はんにんは　きんは゜つた゛な。
 // ねぇ、だんな。<end>
 <Oidon>
-A blond hair! So the<nl>
-perp must be blond...<end>
+A blond hair! So the perp must be blond...<end>
 
 // <Oidon>ここには、た゛れも　いませんぜ。<end>
 <Oidon>
-There's no one to talk<nl>
-to here.<end>
+There's no one to talk to here.<end>
 
 // <Oidon>あけるものは、なにも　ありませんぜ。<end>
 <Oidon>
-There's nothing here to<nl>
-open.<end>
+There's nothing here to open.<end>
 
 // <Oidon>みせるものも　みせるあいても、た゛れも
 // いませんぜ。<end>
 <Oidon>
-You have nothing to<nl>
-show and no one to show<nl>
-it to.<end>
+You have nothing to show and no one to show it to.<end>
 
 // <Oidon>みせるあいては、た゛れも　いません。<end>
 <Oidon>
-There's no one to show<nl>
-anything to.<end>
+There's no one to show anything to.<end>
 
 // <Oidon>はまきの　いいにおいか゛　しますぜ。
 // うーたまらん、だんなも　と゛うて゛す？<end>
 <Oidon>
-Just the pleasant scent of my cigar.<nl>
-Irresistible, don't you think?<end>
+Just the pleasant aroma of my cigar. Irresistible, don't you think?<end>
 
 // <Oidon>ほんじゃ、ほうせきてんへ　いきましょうや。<end>
 <Oidon>
-OK, to the jewelry<nl>
-shop.<end>
+OK, to the jewelry shop.<end>
 
 // <Oidon>ほんじゃ、しょさいへ　いきましょうや。<end>
 <Oidon>
@@ -1548,9 +1527,7 @@ OK, to headquarters.<end>
 // <Oidon>ほうせきか゛、すへ゛て　きえてます。
 // こ゛うとうさつし゛ん　て゛すね。<end>
 <Oidon>
-The jewels are all<nl>
-gone.<pause> So the killer was<nl>
-a robber...<end>
+The jewels are all gone.<pause> So the killer was a robber...<end>
 
 0<end>
 
@@ -1558,8 +1535,7 @@ a robber...<end>
 // おちてますぜ。<end>
 // (Describes note on floor)
 <Oidon>
-Huh? There's a note or<nl>
-something on it.<end>
+Huh? There's a note or something down here.<end>
 
 0<end>
 
@@ -1576,16 +1552,12 @@ We've already got it.<end>
 // <Oidon>リンリン、ターシ゛、コンタなと゛と
 // なまえか゛、かかれてますぜ。<end>
 <Oidon>
-It has the names<nl>
-Rinrin, Taji, and Red<nl>
-written on it.<end>
+It has the names Rinrin, Taji, and Red written on it.<end>
 
 // <Oidon>クンクン、かなり　そうし゛か゛　ゆきとと゛いてます。
 // ワックスの　いいにおいか゛、しますぜ。<end>
 <Oidon>
-*sniff, sniff*<pause><nl>
-It's quite clean.<pause> The<nl>
-pleasant scent of wax.<end>
+*sniff, sniff*<pause> It's quite clean.<pause> The pleasant scent of wax.<end>
 
 0<end>
 
@@ -1593,12 +1565,9 @@ pleasant scent of wax.<end>
 // いっは゜い　ですぜ。
 // そうさか゛　おわってから、し゛っくり
 // みましょうよ。<end>
-// (HOW DO YOU FIND THIS?!)
+// (@TODO@ -- HOW DO YOU FIND THIS?!)
 <Oidon>
-It's full of, ah, maga-<nl>
-zines.<pause> We can read 'em<nl>
-later.<pause> For the arti-<nl>
-cles, of course.<end>
+It's full of, ah, magazines.<pause> We can read 'em later.<pause> For the articles, of course.<end>
 
 0<end>
 
@@ -1610,14 +1579,9 @@ cles, of course.<end>
 // <Oidon>て゛も、だんなと　おいと゛んのコンヒ゛ネーションに
 // かてるものなと゛　ありゃしませんぜ。<end>
 <Oidon>
-This chair and this<nl>
-desk go well together,<nl>
-don't they?<key>
+This chair and this desk go well together, don't they?<key>
 <Oidon>
-But there's no pair that fits better<nl>
-than you and I.<pause><nl>
-Platonically speaking,<nl>
-of course.<end>
+But there's no pair that fits better than you and I.<pause> Platonically speaking, of course.<end>
 
 // <Oidon>さいしょ　みたとおりですぜ。<end>
 <Oidon>
@@ -1632,14 +1596,12 @@ Just an ordinary desk.<end>
 // <Oidon>ふつうの　ほんた゛なですぜ。
 // こうきゅうそうな　かんし゛か゛、しますけと゛。<end>
 <Oidon>
-An ordinary bookcase,<nl>
-if a rather classy one.<end>
+An ordinary bookcase, if a rather classy one.<end>
 
 // <Oidon>このきんこは・・・・・・。
 // タ゛イヤルしきですぜ。<end>
 <Oidon>
-This safe...<pause> it's the<nl>
-kind with a dial.<end>
+This safe...<pause> it's the kind with a dial.<end>
 
 0<end>
 
@@ -1651,9 +1613,7 @@ Nngghh...<pause> it's locked.<end>
 // <Oidon>カキ゛か゛　なけれは゛、なんと゛やっても
 // おなし゛ですぜ。<end>
 <Oidon>
-Try all you want, you<nl>
-can't open it without<nl>
-the key.<end>
+Try as you might, you can't open it without the key.<end>
 
 0<end>
 
@@ -1664,13 +1624,11 @@ There's a safe inside.<end>
 // <Oidon>だんな、は゛んこ゛うか゛　わからなくちゃ
 // あきませんぜ。<end>
 <Oidon>
-It's no use without the<nl>
-combination.<end>
+It's no use without the combination.<end>
 
 // <Oidon>は゛んこ゛うを　しることか゛、せんけつですぜ。<end>
 <Oidon>
-First we need the com-<nl>
-bination.<end>
+First we need the combination.<end>
 
 0<end>
 
@@ -1680,10 +1638,7 @@ bination.<end>
 // ふたりの　むすこか゛いる。　38さい。<end>
 // (Description of Gonkichi/Renard)
 <Oidon>
-The victim. Divorced 3<nl>
-years ago. Owned Foxy<nl>
-Jewelry and a condo.<nl>
-Two sons. 38 years old.<end>
+The victim. Divorced 3 years ago. Owned Foxy Jewelry and a condo. Two sons. 38 years old.<end>
 
 // <Oidon>20さい。　ひか゛いしゃの　むすこて゛
 // ちょうなん。
@@ -1691,40 +1646,31 @@ Two sons. 38 years old.<end>
 // うわさか゛ある。<end>
 // (Description of Konta/Red)
 <Oidon>
-20 years old. Victim's<nl>
-first son. Managing<nl>
-director at the store.<key>
+20 years old. Victim's first son. Managing director at the store.<key>
 <Oidon>
-It's rumored that he<nl>
-was to become the owner<nl>
-soon.<end>
+It's rumored that he was to become the owner soon.<end>
 
 // <Oidon>18さい。　コンタと　きょうた゛いて゛　し゛なん。
 // ヒ゜ョンコという　こいひ゛とか゛　いる。<end>
 // (Description of Kokon/Kit)
 <Oidon>
-Age 18. Red's younger<nl>
-brother. Has a girl-<nl>
-friend named Amy.<end>
+Age 18. Red's younger brother. Has a girl- friend named Amy.<end>
 
 // <Oidon>40さい。　コンコンほうせきてんの
 // しょうは゛いか゛たき。<end>
 // (Don't know who this is.)
 <Oidon>
-40 years old. Competes<nl>
-with Foxy Jewelry.<end>
+40 years old. Competes with Foxy Jewelry.<end>
 
 // <Oidon>また゛　このと゛うふ゛つのことは、なに1つ
 // わかっていない。<end>
 <Oidon>
-I don't know a thing<nl>
-about this person yet.<end>
+I don't know a thing about this person yet.<end>
 
 // <Oidon>また゛　このと゛うふ゛つのことは、なに1つ
 // わかっていない。<end>
 <Oidon>
-I don't know a thing<nl>
-about this person yet.<end>
+I don't know a thing about this person yet.<end>
 
 0<end>
 
@@ -1737,25 +1683,19 @@ about this person yet.<end>
 // いままて゛　て゛てきた　かんけいしゃを、
 // しらへ゛て　みましょう。<end>
 <Oidon>
-Here we are at head-<nl>
-quarters.<key>
+Here we are at headquarters.<key>
 <Oidon>
-Foxy Jewelry was<nl>
-reportedly closed on<nl>
-the day of the crime.<key>
+Foxy Jewelry was reportedly closed on the day of the crime.<key>
 <Oidon>
-It's unknown who else<nl>
-might have been in the<nl>
-shop.<key>
+It's unknown who else might have been in the shop.<key>
 <Oidon>
-OK, let's have a look<nl>
-at the people involved.<end>
+OK, let's have a look at the people involved.<end>
 
 // と゛うする？　<end>
 What to do?<end>
 
 // なにを？　<end>
-What?<end>
+Which?<end>
 
 // と゛こへ？　<end>
 Where?<end>
@@ -1770,17 +1710,14 @@ Just an ordinary wall.<end>
 // <Oidon>ふつうの　ト゛アですぜ。はんにんは　ここを
 // とおって　このへやへ　はいってきたのて゛しょう。<end>
 <Oidon>
-Just an ordinary door.<nl>
-The killer must got in through
-here.<end>
+Just an ordinary door. The killer must have got in through here.<end>
 
 0<end>
 
 // <Oidon>・・・。た゛んな、へ゛つにかわったところは
 // ありませんぜ。<end>
 <Oidon>
-Nothing particularly<nl>
-unusual about it.<end>
+Nothing particularly unusual about it.<end>
 
 0<end>
 
@@ -1797,8 +1734,7 @@ Rather stylish window. It's locked.<end>
 
 // <Oidon>とくに　かわったところは　ないようですぜ。<end>
 <Oidon>
-Nothing particularly<nl>
-unusual about it.<end>
+Nothing particularly unusual about it.<end>
 
 // <Oidon>た゛いふ゛ひと゛く　こわされてます。<end>
 <Oidon>
@@ -1812,23 +1748,18 @@ It's all smashed up.<end>
 // 1つのこらす゛　ぬすまれているのて゛　なかには
 // カ゛ラスのはへんいか゛い　なにもありませんぜ。<end>
 <Oidon>
-There's not a single<nl>
-jewel left, only shards<nl>
-of glass.<end>
+There's not a single jewel left, only shards of glass.<end>
 
 // <Oidon>・・・・・・こし゛あけられた　けいせきは
 // ありません。
 // はんにんは　カキ゛をもっていたのかも
 // しれませんね。<end>
 <Oidon>
-Doesn't look like it<nl>
-was forced open.<pause> Maybe<nl>
-the perp had a key.<end>
+Doesn't look like it was forced open.<pause> Maybe the perp had a key.<end>
 
 // <Oidon>へ゛つに　なんともありませんぜ。<end>
 <Oidon>
-There's nothing inter-<nl>
-esting about it.<end>
+There's nothing interesting about it.<end>
 
 // <Oidon>もうなにも　おちてないようですぜ。<end>
 <Oidon>
@@ -1836,8 +1767,7 @@ Nothing else there.<end>
 
 // <Oidon>みたところ　なにも　おちてないようですぜ。<end>
 <Oidon>
-Doesn't seem to be any-<nl>
-thing there.<end>
+Doesn't seem to be anything there.<end>
 
 // <Oidon>ふつうの　ほんのようですぜ。<end>
 <Oidon>
@@ -1876,47 +1806,37 @@ Nope, nothing.<end>
 // とても　さつし゛んし゛けんか゛　おこったとは
 // おもえませんぜ。<end>
 <Oidon>
-Such a tranquil scene.<nl>
-Impossible to believe a<nl>
-murder happened here.<end>
+Such a tranquil scene. Impossible to believe a murder happened here.<end>
 
 // <Oidon>だんな、ここには　きくあいてか゛　いませんぜ。<end>
 <Oidon>
-There's no one here to<nl>
-ask anything.<end>
+There's no one here to ask anything.<end>
 
 // <Oidon>クンクン。<pause>　ほんや　きの　においか゛します。
 // しょさいと゛くとくの　においですぜ。<end>
 <Oidon>
-It smells of books and<nl>
-of wood, just like any<nl>
-study.<end>
+It smells of books and of wood, just like any study.<end>
 
 // <Oidon>つくえのうえに　ほんか゛おいてありますぜ。<end>
 <Oidon>
-There are books on the<nl>
-desk.<end>
+There are books on the desk.<end>
 
 // <Oidon>だんな、ふつうの　ほんのようなのて゛　これは
 // おいておきますぜ。<end>
 <Oidon>
-They're just ordinary<nl>
-books.<pause> Let's just leave<nl>
-them here.<end>
+They're just ordinary books.<pause> Let's just leave them here.<end>
 
 // <Oidon>あきましたよ。<pause>・・・だんな、こんなところに
 // きんこか゛ありますぜ。<end>
 <Oidon>
-It's open.<pause> Seems<nl>
-there's a safe in here.<end>
+It's open.<pause> Seems there's a safe in here.<end>
 
 // <contd>
 // しかし、さすか゛　かねもちた゛けあって
 // ほんた゛なに　すきまなと゛は　みられませんぜ。<end>
 // Describes bookcase. Follows "nothing particularly" line.
 <contd>
-He was rich, so it's<nl>
-in great condition.<end>
+He was rich, so it's in great condition.<end>
 
 // <Oidon>だんな　なんた゛か　ナソ゛のおおい　し゛けんですぜ。
 // "<char>"というもし゛は　なにか。きんは゜つは
@@ -1933,37 +1853,23 @@ in great condition.<end>
 // そうさファイルに　まとめました。
 // ファイルめいは　<red>あるまし゛ろ<black>て゛す。<end>
 <Oidon>
-This is a rather myste-<nl>
-rious case, boss.<key>
+This is a rather mysterious case, boss.<key>
 <Oidon>
-What's with the "N" on<nl>
-the paper? Who does the blond
-hair being to? Why was<nl>
-the door open?<key>
+What's with the "N" on the paper? Who does the blond hair belong to? Why was the door open?<key>
 <Oidon>
-The only clues the perp<nl>
-left are the hair and<nl>
-the gun.<pause> We'll have to<nl>
-gather more info.<key>
+The only clues the perp left are the hair and the gun.<pause> We'll have to gather more info.<key>
 <Oidon>
-There's a convenience<nl>
-store across the street<nl>
-from Foxy Jewelry.<key>
+There's a convenience store across the street from Foxy Jewelry.<key>
 <Oidon>
-Maybe they know some-<nl>
-thing.<pause> Let's check it<nl>
-out.<key>
+Maybe they know something.<pause> Let's check it out.<key>
 <Oidon>
-By the way, I recorded<nl>
-our progress in a file.<pause><nl>
-The name is <m:M><m:A><m:L><m:L><m:A><m:R><m:D>.<pause> Be sure to write down the name so you won't forget!<end>
+By the way, I recorded our progress in a file.<pause> The name is <m:M><m:A><m:L><m:L><m:A><m:R><m:D>.<pause> Be sure to write down the name so you won't forget!<end>
 
 // <contd>
 // へ゛つに　かわったところは　ありませんぜ。<end>
 // (Note: can apply to singular or plural objects)
 <contd>
-Nothing particularly<nl>
-unusual.<end>
+Nothing particularly unusual.<end>
 
 // <Oidon>ほんじゃ、いくのは、やめますぜ。<end>
 <Oidon>
@@ -1973,28 +1879,19 @@ OK, never mind.<end>
 // あっ　まってくた゛さい。つくえのうえに
 // ひ゛んせんの　きれはしか゛　あります。<end>
 <Oidon>
-There's nothing inside<nl>
-the...<pause> ah, hang on.<pause><nl>
-There's a scrap of<nl>
-paper on the desk.<end>
+There's nothing inside the...<pause> ah, hang on.<pause> There's a scrap of paper on the desk.<end>
 
 // <Oidon>"<char>"という　もし゛か゛　よめますか゛
 // あとは　やふ゛けていて　た゛めて゛す。
 // さ゛んねん　ウー　ワンワン!<end>
 <Oidon>
-I can read an "N", but<nl>
-not anything after<nl>
-that. Too bad...<pause><nl>
-Grrowf!<end>
+I can read an "N", but not anything after that. Too bad...<pause> Grrowf!<end>
 
 // <Oidon>やや　いすのしたに　けんし゛ゅうか゛
 // ころか゛っています!　これか゛　きょうきに
 // ちか゛いありませんぜ。<end>
 <Oidon>
-A gun rolled out from<nl>
-under the chair! It<nl>
-must be the murder<nl>
-weapon.<end>
+A gun rolled out from under the chair! It must be the murder weapon.<end>
 
 // <Oidon>し゛ゃ　とっておきますぜ。<end>
 <Oidon>
@@ -2002,8 +1899,7 @@ OK, I'll take it.<end>
 
 // <Oidon>これか゛　きょうきに　ちか゛いありませんぜ。<end>
 <Oidon>
-This must be the murder<nl>
-weapon.<end>
+This must be the murder weapon.<end>
 
 // <Oidon>とるようなものは　ありませんぜ。<end>
 <Oidon>
@@ -2020,9 +1916,7 @@ Nothing here to take.<end>
 // <Pyonko>みせのものを　かってに　いし゛くらないて゛
 // くた゛さいよ。<end>
 <Pyonko>
-Hey now, you can't just<nl>
-go around grabbing<nl>
-things!<end>
+Hey now, you can't just go around grabbing things!<end>
 
 // <Oidon>し゛ゃあ、すまないけと゛　しらへ゛させて
 // もらうよ。
@@ -2032,33 +1926,26 @@ things!<end>
 // <Oidon>だんな、なく゛られちゃいましたせ゛。<end>
 // (upon CHECKing Amy)
 <Oidon>
-Excuse me, I'd like to take a look.<nl>
-Standard procedure.<key>
+Excuse me, I'd like to take a look. Standard procedure.<key>
 <Pyonko>
-Hey! What do you think you're doing?<nl>
-*slap!*<nl>
+Hey! What do you think you're doing? *slap!*<nl>
 <Oidon>
 Ah...<pause> sorry, never mind.<end>
 
 // <Oidon>ヒ゜ョンコのくちを　あけてみましたところ、
 // きれいな　はを　してましたせ゛。<end>
 <Oidon>
-Amy's mouth shows a<nl>
-nice set of teeth.<pause><nl>
-Probably no need to<nl>
-open it further.<end>
+Amy's mouth shows a nice set of teeth.<end>
 
 // <Oidon>クンクン。　いいにおいか゛　するなー。
 // だんな、はらか゛　へりましたせ゛。<end>
 <Oidon>
-Mmm, smells good! It's<nl>
-making me hungry, boss.<end>
+Mmm, smells good! It's making me hungry, boss.<end>
 
 // <Oidon>クンクン。　ヒ゜ョンコのふくから　こうすいの
 // いいにおいか゛　しますぜ。<end>
 <Oidon>
-Amy's clothes smell of<nl>
-lovely perfume.<end>
+Amy's clothes smell of lovely perfume.<end>
 
 // <Oidon>ほんじゃ、そうさほんふ゛へ　いきましょうや。<end>
 <Oidon>
@@ -2068,9 +1955,7 @@ OK, back to HQ.<end>
 // コンタのくるまは　しろの　おおか゛たしゃ
 // て゛あることか゛　わかりました。<end>
 <Oidon>
-My investigation shows<nl>
-that Red drives a<nl>
-large, white car.<end>
+My investigation shows that Red drives a large, white car.<end>
 
 // <Oidon>ほんじゃ、コンタのへやへ　いきましょうや。<end>
 <Oidon>
@@ -2079,8 +1964,7 @@ OK, to Red's room.<end>
 // <Oidon>ほんじゃ、コンヒ゛ニエンスストアーへ
 // いきましょうや。<end>
 <Oidon>
-OK, to the convenience<nl>
-store.<end>
+OK, to the convenience store.<end>
 
 // <Oidon>うさき゛のヒ゜ョンコて゛す。<end>
 <Oidon>
@@ -2090,9 +1974,7 @@ It's Amy, the rabbit.<end>
 // おいと゛んのすきな　ト゛ック゛フート゛か゛
 // たくさん　ありますぜ。<end>
 <Oidon>
-It's full of yummy<nl>
-things.<pause> So many of my<nl>
-favorite dog treats...<end>
+It's full of yummy things.<pause> So many of my favorite dog treats...<end>
 
 // <Oidon>きのうのことて゛　ききたいんた゛か゛、なんか
 // かわったことは　なかったか？
@@ -2759,7 +2641,7 @@ someone is here.<end>
 What to do?<end>
 
 // なにを？　<end>
-What?<end>
+Which?<end>
 
 // と゛こへ？　<end>
 Where?<end>
@@ -4115,7 +3997,7 @@ Wait, I mean *whisper whisper*, *mumble mumble*
 What to do?<end>
 
 // なにを？　<end>
-What?<end>
+Which?<end>
 
 // た゛れを？　<end>
 Whom?<end>
@@ -5334,7 +5216,7 @@ What to do?<end>
 Where?<end>
 
 // なにを？　<end>
-What?<end>
+Which?<end>
 
 // た゛れを？　<end>
 Whom?<end>
@@ -6320,7 +6202,7 @@ What to do?<end>
 Where?<end>
 
 // なにを？　<end>
-What?<end>
+Which?<end>
 
 // <Beasu>いらっしゃい!　おっ、おいと゛んさん。
 // コアラさん　また゛　こ゛きけ゛んななめなんた゛。
@@ -7700,7 +7582,7 @@ Translation goes here.<end>
 What to do?<end>
 
 // なにを？　<end>
-What?<end>
+Which?<end>
 
 // と゛こへ？　<end>
 Where?<end>
@@ -8592,7 +8474,7 @@ What to do?<end>
 Where?<end>
 
 // なにを？　<end>
-What?<end>
+Which?<end>
 
 // た゛れを？　<end>
 Whom?<end>

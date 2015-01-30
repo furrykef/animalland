@@ -149,13 +149,6 @@ RAM variables
 <@BiFi> FAF9-FAFD are kanji basic related and FAFC contain a few MSX2 and MSX2+ related things
 
 
-"What?"
--------
-The "なにを？" prompt could be translated as "Choose an item."
-
-If we want to get REALLY adventurous, we could remember what the last menu item was and compare it to allow us to print strings such as "Look at what?"
-
-
 Text blocks
 -----------
 All ranges are inclusive

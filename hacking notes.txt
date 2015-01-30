@@ -1,18 +1,18 @@
+Our hack uses an expanded ROM. This means, if you are hacking a copy of the original Japanese ROM, you should expand the ROM to 256 KB before trying to build the project. Adding 128 KB of anything to the end of the file should be sufficient.
+
 The font is a 1bpp raw file named vwf.bin. It can be edited in tools such as Tile Layer Pro and Tile Molester. The width of each character is defined in the char_widths table in animalhack.asm.
 
 The "no" symbol (a circle with a slash through it) appears in the font for characters that correspond to control codes; it's useless to put anything there except as an easter egg. (It's possible we didn't find all of 'em, so always check to see if your special character will display.) The character $10 in the charset ($90 in the game script) is also a control code for menus, though it's blank, because it also gets displayed (as a space).
 
 The script is a standard Atlas script.
 
-The game's text formatting routine is pretty smart. It can wrap lines automatically, and it will automatically prompt for a keypress if the text goes on too long. It's even smart enough not to prompt for a keypress in the middle of a sentence, except for a logical pausing point such as a comma. If your text goes on too long with no place where it can pause, the game will print an error message. You would almost have to be doing it on purpose or writing very badly indeed for this to happen.
+The game's text formatting routine will wrap lines automatically, and it will automatically prompt for a keypress if the text goes past the bottom margin. I wanted to make it smart enough not to ask for a keypress in the middle of a sentence, but in the end I decided it's not worth the effort. Instead I took note of passages where this happens and inserted prompts at appropriate places by hand.
 
 
-Text formatting algorithm
--------------------------
-The text formatting algorithm is more complicated than in most games. As in most games, it will stop and ask the user to press a key if the text won't fit in the box. What it won't do, though, is do this in the middle of a sentence, except at a logical stopping point such as a comma. So we'll use the term "stopping point" to refer to these points.
+The ASM code
+------------
+The game ROM is loaded into $4000-BFFF. The original game used $4000-7FFF for the game's code and data and $8000-BFFF for the script. This $8000-BFFF region could get switched with every chapter. This means each chapter could have up to 16 KB of text. That's more than we needed, so we decided to make it 12 KB, and filled the remaining 4 KB with code and data, since there wasn't enough space for it in the $4000-7FFF region. Since 4 KB is smaller than a bank, we had to duplicate this 4 KB in every bank that could be loaded in that region. Thus, the code that goes in this region is in multibank.asm, because it's assembled once and then included in several different banks using incbin. The multibank.sym file generated in the process is used to allow animalhack.asm to have access to symbols defined in multibank.asm.
 
-The code for this is a little difficult to follow, especially since the code has to deal with horizontal word wrapping as well, so we will explain it here.
+So animalhack.asm mainly applies hacks to the original ROM code, and multibank.asm includes code and data that doesn't fit into animalhack.asm. Patches frequently take the form of animalhack.asm modifying a few instructions and then branching to somewhere in multibank.asm, since multibank.asm is where all our usable free space is.
 
-Every time the text routine is told to print a space, first we check what the previous character was. If it was a period, exclamation point, or one of a few other symbols, we are at a stopping point, in which case we scan the rest of the string to the next stopping point to see if the text will fit in the block. If so, the space remains a space. Otherwise, it becomes <key> (the wait-for-keypress code).
-
-If the space did not become <key> (either because the next utterance fit the block or because the space wasn't a stopping point), we next have to determine if the next word fits the line. If not, the space becomes <nl> (newline).
+It's an ugly system, but it works.

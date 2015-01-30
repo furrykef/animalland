@@ -258,8 +258,14 @@ org     $4792, $4794
 ; This is where the original game's PrintChar routine was. We'll just hook it to PrintChar8
 forg    $027ba
 org     $47ba, $4846
-PrintChar8_hook:
         jp      PrintChar8
+
+
+; This is our hook for linewrapping
+; This is at the start of the original FetchAndPrintChar
+forg    $025e7
+org     $45e7
+        call    FetchCharWithLinewrapping
 
 
 forg $20000 + MULTIBANK_OFFSET
