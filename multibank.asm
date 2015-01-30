@@ -26,8 +26,7 @@ CHAR_KEY:           equ     $ff
 
 
 ; Misc. constants
-RIGHT_MARGIN:       equ     184
-WIDTH_OF_SPACE:     equ     3
+RIGHT_MARGIN:       equ     23*8
 
 
 ; BIOS stuff
@@ -169,7 +168,7 @@ ErasePushSpaceKey:
         jp      $4a8e
 
 
-; This adds to the code that was at $475d
+; This adds to the code that was at $0275d
 HandleFirstLineOfDialogue:
         xor     a
         ld      (pixel_offset), a
@@ -177,7 +176,7 @@ HandleFirstLineOfDialogue:
         ld      hl, $1008                   ; the line the patch at $475d was patching over
         ret
 
-; This adds to the code that was at $4771
+; This adds to the code that was at $02771
 HandleNewline:
         ; These three lines are from the original routine
         ld      a, (cur_y)
@@ -202,7 +201,7 @@ DrawMenuLetters:
         ld      (text_color), a
         ld      a, (ix)                     ; [IX] points to the char in the script
         inc     ix
-        add     a, $80                      ; Adjust it to MSX charset
+        add     a, $80                      ; Adjust it to MSX encoding
         cp      CHAR_MNL                    ; Is this the <mnl> code?
         jp      z, HandleMenuNewline        ; Branch if so
         call    PrintChar8                  ; Print char
@@ -212,7 +211,7 @@ DrawMenuLetters:
         ret
 
 
-; This replaces the bit of code that was at $4792 ($02792 in ROM space)
+; This replaces the bit of code that was at $02792
 ; IX is a pointer to the name to display
 ; HL contains the address in VRAM to write to
 DisplayNameTag:
@@ -279,10 +278,6 @@ PrintChar:
 
         ld      a, (char_to_print)
         call    GetCharWidth
-        ld      b, a                    ; Add the width to the cursor
-        ld      a, (cur_x)
-        add     a, b
-        ld      (cur_x), a
 
         call    GetPtrToCharData
         call    Write1stTile
@@ -327,7 +322,7 @@ PrintChar:
 
 
 ; Points DE to the first row of pixels to the char in char_to_print
-; Preserves HL
+; Clobbers BC, preserves HL
 GetPtrToCharData:
         ld      a, (char_to_print)
         ex      de, hl
@@ -343,21 +338,23 @@ GetPtrToCharData:
 
 
 ; Inputs:
-;   A = char whose width we're looking up
+;   A = char whose width we're looking up (MSX encoding, not script encoding)
 ;
 ; Outputs:
 ;   char_width = A = width of char in pixels
 ;
-; Clobbers BC, preserves HL
+; Preserves BC and HL
 GetCharWidth:
+        push    bc
         push    hl
         ld      b, 0
         ld      c, a
         ld      hl, char_widths
         add     hl, bc
         ld      a, (hl)
-        ld      (char_width),a
+        ld      (char_width), a
         pop     hl
+        pop     bc
         ret
 
 
@@ -492,7 +489,7 @@ CalcStrWidth:
         ld      a, (ix)
         cp      CHAR_END
         jr      z, .done
-        add     $80                     ; convert to MSX charset
+        add     $80                     ; convert to MSX encoding
         push    bc
         call    GetCharWidth
         pop     bc
@@ -510,17 +507,29 @@ CalcStrWidth:
 FetchCharWithLinewrapping:
         ld      a, (ix+0)                   ; the line our hook replaced
 
+        ; Add the width of this character to the cursor
+        push    bc
+        add     a, $80                      ; convert to MSX encoding
+        call    GetCharWidth
+        ld      b, a
+        ld      a, (cur_x)
+        add     a, b
+        ld      (cur_x), a
+        pop     bc
+
+        ; Get the char from the script again, since we clobbered A
+        ld      a, (ix+0)
+
+        ; Don't do anything else if it isn't a space
         cp      CHAR_SPACE
         ret     nz
 
         ; This is a space; check if the next word fits on the line.
         ; If so, the space will remain a space.
         ; If not, it will become a newline.
-        push    bc                          ; GetCharWidth clobbers BC
         push    de
         push    ix
         ld      a, (cur_x)
-        add     a, WIDTH_OF_SPACE
         cp      RIGHT_MARGIN
         jr      nc, .overflowed
         ld      d, a                        ; D will store the running X position
@@ -536,6 +545,7 @@ FetchCharWithLinewrapping:
         jr      z, .fits
         cp      CHAR_END
         jr      z, .fits
+        add     a, $80                      ; convert to MSX encoding
         call    GetCharWidth
         add     a, d                        ; Update running X coordinate
         cp      RIGHT_MARGIN
@@ -552,7 +562,6 @@ FetchCharWithLinewrapping:
 .done:
         pop     ix
         pop     de
-        pop     bc
         ret
 
 

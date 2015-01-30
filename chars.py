@@ -18,8 +18,8 @@ CHAR_WIDTHS = [
 
 #       [first char here is space]
 #       [asterisk in this row is not the one we use]
-#          !  "  #  $  %  &  '  (  )  *  +  ,  -  .  /
-        3, 2, 5, 6, 6, 6, 6, 3, 3, 3, 6, 6, 3, 5, 2, 4,
+#          !  "     $  %  &  '  (  )  *  +  ,  -  .  /
+        3, 2, 5, 0, 6, 6, 6, 3, 3, 3, 6, 6, 3, 5, 2, 4,
 
 #       0  1  2  3  4  5  6  7  8  9  :  ;  <  =  >  ?
         5, 3, 6, 6, 6, 6, 6, 6, 6, 6, 2, 3, 6, 6, 6, 6,
@@ -33,8 +33,8 @@ CHAR_WIDTHS = [
 #       `  a  b  c  d  e  f  g  h  i  j  k  l  m  n  o
         6, 5, 5, 5, 5, 5, 4, 5, 5, 2, 3, 5, 2, 6, 5, 5,
 
-#       p  q  r  s  t  u  v  w  x  y  z  {  |  }  ~
-        5, 5, 4, 5, 4, 5, 5, 6, 5, 5, 5, 6, 6, 6, 6, 0,
+#       p  q  r  s  t  u  v  w  x  y  z  {  |  }
+        5, 5, 4, 5, 4, 5, 5, 6, 5, 5, 5, 6, 6, 6, 0, 0,
 
 #       [first char here is the odd "N"-like character]
 #       [after skipping a control code, next 5 are "PRESS SPACE"]

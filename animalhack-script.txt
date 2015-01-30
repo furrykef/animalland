@@ -1885,7 +1885,7 @@ There's nothing inside the...<pause> ah, hang on.<pause> There's a scrap of pape
 // あとは　やふ゛けていて　た゛めて゛す。
 // さ゛んねん　ウー　ワンワン!<end>
 <Oidon>
-I can read an "N", but not anything after that. Too bad...<pause> Grrowf!<end>
+I can read an "N", but not anything after that. Too bad...<pause> grrowf!<end>
 
 // <Oidon>やや　いすのしたに　けんし゛ゅうか゛
 // ころか゛っています!　これか゛　きょうきに
