@@ -3,7 +3,12 @@ MURDER IN ANIMAL LAND
 http://www.d1.dion.ne.jp/~gake/koryaku/animal/animal.htm
 
 
-"There's not a single jewel left, only shards of glass." The line should break after "shards", but instead breaks before it.
+Buggy behavior with C-BIOS MSX2+ JP setting in openMSX. Background color is black in the main game. May be related to the RAM region we're using.
+
+
+Check that text can go right up against the right margin
+
+Word wrapping should be disabled on password screen
 
 
 Not sure that "Start" and "Continue" on the title screen are always aligned the same. It may depend on when exactly you skip ahead to the title screen.
@@ -17,6 +22,8 @@ Check that <contd> blocks always start with cur_x at 0 as expected
 The けいさつ graphic begins at $0bb0c (probably as part of a larger graphic). The け appears in the pattern table as 44 9e 84 84 84 a4 48 00, but appears in the ROM as 44 9e 03 84 84 a4 48 00. The 03 appears to be a repeat code. The second 84 seems to mark the end of the RLE code in some way (its shared value with the previous value appears to be a coincidence).
 
 I discussed it with BiFi and he suggested each sequence of bytes is preceded by a code. The code is of the form 1xxxxxxx (where xxxxxxx is a count) if the next few bytes should be printed verbatim; 0xxxxxxx if the next byte should be repeated N times (RLE).
+
+A character holds a sign in Japanese in the ending (しゃくほう　しろ！！, "Release him/her!!" -- perhaps translate as "FREE [name]!!").
 
 
 The ending (at least) loads bank 15 ($1e000-1ffff) into $6000. Not sure why. We may want to consider leaving this bank alone.
@@ -127,6 +134,7 @@ Release checklist
 
 When done, submit to MSX sites:
 * msx.org
+* http://www.generation-msx.nl/software/enix/animal-land-murder-case/translations/886/
 
 
 Also submit the porn magazine easter egg and possibly ending password to tcrf.net
@@ -193,15 +201,6 @@ Bank identification
 No duplicates. So long as we don't change these, we can identify a bank by its first byte.
 
 
-Remember to put in manual
--------------------------
-ROM type is "ASCII 8kbyte"
-
-Run at NTSC speed (may want to emulate a Japanese MSX)
-
-You can use 0 to back out of menus
-
-
 Credits
 -------
 Kef Schecter - hacking and translation
@@ -264,6 +263,8 @@ Chapter 6: つきのわぐま
 Chapter 7: おおありくい
 Ending: えンテ゛ィンク゛ (secret password!)
 
+[use right ctrl to type ン in openMSX]
+
 
 Possible English passwords
 --------------------------
@@ -302,5 +303,3 @@ INSTAWIN
 Misc
 ----
 Consider "ASK ABOUT" instead of "ASK".
-
-The game will probably wig out if the text for any chapter begins in a different bank from the corresponding block in the original ROM.

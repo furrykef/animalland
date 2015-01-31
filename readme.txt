@@ -4,6 +4,19 @@ RUN THE GAME AT NTSC SPEED (60 Hz)! This is the speed at which the game was desi
 
 If your emulator or flash cart asks for the ROM type, there should be an option like "ASCII 8kbyte" or "ASCII8". Choose that one. Chances are, though, that the emulator will autodetect the ROM type correctly. You'll know if it doesn't, since the game will not run at all with the wrong ROM type.
 
+Here are some instructions for specific emulators.
+
+Meisei:
+* Cartridge type: ASCII MegaROM
+* RAM: 64 KB in slot 3
+* VDP: TI TMS9118 (60Hz), or anything that says 60Hz
+
+OpenMSX:
+* MSX Type: C-BIOS MSX1 JP or National CF-1200
+
+MESS:
+* ???
+
 
 Translation notes
 -----------------
@@ -30,6 +43,12 @@ We can't call 'em "frequently asked questions" because then we would be lying.
 
 Q: The game said something about a file to record my progress. Where are the files stored?
 A: They aren't. The names are really passwords.
+
+Q: Is it possible to lose the game or make it unwinnable?
+A: Nope.
+
+Q: Does the game have any swearing?
+A: Nope.
 
 Q: Is there any way to go back to the title screen after choosing "continue"?
 A: None that we've found. Reset your MSX.
