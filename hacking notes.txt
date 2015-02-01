@@ -9,6 +9,24 @@ The script is a standard Atlas script.
 The game's text formatting routine will wrap lines automatically, and it will automatically prompt for a keypress if the text goes past the bottom margin. I wanted to make it smart enough not to ask for a keypress in the middle of a sentence, but in the end I decided it's not worth the effort. Instead I took note of passages where this happens and inserted prompts at appropriate places by hand.
 
 
+Graphics
+--------
+Background images are stored in an RLE format. Each image has the following format:
+
+The first two bytes give the size of the compressed image in bytes, including the size of this header. This tells the program how many bytes to skip to get to the next image. Therefore, when replacing an image, this value should NOT be updated even if the new image is smaller.
+
+The third byte is the VRAM address to write the data to, divided by eight.
+
+The next bytes are the pattern data. This data is compressed using an RLE scheme using the following binary codes:
+  * 00000000: denotes end of the pattern data.
+  * 0nnnnnnn: the next byte is to be output n times. For example, the hex values 03 5a output 5a 5a 5a.
+  * 1nnnnnnn: the next n bytes are to be copied verbatim. For example, the hex values 83 7c 24 02 output 7c 24 02.
+
+(Note: The RLE encoder used in the original game uses RLE to encode runs of two bytes, which is inefficient, so it is quite easy to make new graphics fit in the same space as the old by using RLE only for repetitions of three or more bytes.)
+
+Finally, the bytes after this are the tilemap, uncompressed. The map is 19x14, so it'll be 266 bytes.
+
+
 The ASM code
 ------------
 The game ROM is loaded into $4000-BFFF. The original game used $4000-7FFF for the game's code and data and $8000-BFFF for the script. This $8000-BFFF region could get switched with every chapter. This means each chapter could have up to 16 KB of text. That's more than we needed, so we decided to make it 12 KB, and filled the remaining 4 KB with code and data, since there wasn't enough space for it in the $4000-7FFF region. Since 4 KB is smaller than a bank, we had to duplicate this 4 KB in every bank that could be loaded in that region. Thus, the code that goes in this region is in multibank.asm, because it's assembled once and then included in several different banks using incbin. The multibank.sym file generated in the process is used to allow animalhack.asm to have access to symbols defined in multibank.asm.

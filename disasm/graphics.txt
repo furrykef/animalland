@@ -1,0 +1,85 @@
+; Load graphic
+;
+; Inputs:
+;   A: number of image to display
+;   $f2ee: address of first image in group
+$4042:  push    af
+        ld      a, ($f2ed)
+        ld      ($7000), a                  ; switch bank
+        ld      ($f2da), a
+        inc     a
+        ld      ($7800), a
+        pop     af
+        ld      hl, ($f2ee)
+        or      a
+        jr      z, $4076                    ; skip the loop for image #0
+
+        ; This loop just skips over N images, where N is the value that was passed in A
+        ld      b, a
+$4058:  ld      e, (hl)                     ; get size of compressed image
+        inc     hl
+        ld      d, (hl)
+        dec     hl
+        add     hl, de
+        ld      a, h
+        cp      $a0                         ; if HL < $A000...
+        jr      c, $4074                    ; ...we've not crossed a bank boundary; jump to top of loop
+        ld      a, ($f2da)                  ; else, we have crossed one
+        inc     a                           ; so we must update the banks
+        ld      ($7000), a
+        ld      ($f2da), a
+        inc     a
+        ld      ($7800), a
+        ld      de, $e000
+        add     hl, de
+$4074:  djnz    $4058
+
+$4076:  ex      de, hl
+        inc     de                          ; skip past the size
+        inc     de
+        ld      a, (de)                     ; get the VRAM address to write to, divided by 8
+        inc     de
+        push    de
+        call    $4146                       ; HL := A*8, putting a proper VRAM address in HL
+        call    $0053                       ; SETWRT
+        pop     de
+        call    $4150                       ; decompress to VRAM
+
+
+; HL := A*8
+$4146:
+        ld      h, 0
+        ld      l, a
+        ld      de, 8
+        call    $3193                       ; HL *= DE (IMULT)
+        ret
+
+
+; Decompress graphic to VRAM
+;
+; Inputs:
+;    DE: address to copy from
+$4150:  ld      a, ($0007)                  ; get VDP.DW
+        ld      c, a
+$4154:  ld      a, (de)
+        inc     de
+        or      a                           ; is the value 00?
+        ret     z                           ; we're done if so
+        ld      b, a
+        bit     7, b                        ; if bit 7 is set...
+        jr      nz, $4165                   ; ...then we copy N bytes
+
+        ; Bit 7 is clear; copy byte N times
+        ld      a, (de)
+        inc     de
+$415f:  out     (c), a                      ; write to VRAM
+        djnz    $415f
+        jr      $4154                       ; back to top of decoder loop
+
+        ; Bit 7 was set; copy N bytes
+$4165:  res     7, b                        ; clear high bit of loop count
+$4167:  ld      a, (de)
+        inc     de
+        out     (c), a
+        djnz    $4167
+        jr      $4154                       ; back to top of decoder loop

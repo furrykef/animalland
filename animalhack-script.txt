@@ -5059,9 +5059,9 @@ No, not yet.<end>
 <Oidon>
 Nuki! You are under arrest for the murder of Renard Fox!<nl>
 <Nuki>
-Now wait a minute!<key>
+Now wait a minute! I did no such thing!<key>
 <Nuki>
-I did no such thing! But I do have a confession to make.<key>
+But I do have a confession to make...<key>
 <Nuki>
 On the 10th at 11 PM, I got in an accident with an elephant in my rental car.<key>
 <Nuki>
@@ -5084,7 +5084,7 @@ What's the deal with these jewels?!<nl>
 <Nuki>
 I don't know anything about those.<nl>
 <Oidon>
-Yeah, right! We found these in your room!<key>
+Don't play dumb! We found these in your room!<key>
 <Nuki>
 I don't know what to say. I really don't know anything about them.<end>
 
@@ -5095,9 +5095,9 @@ I don't know what to say. I really don't know anything about them.<end>
 <Oidon>
 What's this key for?<nl>
 <Nuki>
-I've never seen it before.<key>
+I've never seen it before.<nl>
 <Oidon>
-It was found in your room!
+It was found in your room!<nl>
 <Nuki>
 Dunno how it got there.<end>
 
@@ -5162,7 +5162,7 @@ Who knows... maybe he just got tired of it.<end>
 <contd>
 Actually, I just realized something.<nl>
 <Oidon>
-Hmm? What's that?
+Hmm? What's that?<nl>
 <Kokon>
 There's a guy named Nuki who lives in my father's condo.<key>
 <Kokon>
@@ -5176,7 +5176,7 @@ Maybe the "N" is for Nuki.<end>
 // <Oidon>だんな、ココンは　10日のよる　11時には
 // ヘ゜ルーと　テ゛ートを　していたらしいですぜ。<end>
 <Oidon>
-Boss, It seems that from 11 on the night of the 10th Kit was on a date with Peruu.<end>
+Boss, it seems that at 11 on the night of the 10th Kit was on a date with Peruu.<end>
 
 // <Oidon>ほんじゃ、かえってもらいますぜ。<end>
 <Oidon>
@@ -5188,9 +5188,9 @@ OK, you may go now.<end>
 // そんなことを　いうなんて・・・。<key><Kokon>とっくに　わすれて　いたのに・・・。<end>
 <contd>
 <Kokon>
-...How mean!<pause> How could you be so disrespectful of my feelings and ask something like that?!<key>
+...How mean!<pause> How could you go and ask me something like that?!<key>
 <Kokon>
-And to think I had already put it all so far behind me...<end>
+And after I'd already put it all behind me...<end>
 
 // <Oidon>なせ゛　ゴンきちと　もめたんた゛？
 // <Nuki>やちんのことて゛すよ。なんか月もみのか゛して
@@ -5212,7 +5212,7 @@ It was about the rent. He had been overlooking it for months. I don't have any m
 <Nuki>
 I don't think so. His fights with me were simply due to me losing my temper...<key>
 <Nuki>
-He was a good man. I would have been thrown out on the streets long by now if it weren't for him. It's thanks to him someone as penniless as me can have somewhere so nice to stay.<end>
+He was a good man. I would have been thrown out on the streets long ago if it weren't for him. It's thanks to him someone as penniless as me can have somewhere so nice to stay.<end>
 
 // <Oidon>ゴンきちか゛　さいきんもめこ゛とを
 // おこしたことは　ないか？<end>
@@ -5387,8 +5387,7 @@ I don't know. Renard's sons should know.<end>
 // いいなあ・・・・・・。<pause>
 // おいと゛んも　テ゛ートしたい。<end>
 <Oidon>
-On the night of the 10th, Peruu was on a date with Kit.<pause>
-Must be fun...<pause> Wish I had a date too.<end>
+On the night of the 10th, Peruu was on a date with Kit.<pause> Must be fun...<pause> Wish I had a date too.<end>
 
 // <contd>
 // <Peruu>ここいか゛いて゛は　みたこと　ありませんわ。<end>
@@ -5447,7 +5446,7 @@ To whom?<end>
 // くるまを　かりていたようて゛す。
 // しかも、しろのこか゛たしゃを・・・・・・。<end>
 <Oidon>
-Ok, let's call the company Nuki rented the car from and see what we can find out.<key>
+OK, let's call the company Nuki rented the car from and see what we can find out.<key>
 <Oidon>
 ...<pause> Hmm...<pause> hmm...<pause>...<pause><key>
 <Oidon>
@@ -5457,7 +5456,7 @@ Boss, it seems Nuki did in fact rent a car from the 9th to the 11th. A small, wh
 <end>
 
 // <Oidon>ほんじゃ、いくのは　やめますぜ。<end>
-Translation goes here.<end>
+OK, never mind.<end>
 
 
 //******** CHAPTER 5 ********//
@@ -5583,8 +5582,7 @@ No, I don't.<end>
 
 // <Oidon>とくに　かわったところは　ありませんぜ。<end>
 <Oidon>
-Nothing particularly<nl>
-unusual about it.<end>
+Nothing particularly unusual about it.<end>
 
 // <contd>てか゛み、<end>
 Translation goes here.<end>
@@ -5597,14 +5595,12 @@ No one to talk to here.<end>
 // <Oidon>だんな、ここには　みせるあいてか゛
 // いませんぜ。<end>
 <Oidon>
-No one to show anything<nl>
-to here.<end>
+No one to show anything to here.<end>
 
 // <Oidon>だんな、ここには　たいほて゛きるものか゛
 // いませんぜ。<end>
 <Oidon>
-There's nobody here we<nl>
-can arrest.<end>
+There's nobody here we can arrest.<end>
 
 // <Oidon>し゛ゃあ、しょうこひんとして
 // もっておきますぜ。<end>
@@ -5629,8 +5625,7 @@ It's open. <pause>There's a safe.<end>
 // <Oidon>くっ・・・・・・。<pause>だんな、カキ゛か゛
 // かかっていて　あきませんぜ。<end>
 <Oidon>
-Nggh. It won't open.<nl>
-It's locked.<end>
+Nggh. It won't open. It's locked.<end>
 
 // <Oidon>だんな、きんこのなかに　はいっていたカキ゛を
 // つかったら　ひらきました。<pause>なかには　てか゛みか゛
@@ -5644,9 +5639,7 @@ There's a letter inside.<key>
 
 // <Oidon>あけましたよ。<pause>て゛も、もうなにも　ありませんぜ。<end>
 <Oidon>
-OK, it's open.<nl>
-<pause>But there's nothing<nl>
-inside.<end>
+OK, it's open.<pause> But there's nothing inside.<end>
 
 // <Oidon>ここに　いますぜ。<end>
 <Oidon>
@@ -5676,8 +5669,7 @@ Nothing to open here.<end>
 // <Oidon>だんな、ツネコを　たいほする　ひつようは
 // ありませんぜ。<end>
 <Oidon>
-Boss, there's no need<nl>
-to arrest her.<end>
+Boss, there's no need to arrest her.<end>
 
 // <Oidon>なかなか　きれいな　へやですぜ。
 // はくせいか゛　おいてあります。<end>
@@ -5750,11 +5742,9 @@ remember him by.<end>
 // いるか？
 // <Tsuneko>しっていることは　すへ゛て　おはなししました。<end>
 <Oidon>
-Know anything else<nl>
-about Renard?<nl>
+Know anything else about Renard?<nl>
 <Tsuneko>
-I already told you all<nl>
-I know.<end>
+I already told you all I know.<end>
 
 // ますぜ。<end>
 <end>
@@ -5938,15 +5928,13 @@ We need evidence first.<end>
 
 // <Oidon>また゛　"<char>"というもし゛は　わからないか？<end>
 <Oidon>
-Does this "N" still not<nl>
-mean anything to you?<end>
+Does this "N" still not mean anything to you?<end>
 
 // <contd>
 // <Konta>ヌキという　いか゛いは　なにも・・・。<end>
 <contd>
 <Konta>
-Aside from Nuki, I<nl>
-wouldn't know.<end>
+Aside from Nuki, I wouldn't know.<end>
 
 // ？<end>
 ?<end>
@@ -6099,8 +6087,7 @@ The file name is <m:X><m:X><m:X><m:X>.<end>
 // <Oidon>だんな、ヘ゜ルーを　たいほする　ひつようは
 // ありませんぜ。<end>
 <Oidon>
-Boss, there's no need<nl>
-to arrest her.<end>
+Boss, there's no need to arrest her.<end>
 
 // <contd>
 // <Peruu>ええ・・・。<end>
@@ -6142,15 +6129,12 @@ won't be of any use. Let's just leave it.<end>
 // <Oidon>たた゛の　ほんの　ようなのて゛　とるのは
 // やめますぜ。<end>
 <Oidon>
-It's just an ordinary<nl>
-book, so we don't need<nl>
-it.<end>
+It's just an ordinary book, so we don't need it.<end>
 
 // <Oidon>・・・だんな、へ゛つに　かわったところは
 // ありませんぜ。<end>
 <Oidon>
-Nothing particularly<nl>
-unusual about it.<end>
+Nothing particularly unusual about it.<end>
 
 // <Oidon>なにも　おちていませんぜ。<end>
 <Oidon>
@@ -6162,8 +6146,7 @@ Top of the line sofa.<end>
 
 // <Oidon>ふつうの　まと゛ですぜ。<end>
 <Oidon>
-Just an ordinary<nl>
-window.<end>
+Just an ordinary window.<end>
 
 // <Oidon>だんな、これは　とらないほうか゛
 // いいですぜ。<end>
@@ -6188,8 +6171,7 @@ We should probably leave it alone, boss.<end>
 // ほんとうのことを　いえ!!<end>
 <contd><key>
 <Oidon>
-Why are you so quiet?<nl>
-Tell us the truth!<end>
+Why are you so quiet? Tell us the truth!<end>
 
 // <Oidon>ここにある　はくせいは
 // ゴンきちに　もらったものた゛と　いったか゛、
@@ -6541,8 +6523,7 @@ It's too soon to make any conclusions though.<end>
 // <Oidon>とくに　かわったところは　ありませんぜ。
 // たた゛の　とうゆの　ようですぜ。<end>
 <Oidon>
-Nothing unusual about<nl>
-the oil.<end>
+There's nothing unusual about the oil.<end>
 
 // <Oidon>きんは゜つに　けを　そめることか゛て゛きる
 // くすりて゛す。もしや　はんにんは
@@ -6552,9 +6533,7 @@ Translation goes here.<end>
 // <Oidon>ちょっと　ふるいレンカ゛て゛すか゛
 // とくにかわったところは　ありませんぜ。<end>
 <Oidon>
-It's a bit old, but<nl>
-it's still ordinary<nl>
-bricks.<end>
+It's a bit old, but it's still ordinary bricks.<end>
 
 // <Oidon>ここには、た゛れも　いませんぜ。<end>
 <Oidon>
@@ -6963,8 +6942,7 @@ Translation goes here.<end>
 // <Oidon>・・・へ゛つに　かわったところは
 // ありませんぜ。<end>
 <Oidon>
-Nothing particularly<nl>
-unusual about it.<end>
+Nothing particularly unusual about it.<end>
 
 0<end>
 
@@ -7035,9 +7013,7 @@ Translation goes here.<end>
 // き　そのものに　かわったところは
 // ありませんぜ。<end>
 <Oidon>
-The trees may be dense,<nl>
-but there's nothing<nl>
-unusual about them.<end>
+The trees may be dense, but there's nothing unusual about them.<end>
 
 // <Oidon>だんな、あしあとか゛　あります。
 // しかし、はっきりしたものて゛は　ないのて゛
@@ -7278,8 +7254,7 @@ Translation goes here.<end>
 // <Oidon>ます゛は
 // た゛れかを　ここによひ゛ましょうせ゛。<end>
 <Oidon>
-Let's call someone in<nl>
-first.<end>
+Let's call someone in first.<end>
 
 // た゛れを　よひ゛ましょうか？　<end>
 Call whom?<end>
@@ -7495,8 +7470,7 @@ Translation goes here.<end>
 // <Konta>・・・それは、おやし゛のものた゛とおもいます。<end>
 <contd>
 <Konta>
-I think that's my<nl>
-father's.<end>
+I think that's my father's.<end>
 
 // 。<end>
 .<end>
@@ -7909,8 +7883,7 @@ Translation goes here.<end>
 
 // <Oidon>とくに　みるようなものは　ありませんぜ。<end>
 <Oidon>
-There's nothing inter-<nl>
-esting to look at.<end>
+There's nothing interesting to look at.<end>
 
 // <Oidon>こうきゅうそうな　ゆひ゛わて゛す。
 // て゛も　なんの　へんてつも　ありませんぜ。<end>

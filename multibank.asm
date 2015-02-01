@@ -105,6 +105,7 @@ ClearPasswordDialogueAndPrintString:
         ld      b, a
         xor     a
         ld      (pixel_offset), a
+        ld      (cur_x), a
 .loop:
         push    bc
         ld      bc, 20                      ; 20 rows of pixels to erase
@@ -119,10 +120,12 @@ ClearPasswordDialogueAndPrintString:
         ret
 
 
+; Used in dialogues for password screen
 ClearPixelOffsetAndPrintString:
         push    af
         xor     a
         ld      (pixel_offset), a
+        ld      (cur_x), a
         pop     af
         call    $4003                       ; print string
         ret
@@ -201,7 +204,7 @@ DrawMenuLetters:
         ld      (text_color), a
         ld      a, (ix)                     ; [IX] points to the char in the script
         inc     ix
-        add     a, $80                      ; Adjust it to MSX encoding
+        add     a, $80                      ; Adjust it to screen encoding
         cp      CHAR_MNL                    ; Is this the <mnl> code?
         jp      z, HandleMenuNewline        ; Branch if so
         call    PrintChar8                  ; Print char
@@ -338,7 +341,7 @@ GetPtrToCharData:
 
 
 ; Inputs:
-;   A = char whose width we're looking up (MSX encoding, not script encoding)
+;   A = char whose width we're looking up (screen encoding, not script encoding)
 ;
 ; Outputs:
 ;   char_width = A = width of char in pixels
@@ -489,7 +492,7 @@ CalcStrWidth:
         ld      a, (ix)
         cp      CHAR_END
         jr      z, .done
-        add     $80                     ; convert to MSX encoding
+        add     $80                     ; convert to screen encoding
         push    bc
         call    GetCharWidth
         pop     bc
@@ -509,7 +512,7 @@ FetchCharWithLinewrapping:
 
         ; Add the width of this character to the cursor
         push    bc
-        add     a, $80                      ; convert to MSX encoding
+        add     a, $80                      ; convert to screen encoding
         call    GetCharWidth
         ld      b, a
         ld      a, (cur_x)
@@ -545,7 +548,7 @@ FetchCharWithLinewrapping:
         jr      z, .fits
         cp      CHAR_END
         jr      z, .fits
-        add     a, $80                      ; convert to MSX encoding
+        add     a, $80                      ; convert to screen encoding
         call    GetCharWidth
         add     a, d                        ; Update running X coordinate
         cp      RIGHT_MARGIN

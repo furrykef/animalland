@@ -8,8 +8,6 @@ Buggy behavior with C-BIOS MSX2+ JP setting in openMSX. Background color is blac
 
 Check that text can go right up against the right margin
 
-Word wrapping should be disabled on password screen
-
 
 Not sure that "Start" and "Continue" on the title screen are always aligned the same. It may depend on when exactly you skip ahead to the title screen.
 
@@ -21,7 +19,10 @@ Check that <contd> blocks always start with cur_x at 0 as expected
 
 The けいさつ graphic begins at $0bb0c (probably as part of a larger graphic). The け appears in the pattern table as 44 9e 84 84 84 a4 48 00, but appears in the ROM as 44 9e 03 84 84 a4 48 00. The 03 appears to be a repeat code. The second 84 seems to mark the end of the RLE code in some way (its shared value with the previous value appears to be a coincidence).
 
-I discussed it with BiFi and he suggested each sequence of bytes is preceded by a code. The code is of the form 1xxxxxxx (where xxxxxxx is a count) if the next few bytes should be printed verbatim; 0xxxxxxx if the next byte should be repeated N times (RLE).
+I discussed it with BiFi and he noticed each sequence of bytes is preceded by a code. The code is of the form 1xxxxxxx (where xxxxxxx is a count) if the next few bytes should be printed verbatim; 0xxxxxxx if the next byte should be repeated N times (RLE).
+
+The code 0x00 is used to terminate the data.
+
 
 A character holds a sign in Japanese in the ending (しゃくほう　しろ！！, "Release him/her!!" -- perhaps translate as "FREE [name]!!").
 
