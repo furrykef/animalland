@@ -22,6 +22,8 @@ Translation notes
 -----------------
 Our general philosophy when translating is that making the text natural and entertaining is more important than making it an accurate reflection of the original Japanese. After all, if you want an authentic Japanese experience, you're only going to get it by playing the game in Japanese. That said, we have tried our best to preserve the spirit of the original game, and most of the concessions we've made are pretty minor.
 
+On the other side of the coin, our philosophy is also, "What would the developers have done?" In other words, if the original writers had known English and Western culture as fluently as we do, what would they have written? One thing they would not have done is translate everything as literally as possible, because that would kill all the flavor the original writing had.
+
 Here are some of the particular issues we ran into when translating. WARNING: Here be minor spoilers!
 
 * Many character names were changed. For example, Renard was originally named Gonkichi, and Kit was originally named Kokon. "Gon" and "kon" are fox noises in Japanese, and "ko-" is often a prefix meaning "little" or "offspring". (For example, a "koinu" is a puppy, and the Koopalings in the Mario series are called "Kokuppa".) So we chose "Renard", which is French for "fox", and of course a fox's offspring is called a "kit". We didn't manage to capture the nuance of every name, and a couple of names were pulled out of a hat.
@@ -34,7 +36,7 @@ Here are some of the particular issues we ran into when translating. WARNING: He
 
 * The name of The Dragon Cafe may have had a dual meaning. The name was spelled "Doragon" in Japanese, and Renard's and Drago's original names were "Gonkichi" and "Dorakure". So "Doragon" could be read as a portmanteau: "Dora[kure]-Gon[kichi]".
 
-* There is a tortured pun involving a stone you find in the Forest Maze. You are told to find the "Kokeshi Rock". A Japanese player would expect to find a rock in the shape of a Japanese kokeshi doll. Instead, what you actually find is a rock with an inscription that almost makes sense, but not quite. Your partner realizes the inscription makes sense if you remove the letter "ko" -- the word "kokeshi" has a second meaning of "erasing the 'ko'".
+* There is a tortured pun involving a stone you find in the Forest Maze. You are told to find the "Kokeshi Rock". A Japanese player would expect to find a rock in the shape of a Japanese kokeshi doll. Instead, what you actually find is a rock with an inscription that almost makes sense, but not quite. Your partner realizes the inscription makes sense if you remove the letter "ko" -- the word "kokeshi" has a second meaning of "erasing the 'ko'". We'll leave it to you to figure out what we replaced this gag with; you'll know it when you see it.
 
 
 QUESTIONS & ANSWERS
@@ -50,6 +52,12 @@ A: Nope.
 Q: Does the game have any swearing?
 A: Nope.
 
+Q: Does the game have multiple endings?
+A: Nope.
+
+Q: Can anything I do in one chapter affect what happens in future chapters?
+A: Nope.
+
 Q: Is there any way to go back to the title screen after choosing "continue"?
 A: None that we've found. Reset your MSX.
 
@@ -63,7 +71,7 @@ Q: This game's graphics suck!
 A: One, that's still not a question. Two, this game was written for the MSX1, on which it is extremely hard to get pretty graphics. The screen is divided into 8x8 tiles, and each line of pixels in those tiles can only have two colors. That means, for example, that drawing an outline around a character or object is just not possible. I'm sure that a particularly skilled artist would be able to create better images, but it would not be easy. Prettier MSX games generally used the much more advanced graphics capabilities of the MSX2.
 
 Q: This game's music is annoying!
-A: Now imagine having to hear it constantly while testing or debugging the hack.
+A: Now imagine having to hear it constantly while testing or debugging the hack. We've learned to love our emulators' mute function...
 
 
 Credits

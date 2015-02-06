@@ -15,16 +15,16 @@ Background images are stored in an RLE format. Each image has the following form
 
 The first two bytes give the size of the compressed image in bytes, including the size of this header. This tells the program how many bytes to skip to get to the next image. Therefore, when replacing an image, this value should NOT be updated even if the new image is smaller.
 
-The third byte is the VRAM address to write the data to, divided by eight.
+Next are four blocks of pattern data. The first block is loaded into VRAM location $0000, the second is loaded into $0800, the third is loaded into $2000, and the fourth is loaded into $2800. Each block starts with a one-byte header that indicates how many tiles to skip. For instance, if the first byte of the second block is 8, the data will be written to $0840, eight tiles after $0800.
 
-The next bytes are the pattern data. This data is compressed using an RLE scheme using the following binary codes:
+The pattern data streams are compressed using an RLE scheme using the following binary codes:
   * 00000000: denotes end of the pattern data.
-  * 0nnnnnnn: the next byte is to be output n times. For example, the hex values 03 5a output 5a 5a 5a.
+  * 0nnnnnnn: the next byte is to be output n times (an RLE run). For example, the hex values 03 5a output 5a 5a 5a.
   * 1nnnnnnn: the next n bytes are to be copied verbatim. For example, the hex values 83 7c 24 02 output 7c 24 02.
 
 (Note: The RLE encoder used in the original game uses RLE to encode runs of two bytes, which is inefficient, so it is quite easy to make new graphics fit in the same space as the old by using RLE only for repetitions of three or more bytes.)
 
-Finally, the bytes after this are the tilemap, uncompressed. The map is 19x14, so it'll be 266 bytes.
+Finally, after the four blocks comes the tilemap, uncompressed. Maps for backgrounds are 19x14, so they'll be 266 bytes.
 
 
 The ASM code

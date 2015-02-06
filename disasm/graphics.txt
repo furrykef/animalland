@@ -1,4 +1,13 @@
-; Load graphic
+$7346:  ld      a, 6                        ; ID of ALPD graphic
+$7348:  call    $4021                       ; jumps to $403c
+        call    $4033                       ; jumps to $4260
+
+
+$403c:  call    $4042
+        jp      $40ba
+
+
+; Load graphic (does not load tilemap)
 ;
 ; Inputs:
 ;   A: number of image to display
@@ -44,6 +53,21 @@ $4076:  ex      de, hl
         call    $0053                       ; SETWRT
         pop     de
         call    $4150                       ; decompress to VRAM
+        ld      a, (de)                     ; get a second VRAM/8 address
+        inc     de
+        push    de
+        call    $4146                       ; HL := A*8
+        ld      de, $0800
+        add     hl, de
+        call    $0053                       ; SETWRT
+        pop     de
+        call    $4150                       ; decompress to VRAM
+
+        ; *** SNIP ***
+        ; This rigamarole is done two more times,
+        ; only HL has $2000 and $2800 added instead of $0800
+
+        ret
 
 
 ; HL := A*8
@@ -83,3 +107,44 @@ $4167:  ld      a, (de)
         out     (c), a
         djnz    $4167
         jr      $4154                       ; back to top of decoder loop
+
+
+$4199:
+        call    $4042
+        push    de
+        ld      a, ($f2e8)
+        ld      l, a
+        ld      de, $0020
+        call    $3193                       ; HL *= DE (IMULT)
+        ld      de, $1802
+        add     hl, de
+        ld      a, ($f2e9)
+        add     a, l
+        ld      l, a
+        pop     de
+        ld      a, ($0007)
+        ld      c, a
+        ld      a, ($f2e6)
+        ld      b, a
+$41bb:  push    bc
+        call    $0053                       ; SETWRT
+        ld      a, ($f2e7)
+        ld      b, a
+$41c3:  ld      a, (de)
+        out     (c), a
+        inc     de
+        djnz    $41c3
+        ld      bc, $0020
+        add     hl, bc
+        pop     bc
+        djnz    $41bb
+        jp      $4253
+
+
+$4260:  ld      a, 1
+        ld      ($f2e8), a
+        ld      hl, $130e
+        ld      ($f2e6), hl
+        ld      a, ($f2d9)
+        call    $4199
+        ret
