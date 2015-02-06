@@ -3075,7 +3075,7 @@ She's just a customer at the jewelry store so there's no reason to suspect her. 
 // <Kokon>ヘ゜ルーさんと　ハ゜フハ゜フしていましたよ。<end>
 <contd>
 <Kokon>
-Peruu was giving me some "puff-puff".<end>
+Peru was giving me some "puff-puff".<end>
 
 // <Oidon>また゛　これをみたものは　いませんぜ。
 // いったい　た゛れのなんて゛しょうかね。<end>
@@ -3613,7 +3613,7 @@ Little brats like him don't usually commit such serious crimes though...<end>
 // ありそうなのは　こいつですぜ。
 // さらにそうさか゛ひつようですぜ。<end>
 <Oidon>
-Peruu confirmed his alibi, but right now he's got the most likely motive. We'll have to further our investigation.<end>
+Peru confirmed his alibi, but right now he's got the most likely motive. We'll have to further our investigation.<end>
 
 // <Oidon>そのケカ゛は、と゛うしたんた゛ね？
 // <Rinrin>やけと゛て゛す。きのうのよる、コンタさんのいえに
@@ -3638,7 +3638,7 @@ It's probably just a coincidence.<end>
 // <Kokon>それは　こし゛んてきな　ことなのて゛
 // はなしたく　ありませんね<end>
 <Oidon>
-Hey, you and Peruu smell of the same perfume. What's the deal?<nl>
+Hey, you and Peru smell of the same perfume. What's the deal?<nl>
 <Kokon>
 It's personal. I'd rather not talk about it.<end>
 
@@ -3665,11 +3665,11 @@ Yes. He's younger than me and so cute! I just wanna give him some "puff-puff"!<e
 <Kokon>
 I'm telling you, I was home all night. God, we've been over this!<key>
 <Oidon>
-Ah, but Peruu tells us you two were together that night.<nl>
+Ah, but Peru tells us you two were together that night.<nl>
 <Kokon>
 OK, you've got me. How embarrassing...<key>
 <Kokon>
-To tell the truth, I was seeing Peruu behind Bunnie's back. She ended up finding out and now I've got all these scratches. It's not exactly something I like to talk about.<key>
+To tell the truth, I was seeing Peru behind Bunnie's back. She ended up finding out and now I've got all these scratches. It's not exactly something I like to talk about.<key>
 <Oidon>
 Even so, we're going to need you to tell the truth from here on.<nl>
 <Kokon>OK...<end>
@@ -4075,7 +4075,7 @@ I dunno.<end>
 // <Oidon>ヘ゜ルーは　10日のよる、
 // た゛れかと　テ゛ートしていたようて゛す。<end>
 <Oidon>
-It appears that on the night of the 10th Peruu was on a date.<end>
+It appears that on the night of the 10th Peru was on a date.<end>
 
 // <contd>
 // <Peruu>さあ・・・わかりませんわ。<end>
@@ -4364,7 +4364,7 @@ Lives alone in a condo owned by Renard close by the jewelry store. Stashes the r
 // きんは゜つのものは　いませんよ。
 // <pause>ふしき゛なものて゛すね。<end>
 <Oidon>
-It's not necessarily the perp's. But Red and Peruu both say there are no blond customers.<key>
+It's not necessarily the perp's. But Red and Peru both say there are no blond customers.<key>
 <Oidon>
 We've got not blond suspects, either.<pause> It's quite the mystery.<end>
 
@@ -4582,7 +4582,7 @@ So I was to go in his place...<end>
 // <Oidon>せっかく　ヘ゜ルーを　よんた゛んて゛すから
 // ヘ゜ルーに　めを　むけましょうよ。<end>
 <Oidon>
-We've got Peruu here, so let's focus on her.<end>
+We've got Peru here, so let's focus on her.<end>
 
 // 。<end>
 .<end>
@@ -5175,7 +5175,7 @@ Maybe the "N" is for Nuki.<end>
 // <Oidon>だんな、ココンは　10日のよる　11時には
 // ヘ゜ルーと　テ゛ートを　していたらしいですぜ。<end>
 <Oidon>
-Boss, it seems that at 11 on the night of the 10th Kit was on a date with Peruu.<end>
+Boss, it seems that at 11 on the night of the 10th Kit was on a date with Peru.<end>
 
 // <Oidon>ほんじゃ、かえってもらいますぜ。<end>
 <Oidon>
@@ -5386,7 +5386,7 @@ I don't know. Renard's sons should know.<end>
 // いいなあ・・・・・・。<pause>
 // おいと゛んも　テ゛ートしたい。<end>
 <Oidon>
-On the night of the 10th, Peruu was on a date with Kit.<pause> Must be fun...<pause> Wish I had a date too.<end>
+On the night of the 10th, Peru was on a date with Kit.<pause> Must be fun...<pause> Wish I had a date too.<end>
 
 // <contd>
 // <Peruu>ここいか゛いて゛は　みたこと　ありませんわ。<end>
@@ -5634,7 +5634,7 @@ Nggh. It won't open. It's locked.<end>
 It opens with the key we found in the safe.<pause>
 There's a letter inside.<key>
 <Oidon>
-...Maybe this is the letter Peruu was talking about.<end>
+...Maybe this is the letter Peru was talking about.<end>
 
 // <Oidon>あけましたよ。<pause>て゛も、もうなにも　ありませんぜ。<end>
 <Oidon>
@@ -6272,11 +6272,9 @@ Whom?<end>
 // <Konta>もう　ようし゛は　すみましたし、
 // わたしは　このへんて゛・・・。<end>
 <Konta>
-Andy! I got it!
-The code to the safe in the study is 2195.
-It sure took a lot of effort to find.....<key>
+Andy! I got it! The code to the safe in the study is 2195. It sure took a lot of effort to find...<key>
 <Konta>
-Now that I got that to you I'll just be on my way...<end>
+Now that I've got that to you, I'll just be on my way...<end>
 
 0<end>
 
@@ -6295,7 +6293,8 @@ Let's focus on Kit since he's here already.<end>
 
 // <Oidon>せっかく　ヘ゜ルーを　よんた゛んて゛すから
 // ヘ゜ルーに　めを　むけましょうよ。<end>
-Let's focus on Peruu since we got her here.<end>
+<Oidon>
+Let's focus on Peru since we've got her here.<end>
 
 
 //******** CHAPTER 6 ********//
@@ -6306,7 +6305,7 @@ Translation goes here.<end>
 
 // <Oidon>・・・しらへ゛ましたか゛　なにもありませんぜ。<end>
 <Oidon>
-...my investigation turns up nothing.<end>
+...My investigation turns up nothing.<end>
 
 // <contd>
 // しかし、そこか゛　みえにくいのて゛
@@ -6326,8 +6325,7 @@ Translation goes here.<end>
 // おまかせしますのて゛　しんこうほうこうを
 // カーソルキーて゛　しし゛してくた゛さい。<end>
 <Oidon>
-I'll let you decide where to go, boss.
-Move with the direction keys.<end>
+I'll let you decide where to go, boss. Move with the direction keys.<end>
 
 // <Oidon>すいちゅうし゛ゅうは　た゛いし゛な
 // しょうこひんですぜ。　むやみにつかうのは
@@ -6350,8 +6348,7 @@ A nice, peaceful lake.<end>
 // やはり　よこ゛すものか゛　いないた゛けあって
 // みす゛か゛　すきとおってますぜ。<end>
 <Oidon>
-Beautiful river.
-The water's so clean you can see right through it.<end>
+Beautiful river. The water's so clean you can see right through it.<end>
 
 // <Oidon>ふつうの　はしのようですぜ。<end>
 <Oidon>
@@ -6375,15 +6372,13 @@ Translation goes here.<end>
 // <Oidon>だんな、と゛うしたんて゛すか？
 // はやく、カーソルキーて゛　しし゛してくた゛さいよ。<end>
 <Oidon>
-What's the matter, boss?
-Press the direction keys and let's get moving.<end>
+What's the matter, boss? Press the direction keys and let's get moving.<end>
 
 // <Oidon>・・・たた゛の　マッチは゛こ　て゛す。
 // なかには　マッチか゛　3ほ゛んは゛かり
 // はいっています。<end>
 <Oidon>
-Just a normal box of matches.
-There are 3 matches inside.<end>
+Just a normal box of matches. There are 3 matches inside.<end>
 
 // <Oidon>・・・ふつうの　オノて゛す。
 // ハは　まったくかけていないのて゛、
@@ -6406,7 +6401,6 @@ Quite dirty looking.<end>
 // いし゛ょうありませんのて゛　し゛ゅうふ゛ん
 // つかえますぜ。<end>
 <Oidon>
-<Oidon>
 The lens looks unscathed, so it should be usable still.<end>
 
 // <Oidon>・・・ふつうの　すいちゅうメカ゛ネですぜ。<end>
@@ -6415,21 +6409,19 @@ Translation goes here.<end>
 // <Oidon>・・・おおきさ、かたちとも　よくあるカキ゛と
 // おなし゛ような　かんし゛か゛　しますぜ。<end>
 <Oidon>
-...Same shape and size of most keys.<end>
+...Same shape and size as most keys.<end>
 
 // <Oidon>・・・たかそうな　かんし゛のする
 // すいちゅうし゛ゅうですぜ。
 // そう　ふるくはないと　おもいます。<end>
 <Oidon>
-Looks rather expensive.
-Doesn't seem that old.<end>
+Looks rather expensive. Doesn't seem that old.<end>
 
 // <Oidon>・・・ふつうの　むしメカ゛ネて゛す。
 // レンス゛にキス゛は　ないのて゛　し゛ゅうふ゛ん
 // つかえますぜ。<end>
 <Oidon>
-Just a regular magnifying glass.
-The lense is unscathed so it should still be usable.<end>
+Just a regular magnifying glass. The lense is unscathed, so it should still be usable.<end>
 
 // <Oidon>だんな、このしんふ゛んは　やふ゛けているのて゛
 // 1まいの　はんふ゛んしか　ありませんぜ。
@@ -6700,7 +6692,7 @@ It's locked, boss.<end>
 // ・・・カチャッ・・・。<pause>
 // だんな、あきましたせ゛。<end>
 <Oidon>
-Ok, let's try opening it with this key.<pause> *click*<pause> It opened, boss.<end>
+OK, let's try opening it with this key.<pause> *click*<pause> It opened, boss.<end>
 
 // <Oidon>だんな、はこの　なかには　すいちゅうし゛ゅうか゛
 // はいって　ますぜ。<end>
@@ -6713,7 +6705,7 @@ Translation goes here.<end>
 
 // <Oidon>だんな、くす゛かこ゛か゛　ありますぜ。<end>
 <Oidon>
-There's a waste basket, boss.<end>
+There's a wastebasket, boss.<end>
 
 // <Oidon>くす゛かこ゛に　はいっている　しんふ゛んは
 // ほとんと゛　コ゛ミのようなものなのて゛
@@ -6729,7 +6721,7 @@ Translation goes here.<end>
 // はんふ゛んに　きれていた　しんふ゛んの
 // もうかたほうて゛す。<key><Oidon>まえにひろった　しんふ゛んと　ひ゜ったりと
 // あわさりますぜ。<end>
-.....<pause>
+...<pause>
 <Oidon>
 We found it, boss! The other half of the newspaper is in here.<key>
 <Oidon>
@@ -6765,7 +6757,7 @@ Translation goes here.<end>
 // おとしてみます。
 // ・・・ホ゜カ・・・<pause>ハ゛サ。<pause>　おとしましたせ゛。<end>
 <Oidon>
-Ok, let's knock the magazine down with the ball.<pause><pause> ...Got it.<end>
+OK, let's knock the magazine down with the ball.<pause><pause> ...Got it.<end>
 
 // <Oidon>て゛は、みす゛のなかを　しらへ゛て　みます。<end>
 <Oidon>
