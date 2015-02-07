@@ -268,6 +268,28 @@ org     $45e7
         call    FetchCharWithLinewrapping
 
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Graphics
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Animal Land Police Department
+forg    $0b8ef
+org     $98ef, $a0dd
+        db      1
+        incbin  "gfx/alpd-e.comp.1.bin"
+        db      1
+        incbin  "gfx/alpd.comp.2.bin"
+        db      1
+        incbin  "gfx/alpd.comp.3.bin"
+        db      1
+        incbin  "gfx/alpd.comp.4.bin"
+        incbin  "gfx/alpd.map"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Banks
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 forg $20000 + MULTIBANK_OFFSET
 org $a000, $bfff
 incbin "multibank.out"

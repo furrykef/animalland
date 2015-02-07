@@ -13,7 +13,7 @@ Graphics
 --------
 Background images are stored in an RLE format. Each image has the following format:
 
-The first two bytes give the size of the compressed image in bytes, including the size of this header. This tells the program how many bytes to skip to get to the next image. Therefore, when replacing an image, this value should NOT be updated even if the new image is smaller.
+The first two bytes give the size of the compressed image in bytes, including the size of this header, in little endian. This tells the program how many bytes to skip to get to the next image. Therefore, when replacing an image, this value should NOT be updated even if the new image is smaller.
 
 Next are four blocks of pattern data. The first block is loaded into VRAM location $0000, the second is loaded into $0800, the third is loaded into $2000, and the fourth is loaded into $2800. Each block starts with a one-byte header that indicates how many tiles to skip. For instance, if the first byte of the second block is 8, the data will be written to $0840, eight tiles after $0800.
 
@@ -25,6 +25,8 @@ The pattern data streams are compressed using an RLE scheme using the following 
 (Note: The RLE encoder used in the original game uses RLE to encode runs of two bytes, which is inefficient, so it is quite easy to make new graphics fit in the same space as the old by using RLE only for repetitions of three or more bytes.)
 
 Finally, after the four blocks comes the tilemap, uncompressed. Maps for backgrounds are 19x14, so they'll be 266 bytes.
+
+To rip graphics, use gfxrip.py. Give the offset of the graphic starting at the header. If you give the name of the graphic as "foo", this will result in foo.1.bin, foo.2.bin, foo3.bin, foo.4.bin, foo.log, and foo.map. The first four of these are pattern data; the logfile gives the header for each block as well as other info; and the .map file contains the tilemap. The pattern data files are all uncompressed. To reinsert graphics, the pattern data must first be compressed with gfxcompress.py. If an uncompressed file is called foo.1.bin, we call the recompressed file foo.comp.1.bin.
 
 
 The ASM code

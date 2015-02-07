@@ -3206,7 +3206,8 @@ Do you have a car?<end>
 // <Oidon>け゛んは゛のつくえに"<char>"とかかれた
 // ひ゛んせんのきれはしか゛みつかったのた゛か゛
 // おもいあたるふしはないか？<end>
-<Oidon>We found this scrap of paper at the scene on a desk. Any ideas what "N" is?<end>
+<Oidon>
+We found this scrap of paper at the scene on a desk. Any ideas what "N" is?<end>
 
 // <Oidon>ココンと　おなし゛においか゛しますぜ。<end>
 <Oidon>
@@ -3406,7 +3407,7 @@ Yes. I have a red one.<end>
 // ああ、こういうのはと゛うて゛す？
 // <green>また<black>くるといういみを　あらわしている、
 // なんて・・・・・・。<end>
-<cont><key>
+<contd><key>
 <Rinrin>
 An "N"...? Maybe you're looking at it sideways. Maybe it's a "Z"?<end>
 

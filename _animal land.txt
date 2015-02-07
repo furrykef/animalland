@@ -17,11 +17,9 @@ Also looks like "Continue" is one more pixel to the right, at least as of this r
 Check that <contd> blocks always start with cur_x at 0 as expected
 
 
-The けいさつ graphic begins at $0bb0c (probably as part of a larger graphic). The け appears in the pattern table as 44 9e 84 84 84 a4 48 00, but appears in the ROM as 44 9e 03 84 84 a4 48 00. The 03 appears to be a repeat code. The second 84 seems to mark the end of the RLE code in some way (its shared value with the previous value appears to be a coincidence).
+The けいさつ/ALPD graphic begins at $0b8ed ($98ed in memory space). The pattern data begins at $0b8f0 and runs to $0bfd4, exclusive.
 
-I discussed it with BiFi and he noticed each sequence of bytes is preceded by a code. The code is of the form 1xxxxxxx (where xxxxxxx is a count) if the next few bytes should be printed verbatim; 0xxxxxxx if the next byte should be repeated N times (RLE).
-
-The code 0x00 is used to terminate the data.
+The tilemap begins at $0bfd4 and runs to $0c0de, exclusive.
 
 
 A character holds a sign in Japanese in the ending (しゃくほう　しろ！！, "Release him/her!!" -- perhaps translate as "FREE [name]!!").
