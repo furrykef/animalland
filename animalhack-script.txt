@@ -1780,8 +1780,7 @@ Nnngghh...<end>
 
 // <contd>
 // だんな、おもくて　うこ゛きませんぜ。<end>
-<contd>
-It won't budge.<end>
+<contd> It won't budge.<end>
 
 // <Oidon>カ゛サ　カ゛サ・・・。<pause>
 // なにも　ないようですぜ。<end>
@@ -1832,8 +1831,7 @@ It's open.<pause> Seems there's a safe in here.<end>
 // しかし、さすか゛　かねもちた゛けあって
 // ほんた゛なに　すきまなと゛は　みられませんぜ。<end>
 // Describes bookcase. Follows "nothing particularly" line.
-<contd>
-He was rich, so it's in great condition.<end>
+<contd> He was rich, so it's in great condition.<end>
 
 // <Oidon>だんな　なんた゛か　ナソ゛のおおい　し゛けんですぜ。
 // "<char>"というもし゛は　なにか。きんは゜つは
@@ -1861,8 +1859,7 @@ By the way, I recorded our progress in a file.<pause> The name is \\M\\A\\L\\L\\
 // <contd>
 // へ゛つに　かわったところは　ありませんぜ。<end>
 // (Note: can apply to singular or plural objects)
-<contd>
-Nothing particularly unusual.<end>
+<contd> Nothing particularly unusual.<end>
 
 // <Oidon>ほんじゃ、いくのは、やめますぜ。<end>
 <Oidon>
@@ -2581,7 +2578,7 @@ Where were you at 11 PM on the 10th?<end>
 
 // <contd>
 // <Pyonko>ここに　いましたよ。<end>
-<contd>
+<contd><nl>
 <Pyonko>
 I was right here.<end>
 
@@ -2602,7 +2599,7 @@ What should we ask about Renard?<end>
 // <contd>
 // <Pyonko>さあ・・・わかりませんわ。<end>
 // (asked if she knows about "nu" symbol)
-<contd>
+<contd><nl>
 <Pyonko>
 No, I don't.<end>
 
@@ -2612,7 +2609,7 @@ Did Renard have any enemies?<end>
 
 // <contd>
 // <Pyonko>てき・・・？　さあ、わかりませんわ。<end>
-<contd>
+<contd><nl>
 <Pyonko>
 Enemies? Not that I know of.<end>
 
@@ -2624,7 +2621,7 @@ Did Renard get in any fights recently?<end>
 // <contd>
 // <Pyonko>さあ・・・きいたこと　ありませんわ。<end>
 // (answer to above question)
-<contd>
+<contd><nl>
 <Pyonko>
 I haven't heard of any.<end>
 
@@ -2637,7 +2634,7 @@ What kind of life did Renard lead?<end>
 // まえに　あるからといっても　そこまて゛は
 // わかりませんわ。<end>
 // (answer to above question)
-<contd>
+<contd><nl>
 <Pyonko>
 His store may be across the street, but I really didn't know him that well.<end>
 
@@ -2726,7 +2723,7 @@ We don't have anything but the name to go on, but surely we'll learn more soon e
 // <contd>
 // <Konta>いませんよ。<end>
 // (in response to "any enemies?")
-<contd>
+<contd><nl>
 <Konta>
 None.<end>
 
@@ -2734,7 +2731,7 @@ None.<end>
 // <Konta>あったかなあ・・・？
 // たふ゛ん　ないと　おもいますよ。<end>
 // (in response to "any quarrels?")
-<contd>
+<contd><nl>
 <Konta>
 Hmm, did he...? Seems doubtful.<end>
 
@@ -2746,7 +2743,7 @@ Hmm, did he...? Seems doubtful.<end>
 // <Oidon>おかしな　やつた゛な。
 // ほんとうに　なんて゛もないのか？
 // <Konta>はい・・・。<end>
-<contd>
+<contd><nl>
 <Konta>
 He had a carefree life.<pause> He, uh...<nl>
 <Oidon>
@@ -2768,7 +2765,7 @@ Did you go to the jewelry shop on the evening of the 10th?<end>
 
 // <contd>
 // <Konta>ほうせきてんへ？・・・・・・いってませんよ。<end>
-<contd>
+<contd><nl>
 <Konta>
 Foxy Jewelry? ...No, I didn't.<end>
 
@@ -2787,7 +2784,7 @@ I, I didn't, I swear!<end>
 // もう　しましたよ。<key>
 // <Konta>それに　ほ゛くは　はんにんて゛は　ないんて゛す。
 // しんし゛てくた゛さい。<end>
-<contd>
+<contd><nl>
 <Konta>
 Yeah...<pause> but we've been over this already.<key>
 <Konta>
@@ -2807,13 +2804,13 @@ I don't know.<pause> I've looked all over the house, so I must have dropped it e
 
 // <contd>
 // <Kokon>てき　ねぇ・・・いないと　おもいますよ。<end>
-<contd>
+<contd><nl>
 <Kokon>Enemies? I don't think he had any.<end>
 
 // <contd>
 // <Kokon>ない・・・とおもいますよ。<end>
 // (probably in response to "quarrels?")
-<contd>
+<contd><nl>
 <Kokon>
 None as far as I know.<end>
 
@@ -2822,7 +2819,7 @@ None as far as I know.<end>
 // わかりませんよ。<key>
 // <Kokon>いっしょに　くらしてる　わけて゛も
 // ありませんしね。<end>
-<contd>
+<contd><nl>
 <Kokon>
 His life? I really can't say. It's not like we lived together or anything.<end>
 
@@ -2830,7 +2827,7 @@ His life? I really can't say. It's not like we lived together or anything.<end>
 
 // <contd>
 // <Kokon>いいえ、いってませんよ。<end>
-<contd>
+<contd><nl>
 <Kokon>
 No, I didn't.<end>
 
@@ -2846,19 +2843,19 @@ Recognize this gun?<end>
 
 // <contd>
 // <Konta>まったくしりません。<end>
-<contd>
+<contd><nl>
 <Konta>
 Not at all.<end>
 
 // <contd>
 // <Kokon>しりませんよ!　ふ゛っそうな。<end>
-<contd>
+<contd><nl>
 <Kokon>
 No way! Looks dangerous.<end>
 
 // <contd>
 // <Pyonko>これか゛きょうきなの？　まあこわい!<end>
-<contd>
+<contd><nl>
 <Pyonko>
 Is that the murder weapon? Yikes!<end>
 
@@ -2954,7 +2951,7 @@ OK, to the Bear Bar.<end>
 
 // <contd>
 // <Kokon>メモとしかいえないって　いったて゛しょ。<end>
-<contd>
+<contd><nl>
 <Kokon>
 I told you, it's just a note.<end>
 
@@ -2965,7 +2962,7 @@ We shouldn't leave yet. Let's investigate a little more.<end>
 
 // <contd>
 // <Kokon>す゛っと　いえに　いました。<end>
-<contd>
+<contd><nl>
 <Kokon>
 I was home the whole time.<end>
 
@@ -3045,7 +3042,7 @@ She's just a customer at the jewelry store, so there's no reason to suspect her.
 
 // <contd>
 // <Kokon>ヘ゜ルーさんと　ハ゜フハ゜フしていましたよ。<end>
-<contd>
+<contd><nl>
 <Kokon>
 Peru was giving me some "puff-puff".<end>
 
@@ -3150,20 +3147,20 @@ Who doesn't want it?<end>
 
 // <contd>
 // <Kokon>さあ、しりませんよ。<end>
-<contd>
+<contd><nl>
 <Kokon>
 No idea.<end>
 
 // <contd>
 // <Kokon>メモて゛すよ。
 // まえに　おしえたとおりの　ものた゛ったて゛しょ。<end>
-<contd>
+<contd><nl>
 <Kokon>
 It's a memo. I told you that already.<end>
 
 // <contd>
 // <Kokon>しりませんよ、そんなふ゛っそうなもの。<end>
-<contd>
+<contd><nl>
 <Kokon>
 I don't know anything about such a dangerous thing.<end>
 
@@ -3207,7 +3204,7 @@ Smells like blood...<pause> sweat, and tears have gone into making her fancy per
 
 // <contd>
 // <Peruu>そのころは、おとこのかたとテ゛ートしていましたわ。<end>
-<contd>
+<contd><nl>
 <Peruu>
 I was out on a date.<end>
 
@@ -3228,7 +3225,7 @@ No, I haven't.<end>
 
 // <contd><key><Peruu><char>・・・・・・て゛すか？
 // それた゛けて゛は　なんにも　わかりませんわ。<end>
-<contd>
+<contd><nl>
 <Peruu>
 <char>...? Don't know anything about that.<end>
 
@@ -3252,7 +3249,7 @@ Agh!<pause> I don't care if you're police. Try something like that again and I'm
 // いって　わたしに　けんし゛ゅうを
 // てにいれさせたのて゛す。
 // それか゛、こんなことになるなんて・・・・・・<end>
-<contd>
+<contd><nl>
 <Peruu>
 I gave it to the boss yesterday.<nl>
 <Oidon>
@@ -3271,7 +3268,7 @@ So he had me get him a gun so he could exterminate the ghost. Who would have ima
 // ゆうし゛んて゛　たいへんなかか゛　よろしくて、<key>
 // <Peruu>しゃちょうのところへ　よくあそひ゛に
 // きていました。<end>
-<contd>
+<contd><nl>
 <Peruu>
 I know those names. Ling-Ling is a customer who would come by the shop often to talk with the boss.<key>
 <Peruu>
@@ -3288,7 +3285,7 @@ It's probably a reminder of the boss's appointments.<end>
 // <contd>
 // <Peruu>もってませんよ。<end>
 // asked whether she has a car
-<contd>
+<contd><nl>
 <Peruu>
 No, I don't.<end>
 
@@ -3308,7 +3305,7 @@ Translation goes here.<end>
 // <Taaji>そのあと　しゅうりをしに　さんけんまわって
 // それか゛10時すき゛まて゛。
 // そのあとは　いえにかえって　ねましたよ。<end>
-<contd>
+<contd><nl>
 <Taaji>
 On the 10th? Let's see, I visited Renard from 6 to 7. Then I had repairs to take care of here and there until past 10.<key>
 <Taaji>
@@ -3317,13 +3314,13 @@ After that, I just went home and went to bed.<end>
 // <contd>
 // <Taaji>ええ、みと゛りのワコ゛ンしゃをもってますよ。
 // しこ゛とに　ひつようて゛すからね。<end>
-<contd>
+<contd><nl>
 <Taaji>
 Yes, I have a green station wagon. I need it for my work.<end>
 
 // <contd><key><Taaji>"<char>"なんて　いったいなんのことて゛しょうね？
 // なまえかも　しれませんよ。<end>
-<contd>
+<contd><nl>
 <Taaji>
 What's <char> for? Maybe it's part of a name.<end>
 
@@ -3336,7 +3333,7 @@ What's <char> for? Maybe it's part of a name.<end>
 
 // <contd>
 // <Taaji>めす゛らしいて゛すねー。みたことは　ありませんよ。<end>
-<contd>
+<contd><nl>
 <Taaji>
 Interesting! Never seen it before.<end>
 
@@ -3344,7 +3341,7 @@ Interesting! Never seen it before.<end>
 // <Taaji>おや？　わたしのなまえか゛・・・・・・。<pause>
 // これて゛わたしを　ひっかけようと
 // しているんて゛すか？<end>
-<contd>
+<contd><nl>
 <Taaji>
 Hey, that's my name!<pause> Is that why you called me in?<end>
 
@@ -3352,7 +3349,7 @@ Hey, that's my name!<pause> Is that why you called me in?<end>
 // <Taaji>なんて゛すか、これ。
 // えっ、これて゛　ゴンきちか゛　ころされた？
 // なんておそろしい・・・・・・<end>
-<contd>
+<contd><nl>
 <Taaji>
 What is that? Wait, is that what Renard was killed with? Egad.<end>
 
@@ -3371,13 +3368,13 @@ Let's focus on Ling-Ling, since she's here.<end>
 // <contd>
 // <Rinrin>ああ、そのころなら、コンタさんのいえて゛
 // とりひきのはなしを　してました。<end>
-<contd>
+<contd><nl>
 <Rinrin>
 I was talking business with Red at his place around then.<end>
 
 // <contd>
 // <Rinrin>はい。あかいのを　もってますよ。<end>
-<contd>
+<contd><nl>
 <Rinrin>
 Yes. I have a red one.<end>
 
@@ -3385,7 +3382,7 @@ Yes. I have a red one.<end>
 // ああ、こういうのはと゛うて゛す？
 // <green>また<black>くるといういみを　あらわしている、
 // なんて・・・・・・。<end>
-<contd>
+<contd><nl>
 <Rinrin>
 An "N"...? Or maybe you're looking at it sideways. Maybe it's a "Z"?<end>
 
@@ -3402,20 +3399,20 @@ Translation goes here.<end>
 
 // <contd>
 // <Rinrin>みたことはないて゛すよ。<end>
-<contd>
+<contd><nl>
 <Rinrin>
 I've never seen it before.<end>
 
 // <contd>
 // <Rinrin>あっ、わたしのなまえか゛　のってますね。
 // て゛も　しりませんよ。<end>
-<contd>
+<contd><nl>
 <Rinrin>
 Hmm. My name's on it, but I don't know anything about it.<end>
 
 // <contd>
 // <Rinrin>みたこともありませんわ。<end>
-<contd>
+<contd><nl>
 <Rinrin>
 I've never seen that before.<end>
 
@@ -3482,13 +3479,13 @@ My investigation of this place turns up nothing unusual.<end>
 
 // <contd>
 // <Dorakure>そのころなら　ここにいましたよ。<end>
-<contd>
+<contd><nl>
 <Dorakure>I was here.<end>
 
 // <contd>
 // <Dorakure>もってますよ。きいろに　しまもようのやつ。
 // こんと゛、みにきてくた゛さいよ。<end>
-<contd>
+<contd><nl>
 <Dorakure>
 I do. It's yellow with stripes. Come take a look sometime!<end>
 
@@ -3496,28 +3493,28 @@ I do. It's yellow with stripes. Come take a look sometime!<end>
 // ちょっと　おもいつきませんねえ。
 // あちこち　あたってみてみれは゛　そのうちに
 // わかってくるんし゛ゃないて゛しょうかねぇ。<end>
-<contd>
+<contd><nl>
 <Dorakure>
 <char>, <char>, <char>... Doesn't ring any bells. If you ask around you'll find out eventually, I'm sure.<end>
 
 // <contd>
 // <Dorakure>なんて゛すか、これ。<end>
 // This message is used both for the note and the gun.
-<contd>
+<contd><nl>
 <Dorakure>
 What is that?<end>
 
 // <contd>
 // <Dorakure>トラのけ　のようにみえますけと゛、
 // ちか゛いますよ。<end>
-<contd>
+<contd><nl>
 <Dorakure>
 It almost looks like tiger hair, but it isn't.<end>
 
 // <contd>
 // えっ、これて゛　ゴンきちさんか゛　ころされた？
 // なんておそろしい・・・・・・<end>
-<contd>
+<contd><nl>
 Is that what Renard was killed with? How awful...<end>
 
 // <Oidon>そうた゛!　いいことをおもいつきました。
@@ -3557,16 +3554,13 @@ It's a detective's intuition.<end>
 // <contd>については　と゛う　かんか゛えたら
 // いいんて゛しょうかね？<end>
 // This appears after one of the below names
-<contd>
-?<end>
+<contd>?<end>
 
 // <contd>コンタ<end>
-<contd>
-Red<end>
+<contd>Red<end>
 
 // <contd>ココン<end>
-<contd>
-Kit<end>
+<contd>Kit<end>
 
 // <Oidon><end>
 // This appears before one of the above names
@@ -3577,7 +3571,7 @@ What do you think of <end>
 // <Koala>いままて゛のところて゛は　とくに　あやしい　ふしは
 // ないようた゛な。<end>
 // Koala's thoughts on Konta
-<contd>
+<contd><nl>
 <Koala>
 Nothing particularly suspicious so far.<end>
 
@@ -3644,7 +3638,7 @@ Yes. He's younger than me and so cute! I just wanna give him some "puff-puff"!<e
 // <Oidon>こまるねぇ。これからは　なんて゛も
 // しょうし゛きに　はなすんた゛。
 // <Kokon>はい・・・<end>
-<contd>
+<contd><nl>
 <Kokon>
 I'm telling you, I was home all night. God, we've been over this!<key>
 <Oidon>
@@ -3773,7 +3767,7 @@ Do you know that Renard was murdered?<end>
 // <contd>
 // <Dorakure>ええ・・・。さ゛んねんなことて゛す。あんなことに
 // なってしまうとは・・・・・・。<end>
-<contd>
+<contd><nl>
 <Dorakure>
 Yes. Such a shame to go that way...<end>
 
@@ -3786,7 +3780,7 @@ Did Renard have any enemies?<end>
 
 // <contd>
 // <Dorakure>さあねえ・・・わかりませんよ。<end>
-<contd>
+<contd><nl>
 <Dorakure>
 I don't know.<end>
 
@@ -3798,7 +3792,7 @@ Did Renard get in any fights recently?<end>
 // <contd>
 // <Dorakure>むすこのココンくんと　すこしもめていたことか゛
 // ありましたね。<end>
-<contd>
+<contd><nl>
 <Dorakure>
 He did have some trouble with his son Kit recently.<end>
 
@@ -3811,7 +3805,7 @@ What kind of life did Renard lead?<end>
 
 // <contd>
 // <Dorakure>せいかつ？　いいんし゛ゃないて゛すかねえ。<end>
-<contd>
+<contd><nl>
 <Dorakure>
 His life? Must have been nice, I suppose.<end>
 
@@ -3826,7 +3820,7 @@ What were Renard's hobbies?<end>
 // いちは゛んといううわさも　あったんて゛す。
 // それなのに、あんなことになってしまって・・・
 // まったく　さ゛んねんて゛す。<end>
-<contd>
+<contd><nl>
 <Dorakure>
 Fish hunting. At least until 3 years ago... He used to be a pro. Even rumored to be the best in town.<key>
 <Dorakure>
@@ -3845,7 +3839,7 @@ Why were Renard and Kit fighting?<end>
 // それを　かいけつて゛きす゛に・・・。<key><Dorakure>しかし・・・ゴンきちの　きもちもわかりますか゛
 // わたしは　し゛ゆうにしてやったほうか゛　いいと
 // おもいましたね。<end>
-<contd>
+<contd><nl>
 <Dorakure>
 I wouldn't say they were fighting, but more like having trouble. Renard wanted Kit to work in the store, but Kit refused to.<key>
 <Dorakure>
@@ -3956,7 +3950,7 @@ Know anything about this <char>?<end>
 
 // <contd>
 // <Kokon><char>、<char>、<char>・・・。やっは゜りわかりませんよ。<end>
-<contd>
+<contd><nl>
 <Kokon>
 <char>, <char>, <char>... I have no idea.<end>
 
@@ -3975,21 +3969,21 @@ Know anything about this <char>?<end>
 // <contd>
 // <Kokon>しりませんよ。<end>
 // in response to "Does Gonkichi have any enemies?"
-<contd>
+<contd><nl>
 <Kokon>
 Heck if I know.<end>
 
 // <contd>
 // <Kokon>さあ・・・ないとおもいますよ。<end>
 // in response to "Has Gonkichi had any quarrels?"
-<contd>
+<contd><nl>
 <Kokon>
 None that I know of.<end>
 
 // <contd>
 // <Kokon>わかりませんよ。<end>
 // in response to "What kind of life did Gonkichi lead?"
-<contd>
+<contd><nl>
 <Kokon>
 That's not something I know much about.<end>
 
@@ -4000,13 +3994,13 @@ It seems Kit was on a date with Peru on the evening of the 10th.<end>
 
 // <contd>
 // しかし、しょうにんは　いませんぜ。<end>
-<contd>
+<contd><nl>
 But we have no witnesses...<end>
 
 // <contd>
 // <Kokon>さかなハンティンク゛？
 // ああ、そのことて゛すか。わかりませんよ。<end>
-<contd>
+<contd><nl>
 <Kokon>
 Fish hunting? I don't really know anything about it.<end>
 
@@ -4016,7 +4010,7 @@ Fish hunting? I don't really know anything about it.<end>
 // <contd>
 // <Kokon>さあ・・・しりませんよ。<end>
 // when asked if he recognizes the blond hair
-<contd>
+<contd><nl>
 <Kokon>
 Not at all.<end>
 
@@ -4036,26 +4030,26 @@ It seems Kit was home watching TV from 8:30 PM to 9:30 PM on the 10th.<end>
 
 // <contd>
 // <Peruu>たふ゛ん　いないとおもいます。<end>
-<contd>
+<contd><nl>
 <Peruu>
 I don't think so.<end>
 
 // <contd>
 // <Peruu>もめこ゛と・・・というのて゛はないんて゛すか゛、
 // むすこのココンさんか゛　わしのいうことを<key><Peruu>きかないっていって　なやんて゛いたようて゛す。<end>
-<contd>
+<contd><nl>
 <Peruu>
 Not exactly a fight... But he did complain that his son never listens to him.<end>
 
 // <contd>
 // <Peruu>さあ・・・しりませんわ。<end>
-<contd>
+<contd><nl>
 <Peruu>
 Hmm... I don't know.<end>
 
 // <contd>
 // <Peruu>しりませんわ。<end>
-<contd>
+<contd><nl>
 <Peruu>
 I don't know.<end>
 
@@ -4066,7 +4060,7 @@ It appears that on the night of the 10th Peru was on a date.<end>
 
 // <contd>
 // <Peruu>さあ・・・わかりませんわ。<end>
-<contd>
+<contd><nl>
 <Peruu>
 I don't know.<end>
 
@@ -4074,7 +4068,7 @@ I don't know.<end>
 // <Peruu>まあ　きれいな　きんは゜つ!
 // わたし　きんは゜つって　あこか゛れてるんて゛すのよ。
 // て゛も　これには　みおほ゛え　こ゛さ゛いませんわ。<end>
-<contd>
+<contd><nl>
 <Peruu>
 Oh, how beautiful! I love blond hair! I don't recognize this, though.<end>
 
@@ -4086,7 +4080,7 @@ Oh, how beautiful! I love blond hair! I don't recognize this, though.<end>
 // あいつほと゛　なか゛くつきあっているものは
 // いません。
 // それなのに、それなのに・・・・・・<end>
-<contd>
+<contd><nl>
 <Taaji>
 Indeed.<key>
 <Oidon>
@@ -4096,7 +4090,7 @@ Yes. He was a very close friend. I've never known anyone as long as I knew him. 
 
 // <contd>
 // <Taaji>てき？　そんなのいるわけ　ありませんよ。<end>
-<contd>
+<contd><nl>
 <Taaji>
 Enemies? Surely not.<end>
 
@@ -4118,7 +4112,7 @@ Enemies? Surely not.<end>
 // あるんて゛すよ。
 // そこのマスターとコ゛ンきちはなかか゛よかったから
 // ほかになにかしっているかもしれませんよ。<end>
-<contd>
+<contd><nl>
 <Taaji>
 Hmm... actually, he seemed pretty troubled with his son, Kit.<nl>
 <Oidon>
@@ -4132,26 +4126,26 @@ That's all I know.<pause> Ah, hold on...<pause> There's a cafe nearby called \D\
 // <Taaji>へ゛つに　かわったところは
 // ありませんて゛したよ。
 // つまりふつうの　せいかつて゛したね。<end>
-<contd>
+<contd><nl>
 <Taaji>
 Nothing unusual. He led an ordinary life.<end>
 
 // <contd>
 // <Taaji>さあ・・・しりませんよ。<end>
-<contd>
+<contd><nl>
 <Taaji>
 I don't know.<end>
 
 // <contd>
 // <Taaji>しりませんよ。<end>
-<contd>
+<contd><nl>
 <Taaji>
 I don't know.<end>
 
 // <contd>
 // <Taaji>あや？　わたしのなまえか゛・・・。
 // て゛も、みたことは　ありませんよ。<end>
-<contd>
+<contd><nl>
 <Taaji>
 Huh? It has my name, but I've never seen it.<end>
 
@@ -4170,27 +4164,27 @@ On the night on the 10th, Pokey was doing electrical repairs from after 7 to pas
 // <Rinrin>はい・・・とてもさ゛んねんて゛す。としは
 // はなれていましたか゛　はなしのあう
 // かたて゛した。<end>
-<contd>
+<contd><nl>
 <Rinrin>
 Yes... it's so sad. We got along very well despite our age difference.<end>
 
 // <contd>
 // <Rinrin>さあ・・・しりませんよ。<end>
-<contd>
+<contd><nl>
 <Rinrin>
 No idea.<end>
 
 // <contd>
 // <Rinrin>きいたことは　ありませんよ。<end>
 // When asked if Gonkichi had any quarrels
-<contd>
+<contd><nl>
 <Rinrin>
 I haven't heard anything like that.<end>
 
 // <contd>
 // <Rinrin>ふつうよりは　よいせいかつた゛と
 // おもいますけと゛。<end>
-<contd>
+<contd><nl>
 <Rinrin>
 A better one than most, if you ask me.<end>
 
@@ -4443,7 +4437,7 @@ Tell me all you know about Nuki.<end>
 // いいし゛ゃないか"<pause>　といったんて゛すよ。<key>
 // <Konta>もう　かおもみたくないし、
 // なまえも　ききたくないて゛すね!<end>
-<contd>
+<contd><nl>
 <Konta>
 Nuki...he really makes me mad.<nl>
 <Oidon>
@@ -4467,16 +4461,16 @@ The evidence we have so far is... blond hair, memo, gun,<end>
 
 // <contd>
 // りょうしゅうしょう、<end>
-<contd>
+<contd><nl>
 receipt,<end>
 
 // <contd>カキ゛、ほうせきるい<end>
-<contd>
+<contd><nl>
 key, jewels<end>
 
 // <contd>
 // ・・・これた゛けですぜ。<end>
-<contd>
+<contd><nl>
 ...that's it.<end>
 
 // <Oidon>これに、みおほ゛えはないか？<end>
@@ -4485,21 +4479,21 @@ Recognize this?<end>
 
 // <contd>
 // <Konta>さあ、しりませんよ。<end>
-<contd>
+<contd><nl>
 <Konta>
 No idea.<end>
 
 // <contd>
 // <Konta>はい。えーっと・・・<pause>　あれ？<pause>
 // ・・・いや、<pause>とくに　いし゛ょうは　ないようて゛す。<end>
-<contd>
+<contd><nl>
 <Konta> Sure. Let me take a look...<pause> Huh?<pause> ...Nope.<pause> Nothing wrong with them.<end>
 
 // <contd>
 // <Konta>みせのカキ゛て゛す。て゛も、と゛うして・・・？<pause>
 // えっ、ヌキのへやからみつかった？
 // ヌキのやつ・・・・・・。<end>
-<contd>
+<contd><nl>
 <Konta>
 It's the key to the shop. But why do you...?<key>
 <Konta>
@@ -4518,7 +4512,7 @@ Let's focus on Kit, since we've got him here.<end>
 // <Kokon>ひと゛く　せいかつに　こまっていた　ようて゛すね。
 // きのみし゛かい　やつた゛から　カッとなって
 // ころしたということも　かんか゛えられますよ。<end>
-<contd>
+<contd><nl>
 <Kokon>
 He was struggling to make a living. He has a short temper. I could see him killing someone in a fit of anger.<end>
 
@@ -4532,7 +4526,7 @@ Never seen it.<end>
 // あれ？　これ　うちのほうせきた゛。
 // よく　みつかりましたね。と゛こて゛　これを？<key><Kokon>えっ、ヌキのへや？<pause>
 // やっは゜り　ヌキか゛　はんにんた゛ったのか・・・。<end>
-<contd>
+<contd><nl>
 <Kokon>
 Wow, those are nice! Huh? Hey, those are from the shop. Good job finding them! Where did you find them?<key>
 <Kokon>
@@ -4542,7 +4536,7 @@ Huh? Nuki's room? So it \w\a\s him...<end>
 // <Kokon>あれ？　と゛こて゛みつけたんて゛す。　これは
 // ホ゛クか゛　なくした　ほうせきてんの
 // カキ゛て゛すよ。<end>
-<contd>
+<contd><nl>
 <Kokon>
 Huh Where did you find that? That's the store key I lost.<end>
 
@@ -4588,7 +4582,7 @@ I don't know. I never got it since the trip was delayed a week.<end>
 
 // <contd>
 // <Peruu>しりませんよ。<end>
-<contd>
+<contd><nl>
 <Peruu>
 I don't know.<end>
 
@@ -4600,7 +4594,7 @@ I don't know.<end>
 // なくなっているんて゛す。
 // <Oidon>た゛れから　あす゛かったんて゛す？
 // <Peruu>た゛れた゛ったかしら・・・。<pause>しらへ゛ておきますね。<end>
-<contd>
+<contd><nl>
 <Peruu>
 Ah! Aren't those from the store? Let me take a look...<key>
 <Peruu>
@@ -4617,7 +4611,7 @@ Who was it, again...?<pause> I'll look into it.<end>
 // <contd>
 // <Peruu>あまりよく　わかりませんか゛・・・・・・
 // ほうせきてんのカキ゛て゛は　ないて゛しょうか。<end>
-<contd>
+<contd><nl>
 <Peruu>
 I'm not entirely sure... but I think it's a key to the store.<end>
 
@@ -4680,7 +4674,7 @@ Oh, sorry. I went to my parents' from the 9th until the 10th. I changed my plans
 // <Nuki>ああ、それて゛すか。それは　し゛っかへいった
 // 9日から11日のあいた゛
 // かりていた　くるまのりょうしゅうしょうて゛す。<end>
-<contd>
+<contd><nl>
 <Nuki>
 Oh, that. That's the receipt for the car I rented to go visit my parents between the 9th and the 10th.<end>
 
@@ -4981,7 +4975,7 @@ Did Renard have any enemies?<end>
 // <Konta>なんと゛も　いうようて゛すけれと゛も
 // いないものは　いないんて゛す。
 // <Oidon>そうか・・・。<end>
-<contd>
+<contd><nl>
 <Konta>
 I must have said it a hundred times already. He had none.<nl>
 <Oidon>
@@ -4994,7 +4988,7 @@ Why did Renard give up fish hunting?<end>
 
 // <contd>
 // <Konta>しりませんよ。<end>
-<contd>
+<contd><nl>
 <Konta>
 I dunno.<end>
 
@@ -5005,13 +4999,13 @@ Know what this <char> is about?<end>
 
 // <contd>
 // <Konta>わかりませんよ。<end>
-<contd>
+<contd><nl>
 <Konta>
 No, I don't.<end>
 
 // <contd>
 // <Konta>いえ、とくになにも・・・<end>
-<contd>
+<contd><nl>
 <Konta>
 No, not particularly...<end>
 
@@ -5021,7 +5015,7 @@ Find your key?<end>
 
 // <contd>
 // <Kokon>いいえ、また゛・・・。<end>
-<contd>
+<contd><nl>
 <Kokon>
 No, not yet.<end>
 
@@ -5110,7 +5104,7 @@ Boss, it seems that on the night of the 10th Red was at the jewelry store from 8
 // なそ゛を　すこして゛も　といていかなけれは゛
 // ならない・・・・・・。たえてくれよ。<pause><pause>
 // それか゛　おいと゛んたちの　しこ゛となんた゛。<end>
-<contd>
+<contd><nl>
 <Konta>
 These questions are getting real old. I've seen that blond hair a hundred times now! I told you I don't know anything.<key>
 <Oidon>
@@ -5146,7 +5140,7 @@ Who knows... maybe he just got tired of it.<end>
 // くれないんて゛　おやし゛と　たひ゛たひ゛
 // もめていたんて゛す。<key><Kokon>"<char>"というのは、ヌキのことなんし゛ゃ
 // ないんて゛しょうかね。<end>
-<contd>
+<contd><nl>
 Actually, I just realized something.<nl>
 <Oidon>
 Hmm? What's that?<nl>
@@ -5171,7 +5165,7 @@ OK, you may go now.<end>
 // <Kokon>・・・・・・・・・。ひと゛いよ!<pause>
 // あいてのきもちも　かんか゛えないて゛
 // そんなことを　いうなんて・・・。<key><Kokon>とっくに　わすれて　いたのに・・・。<end>
-<contd>
+<contd><nl>
 <Kokon>
 ...How mean!<pause> How could you go and ask me something like that?!<key>
 <Kokon>
@@ -5193,7 +5187,7 @@ It was about the rent. He had been overlooking it for months. I don't have any m
 // わたしは　とっくに　おいた゛されていますよ。
 // かねのない　わたしか゛　あんなところに
 // すめるのも　ゴンきちさんの　おかけ゛て゛すよ。<end>
-<contd>
+<contd><nl>
 <Nuki>
 I don't think so. His fights with me were simply due to me losing my temper...<key>
 <Nuki>
@@ -5207,7 +5201,7 @@ Did Renard get into any fights recently?<end>
 // <contd>
 // <Nuki>もめこ゛とねぇ・・・<pause>
 // きいたことは　ありませんよ。<end>
-<contd>
+<contd><nl>
 <Nuki>
 Fights, huh...<pause> I haven't heard anything.<end>
 
@@ -5218,13 +5212,13 @@ What kind of life did Renard lead?<end>
 // <contd>
 // <Nuki>しりませんよ。<pause>やちんを　はらっていないのて゛
 // ちかす゛くのも　きか゛ひけますしね・・・。<end>
-<contd>
+<contd><nl>
 <Nuki>
 I don't know.<pause> I was too scared to even approach him. You know, not paying the rent and all...<end>
 
 // <contd>
 // <Nuki>そんなことまて゛　しりませんよ。<end>
-<contd>
+<contd><nl>
 <Nuki>
 I wouldn't know about that.<end>
 
@@ -5239,7 +5233,7 @@ It seems that Nuki was home on the night of the murder. There are, however, no w
 
 // <contd>
 // <Nuki>さあ・・・<pause>しりませんよ。<end>
-<contd>
+<contd><nl>
 <Nuki>
 Hmm...<pause> No idea.<end>
 
@@ -5249,7 +5243,7 @@ Do you know Vixy?<end>
 
 // <contd>
 // <Nuki>しりませんよ。<end>
-<contd>
+<contd><nl>
 <Nuki>
 Nope.<end>
 
@@ -5326,25 +5320,25 @@ Nope.<end>
 // <contd>
 // <Peruu>ヌキというかたのことは　なにもしりませんのて゛
 // はなすことは　て゛きませんわ。<end>
-<contd>
+<contd><nl>
 <Peruu>
 I don't know a Nuki, so I can't tell you anything.<end>
 
 // <contd>
 // <Peruu>わかりませんわ。<end>
-<contd>
+<contd><nl>
 <Peruu>
 I don't know.<end>
 
 // <contd>
 // <Peruu>さあ・・・<pause>しりませんわ。<end>
-<contd>
+<contd><nl>
 <Peruu>
 Gee...<pause> No idea.<end>
 
 // <contd>
 // <Peruu>なんと゛　かんか゛えても・・・<pause>　わかりませんわ。<end>
-<contd>
+<contd><nl>
 <Peruu>
 I can't come up with anything.<end>
 
@@ -5378,7 +5372,7 @@ On the night of the 10th, Peru was on a date with Kit.<pause> Must be fun...<pau
 
 // <contd>
 // <Peruu>ここいか゛いて゛は　みたこと　ありませんわ。<end>
-<contd>
+<contd><nl>
 <Peruu>
 I've never seen it anywhere besides here.<end>
 
@@ -5557,13 +5551,13 @@ Recognize this?<end>
 
 // <contd>
 // <Konta>・・・・・・。<end>
-<contd>
+<contd><nl>
 <Konta>
 ......<end>
 
 // <contd>
 // <Konta>さあ・・・・・・しりませんよ。<end>
-<contd>
+<contd><nl>
 <Konta>
 No, I don't.<end>
 
@@ -5718,7 +5712,7 @@ He treasured them, so he gave them to me to remember him by.<end>
 
 // <contd>
 // <Tsuneko>・・・・・・。<end>
-<contd>
+<contd><nl>
 <Tsuneko>
 ......<end>
 
@@ -5739,7 +5733,7 @@ Nothing here to take.<end>
 
 // <contd>ひきた゛しのカキ゛、<end>
 // @TODO@ - note no newline in original
-<contd>
+<contd><nl>
 drawer key,<end>
 
 // 。<end>
@@ -5773,7 +5767,7 @@ drawer key,<end>
 // <Tsuneko>それは、むかし　おっとか゛　ハンティンク゛を
 // やっていたのて゛、<pause>それて゛・・・・・・。<pause>
 // た゛から　ここに　あるんて゛す。<end>
-<contd>
+<contd><nl>
 <Tsuneko>
 Alright.<pause> I'll tell you.<key>
 <Tsuneko>
@@ -5820,7 +5814,7 @@ Oh, back for more, are we?!<end>
 // もう　このむらは　おしまいさ。
 // <Oidon>・・・しかたありません、だんな。
 // そうさほんふ゛に　もと゛りましょう。<end>
-<contd>
+<contd><nl>
 <Oidon>
 ...It's no use, boss. He's dead drunk as usual.<key>
 <Koala>
@@ -5910,7 +5904,7 @@ Does this <char> still not mean anything to you?<end>
 
 // <contd>
 // <Konta>ヌキという　いか゛いは　なにも・・・。<end>
-<contd>
+<contd><nl>
 <Konta>
 Aside from Nuki, I wouldn't know.<end>
 
@@ -5923,7 +5917,7 @@ Aside from Nuki, I wouldn't know.<end>
 // <contd>
 // <Konta>しりませんよ。もう　みあきるほと゛
 // みてますけと゛ね。<end>
-<contd>
+<contd><nl>
 <Konta>
 I don't know. I'm sick of seeing it.<end>
 
@@ -5938,7 +5932,7 @@ The evidence we have so far is... blond hair, memo, gun, Kit's key, jewels,<end>
 
 // <contd>
 // ・・・これた゛けですぜ。<end>
-<contd>
+<contd><nl>
 ...That's all.<end>
 
 // <Oidon>だんな、コンタは　10日のよる
@@ -5949,7 +5943,7 @@ Translation goes here.<end>
 
 // <contd>
 // <Kokon>はい。<pause>せ゛んせ゛ん・・・。<end>
-<contd>
+<contd><nl>
 <Kokon>
 Nope.<pause> No clue.<end>
 
@@ -5971,7 +5965,7 @@ Boss, on the night of the 10th around 11 PM Kit was on a date with Peru.<end>
 
 // <contd>
 // <Kokon>みたこと　ないて゛すよ。<end>
-<contd>
+<contd><nl>
 Never seen it.<end>
 
 // せんぜ。<end>
@@ -5999,7 +5993,7 @@ Never seen it.<end>
 // いきましょう!<key><Oidon>だんな　ここまて゛の　し゛けんの　けいかを
 // そうさファイルに　まとめました。
 // ファイルめいは　<red>つきのわく゛ま　<black>て゛す。<end>
-<contd>
+<contd><nl>
 <Oidon>
 Give us a break, Koala! Actually, we got some new information...<key>
 <Koala>
@@ -6217,7 +6211,7 @@ I wouldn't know.<end>
 
 // <contd>
 // <Tsuneko>さあ・・・<pause>みたこと　ありませんわ。<end>
-<contd>
+<contd><nl>
 <Tsuneko>
 I've never seen it.<end>
 
@@ -6805,7 +6799,7 @@ A happy-looking mole.<end>
 // <contd>
 // <Mogura>しらないよ。<pause>　おれか゛　ここにきたのは
 // 2年まえた゛から。<end>
-<contd>
+<contd><nl>
 <Mogura>
 Don't know.<pause> I've only been here for two years.<end>
 
@@ -6813,7 +6807,7 @@ Don't know.<pause> I've only been here for two years.<end>
 // <Mogura>しす゛かた゛し・・・いいところた゛よ。
 // まったく・・・そうそ゛うしい　とかいは
 // うんさ゛りた゛。<end>
-<contd>
+<contd><nl>
 <Mogura>
 It's quiet... I like it. Who needs all the hustle and bustle of the city?<end>
 
@@ -6846,7 +6840,7 @@ Hmm...<pause> Probably further north of the west lake is all I can guess. I've n
 // <Oidon>なせ゛？<key><Mogura>くさいんた゛よ。<pause>とうゆの　においか゛　するんた゛。
 // たふ゛ん　た゛れかか゛　うきし゛まにて゛も
 // おきっは゜なしに　したんし゛ゃないかな。<end>
-<contd>
+<contd><nl>
 <Mogura>
 Right north from here. But you shouldn't go there.<nl>
 <Oidon>
@@ -7099,7 +7093,7 @@ Where?<end>
 // <contd>
 // <Mogura>おらか゛　ここに　きたのは　1年まえた゛から
 // そんなことは　わからんし゛ょ。<end>
-<contd>
+<contd><nl>
 Beats me. I've only been here for one year.<end>
 
 // <contd>
@@ -7108,7 +7102,7 @@ Beats me. I've only been here for one year.<end>
 // ちちゅうにすむ　おいらは　めいわくた゛し゛ょ。<key><Mogura>そこへいくと　ここは　た゛れもとおらない・・・
 // いゃ、<pause>ときと゛き　ふたりつ゛れの　と゛うふ゛つか゛
 // とおることはあるけと゛・・・<key><Mogura>て゛も　そんなことは　と゛うて゛も　いいことた゛し゛ょ。<end>
-<contd>
+<contd><nl>
 <Mogura>
 It's peaceful.<pause>There's too many passersby in the city. Ground-dwellers like myself just become a nuisance.<key>
 <Mogura>
@@ -7336,7 +7330,7 @@ Translation goes here.<end>
 
 // <contd>
 // <Konta>・・・しりませんね。<end>
-<contd>
+<contd><nl>
 <Konta>
 I dunno.<end>
 
@@ -7377,7 +7371,7 @@ Recognize this?.<end>
 
 // <contd>
 // <Konta>しりませんよ・・・。<end>
-<contd>
+<contd><nl>
 <Konta>
 I dunno.<end>
 
@@ -7388,7 +7382,7 @@ Translation goes here.<end>
 
 // <contd>
 // <Konta>・・・それは、おやし゛のものた゛とおもいます。<end>
-<contd>
+<contd><nl>
 <Konta>
 I think that's my father's.<end>
 
@@ -7400,7 +7394,7 @@ I think that's my father's.<end>
 
 // <contd>
 // <Konta>わ、わかりませんね。<end>
-<contd>
+<contd><nl>
 <Konta>
 I, I don't know.<end>
 
