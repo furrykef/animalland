@@ -536,7 +536,7 @@ Note<end>
 Gun<end>
 
 // おかねのこと<end>
-MONEY<end>
+Money<end>
 
 // アリハ゛イ<end>
 Alibi<end>
@@ -636,7 +636,7 @@ Coffee<end>
 Injury<end>
 
 // てき<end>
-Eenemies<end>
+Enemies<end>
 
 // もめこ゛と<end>
 Quarrels<end>
@@ -687,7 +687,8 @@ Bunnie<end>
 <end>
 
 // さかな<pause>3ハンティンク゛<end>
-Fish Hunting<end>
+Fish<mnl>
+hunting<end>
 
 // ゜<end>
 <end>
@@ -712,52 +713,52 @@ Kit<end>
 #WRITE(cmdptr, $2BEB)
 
 // あける<end>
-OPEN<end>
+Open<end>
 
 // みせる<end>
-LOOK<end>
+Show<end>
 
 // たいほする<end>
-ARREST<end>
+Arrest<end>
 
 // と゛こかいく<end>
-GO<end>
+Go<end>
 
 // よふ゛<end>
-CALL<end>
+Summon<end>
 
 // すいりする<end>
 Ponder<end>
 
 // し゛ょうほう<end>
-INFO<end>
+Info<end>
 
 // みる<end>
-LOOK<end>
+Look<end>
 
 // とる<end>
-TAKE<end>
+Take<end>
 
 // しらへ゛る<end>
-CHECK<end>
+Check<end>
 
 // きく<end>
-ASK<end>
+Ask<end>
 
 // コンタ<end>
-RED<end>
+Red<end>
 
 // ココン<end>
-KIT<end>
+Kit<end>
 
 // ヘ゜ルー<end>
-PERU<end>
+Peru<end>
 
 // ヌキ<end>
-NUKI<end>
+Nuki<end>
 
 // きんは゜つ<end>
-BLOND HAIR<end>
+Blond hair<end>
 
 // ゜<end>
 <end>
@@ -769,63 +770,63 @@ BLOND HAIR<end>
 <end>
 
 // ほうせきるい<end>
-JEWELS<end>
+Jewels<end>
 
 // リ<end>
 <end>
 
 // いさ゛かや<pause>5　クマ<end>
-BAR<end>
+Bar<end>
 
 // ヌキのへや<end>
-NUKI'S ROOM<end>
+Nuki's room<end>
 
 // ヌキのこと<end>
-NUKI<end>
+Nuki<end>
 
 // しょうこひん<end>
-GOODS<end>
+Goods<end>
 
 // りょうしゅう<pause>4しょう<end>
-RECEIPT<end>
+Receipt<end>
 
 // カキ゛<end>
-KEY<end>
+Key<end>
 
 // てか゛みの<pause>5ありか<end>
 Location<mnl>
 of letter<end>
 
 // てか゛みの<pause>4ないよう<end>
-LETTER<end>
+Letter<end>
 
 // アリハ゛イ<end>
-ALIBI<end>
+Alibi<end>
 
 // くるまのこと<end>
-CAR<end>
+Car<end>
 
 // ほうせきの<pause>6こと<end>
-JEWEL<end>
+Jewel<end>
 
 // ほんた゛な<end>
-BOOKCASE<end>
+Bookcase<end>
 
 // ほん<end>
-BOOKS<end>
+Books<end>
 
 // しおり<end>
-BOOKMARK<end>
+Bookmark<end>
 
 // たたみ<end>
 // @TODO@ - ?
-TATAMI<end>
+Tatami<end>
 
 // まと゛<end>
-WINDOW<end>
+Window<end>
 
 // コ゛ンきち<end>
-RENARD<end>
+Renard<end>
 
 // ターシ゛<end>
 Pokey<end>
@@ -834,13 +835,13 @@ Pokey<end>
 Ling-Ling<end>
 
 // コ゛ンきちの<pause>5こと<end>
-RENARD<end>
+Renard<end>
 
 // 「($00)」という<pause>1もし゛のこと<end>
 <char><end>
 
 // カキ゛のこと<end>
-KEY<end>
+Key<end>
 
 // と<end>
 <end>
@@ -849,10 +850,11 @@ KEY<end>
 <end>
 
 // てき<end>
-ENEMY<end>
+Enemies<end>
 
 // さかな<pause>3ハンティンク゛<end>
-Fish hunting<end>
+Fish<mnl>
+hunting<end>
 
 // コ゛ンきちと<pause>1もめたりゆう<end>
 Dispute<mnl>
@@ -898,7 +900,7 @@ Jewel key<end>
 Dismiss<end>
 
 // ほんふ゛へ<pause>3もと゛る<end>
-HQ<end>
+Return to HQ<end>
 
 // し゛けんに<pause>4ついて<end>
 Murder<end>
@@ -3199,7 +3201,7 @@ Let's focus on Peru, since she's here.<end>
 // <Oidon>クンクン。うっ、これは　ちのにおい・・・・・・<pause>
 // というのはうそて゛す。
 // し゛ょうひんな　においか゛しますぜ。<end>
-// When sniffing Peruu
+// When sniffing Peruu, before sniffing Kokon
 <Oidon>
 Smells like blood...<pause> sweat, and tears have gone into making her fancy perfume.<end>
 
@@ -3212,8 +3214,10 @@ I was out on a date.<end>
 // <Oidon>しゅっちょうには　なせ゛　いかなかったのた゛？
 // <Peruu>しゃちょうか゛　いっしゅうかんおくらせると
 // いわれましたのて゛・・・・・・。<end>
-<Oidon>Why didn't you leave on your trip?<nl>
-<Peruu>I was told to postpone it for a week.<end>
+<Oidon>
+Why didn't you leave on your trip?<nl>
+<Peruu>
+I was told to postpone it for a week.<end>
 
 // <Oidon>きんは゜つのきゃくを　みたことか゛あるか？
 // <Peruu>さあ、みたことは　ありませんよ。<end>
@@ -3250,7 +3254,7 @@ Agh!<pause> I don't care if you're police. Try something like that again and I'm
 // それか゛、こんなことになるなんて・・・・・・<end>
 <contd>
 <Peruu>
-I gave that to the boss yesterday.<nl>
+I gave it to the boss yesterday.<nl>
 <Oidon>
 You did? Why?<key>
 <Peruu>
@@ -3291,7 +3295,7 @@ No, I don't.<end>
 // <Oidon>せっかくターシ゛を　よんた゛のて゛すから、
 // ターシ゛に　めをむけましょうよ。<end>
 <Oidon>
-Let's focus on Pokey since he's here.<end>
+Let's focus on Pokey, since he's here.<end>
 
 // <Oidon>クンクン。<pause>
 // だんな、のみものの　においか゛しますぜ。
@@ -3306,7 +3310,9 @@ Translation goes here.<end>
 // そのあとは　いえにかえって　ねましたよ。<end>
 <contd>
 <Taaji>
-I was visiting Renard from 6 to 7 PM. Then I had repairs to take care of here and there until past 10. After that I just went home and went to bed.<end>
+On the 10th? Let's see, I visited Renard from 6 to 7. Then I had repairs to take care of here and there until past 10.<key>
+<Taaji>
+After that, I just went home and went to bed.<end>
 
 // <contd>
 // <Taaji>ええ、みと゛りのワコ゛ンしゃをもってますよ。
@@ -3317,7 +3323,7 @@ Yes, I have a green station wagon. I need it for my work.<end>
 
 // <contd><key><Taaji>"<char>"なんて　いったいなんのことて゛しょうね？
 // なまえかも　しれませんよ。<end>
-<contd><key>
+<contd>
 <Taaji>
 What's <char> for? Maybe it's part of a name.<end>
 
@@ -3353,7 +3359,7 @@ What is that? Wait, is that what Renard was killed with? Egad.<end>
 // <Oidon>せっかくリンリンを　よんた゛のて゛すから、
 // リンリンに　めをむけましょうよ。<end>
 <Oidon>
-Let's focus on Ling-Ling since she's here.<end>
+Let's focus on Ling-Ling, since she's here.<end>
 
 // <Oidon>クンクン。<pause>
 // だんな、ささのいいにおいか゛　しますぜ。
@@ -3551,7 +3557,8 @@ It's a detective's intuition.<end>
 // <contd>については　と゛う　かんか゛えたら
 // いいんて゛しょうかね？<end>
 // This appears after one of the below names
- strikes you as what sort of person?<end>
+<contd>
+?<end>
 
 // <contd>コンタ<end>
 <contd>
@@ -3562,7 +3569,9 @@ Red<end>
 Kit<end>
 
 // <Oidon><end>
-<Oidon><end>
+// This appears before one of the above names
+<Oidon>
+What do you think of <end>
 
 // <contd>
 // <Koala>いままて゛のところて゛は　とくに　あやしい　ふしは
@@ -3577,9 +3586,9 @@ Nothing particularly suspicious so far.<end>
 // こいつは　おんなく゛せのわるいやつた゛な。<key><Koala>こういう　こあくとうは　さつし゛んみたいな
 // おおきなはんさ゛いなんて　しないものた゛けと゛な。<end>
 // Koala's thoughts on Kokon
-<contd>
+<contd><key>
 <Koala>
-There's a woman involved in the crime, and he's got a bad habit with women. Little brats like him don't usually commit such serious crimes though...<end>
+There's a woman involved in the crime, and he's got a bad habit with women. Little brats like him don't usually commit such serious crimes, though...<end>
 
 // <Oidon>ヘ゜ルーか゛　アリハ゛イをしょうめいしました。
 // て゛も、いまのところ、と゛うきか゛いちは゛ん
@@ -3595,7 +3604,7 @@ Peru confirmed his alibi, but right now he's got the most likely motive. We'll h
 <Oidon>
 What happened to you?<nl>
 <Rinrin>
-It's a burn. I accidently spilled coffee last night when I was at Red's.<end>
+Oh, this? It's a burn. I accidently spilled coffee last night when I was at Red's.<end>
 
 // <Oidon>クンクン。
 // あれっ、ココンのとおなし゛　し゛ょうひんな
@@ -3731,7 +3740,8 @@ There he is. Let's see if he can help us.<end>
 // し゛つはコアラさん、かくかく<pause>うまうま、<pause>いや、<pause>
 // かくかく<pause>しかし゛か<pause>なんて゛すけと゛・・・。<end>
 <contd><key>
-Koala is *mumble mumble*, *whisper whisper*... Wait, I mean *whisper whisper*, *mumble mumble*
+<Oidon>
+Koala, *mumble mumble*, *whisper whisper*... Wait, I mean *whisper whisper*, *mumble mumble*
 <end>
 
 // と゛うする？　<end>
@@ -3748,7 +3758,9 @@ Where?<end>
 
 // <Oidon>だんな、ます゛さいしょに　ゴンきちのことを
 // しらせたほうか゛　いいですぜ。<end>
-Translation goes here.<end>
+// @TODO@ -- when is this text triggered?
+<Oidon>
+Boss, we should ask him about Renard first.<end>
 
 // <Oidon>うまそうな　コーヒーですぜ。<end>
 <Oidon>
@@ -3801,7 +3813,7 @@ What kind of life did Renard lead?<end>
 // <Dorakure>せいかつ？　いいんし゛ゃないて゛すかねえ。<end>
 <contd>
 <Dorakure>
-His life? Must have been nice I suppose.<end>
+His life? Must have been nice, I suppose.<end>
 
 // <Oidon>ゴンきちの　しゅみは？<end>
 <Oidon>
@@ -3929,7 +3941,7 @@ Why did Renard give up fish hunting?<end>
 
 // <Oidon>"<char>"というもし゛に　なにかおもいあたらないか？<end>
 <Oidon>
-Know anything about this letter <char>?<end>
+Know anything about this <char>?<end>
 
 0<end>
 
@@ -3962,24 +3974,24 @@ Know anything about this letter <char>?<end>
 
 // <contd>
 // <Kokon>しりませんよ。<end>
-// I think this is in response to "Does Gonkichi have any enemies?"
+// in response to "Does Gonkichi have any enemies?"
 <contd>
 <Kokon>
 Heck if I know.<end>
 
 // <contd>
 // <Kokon>さあ・・・ないとおもいますよ。<end>
-// In response to "Has Gonkichi had any quarrels?"
+// in response to "Has Gonkichi had any quarrels?"
 <contd>
 <Kokon>
 None that I know of.<end>
 
 // <contd>
 // <Kokon>わかりませんよ。<end>
-// I think this is in response to "What kind of life did Gonkichi lead?"
+// in response to "What kind of life did Gonkichi lead?"
 <contd>
 <Kokon>
-Not something I know much about.<end>
+That's not something I know much about.<end>
 
 // <Oidon>ココンは　10日のよる、
 // ヘ゜ルーと　テ゛ートしていたようて゛す。<end>
@@ -4003,16 +4015,18 @@ Fish hunting? I don't really know anything about it.<end>
 
 // <contd>
 // <Kokon>さあ・・・しりませんよ。<end>
+// when asked if he recognizes the blond hair
 <contd>
 <Kokon>
-No idea.<end>
+Not at all.<end>
 
 // ？<end>
 ?<end>
 
 // <Oidon>ヘ゜ルーは　10日のよる、
 // ココンと　テ゛ートしていたようて゛す。<end>
-Translation goes here.<end>
+<Oidon>
+It seems Peru was on a date with Kokon on the night of the 10th.<end>
 
 // <Oidon>だんな、ココンは　10日のよる8時はんから
 // 9時はんのあいた゛は　　いえて゛テレヒ゛を
@@ -4054,7 +4068,7 @@ It appears that on the night of the 10th Peru was on a date.<end>
 // <Peruu>さあ・・・わかりませんわ。<end>
 <contd>
 <Peruu>
-I dunno.<end>
+I don't know.<end>
 
 // <contd>
 // <Peruu>まあ　きれいな　きんは゜つ!
@@ -4074,7 +4088,7 @@ Oh, how beautiful! I love blond hair! I don't recognize this, though.<end>
 // それなのに、それなのに・・・・・・<end>
 <contd>
 <Taaji>
-Uhh...<key>
+Indeed.<key>
 <Oidon>
 We hear you two were friends.<nl>
 <Taaji>
@@ -4084,7 +4098,7 @@ Yes. He was a very close friend. I've never known anyone as long as I knew him. 
 // <Taaji>てき？　そんなのいるわけ　ありませんよ。<end>
 <contd>
 <Taaji>
-Enemies? He had none.<end>
+Enemies? Surely not.<end>
 
 // <contd>
 // <Taaji>と゛うて゛すかねえ・・・。あ、そういえは゛、
@@ -4112,7 +4126,7 @@ Troubled? Why's that?<nl>
 <Taaji>
 His older son Red started working for the business, but Kit refused to. It seems he was after money to start his own business to compete with his father's.<key>
 <Taaji>
-That's all I know. Ah, hold on...<pause> There's a cafe nearby called \D\r\a\g\o\n. Renard was good friends with the owner there, so he might know something.<end>
+That's all I know.<pause> Ah, hold on...<pause> There's a cafe nearby called \D\r\a\g\o\n. Renard was good friends with the owner there, so he might know something.<end>
 
 // <contd>
 // <Taaji>へ゛つに　かわったところは
@@ -4178,7 +4192,7 @@ I haven't heard anything like that.<end>
 // おもいますけと゛。<end>
 <contd>
 <Rinrin>
-A better one than most, in my opinion.<end>
+A better one than most, if you ask me.<end>
 
 // <contd>
 // <Rinrin>しりませんよ。<end>
@@ -4338,9 +4352,7 @@ Lives alone in a condo owned by Renard close by the jewelry store. Stashes the r
 // きんは゜つのものは　いませんよ。
 // <pause>ふしき゛なものて゛すね。<end>
 <Oidon>
-It's not necessarily the perp's. But Red and Peru both say there are no blond customers.<key>
-<Oidon>
-We've got not blond suspects, either.<pause> It's quite the mystery.<end>
+It's not necessarily the perp's. But Red and Peru both say there are no blond customers. We've got no blond suspects either.<pause> It's quite the mystery.<end>
 
 // <Oidon>たいほするにしても　しょうこか゛たりませんぜ。<end>
 <Oidon>
@@ -4353,7 +4365,9 @@ We need a little more evidence first...<end>
 
 // <Oidon>これはいったい　なにをあらわして
 // いるんて゛しょうかね？よく　わかりませんぜ。<end>
-Translation goes here.<end>
+// referring to the "N" char
+<Oidon>
+What the heck does it mean? I don't get it.<end>
 
 // <Oidon>これか゛　いちは゛ん　なんかいですぜ。
 // ヌキの"<char>"としか　とれませんよ。
@@ -4388,6 +4402,7 @@ OK, let's go to Nuki's room.<end>
 
 // <Oidon>せっかく　コンタを　よんた゛んて゛すから
 // コンタに　めを　むけましょうよ。<end>
+<Oidon>
 Red's already here, so let's focus on him.<end>
 
 // <contd>
@@ -4447,7 +4462,8 @@ Excuse me for a minute here...<pause> Nothing to see here, boss.<end>
 
 // <Oidon>いまもっている　しょうこひんは・・・・・・。
 // きんは゜つ、メモ、けんし゛ゅう、<end>
-<Oidon>The evidence we have so far is... blond hair, memo, gun,<end>
+<Oidon>
+The evidence we have so far is... blond hair, memo, gun,<end>
 
 // <contd>
 // りょうしゅうしょう、<end>
@@ -4455,7 +4471,6 @@ Excuse me for a minute here...<pause> Nothing to see here, boss.<end>
 receipt,<end>
 
 // <contd>カキ゛、ほうせきるい<end>
-// @TODO@ - note no newline in original
 <contd>
 key, jewels<end>
 
@@ -4478,7 +4493,7 @@ No idea.<end>
 // <Konta>はい。えーっと・・・<pause>　あれ？<pause>
 // ・・・いや、<pause>とくに　いし゛ょうは　ないようて゛す。<end>
 <contd>
-<Konta> Sure. Let me take a look...<pause> Huh?<pause>...Nope.<pause>Nothing wrong with them.<end>
+<Konta> Sure. Let me take a look...<pause> Huh?<pause> ...Nope.<pause> Nothing wrong with them.<end>
 
 // <contd>
 // <Konta>みせのカキ゛て゛す。て゛も、と゛うして・・・？<pause>
@@ -4492,7 +4507,7 @@ Wait, it was found in Nuki's room? That Nuki...<end>
 
 // <Oidon>せっかく　ココンを　よんた゛んて゛すから
 // ココンに　めを　むけましょうよ。<end>
-Let's focus on Kit since we've got him here.<end>
+Let's focus on Kit, since we've got him here.<end>
 
 // !<end>
 !<end>
@@ -4518,7 +4533,8 @@ Never seen it.<end>
 // よく　みつかりましたね。と゛こて゛　これを？<key><Kokon>えっ、ヌキのへや？<pause>
 // やっは゜り　ヌキか゛　はんにんた゛ったのか・・・。<end>
 <contd>
-<Kokon>Wow, those are nice! Huh? Hey, those are from the shop. Good job finding them! Where did you find them?<key>
+<Kokon>
+Wow, those are nice! Huh? Hey, those are from the shop. Good job finding them! Where did you find them?<key>
 <Kokon>
 Huh? Nuki's room? So it \w\a\s him...<end>
 
@@ -4619,7 +4635,7 @@ We've got Nuki here, so let's focus on him.<end>
 // <Oidon>10日のよる11時は　と゛こにいた？
 // <Nuki>そのときは、いえにいましたよ。<end>
 <Oidon>
-Where were you at 11pm on the night of the 10th?<nl>
+Where were you at 11 PM on the night of the 10th?<nl>
 <Nuki>
 I was home at that time.<end>
 
@@ -4639,8 +4655,7 @@ Nope. I have a license, though.<end>
 <Oidon>
 Are you aware that all the jewelry in the store was stolen?<key>
 <Nuki>
-Yeah, but everybody knows that. Why are you asking me?
-<end>
+Yeah, but everybody knows that. Why are you asking me?<end>
 
 // <Oidon>け゛んは゛に　のこされた　かみに"<char>"というもし゛か゛
 // かかれていたのた゛か゛
@@ -4666,6 +4681,7 @@ Oh, sorry. I went to my parents' from the 9th until the 10th. I changed my plans
 // 9日から11日のあいた゛
 // かりていた　くるまのりょうしゅうしょうて゛す。<end>
 <contd>
+<Nuki>
 Oh, that. That's the receipt for the car I rented to go visit my parents between the 9th and the 10th.<end>
 
 // ？<end>
@@ -4701,8 +4717,8 @@ Barely any books here, boss.<end>
 // <Oidon>カ゛サ、カ゛サ・・・・・・<pause>うひゃーっ。<pause>
 // だんな、コ゛<pause>、コ゛キフ゛リか゛　て゛てきましたよ。
 // ソ゛クソ゛クッ<end>
-<Oidon>Let's have a look here...<pause> Aaahh!!<pause>
-Boss, the, there's a cockroach! *shudder*<end>
+<Oidon>
+Let's have a look here...<pause> Aaahh!!<pause> Boss, the, there's a cockroach! *shudder*<end>
 
 // <Oidon>とってみましたけと゛、たた゛のほんと
 // かわりはないようですぜ。<end>
@@ -4719,10 +4735,12 @@ OK, let's take it as evidence.<end>
 
 // <Oidon>カ゛サ、コ゛ソ・・・・・・。<pause>
 // だんな、なんにも　ありませんぜ。<end>
+<Oidon>
 Let's have a look...<pause> Nothing here, boss.<end>
 
 // <Oidon>カ゛サ、コ゛ソ・・・・・・。<pause>
 // だんな、しおりか゛　はさんて゛ある　た゛けですぜ。<end>
+<Oidon>
 Let's take a look...<pause> The bookmark is folded. That's all.<end>
 
 // <Oidon>あれ？<pause>だんな、これは　しおりて゛はなくて
@@ -4808,7 +4826,7 @@ Welcome! Oh, Andy! If you're looking for Koala, he's over there!<nl>
 <Oidon>
 Hi, Koala. I need your help again...<key>
 <Koala>
-Sure. Ask away.
+Sure. Ask away.<key>
 <Oidon>
 Well, you see, *whisper whisper* *mumble mumble*<pause> Wait, I mean *mumble mumble* *whisper whisper*<pause> ...and that's the current situation.<end>
 
@@ -4963,8 +4981,9 @@ Did Renard have any enemies?<end>
 // <Konta>なんと゛も　いうようて゛すけれと゛も
 // いないものは　いないんて゛す。
 // <Oidon>そうか・・・。<end>
+<contd>
 <Konta>
-I must have said it a hundred times already. He had none.
+I must have said it a hundred times already. He had none.<nl>
 <Oidon>
 I see...<end>
 
@@ -4982,7 +5001,7 @@ I dunno.<end>
 // <Oidon>"<char>"というもし゛に　なにか　おもい
 // あたらないか？<end>
 <Oidon>
-Know what this "N" is about?<end>
+Know what this <char> is about?<end>
 
 // <contd>
 // <Konta>わかりませんよ。<end>
@@ -5028,17 +5047,12 @@ No, not yet.<end>
 // ホ゛コホ゛コになって　かえってきたそうて゛す。<key>
 // <Oidon>しかたありません　ヌキを　あてにけ゛の
 // ようき゛て゛　たいほします。<end>
-// @TODO@ - verify pronouns if we meet this elephant
 <Oidon>
 Nuki! You are under arrest for the murder of Renard Fox!<nl>
 <Nuki>
-Now wait a minute! I did no such thing!<key>
+Now wait a minute! I did no such thing! But I do have a confession to make...<key>
 <Nuki>
-But I do have a confession to make...<key>
-<Nuki>
-On the 10th at 11 PM, I got in an accident with an elephant in my rental car.<key>
-<Nuki>
-The elephant was knocked unconscious, so I took the opportunity to run...<key>
+On the 10th at 11 PM, I got in an accident with an elephant in my rental car. The elephant was knocked unconscious, so I took the opportunity to run...<key>
 <Nuki>
 If you check it out, you'll see it's true. So I can't be the murderer!<key>
 <Oidon>
@@ -5055,9 +5069,9 @@ Well, I have no choice. Nuki, you're under arrest for hit and run.<end>
 <Oidon>
 What's the deal with these jewels?!<nl>
 <Nuki>
-I don't know anything about those.<nl>
+I don't know anything about those.<key>
 <Oidon>
-Don't play dumb! We found these in your room!<key>
+Don't play dumb! We found these in your room!<nl>
 <Nuki>
 I don't know what to say. I really don't know anything about them.<end>
 
@@ -5082,7 +5096,7 @@ Dunno how it got there.<end>
 // そのあとは　し゛たくて゛　リンリンと
 // はなしをしてたらしいですぜ。<end>
 <Oidon>
-Boss, it seems that on the night of the 10th Red was at the jewelry store from 8 until 9:30. Afterwards, he was talking with Ling-Ling at his place.<end>
+Boss, it seems that on the night of the 10th Red was at the jewelry store from 8:30 to 9:30. Afterwards, he was talking with Ling-Ling at his place.<end>
 
 // <contd>
 // <Konta>けっこう　しつこいて゛すね。その　きんは゜つは
@@ -5100,7 +5114,7 @@ Boss, it seems that on the night of the 10th Red was at the jewelry store from 8
 <Konta>
 These questions are getting real old. I've seen that blond hair a hundred times now! I told you I don't know anything.<key>
 <Oidon>
-We've still got nothing on the this hair. We need whatever info we can get, no matter how little.<key>
+We've still got nothing on this hair. We need whatever info we can get, no matter how little.<key>
 <Oidon>
 Even if it means asking the same questions and showing the same things over and over. Please understand.<pause> It's our job.<end>
 
@@ -5139,9 +5153,7 @@ Hmm? What's that?<nl>
 <Kokon>
 There's a guy named Nuki who lives in my father's condo.<key>
 <Kokon>
-He would skimp on the rent and occasionally get into arguments with my father.<key>
-<Kokon>
-Maybe the "N" is for Nuki.<end>
+He would skimp on the rent and occasionally get into arguments with my father. Maybe it's an "N" for Nuki.<end>
 
 // 。<end>
 .<end>
@@ -5314,6 +5326,7 @@ Nope.<end>
 // <contd>
 // <Peruu>ヌキというかたのことは　なにもしりませんのて゛
 // はなすことは　て゛きませんわ。<end>
+<contd>
 <Peruu>
 I don't know a Nuki, so I can't tell you anything.<end>
 
@@ -5332,7 +5345,8 @@ Gee...<pause> No idea.<end>
 // <contd>
 // <Peruu>なんと゛　かんか゛えても・・・<pause>　わかりませんわ。<end>
 <contd>
-<Peruu>I can't come up with anything.<end>
+<Peruu>
+I can't come up with anything.<end>
 
 // 。<end>
 .<end>
@@ -5365,6 +5379,7 @@ On the night of the 10th, Peru was on a date with Kit.<pause> Must be fun...<pau
 // <contd>
 // <Peruu>ここいか゛いて゛は　みたこと　ありませんわ。<end>
 <contd>
+<Peruu>
 I've never seen it anywhere besides here.<end>
 
 // た゛れに？　<end>
@@ -5520,8 +5535,7 @@ OK, let's go to Vixy's room.<end>
 // <Oidon>せっかく　コンタを　よんた゛んて゛すから
 // コンタに　めを　むけましょうよ。<end>
 <Oidon>
-Let's focus on Red since we've got him
-here already.<end>
+Let's focus on Red, since we've got him here already.<end>
 
 0<end>
 
@@ -5892,7 +5906,7 @@ We need evidence first.<end>
 
 // <Oidon>また゛　"<char>"というもし゛は　わからないか？<end>
 <Oidon>
-Does this "N" still not mean anything to you?<end>
+Does this <char> still not mean anything to you?<end>
 
 // <contd>
 // <Konta>ヌキという　いか゛いは　なにも・・・。<end>
@@ -6257,7 +6271,7 @@ Now that I've got that to you, I'll just be on my way...<end>
 // <Oidon>せっかく　ココンを　よんた゛んて゛すから
 // ココンに　めを　むけましょうよ。<end>
 <Oidon>
-Let's focus on Kit since he's here already.<end>
+Let's focus on Kit, since he's here already.<end>
 
 // 。<end>
 .<end>
@@ -6268,7 +6282,7 @@ Let's focus on Kit since he's here already.<end>
 // <Oidon>せっかく　ヘ゜ルーを　よんた゛んて゛すから
 // ヘ゜ルーに　めを　むけましょうよ。<end>
 <Oidon>
-Let's focus on Peru since we've got her here.<end>
+Let's focus on Peru, since we've got her here.<end>
 
 
 //******** CHAPTER 6 ********//

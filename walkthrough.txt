@@ -61,23 +61,24 @@ Chapter 3
 ---------
 NB: when questioning people, also show them the gun, memo, and blond hair
 
-* Question Kokon thoroughly
-* Sniff Kokon (identify perfume smell)
-* Seek info at HQ (Peruu becomes available)
-* Sniff Peruu (identify perfume as the perfume Kokon had on him)
+* Info (Peruu becomes available)
 * Question Peruu thoroughly
 ** Asking about alibi reveals she was on a date
 ** Showing gun reveals she gave it to Gonkichi
 ** Showing memo unlocks Taaji and Rinrin
-* Ask Kokon about his alibi (says it's personal)
+* Sniff Peruu
+* Sniff Kokon (now asking Kokon about alibi will hint at a date with Peru)
+* Question Kokon thoroughly
 * Ask Peruu about her alibi again (find out her date was with Kokon)
 * Question Taaji thoroughly
 ** Asking about Gonchiki's quarrels unlocks Dragon Cafe
 * Question Rinrin thoroughly
 * Go to Dragon Cafe
 * Question Dorakure thoroughly
+** Asking about Kit allows you to ask Kit about money
 * Ask Kokon about alibi (find out he'd lied before since he was with Peruu)
 * Ask Kokon about money
+* Ask Kokon, Peruu, Taaji, and Rinrin about Renard's fish hunting
 * "Reason" at HQ
 
 This should take you to the Bear Bar

@@ -235,14 +235,14 @@ People:
   タージ (turtle)                      - Pokey
   ペルー                               - Peru
   ツネコ (female fox)                  - Vixy
-  コアラ                               - ???
+  コアラ                               - Koala
   ベアス (bear)                        - Teddy? Bjorn? Ursula? Can't tell if female.
   ドラクレ (tiger)                      - Draco/Drago/Drake -- maybe think of a more tigery name
 
 Places:
   どうぶつの　むら              - Animalville
   コンコンこうせきてん            - Foxy Jewelry [konkon = fox noise again] - name suggested by Saeko
-  迷いの森
+  迷いの森                  - Lost Woods
 
 
 Alternative titles
