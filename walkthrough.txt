@@ -7,18 +7,54 @@ Chapter 1
 ---------
 Victim's room:
 * Look table (find envelope)
-* Take envelope
+* Take envelope (also reveals scrap of paper with "N")
 * Check envelope (find note from Gonkichi to Peruu)
 * Check chair (find gun)
 * Take gun
+* Look floor (allows checking it)
 * Check floor (find blond hair)
 * Take blond hair
-...
+
+Shop:
+* Look shop (find that the jewels are gone)
+* Look floor (find note)
+* Take note
+* Check note (learn about Taaji and Rinrin)
+
+Study:
+* Open drawer (it's locked, but this is still a necessary step)
+* Open bookcase (find safe)
+* Check safe (allows trying to open it)
+
+After doing all these, it should be possible to go to HQ.
+
+HQ:
+* Check everyone
 
 
 Chapter 2
 ---------
-...
+When the walkthrough says "question [name] thoroughly", it means ask all the questions available. Sometimes asking a question reveals a new topic; be sure to ask about it too. Some questions may not be necessary to ask, but it isn't worth the trouble finding out which ones.
+
+Pyonko's shop:
+* Question Pyonko thoroughly
+* Show Pyonko the blond hair, note, and gun
+
+Red's room:
+* Check desk (find notepad)
+* Take notepad
+* Check notepad (reveals Konta had something to do at 8:30 on the 10th)
+
+HQ:
+* Info (establishes time of murder)
+* Summon Konta
+* Question Konta thoroughly
+* Show Konta the blond hair, note, and gun
+* Show Konta the notepad twice (reveals he met Ling-Ling)
+* Ask Konta about Ling-Ling
+* Summon Kokon
+* Question Kokon thoroughly
+* Show Kokon the blond hair, note, and gun
 
 
 Chapter 3
