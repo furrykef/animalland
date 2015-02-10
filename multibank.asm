@@ -26,7 +26,7 @@ CHAR_KEY:           equ     $ff
 
 
 ; Misc. constants
-RIGHT_MARGIN:       equ     23*8
+RIGHT_MARGIN:       equ     23*8 + 1
 
 
 ; BIOS stuff

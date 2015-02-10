@@ -6,9 +6,6 @@ http://www.d1.dion.ne.jp/~gake/koryaku/animal/animal.htm
 Buggy behavior with C-BIOS MSX2+ JP setting in openMSX. Background color is black in the main game. May be related to the RAM region we're using.
 
 
-Check that text can go right up against the right margin
-
-
 Not sure that "Start" and "Continue" on the title screen are always aligned the same. It may depend on when exactly you skip ahead to the title screen.
 
 Also looks like "Continue" is one more pixel to the right, at least as of this run.
@@ -220,6 +217,11 @@ Beta testers
 * EvilSonic will no doubt be interested (drew Animal Land fanart): https://www.weasyl.com/~evilsonic
 
 
+Other people
+------------
+* tepples can help with title screen logo
+
+
 Character and place names
 -------------------------
 People:
@@ -241,8 +243,6 @@ Places:
   どうぶつの　むら              - Animalville
   コンコンこうせきてん            - Foxy Jewelry [konkon = fox noise again] - name suggested by Saeko
   迷いの森
-
-In addition, the けいさつ at HQ should read "ALPD" or "PDHQ".
 
 
 Alternative titles

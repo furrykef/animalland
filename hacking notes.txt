@@ -6,6 +6,8 @@ The "no" symbol (a circle with a slash through it) appears in the font for chara
 
 The script is a standard Atlas script.
 
+Use \ in the script to make a letter bold. \l\i\k\e \t\h\i\s. Not all characters have a bold version; mostly just letters and a few symbols. Use \\ with uppercase letters to use a monospace font, \\L\\I\\K\\E \\T\\H\\I\\S. This is intended for passwords.
+
 The game's text formatting routine will wrap lines automatically, and it will automatically prompt for a keypress if the text goes past the bottom margin. I wanted to make it smart enough not to ask for a keypress in the middle of a sentence, but in the end I decided it's not worth the effort. Instead I took note of passages where this happens and inserted prompts at appropriate places by hand.
 
 
@@ -15,18 +17,21 @@ Background images are stored in an RLE format. Each image has the following form
 
 The first two bytes give the size of the compressed image in bytes, including the size of this header, in little endian. This tells the program how many bytes to skip to get to the next image. Therefore, when replacing an image, this value should NOT be updated even if the new image is smaller.
 
-Next are four blocks of pattern data. The first block is loaded into VRAM location $0000, the second is loaded into $0800, the third is loaded into $2000, and the fourth is loaded into $2800. Each block starts with a one-byte header that indicates how many tiles to skip. For instance, if the first byte of the second block is 8, the data will be written to $0840, eight tiles after $0800.
+Next are four blocks of pattern/palette data. The first block is loaded into VRAM location $0000 (region p0 pattern), the second is loaded into $0800 (region p1 pattern), the third is loaded into $2000 (region p0 palette), and the fourth is loaded into $2800 (region p1 palette). Each block starts with a one-byte header that indicates how many tiles to skip. For instance, if the first byte of the second block is 8, the data will be written to $0840, eight tiles after $0800.
 
-The pattern data streams are compressed using an RLE scheme using the following binary codes:
+The pattern/palette data streams are compressed using an RLE scheme using the following binary codes:
   * 00000000: denotes end of the pattern data.
   * 0nnnnnnn: the next byte is to be output n times (an RLE run). For example, the hex values 03 5a output 5a 5a 5a.
   * 1nnnnnnn: the next n bytes are to be copied verbatim. For example, the hex values 83 7c 24 02 output 7c 24 02.
 
-(Note: The RLE encoder used in the original game uses RLE to encode runs of two bytes, which is inefficient, so it is quite easy to make new graphics fit in the same space as the old by using RLE only for repetitions of three or more bytes.)
+(Note: The RLE encoder used in the original game uses RLE to encode runs of two bytes, which is inefficient, so it is quite easy to make new graphics fit in the same space as the old by using RLE only for repetitions of three or more bytes, as gfxcompress.py does.)
 
-Finally, after the four blocks comes the tilemap, uncompressed. Maps for backgrounds are 19x14, so they'll be 266 bytes.
+Finally, after the four blocks comes the tilemap, uncompressed. Maps for backgrounds are 19x14, so they'll be 266 bytes. The title screen image is 21x16, so its tilemap will be 336 bytes. You can determine the size of the tilemap in an image from the original ROM by assuming all the data between the end of the fourth stream and the end of the image (going by the length in the image header) is the tilemap.
 
 To rip graphics, use gfxrip.py. Give the offset of the graphic starting at the header. If you give the name of the graphic as "foo", this will result in foo.1.bin, foo.2.bin, foo3.bin, foo.4.bin, foo.log, and foo.map. The first four of these are pattern data; the logfile gives the header for each block as well as other info; and the .map file contains the tilemap. The pattern data files are all uncompressed. To reinsert graphics, the pattern data must first be compressed with gfxcompress.py. If an uncompressed file is called foo.1.bin, we call the recompressed file foo.comp.1.bin.
+
+
+Editing the title screen is difficult because the code makes some assumptions. In particular, values 00 and 01 are special in region p0, and the values 00, 01, 0B, 0C, 0D, and 79 are special in p1. Altering these will alter the background, not just the logo.
 
 
 The ASM code
