@@ -3056,7 +3056,7 @@ Thank you, Koala. OK, we're off to HQ.<end>
 // <Oidon>このし゛んふ゛つにかんしては　また゛
 // きいていないことか゛　あって
 // よくわかりませんぜ。<end>
-Translation goes here.<end>
+There is much I haven't heard about this person, so I can't be sure.<end>
 
 // <Oidon>コンコンほうせきてんの　きゃくというた゛けて゛
 // うたか゛うへ゛きところは　ないですぜ。
