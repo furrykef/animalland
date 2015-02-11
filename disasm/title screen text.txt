@@ -1,0 +1,12 @@
+$620e:  ld      hl, $1150                   ; VRAM address
+        ld      de, $65f9                   ; source text address for " START"
+        ld      a, $f1
+        ld      ($f301), a
+        call    $62a2
+        ; DE will now point at " CONTINUE"
+        ld      hl, $1350
+        call    $62a2
+        ; DE will now point at copyright string
+        ld      hl, $1618
+        call    $62a2
+$6228:

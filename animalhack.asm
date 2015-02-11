@@ -162,6 +162,12 @@ PressSpace:
 PressSpaceLen:  equ $ - PressSpace
 
 
+; The code that prints the title screen text ("START", "CONTINUE", copyright notice)
+forg    $0020e
+org     $620e, $6227
+        jp      PrintTitleScreenText
+
+
 ; Removes the VRAM bump in title screen code
 forg    $002a7
 org     $62a7, $62ab

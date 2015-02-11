@@ -62,6 +62,38 @@ cur_x:          rb 1
 org $8000 + MULTIBANK_OFFSET, $bfff
 
 
+PrintTitleScreenText:
+        xor     a
+        ld      (pixel_offset), a
+        ld      hl, $1150                   ; VRAM address
+        ld      de, TitleScreenText
+        ld      a, $f1
+        ld      ($f301), a
+        call    $62a2                       ; print string
+        ; DE will now point at " CONTINUE"
+        xor     a
+        ld      (pixel_offset), a
+        ld      hl, $1350
+        call    $62a2
+        ; DE will now point at copyright string
+        xor     a
+        ld      (pixel_offset), a
+        ld      hl, $1518                   ; originally $1618
+        call    $62a2
+        ; DE will now point at project URL
+        xor     a
+        ld      (pixel_offset), a
+        ld      hl, $1618
+        call    $62a2
+        jp      $6228                       ; back to your regularly scheduled program
+
+TitleScreenText:
+        db      "START", $ff
+        db      "CONTINUE", $ff
+        db      "Copyright (C) 1987 ENIX", $ff
+        db      "http://github.com/furrykef/animalland", $ff
+
+
 HandlePasswordChar:
         cp      'A'
         jp      c, $637c                    ; below A-Z range; reject

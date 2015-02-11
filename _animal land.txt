@@ -7,9 +7,13 @@ http://web.archive.org/web/20130510133857/http://www5d.biglobe.ne.jp/~t-suzuki/s
 Buggy behavior with C-BIOS MSX2+ JP setting in openMSX. Background color is black in the main game. May be related to the RAM region we're using.
 
 
-Not sure that "Start" and "Continue" on the title screen are always aligned the same. It may depend on when exactly you skip ahead to the title screen.
+"Start", "Continue", and "Copyright" need their alignments fixed (pixel offset zeroed out). Be careful when editing the code for the copyright string, because this is a popular place to put copy protection measures.
 
-Also looks like "Continue" is one more pixel to the right, at least as of this run.
+" START($ff)" at $005f9 ($65f9 in memory space)
+" CONTINUE($ff)" at $00600
+"Copyright (C) 1987 by Enix($ff)" at $0060a
+
+"This is GRAVE MESSAGE" (etc.) at $0065d
 
 
 Check that <contd> blocks always start with cur_x at 0 as expected
@@ -139,8 +143,6 @@ Also submit the porn magazine easter egg and possibly ending password to tcrf.ne
 
 Hacking notes
 -------------
-#msxdev on irc.rizon.net
-
 http://bifi.msxnet.org/msxnet/tech/megaroms.html#ascii8 -- mapper info
 
 Several codes print out multiple characters. The code that does this can possibly be leveraged for our own text compression.
@@ -201,7 +203,8 @@ No duplicates. So long as we don't change these, we can identify a bank by its f
 Credits
 -------
 Kef Schecter - hacking and translation
-Torbjorn -- translation
+Torbjorn - translation
+geishaboy - translation
 BiFi (#msxdev) - found code for making text bold so I could disable it; helped with password routine; helped with graphics compression
 
 Font is a variant of Tau's Custom Font
