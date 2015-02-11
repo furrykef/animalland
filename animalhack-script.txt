@@ -3514,8 +3514,7 @@ It almost looks like tiger hair, but it isn't.<end>
 // <contd>
 // えっ、これて゛　ゴンきちさんか゛　ころされた？
 // なんておそろしい・・・・・・<end>
-<contd><nl>
-Is that what Renard was killed with? How awful...<end>
+<contd> Is that what Renard was killed with? How awful...<end>
 
 // <Oidon>そうた゛!　いいことをおもいつきました。
 // おいと゛んのしりあいて゛　はんさ゛いそうさの
@@ -3994,8 +3993,7 @@ It seems Kit was on a date with Peru on the evening of the 10th.<end>
 
 // <contd>
 // しかし、しょうにんは　いませんぜ。<end>
-<contd><nl>
-But we have no witnesses...<end>
+<contd> But we have no witnesses...<end>
 
 // <contd>
 // <Kokon>さかなハンティンク゛？
@@ -4082,7 +4080,7 @@ Oh, how beautiful! I love blond hair! I don't recognize this, though.<end>
 // それなのに、それなのに・・・・・・<end>
 <contd><nl>
 <Taaji>
-Indeed.<key>
+I am.<key>
 <Oidon>
 We hear you two were friends.<nl>
 <Taaji>
@@ -4147,7 +4145,7 @@ I don't know.<end>
 // て゛も、みたことは　ありませんよ。<end>
 <contd><nl>
 <Taaji>
-Huh? It has my name, but I've never seen it.<end>
+Eh? It has my name, but I've never seen it.<end>
 
 // 。<end>
 .<end>
@@ -4190,14 +4188,18 @@ A better one than most, if you ask me.<end>
 
 // <contd>
 // <Rinrin>しりませんよ。<end>
-Translation goes here.<end>
+<contd><nl>
+<Rinrin>
+I don't know.<end>
 
 // ですぜ。<end>
 <end>
 
 // <contd>
 // <Rinrin>さあ・・・わかりませんよ。<end>
-Translation goes here.<end>
+<contd><nl>
+<Rinrin>
+Hmm... I don't know.<end>
 
 // 。<end>
 .<end>
@@ -4461,12 +4463,10 @@ The evidence we have so far is... blond hair, memo, gun,<end>
 
 // <contd>
 // りょうしゅうしょう、<end>
-<contd><nl>
-receipt,<end>
+<contd> receipt,<end>
 
 // <contd>カキ゛、ほうせきるい<end>
-<contd><nl>
-key, jewels<end>
+<contd> key, jewels<end>
 
 // <contd>
 // ・・・これた゛けですぜ。<end>
@@ -4518,6 +4518,7 @@ He was struggling to make a living. He has a short temper. I could see him killi
 
 // <contd>
 // <Kokon>みたこと　ありませんよ。<end>
+<contd><nl>
 <Kokon>
 Never seen it.<end>
 
@@ -5123,12 +5124,14 @@ Translation goes here.<end>
 
 // <contd>
 // <Kokon>そんなの　しりませんよ。<end>
+<contd><nl>
 <Kokon>
 I don't know.<end>
 
 // <contd>
 // <Kokon>さあ・・・<pause>　やめたくなったから
 // し゛ゃないんて゛すかね。<end>
+<contd><nl>
 <Kokon>
 Who knows... maybe he just got tired of it.<end>
 
@@ -5732,9 +5735,7 @@ I already told you all I know.<end>
 Nothing here to take.<end>
 
 // <contd>ひきた゛しのカキ゛、<end>
-// @TODO@ - note no newline in original
-<contd><nl>
-drawer key,<end>
+<contd> drawer key,<end>
 
 // 。<end>
 .<end>
@@ -5949,6 +5950,7 @@ Nope.<pause> No clue.<end>
 
 // <contd>
 // <Kokon>しりませんよ。<end>
+<contd><nl>
 I dunno.<end>
 
 // <Oidon>だんな、ココンは　10日のよる
@@ -5961,6 +5963,7 @@ Boss, on the night of the 10th around 11 PM Kit was on a date with Peru.<end>
 
 // <contd>
 // <Kokon>・・・・・・。<end>
+<contd><nl>
 ......<end>
 
 // <contd>
@@ -6056,6 +6059,7 @@ Boss, there's no need to arrest her.<end>
 
 // <contd>
 // <Peruu>ええ・・・。<end>
+<contd><nl>
 Sorry...<end>
 
 // <contd>
@@ -7094,6 +7098,7 @@ Where?<end>
 // <Mogura>おらか゛　ここに　きたのは　1年まえた゛から
 // そんなことは　わからんし゛ょ。<end>
 <contd><nl>
+<Mogura>
 Beats me. I've only been here for one year.<end>
 
 // <contd>
