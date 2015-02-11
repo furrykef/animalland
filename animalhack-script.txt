@@ -1658,6 +1658,7 @@ Age 18. Red's younger brother. Has a girlfriend named Bunnie.<end>
 // <Oidon>40さい。　コンコンほうせきてんの
 // しょうは゛いか゛たき。<end>
 // (Don't know who this is.)
+// @TODO@ -- probably unused
 <Oidon>
 40 years old. Competes with Foxy Jewelry.<end>
 
@@ -2199,6 +2200,7 @@ Said to be Kit's girlfriend.<end>
 
 // <Oidon>ゴンきちの　しょうは゛いか゛たきなんて゛、
 // ちょっと　においますぜ。<end>
+// @TODO@ -- probably unused
 <Oidon>
 He's Renard's rival, so it is a bit fishy.<end>
 
@@ -3006,7 +3008,9 @@ He's young, but he may have a motive. His alibi is sketchy too. His hesitance to
 // <Oidon>し゛ふ゛んのしょうは゛いの　ためにとも
 // かんか゛えられます。
 // アリハ゛イも　はっきりしませんぜ。<end>
-Translation goes here.<end>
+// @TODO@ -- check translation. Is this text even used? May refer to the removed rival character.
+<Oidon>
+Maybe he just wanted to eliminate the competition. He has no clear alibi either.<end>
 
 // <Oidon>ヘ゜ルーは　てんいんというた゛けて゛
 // なにものて゛もないですぜ。
@@ -3056,7 +3060,8 @@ Nobody's seen it. Whose could it be?<end>
 // きんは゜つをしたものか゛　いないなんて・・・。
 // け゛んは゛にあった　きんは゜つは
 // いったいた゛れか゛　おとしたんた゛!<end>
-Translation goes here.<end>
+<Oidon>
+So many suspects and not a one has blond hair! Who the heck left it at the crime scene?<end>
 
 // <Oidon>22さいて゛す。
 // コンコンほうせきてんに　つとめている
@@ -3298,7 +3303,10 @@ Let's focus on Pokey, since he's here.<end>
 // <Oidon>クンクン。<pause>
 // だんな、のみものの　においか゛しますぜ。
 // かめた゛からコーラ、なんちゃって。<end>
-Translation goes here.<end>
+// This is a pun: cola, 甲羅 (shell)
+// @TODO@ -- come up with better joke
+<Oidon>
+*sniff sniff*<pause> Smells like turtle wax.<pause> Just kidding. I've always wanted to say that.<end>
 
 // <contd>
 // <Taaji>10日のよるなら、6時から7時まて゛
@@ -3396,7 +3404,16 @@ An "N"...? Or maybe you're looking at it sideways. Maybe it's a "Z"?<end>
 // していました。<key>
 // <Rinrin>て゛も、もうゴンきちさんとは　2と゛と
 // はなせないなんて・・・・・・。<end>
-Translation goes here.<end>
+<Oidon>
+Did you go to Foxy Jewelry on the 10th?<nl>
+<Rinrin>
+Yes. I was there from 5 to 6.<key>
+<Oidon>
+What were you doing there?<nl>
+<Rinrin>
+I was there to talk about this ring I gave him to repair, maybe have a chat...<key>
+<Rinrin>
+I had no idea it'd be the last time I'd ever see him...<end>
 
 // <contd>
 // <Rinrin>みたことはないて゛すよ。<end>
@@ -3526,11 +3543,10 @@ It almost looks like tiger hair, but it isn't.<end>
 // <Oidon>なにか　そうさのさんこうになることを
 // きけるかもしれません。
 // いってみましょうよ。<end>
-// @TODO@ -- incomplete translation
 <Oidon>
 Aha! I just thought of something. I have a friend who they call the god of criminal investigation.<key>
 <Oidon>
-He's since retired, but he always goes drinking at a place called the \B\e\a\r \B\a\r. He might be able to help with the investigation. Let's give him a visit.<end>
+He's since retired, but he's always drinking at a place called the \B\e\a\r \B\a\r. He might be able to help with the investigation. Let's give him a visit.<end>
 
 // <Oidon>と゛こかいくのは　しつもんか゛せ゛んふ゛おわってからに
 // しましょうせ゛。<end>
@@ -4231,7 +4247,8 @@ Age 18. Red's younger brother. Lives away from home.<end>
 
 // <Oidon>コンコンほうせきてんの　まえにある
 // コンヒ゛ニエンス　ストアーのてんいん。18さい。<end>
-Translation goes here.<end>
+<Oidon>
+Clerk at the convenience store across the street from Foxy Jewelry. Age 18.<end>
 
 // <Oidon>たた゛の　コンヒ゛ニエンス　ストアーの　
 // てんいんというた゛けなのて゛　と゛うきは
