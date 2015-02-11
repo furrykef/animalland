@@ -65,7 +65,7 @@ org $8000 + MULTIBANK_OFFSET, $bfff
 PrintTitleScreenText:
         xor     a
         ld      (pixel_offset), a
-        ld      hl, $1150                   ; VRAM address
+        ld      hl, $1150                   ; VRAM address; this one should not be changed
         ld      de, TitleScreenText
         ld      a, $f1
         ld      ($f301), a
@@ -73,8 +73,8 @@ PrintTitleScreenText:
         ; DE will now point at " CONTINUE"
         xor     a
         ld      (pixel_offset), a
-        ld      hl, $1350
-        call    $62a2
+        ld      hl, $1350                   ; don't change this one either
+        call    $62a2                       ; (the rest can be changed, though)
         ; DE will now point at copyright string
         xor     a
         ld      (pixel_offset), a
@@ -83,14 +83,17 @@ PrintTitleScreenText:
         ; DE will now point at project URL
         xor     a
         ld      (pixel_offset), a
-        ld      hl, $1618
+        ld      hl, $1628
         call    $62a2
         jp      $6228                       ; back to your regularly scheduled program
 
 TitleScreenText:
-        db      "START", $ff
-        db      "CONTINUE", $ff
-        db      "Copyright (C) 1987 ENIX", $ff
+        ; "START" and "CONTINUE" are in bold
+        ;                  S    T    A    R    T
+        db      "       ", $c2, $c3, $b0, $c1, $c3, $ff
+        ;                C    O    N    T    I    N    U    E
+        db      "     ", $b2, $be, $bd, $c3, $b8, $bd, $c4, $b4, $ff
+        db      "Copyright 1987 ENIX", $ff
         db      "http://github.com/furrykef/animalland", $ff
 
 

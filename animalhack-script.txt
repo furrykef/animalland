@@ -517,7 +517,8 @@ Character<end>
 Blond hair<end>
 
 // ト゛ラコ゛ン<end>
-Dragon<end>
+Dragon<mnl>
+Cafe<end>
 
 // いさ゛かや<pause>4　クマ<end>
 // @TODO@ - ?
@@ -1657,8 +1658,7 @@ Age 18. Red's younger brother. Has a girlfriend named Bunnie.<end>
 
 // <Oidon>40さい。　コンコンほうせきてんの
 // しょうは゛いか゛たき。<end>
-// (Don't know who this is.)
-// @TODO@ -- probably unused
+// Seems to be unused; a character must have been cut from the game.
 <Oidon>
 40 years old. Competes with Foxy Jewelry.<end>
 
@@ -2183,7 +2183,7 @@ It is said he was soon to become owner after Renard.<pause> He'd have no motive.
 // <Oidon>また゛、よく　わかりませんぜ。<end>
 // (asked to reason about someone)
 <Oidon>
-I've got nuthin'.<end>
+I've got nothing.<end>
 
 // <Oidon>と゛うきは　ありますか゛、いまいち
 // わかりませんぜ。<end>
@@ -2406,13 +2406,10 @@ It's small and white.<end>
 // なにか　おもいあたる　ふしは、ないか？<key>
 // <Kokon><char>　・・・　なにかか゛　ヌっと　て゛てきたとか、
 // なーんちゃって、そんなの　わかりませんよ。<end>
-// (changed Kit's response since we're dropping the idea of it not
-// looking like a perfect N)
-// @TODO@ -- ヌっと is actually a pun here
 <Oidon>
 This <char> was found on a scrap of paper at the scene. Any ideas?<nl>
 <Kokon>
-Hmm... nope.<end>
+<char>... N? N... Nnnope.<end>
 
 0<end>
 
@@ -2945,7 +2942,7 @@ There's no one to show anything to.<end>
 
 // <Oidon>ほんじゃ、ト゛ラコ゛ンへいきましょうや。<end>
 <Oidon>
-OK, let's go to Dragon.<end>
+OK, let's go to the Dragon Cafe.<end>
 
 // <Oidon>ほんじゃ、いさ゛かや"クマ"へいきましょうや。<end>
 <Oidon>
@@ -2996,7 +2993,7 @@ No info at this time.<end>
 // りゆうて゛　ころしたことも　かんか゛えられますか゛
 // と゛うきとしては　よわいですぜ。<end>
 <Oidon>
-While it's possible he killed him to take over the store, it's not too plausible of a motive.<end>
+While it's possible he killed him to take over the store, it's not too plausible a motive.<end>
 
 // <Oidon>としは　わかいんて゛すか゛、と゛うきは
 // かんか゛えられますぜ。アリハ゛イも
@@ -3009,6 +3006,8 @@ He's young, but he may have a motive. His alibi is sketchy too. His hesitance to
 // かんか゛えられます。
 // アリハ゛イも　はっきりしませんぜ。<end>
 // @TODO@ -- check translation. Is this text even used? May refer to the removed rival character.
+// But it might also refer to Kit before his alibi is established.
+// If so, I can't find a way to trigger this message, though.
 <Oidon>
 Maybe he just wanted to eliminate the competition. He has no clear alibi either.<end>
 
@@ -3016,7 +3015,7 @@ Maybe he just wanted to eliminate the competition. He has no clear alibi either.
 // なにものて゛もないですぜ。
 // それに　と゛うきも　かんか゛えられませんぜ。<end>
 <Oidon>
-All we know about Peru is that she's a banker. Not enough information to imagine a motive.<end>
+All we know about Peru is that she's a clerk. Not enough information to imagine a motive.<end>
 
 // <Oidon>コアラさん　と゛うもありか゛とうこ゛さ゛いました。
 // ほんじゃ、そうさほんふ゛へ　いきましょうや。<end>
@@ -3030,7 +3029,7 @@ Thank you, Koala. OK, we're off to HQ.<end>
 // きいていないことか゛　あって
 // よくわかりませんぜ。<end>
 <Oidon>
-There is much I haven't heard about this person, so I can't be sure.<end>
+I haven't heard much about this person, so I've got nothing.<end>
 
 // <Oidon>コンコンほうせきてんの　きゃくというた゛けて゛
 // うたか゛うへ゛きところは　ないですぜ。
@@ -3153,9 +3152,10 @@ Who doesn't want it?<end>
 
 // <contd>
 // <Kokon>さあ、しりませんよ。<end>
+// answer to "recognize this?"
 <contd><nl>
 <Kokon>
-No idea.<end>
+Not at all.<end>
 
 // <contd>
 // <Kokon>メモて゛すよ。
@@ -3204,7 +3204,7 @@ Let's focus on Peru, since she's here.<end>
 // <Oidon>クンクン。うっ、これは　ちのにおい・・・・・・<pause>
 // というのはうそて゛す。
 // し゛ょうひんな　においか゛しますぜ。<end>
-// When sniffing Peruu, before sniffing Kokon
+// When sniffing Peruu, before summoning Kokon
 <Oidon>
 Smells like blood...<pause> sweat, and tears have gone into making her fancy perfume.<end>
 
@@ -3621,7 +3621,7 @@ Oh, this? It's a burn. I accidently spilled coffee last night when I was at Red'
 // こうすいのにおいか゛しますぜ。
 // おい　こりゃ　と゛ういうことた゛？<key><Peruu>さあ　たた゛のく゛うせ゛んて゛しょ。<end>
 <Oidon>
-Hey, it smells like the same fancy perfume Kit had on. What's the deal?<nl>
+Hey, that smells like the same fancy perfume Kit had on! What's the deal?<nl>
 <Peruu>
 It's probably just a coincidence.<end>
 
@@ -3778,7 +3778,7 @@ Looks like good coffee.<end>
 
 // <Oidon>ゴンきちか゛　ころされたのは　しっているか？<end>
 <Oidon>
-Do you know that Renard was murdered?<end>
+Are you aware that Renard has been murdered?<end>
 
 // <contd>
 // <Dorakure>ええ・・・。さ゛んねんなことて゛す。あんなことに
@@ -3896,7 +3896,7 @@ Are you aware that Renard of Foxy Jewelry has been murdered?<end>
 // だんな、したを　やけと゛してしまいましたせ゛。
 // て゛も、いいあし゛て゛したよ。<end>
 <Oidon>
-*gulp*<pause> YOOOOOOOWWWWWW!! Boss, I've burnt my tongue! Darn good coffee though.<end>
+*gulp*<pause> YOOOOOOOWWWWWW!! I've burnt my tongue, boss! Darn fine coffee, though.<end>
 
 // 。<end>
 .<end>
@@ -4024,10 +4024,10 @@ Fish hunting? I don't really know anything about it.<end>
 
 // <contd>
 // <Kokon>さあ・・・しりませんよ。<end>
-// when asked if he recognizes the blond hair
+// @TODO@ -- context
 <contd><nl>
 <Kokon>
-Not at all.<end>
+No idea.<end>
 
 // ？<end>
 ?<end>
@@ -4085,7 +4085,7 @@ I don't know.<end>
 // て゛も　これには　みおほ゛え　こ゛さ゛いませんわ。<end>
 <contd><nl>
 <Peruu>
-Oh, how beautiful! I love blond hair! I don't recognize this, though.<end>
+Oh, how beautiful! I love blond hair! But I have no idea whose it could be.<end>
 
 // <contd>
 // <Taaji>ええ・・・・・・。
@@ -4135,7 +4135,7 @@ Troubled? Why's that?<nl>
 <Taaji>
 His older son Red started working for the business, but Kit refused to. It seems he was after money to start his own business to compete with his father's.<key>
 <Taaji>
-That's all I know.<pause> Ah, hold on...<pause> There's a cafe nearby called \D\r\a\g\o\n. Renard was good friends with the owner there, so he might know something.<end>
+That's all I know.<pause> Ah, hold on...<pause> There's a cafe nearby called the \D\r\a\g\o\n \C\a\f\e. Renard was good friends with the owner there, so he might know something.<end>
 
 // <contd>
 // <Taaji>へ゛つに　かわったところは
@@ -4808,7 +4808,7 @@ Listen here! I think I've begun to understand the mystery behind this case.<key>
 <Oidon>
 What?! Well, who's the culprit?<nl>
 <Koala>
-Oh, you really want to know, don't you? Fine, I'll tell you. The culprit is...<pause><pause><pause> \y\o\u \t\w\o!<key>
+Oh, you really want to know, don't you? Fine, I'll tell you. The culprit is...<pause><pause><pause> \y\o\u<pause> \t\w\o!<key>
 <Beasu>
 Sorry, Andy. You'd best come back when he's in a better mood.<end>
 
@@ -6842,7 +6842,7 @@ Does anybody ever come through here?<nl>
 <Mogura>
 Oh,<pause> sometimes, sure.<nl>
 <Oidon>
-Know what kind of animals?<nl>
+Know what kind of people?<nl>
 <Mogura>
 No clue.<pause> I'm blind, after all.<end>
 
@@ -7129,7 +7129,7 @@ Beats me. I've only been here for one year.<end>
 <Mogura>
 It's peaceful.<pause>There's too many passersby in the city. Ground-dwellers like myself just become a nuisance.<key>
 <Mogura>
-Nobody passes by down below in this forest... well,<pause> you do get a couple animals passing through every now and then...<key>
+Nobody passes by down below in this forest... well,<pause> you do get a couple people passing through every now and then...<key>
 <Mogura>
 But there's nothing really wrong with that.
 <end>
