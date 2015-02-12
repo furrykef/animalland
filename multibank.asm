@@ -62,6 +62,14 @@ cur_x:          rb 1
 org $8000 + MULTIBANK_OFFSET, $bfff
 
 
+SplashScreenText:
+        ; Bold font
+        ;       M    U    R    D    E    R         i    n         A    N    I    M    A    L
+        db      $bc, $c4, $c1, $b3, $b4, $c1, ' ', $e8, $ed, ' ', $b0, $bd, $b8, $bc, $b0, $bb, ' '
+        ;       L    A    N    D    <nl> <nl>
+        db      $bb, $b0, $bd, $b3, $fe, $fe
+        db      "    Alpha version; do not distribute", $ff
+
 PrintTitleScreenText:
         xor     a
         ld      (pixel_offset), a

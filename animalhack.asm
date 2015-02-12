@@ -162,6 +162,12 @@ PressSpace:
 PressSpaceLen:  equ $ - PressSpace
 
 
+; Splash screen text
+forg    $000b3
+org     $60b3, $60b5
+        ld      hl, SplashScreenText
+
+
 ; The code that prints the title screen text ("START", "CONTINUE", copyright notice)
 forg    $0020e
 org     $620e, $6227

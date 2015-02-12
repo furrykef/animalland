@@ -177,7 +177,7 @@ Summon<end>
 Ponder<end>
 
 // し゛ょうほう<end>
-Info<end>
+News<end>
 
 // テーフ゛ル<end>
 Table<end>
@@ -329,7 +329,7 @@ Summon<end>
 Ponder<end>
 
 // し゛ょうほう<end>
-Info<end>
+News<end>
 
 // そうさ<pause>6ほんふ゛<end>
 HQ<end>
@@ -481,7 +481,7 @@ Summon<end>
 Ponder<end>
 
 // し゛ょうほう<end>
-Info<end>
+News<end>
 
 // みる<end>
 Look<end>
@@ -732,7 +732,7 @@ Summon<end>
 Ponder<end>
 
 // し゛ょうほう<end>
-Info<end>
+News<end>
 
 // みる<end>
 Look<end>
@@ -808,7 +808,7 @@ Alibi<end>
 Car<end>
 
 // ほうせきの<pause>6こと<end>
-Jewel<end>
+Jewels<end>
 
 // ほんた゛な<end>
 Bookcase<end>
@@ -934,7 +934,7 @@ Call<end>
 Ponder<end>
 
 // し゛ょうほう<end>
-Info<end>
+News<end>
 
 // みる<end>
 Look<end>
@@ -970,7 +970,7 @@ Study<end>
 Vixy's room<end>
 
 // まよいのもり<end>
-Forest<end>
+Lost Woods<end>
 
 // ノートのこと<end>
 Note<end>
@@ -1094,224 +1094,226 @@ Perp<end>
 #WRITE(cmdptr, $2C0B)
 
 // みる<end>
-LOOK<end>
+Look<end>
 
 // とる<end>
-TAKE<end>
+Take<end>
 
 // しらへ゛る<end>
-CHECK<end>
+Check<end>
 
 // きく<end>
-ASK<end>
+Ask<end>
 
 // もちもの<end>
-ITEMS<end>
+Items<end>
 
 // つかう<end>
-USE<end>
+Use<end>
 
 // と゛こかいく<end>
-GO<end>
+Go<end>
 
 // あしもと<end>
-GROUND<end>
+Ground<end>
 
 // し゛めん<end>
-GROUND<end>
+Ground<end>
 
 // き<end>
-TREE<end>
+Tree<end>
 
 // いわ<end>
-ROCK<end>
+Rock<end>
 
 // みす゛うみ<end>
-LAKE<end>
+Lake<end>
 
 // かわ<end>
-RIVER<end>
+River<end>
 
 // はし<end>
-BRIDGE<end>
+Bridge<end>
 
 // レンカ゛<end>
-BRICK<end>
+Brick<end>
 
 // マッチは゛こ<end>
-MATCHBOX<end>
+Matchbox<end>
 
 // オノ<end>
 // @TODO@ - ?
-ONO<end>
+Ono<end>
 
 // すいとう<end>
-FLASK<end>
+Flask<end>
 
 // ホ゛ール<end>
-BALL<end>
+Ball<end>
 
 // ほ゛うえん<pause>5きょう<end>
-TELESCOPE<end>
+Telescope<end>
 
 // すいちゅう<pause>4メカ゛ネ<end>
-GOGGLES<end>
+Goggles<end>
 
 // カキ゛<end>
-KEY<end>
+Key<end>
 
 // すいちゅう<pause>4し゛ゅう<end>
 // @TODO@ - ?
-DIVING<end>
+Diving<end>
 
 // むしメカ゛ネ<end>
-MAG. GLASS<end>
+Magnifying<mnl>
+glass<end>
 
 // しんふ゛ん<end>
-NEWS<end>
+Newspaper<end>
 
 // しゃしんつき<pause>2しんふ゛ん<end>
-// @TODO@ - should be "news & photo"
-NEWS PHOTO<end>
+News photo<end>
 
 // しゅうかんし<end>
-MAG<end>
+Magazine<end>
 
 // とうゆ<end>
-OIL<end>
+Oil<end>
 
 // けそ゛め<pause>3く゛すり<end>
-HAIR DYE<end>
+Hair dye<end>
 
 // こや<end>
-HUT<end>
+Hut<end>
 
 // くす゛かこ゛<end>
-WASTE BASKET<end>
+Wastebasket<end>
 
 // せきは゛ん<end>
-SLATE<end>
+Slate<end>
 
 // あな<end>
-HOLE<end>
+Hole<end>
 
 // （そのた）<end>
-OTHER<end>
+Other<end>
 
 // せきは゛んの<pause>4もし゛<end>
-SLATE<end>
+Slate<end>
 
 // しんふ゛ん<end>
-NEWS<end>
+Newspaper<end>
 
 // てつのはこ<end>
-IRON BOX<end>
+Iron box<end>
 
 // し゛めんの<pause>6あな<end>
-HOLE<end>
+Hole<end>
 
 // モク゛ラ<end>
-MOLE<end>
+Mole<end>
 
 // さかな<end>
-FISH<end>
+Fish<end>
 
 // なそ゛のひと<end>
-UNK. PERSON<end>
+Unknown<mnl>
+person<end>
 
 // むかしの<pause>3まよいのもり<end>
-OLD FOREST<end>
+Old woods<end>
 
 // いまの<pause>4まよいのもり<end>
-FOREST TODAY<end>
+Today's woods<end>
 
 // なそ゛の<pause>3と゛うふ゛つ<end>
-UNK. ANIMAL<end>
+Unknown<mnl>
+person<end>
 
 // と゛うふ゛つ<pause>3のゆくえ<end>
-LOCATION<end>
+Location<end>
 
 // にしの<pause>5みす゛うみ<end>
-SOUTH LAKE<end>
+South lake<end>
 
 // くす゛れた<pause>6はし<end>
-BROKEN BRIDGE<end>
+Broken bridge<end>
 
 // よこ゛れた<pause>4ホ゛ール<end>
-DIRTY BALL<end>
+Dirty ball<end>
 
 // きれいな<pause>5ホ゛ール<end>
-CLEAN BALL<end>
+Clean ball<end>
 
 // ハチのす<end>
-BEEHIVE<end>
+Beehive<end>
 
 // いくのを<pause>6やめる<end>
-CANCEL<end>
+Cancel<end>
 
 // こやのなか<end>
-INSIDEHUT<end>
+Inside hut<end>
 
 // ト゛ア<end>
-DOOR<end>
+Door<end>
 
 // もと゛る<end>
-GO BACK<end>
+Go back<end>
 
 
 // Menu items for chapter 7
 #WRITE(cmdptr, $2C1A)
 
 // あける<end>
-OPEN<end>
+Open<end>
 
 // みせる<end>
-SHOW<end>
+Show<end>
 
 // たいほする<end>
-ARREST<end>
+Arrest<end>
 
 // と゛こかいく<end>
-GO<end>
+Go<end>
 
 // よふ゛<end>
-CALL<end>
+Call<end>
 
 // すいりする<end>
 Ponder<end>
 
 // し゛ょうほう<end>
-INFO<end>
+News<end>
 
 // みる<end>
-LOOK<end>
+Look<end>
 
 // とる<end>
-TAKE<end>
+Take<end>
 
 // しらへ゛る<end>
-CHECK<end>
+Check<end>
 
 // きく<end>
-ASK<end>
+Ask<end>
 
 // コンタ<end>
-RED<end>
+Red<end>
 
 // ココン<end>
-KIT<end>
+Kit<end>
 
 // ツネコ<end>
 Vixy<end>
 
 // コンタのこと<end>
-RED<end>
+Red<end>
 
 // ゆひ゛わの<pause>5こと<end>
-RING<end>
+Ring<end>
 
 // ヘ゜ルー<end>
-PERU<end>
+Peru<end>
 
 // リンリン<end>
 Ling-Ling<end>
@@ -1320,34 +1322,34 @@ Ling-Ling<end>
 Bunnie<end>
 
 // しゅうかんし<end>
-MAG<end>
+Magazine<end>
 
 // しんふ゛ん<end>
-NEWS<end>
+Newspaper<end>
 
 // かお<pause>6し゛ゃしん<end>
-PHOTO<end>
+Photo<end>
 
 // ん<end>
 <end>
 
 // ほうせきるい<end>
-JEWELS<end>
+Jewels<end>
 
 // しんふ゛んの<pause>4きし゛<end>
-ARTICLE<end>
+Article<end>
 
 // ようき゛しゃ<end>
-SUSPECT<end>
+Suspect<end>
 
 // はんにん<end>
-PERP<end>
+Perp<end>
 
 // ゛<end>
 <end>
 
 // ゆひ゛わ<end>
-RING<end>
+Ring<end>
 
 // ん<end>
 <end>
@@ -1356,35 +1358,35 @@ RING<end>
 <end>
 
 // いさ゛かや<pause>5　クマ<end>
-BAR<end>
+Bar<end>
 
 // そうさ<pause>5ほんふ゛<end>
 HQ<end>
 
 // コ゛ンきちの<pause>5こと<end>
-RENARD<end>
+Renard<end>
 
 // まよいのもり<pause>4のこと<end>
-FOREST<end>
+Lost Woods<end>
 
 // つ<end>
 <end>
 
 // すいちゅう<pause>4し゛ゅう<end>
 // @TODO@ - ?
-DIVING<end>
+Diving<end>
 
 // たいほにいく<end>
-ARREST<end>
+Arrest<end>
 
 // おうせつまの<pause>3かへ゛<end>
-PARLOR WALL<end>
+Parlor wall<end>
 
 // と<end>
 <end>
 
 // ほうせきの<pause>6こと<end>
-JEWEL<end>
+Jewels<end>
 
 // い<end>
 <end>
@@ -1396,10 +1398,10 @@ JEWEL<end>
 <end>
 
 // た゛んか゛ん<pause>3の　ち<end>
-BULLET BLOOD<end>
+Blood<end>
 
 // しんふ゛んの<pause>5こと<end>
-NEWS<end>
+Newspaper<end>
 
 // ゛<end>
 <end>
@@ -2066,6 +2068,7 @@ Welcome!<end>
 0<end>
 
 // <Oidon>コンタは、て゛かけているのて゛　きけませんぜ。<end>
+// @TODO@ -- is this used? When does it happen?
 <Oidon>
 Red's out right now, so we can't talk to him.<end>
 
@@ -2099,7 +2102,7 @@ Ugh...<pause> it's too heavy to pick up, boss.<end>
 // おいと゛んには　よめませんぜ。
 // だんな、これを　とるのは　やめましょうよ。<end>
 <Oidon>
-They're full of difficult things and I can't read them. They're of no use to us.<end>
+Yeesh! They're full of difficult things I can't understand. They're of no use to us.<end>
 
 // <Oidon>あっ　だんな、つくえのしたに　てちょうか゛
 // ありますぜ。<end>
@@ -2143,7 +2146,7 @@ Let's call someone in first.<end>
 // <Oidon>しほ゛う　すいてい　し゛こくは、
 // 10日のよる　11時ということですぜ。<end>
 <Oidon>
-The estimated time of death was 11 PM on the 10th.<end>
+Our sources say the estimated time of death was 11 PM on the 10th.<end>
 
 // <Oidon>いまのところ、なにも　ありませんぜ。<end>
 // (response to じょうほう if player hasn't asked Pyonko about last night/gunshots)
@@ -2217,11 +2220,11 @@ He's Renard's rival, so it is a bit fishy.<end>
 // <Oidon>・・・だんな、このことは　しほ゛うし゛こくか゛
 // わかってから　きくことに　しましょう。<end>
 <Oidon>
-Got an alibi?<nl>
+What were you doing at the time of the murder?<nl>
 <Konta>
-For when? I can't help you unless I know when we're talking about.<key>
+Well, that'll depend on when that was.<key>
 <Oidon>
-Boss, let's ask him after we've determined the time of death.<end>
+Maybe we should ask him after we've determined the time of death.<end>
 
 // <Oidon>クンクン。　おかねの　においか゛、ふ゜んふ゜ん
 // しますぜ。
