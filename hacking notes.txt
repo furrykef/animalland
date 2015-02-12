@@ -1,6 +1,4 @@
-Our hack uses an expanded ROM. This means, if you are hacking a copy of the original Japanese ROM, you should expand the ROM to 256 KB before trying to build the project. Adding 128 KB of anything to the end of the file should be sufficient.
-
-The font is a 1bpp raw file named vwf.bin. It can be edited in tools such as Tile Layer Pro and Tile Molester. The width of each character is defined in the char_widths table in animalhack.asm.
+The font is a 1bpp raw file named vwf.bin. It can be edited in tools such as Tile Layer Pro and Tile Molester. The width of each character is defined in chars.py.
 
 The "no" symbol (a circle with a slash through it) appears in the font for characters that correspond to control codes; it's useless to put anything there except as an easter egg. (It's possible we didn't find all of 'em, so always check to see if your special character will display.) The character $10 in the charset ($90 in the game script) is also a control code for menus, though it's blank, because it also gets displayed (as a space).
 

@@ -1,5 +1,6 @@
 ; Written for tniasm 0.45
-incbin "animalland-expanded.rom"
+incbin "../Animal Land (1987) (Enix) (J).rom"
+ds $20000, $ff                      ; expand ROM to 256 KB
 cpu z80
 
 include "multibank.sym"
