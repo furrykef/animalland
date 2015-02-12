@@ -113,7 +113,7 @@ Teddy:
 :
 
 // ドラクレ
-Drago:
+Tyger:
 
 :
 
@@ -3486,7 +3486,7 @@ OK, back to HQ.<end>
 
 // <Oidon>トラのト゛ラクレですぜ。<end>
 <Oidon>
-It's Dorakure, a tiger.<end>
+Rather stripey fellow.<end>
 
 // <Oidon>なかなかしゃれていて　いいみせですぜ。<end>
 <Oidon>
@@ -4276,7 +4276,7 @@ My investigation shows that Ling-Ling's car is red.<end>
 // ト゛ラクレのくるまは　きいろにしましまの
 // はいったものた゛と　わかりましたせ゛。<end>
 <Oidon>
-My investigation shows that Dorakure drives a striped, yellow car.<end>
+My investigation shows that Tyger drives a striped, yellow car.<end>
 
 
 //******** CHAPTER 4 ********//
