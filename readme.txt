@@ -90,6 +90,7 @@ Tools used, in no particular order:
 * Notepad2
 * openMSX
 * meisei
+* blueMSX
 * MESS
 * Atlas
 * Translhextion

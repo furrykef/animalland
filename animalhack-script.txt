@@ -8014,6 +8014,10 @@ Translation goes here.<end>
 // す<char><char>"イ"イイ($10)<char><char>ーMMmmIK{mK{yiy[yiYYyyiIimM{{{iKmm
 // @TODO@ - data?
 
+
+//******** ENDING ********//
+#JMP($3C000, $3EFFF)
+
 // <Oidon>コンタくん　きのと゛くなことになったね。
 // きみをりようして　ふくしゅうをとけ゛たリンリンも
 // りょうしんの　かしゃくにたえきれす゛・・・

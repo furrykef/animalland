@@ -41,7 +41,7 @@ org     $6378, $637b
 ; and the script will overwrite several pointers. We must take care not
 ; to change anything but pointers and bank numbers.
 forg    $02bb8
-org     $4bb8, $4c24
+org     $4bb8, $4c31
         ; Chapter 1
         xor     a
         ld      h, $10                      ; bank number
@@ -99,6 +99,13 @@ org     $4bb8, $4c24
         ld      bc, $8000
         call    $4c3a
         jp      $7840
+
+        ; Ending
+        ld      a, $0f
+        ld      h, $1e
+        ld      bc, $8000
+        call    $4c3a
+        jp      $7970
 
 
 ; Set pixel_offset to 0 before printing "What's the file's name, boss?"
@@ -303,30 +310,42 @@ org     $98ef, $a0dd
 ; Banks
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+; Chapter 1
 forg $20000 + MULTIBANK_OFFSET
 org $a000, $bfff
 incbin "multibank.out"
 
+; Chapter 2
 forg $24000 + MULTIBANK_OFFSET
 org $a000, $bfff
 incbin "multibank.out"
 
+; Chapter 3
 forg $28000 + MULTIBANK_OFFSET
 org $a000, $bfff
 incbin "multibank.out"
 
+; Chapter 4
 forg $2c000 + MULTIBANK_OFFSET
 org $a000, $bfff
 incbin "multibank.out"
 
+; Chapter 5
 forg $30000 + MULTIBANK_OFFSET
 org $a000, $bfff
 incbin "multibank.out"
 
+; Chapter 6
 forg $34000 + MULTIBANK_OFFSET
 org $a000, $bfff
 incbin "multibank.out"
 
+; Chapter 7
 forg $38000 + MULTIBANK_OFFSET
+org $a000, $bfff
+incbin "multibank.out"
+
+; Ending
+forg $3c000 + MULTIBANK_OFFSET
 org $a000, $bfff
 incbin "multibank.out"

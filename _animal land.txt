@@ -4,6 +4,9 @@ http://www.d1.dion.ne.jp/~gake/koryaku/animal/animal.htm
 http://web.archive.org/web/20130510133857/http://www5d.biglobe.ne.jp/~t-suzuki/sousyuhen/so_animal_land.htm
 
 
+Game does not work correctly in blueMSX in MSX2 mode. The Japanese version does.
+
+
 Buggy behavior with C-BIOS MSX2+ JP setting in openMSX. Background color is black in the main game. May be related to the RAM region we're using.
 
 
@@ -194,7 +197,7 @@ Chapter 6: つきのわぐま
 Chapter 7: おおありくい
 Ending: えンテ゛ィンク゛ (secret password!)
 
-[use right ctrl to type ン in openMSX]
+[use right ctrl to type ン in openMSX; use Page Down to type it in meisei]
 
 
 Possible English passwords
