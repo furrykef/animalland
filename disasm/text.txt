@@ -231,7 +231,7 @@ _not_bold:
         inc     hl
         djnz    -
         ld      a,($f2e1)       ; Put char we've displayed back in A
-        cp      $a1             ; These insert a delay after certain punctuation symbols
+$482c:  cp      $a1             ; These insert a delay after certain punctuation symbols
         call    z,$4708
         cp      $a4
         call    z,$4708
@@ -239,7 +239,7 @@ _not_bold:
         call    z,$4708
         cp      $21
         call    z,$4708
-        call    $4c56
+$4840:  call    $4c56
         pop     hl
         pop     de
         pop     bc

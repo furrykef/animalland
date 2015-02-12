@@ -68,7 +68,7 @@ SplashScreenText:
         db      $bc, $c4, $c1, $b3, $b4, $c1, ' ', $e8, $ed, ' ', $b0, $bd, $b8, $bc, $b0, $bb, ' '
         ;       L    A    N    D    <nl> <nl>
         db      $bb, $b0, $bd, $b3, $fe, $fe
-        db      "    Alpha version; do not distribute", $ff
+        db      "    Alpha version; please do not distribute", $ff
 
 PrintTitleScreenText:
         xor     a
@@ -359,6 +359,8 @@ PrintChar:
         cp      '?'
         call    z, $4708
         cp      ','
+        call    z, $4708
+        cp      '.'
         call    z, $4708
         call    $4c56                   ; I assume this is a delay, music, misc. handling
         ld      hl, (vram_addr)

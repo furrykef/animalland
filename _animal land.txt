@@ -7,18 +7,6 @@ http://web.archive.org/web/20130510133857/http://www5d.biglobe.ne.jp/~t-suzuki/s
 Buggy behavior with C-BIOS MSX2+ JP setting in openMSX. Background color is black in the main game. May be related to the RAM region we're using.
 
 
-"Start", "Continue", and "Copyright" need their alignments fixed (pixel offset zeroed out). Be careful when editing the code for the copyright string, because this is a popular place to put copy protection measures.
-
-" START($ff)" at $005f9 ($65f9 in memory space)
-" CONTINUE($ff)" at $00600
-"Copyright (C) 1987 by Enix($ff)" at $0060a
-
-"This is GRAVE MESSAGE" (etc.) at $0065d
-
-
-Check that <contd> blocks always start with cur_x at 0 as expected
-
-
 The けいさつ/ALPD graphic begins at $0b8ed ($98ed in memory space). The pattern data begins at $0b8f0 and runs to $0bfd4, exclusive.
 
 The tilemap begins at $0bfd4 and runs to $0c0de, exclusive.
@@ -27,69 +15,13 @@ The tilemap begins at $0bfd4 and runs to $0c0de, exclusive.
 A character holds a sign in Japanese in the ending (しゃくほう　しろ！！, "Release him/her!!" -- perhaps translate as "FREE [name]!!").
 
 
-The ending (at least) loads bank 15 ($1e000-1ffff) into $6000. Not sure why. We may want to consider leaving this bank alone.
+The ending (at least) loads bank 15 ($1e000-1ffff) into $6000. I think there's code there. We may want to consider leaving this bank alone.
 
 
 <furrykef> Mm, what's the best place to get docs on the MSX, again?
 <~GuyveR800> map.grauw.nl
 
 http://www.z80.info/
-
-
-<pause> inserts a pause that's much too long after most periods. We need to add a "short pause" code.
-
-
-<Torbjorn> / <Oidon>け゛んは゛に　のこされた　かみに"<char>"というもし゛か゛
-<Torbjorn> / かかれていたのた゛か゛
-<Torbjorn> / なにか　おもいあたる　ふしは、ないか？<key>
-<Torbjorn> / <Kokon><char>　・・・　なにかか゛　ヌっと　て゛てきたとか、
-<Torbjorn> / なーんちゃって、そんなの　わかりませんよ。<end>
-<Torbjorn> Depending what the Nu spells out eventually we might have a different character to work with for this line later maybe
-<furrykef> I believe it's Nuki
-<furrykef> You can probably guess what species he is
-<Torbjorn> tanuki? :;p
-<furrykef> ding ding ding ding ding!
-<Torbjorn> It just depends what we call him then
-<Torbjorn> maybe Rocky like Rocky Racoon from that Beatles song :p
-<furrykef> I currently just call him Nuki, and refer to the symbol as an "N"
-<furrykef> So it'd go something like, "Do you know anything about this?" "It looks like the letter 'N'... but I don't know anything about it."
-<Torbjorn> Yeah that's one way to go
-<Torbjorn> it just means cutting out a joke from that spot
-<Torbjorn> probably doesn't matter in the long run but I'll see if I come up with anything good for it eventually
-<Torbjorn> gotta get to bed now, I'll be back later! ;)
-<furrykef> Hmm, is it a pun on the word ぬっと? Sorry, I don't always get these things easily. ^^;;
-<Torbjorn> Little late now but yeah, it's a pun on ぬっと
-<furrykef> We can make note of it and come back to it later
-
-
-<Torbjorn> Well in the forest you come across this stone tablet that has writing on it
-<Torbjorn> it says た゛こいやのこいわはしんきろうなり on it
-<Torbjorn> so nothing can be made of it for now and you move on
-<Torbjorn> then you come to a point where your path is blocked by rocks and this dialog happens
-<Torbjorn> / <Oidon>なるほと゛・・・。<pause>
-<Torbjorn> / だんな、こけしいわの　もし゛の　いみか゛
-<Torbjorn> / わかりましたせ゛。<key><Oidon>"た゛こいやのこいわはしんきろうなり。"
-<Torbjorn> / このもし゛から　"こ"を　ぬいてよめは゛
-<Torbjorn> / いいんて゛す。<key><Oidon>つまり　"た゛いやのいわは　しんきろうなり"。<pause>
-<Torbjorn> / とすると　このいわは　すへ゛てしんきろう。<pause>
-<Torbjorn> / なせ゛　"こ"を　ぬくかって？<pause><key><Oidon>それは　だんな、<pause>　こけしいわた゛からて゛すよ。
-<Torbjorn> / "こけし"・・・"こをけす"　という
-<Torbjorn> / ことですぜ。<end>
-<Torbjorn> So essentially, the name of the kind of rock the stone tablet is made of is referred to as Kokeshi Iwa
-<Torbjorn> Looking on google it seems to be a stone that has a towering appearence to it
-<Torbjorn> like a Kokeshi doll
-<Torbjorn> but anyways, since the stone is Kokeshi stone(iwa), they take it in a literal sense
-<Torbjorn> ko keshi
-<Torbjorn> which would be ko wo kesu koto, meaning erase the ko
-<furrykef> What an obtuse pun :P
-<Torbjorn> so erase the "ko" in that reading on the stone and it makes sense
-<Torbjorn> yeah :P
-<Torbjorn> but anyways since no literal translation would work something unique has to be made up for the Engish translation
-<furrykef> Is it essential to the plot?
-<Torbjorn> not really :P
-<furrykef> Don't have to lose much sleep over it then :P
-<Torbjorn> All it does it tell you that all other rocks are an illusion and makes them move out of your path
-<Torbjorn> disappear rather
 
 
 <Torbjorn> So in the ending Koala is talking and eventually he says this
@@ -99,11 +31,6 @@ http://www.z80.info/
 <Torbjorn> but there rest isn't to be found
 <Torbjorn> so I'm wondering if maybe it got lost in the script in pieces or something
 <Torbjorn> there's also some more lines in all katakana afterwards that I can't find
-
-
-Pointers
---------
-A routine at 2C3A (4C3A in mem space) handles loading pointers for both menus and script. They're passed in via registers. Trap all calls to it.
 
 
 Release checklist
@@ -118,17 +45,18 @@ Release checklist
 * All dialogue has speaker tag
 * All dialogue has <end> tag
 * <contd> tag always appears where needed
+* <contd> always followed by <nl>, <key>, or space
 * Make sure I've never mixed up Kokon and Konta
 * Password text input never overflows on-screen boundary
 * No significant @TODO@'s in code or script
 * All lines in main script conform to one of these regexes:
-    ^$      [blank line]
-    ^//     [comment]
-    ^<      [dialogue tag]
+    ^$              [blank line]
+    ^//             [comment]
+    ^<[A-Za-z]+>$   [nametag]
     <nl>$
     <key>$
     <end>$
-* hacking notes.txt is up to date
+* hacking notes on wiki are up to date
 * readme.txt has proper word wrapping
 * readme.txt and README.md are up to date
 
