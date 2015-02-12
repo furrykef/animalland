@@ -87,13 +87,13 @@ Kit:
 Red:
 
 // ツネコ
-Vixy:
+Vixen:
 
 // タージ
 Pokey:
 
 // ペルー
-Peru:
+Persia:
 
 // リンリン
 Ling:
@@ -597,7 +597,7 @@ Kit<end>
 <end>
 
 // ヘ゜ルー<end>
-Peru<end>
+Persia<end>
 
 // ターシ゛<end>
 Pokey<end>
@@ -753,7 +753,7 @@ Red<end>
 Kit<end>
 
 // ヘ゜ルー<end>
-Peru<end>
+Persia<end>
 
 // ヌキ<end>
 Nuki<end>
@@ -868,7 +868,7 @@ Life<end>
 Quarrels<end>
 
 // ツネコのこと<end>
-Vixy<end>
+Vixen<end>
 
 // コ゛ンきちの<pause>5つま<end>
 His wife<end>
@@ -967,7 +967,7 @@ Bar<end>
 Study<end>
 
 // ツネコのへや<end>
-Vixy's room<end>
+Vixen's room<end>
 
 // まよいのもり<end>
 Lost Woods<end>
@@ -1018,7 +1018,7 @@ Pokey<end>
 Ling-Ling<end>
 
 // ヘ゜ルー<end>
-Peru<end>
+Persia<end>
 
 // コ゛ンきち<end>
 Renard<end>
@@ -1075,7 +1075,7 @@ Sofa<end>
 Window<end>
 
 // ツネコ<end>
-Vixy<end>
+Vixen<end>
 
 // てか゛みの<pause>6こと<end>
 Letter<end>
@@ -1304,7 +1304,7 @@ Red<end>
 Kit<end>
 
 // ツネコ<end>
-Vixy<end>
+Vixen<end>
 
 // コンタのこと<end>
 Red<end>
@@ -1313,7 +1313,7 @@ Red<end>
 Ring<end>
 
 // ヘ゜ルー<end>
-Peru<end>
+Persia<end>
 
 // リンリン<end>
 Ling-Ling<end>
@@ -1479,10 +1479,10 @@ We've already checked that.<end>
 <Oidon>
 Half of it's torn up and crumpled. Look, it says something!<key>
 <Oidon>
-"Peru: if something should happen to me, give this to the police.<nl>
+"Persia: if something should happen to me, give this to the police.<nl>
 Signed, Renard"<key>
 <Oidon>
-Peru's his assistant, but she's currently out on a business trip.<end>
+Persia's his assistant, but she's currently out on a business trip.<end>
 
 0<end>
 
@@ -2543,7 +2543,7 @@ Whom?<end>
 <Oidon>
 Boss, we've learned some new things, but the mystery only deepens. Why was the gun fired twice? Who owns the white car?<key>
 <Oidon>
-We'll need to ask more people. It seems we must broaden our investigation. Maybe Peru will know something when she's back from her trip.<key>
+We'll need to ask more people. It seems we must broaden our investigation. Maybe Persia will know something when she's back from her trip.<key>
 <Oidon>
 Well, boss, our job has just begun. Let's give it our best! I've recorded our progress in a file. The name is \\X\\X\\X\\X.<end>
 
@@ -2909,7 +2909,7 @@ Maybe we should call someone in first.<end>
 // その日はもちろん、いままて゛す゛っと
 // しゅっちょうせす゛にいたことか゛　わかりましたせ゛。<end>
 <Oidon>
-Boss, we've discovered that not only was Peru of Foxy Jewelry in town on the day of the crime, she never even left for her trip!<end>
+Boss, we've discovered that not only was Persia of Foxy Jewelry in town on the day of the crime, she never even left for her trip!<end>
 
 // <Oidon>だんな　いったい　と゛ういうことて゛しょう？
 // かんけいしゃ　すへ゛てに　アリハ゛イか゛　あるとは。
@@ -2977,7 +2977,7 @@ Recognize this?<end>
 
 // <Oidon>ほんじゃ、ヘ゜ルーをよひ゛ますぜ。<end>
 <Oidon>
-OK, we'll summon Peru.<end>
+OK, we'll summon Persia.<end>
 
 // <Oidon>ほんじゃ、ターシ゛をよひ゛ますぜ。<end>
 <Oidon>
@@ -3017,7 +3017,7 @@ Maybe he just wanted to eliminate the competition. He has no clear alibi either.
 // なにものて゛もないですぜ。
 // それに　と゛うきも　かんか゛えられませんぜ。<end>
 <Oidon>
-All we know about Peru is that she's a clerk. Not enough information to imagine a motive.<end>
+All we know about Persia is that she's a clerk. Not enough information to imagine a motive.<end>
 
 // <Oidon>コアラさん　と゛うもありか゛とうこ゛さ゛いました。
 // ほんじゃ、そうさほんふ゛へ　いきましょうや。<end>
@@ -3050,7 +3050,7 @@ She's just a customer at the jewelry store, so there's no reason to suspect her.
 // <Kokon>ヘ゜ルーさんと　ハ゜フハ゜フしていましたよ。<end>
 <contd><nl>
 <Kokon>
-Peru was giving me some "puff-puff".<end>
+Persia was giving me some "puff-puff".<end>
 
 // <Oidon>また゛　これをみたものは　いませんぜ。
 // いったい　た゛れのなんて゛しょうかね。<end>
@@ -3067,7 +3067,7 @@ So many suspects and not a one has blond hair! Who the heck left it at the crime
 // <Oidon>22さいて゛す。
 // コンコンほうせきてんに　つとめている
 // てんいんですぜ。<end>
-// (must be Peru)
+// (must be Peruu)
 <Oidon>
 22 years old. Clerk at Foxy Jewelry.<end>
 
@@ -3201,7 +3201,7 @@ Don't be silly, boss.<end>
 // <Oidon>せっかくヘ゜ルーを　よんた゛んて゛すから、
 // ヘ゜ルーに　めをむけましょうよ。<end>
 <Oidon>
-Let's focus on Peru, since she's here.<end>
+Let's focus on Persia, since she's here.<end>
 
 // <Oidon>クンクン。うっ、これは　ちのにおい・・・・・・<pause>
 // というのはうそて゛す。
@@ -3607,7 +3607,7 @@ There's a woman involved in the crime, and he's got a bad habit with women. Litt
 // ありそうなのは　こいつですぜ。
 // さらにそうさか゛ひつようですぜ。<end>
 <Oidon>
-Peru confirmed his alibi, but right now he's got the most likely motive. We'll have to further our investigation.<end>
+Persia confirmed his alibi, but right now he's got the most likely motive. We'll have to further our investigation.<end>
 
 // <Oidon>そのケカ゛は、と゛うしたんた゛ね？
 // <Rinrin>やけと゛て゛す。きのうのよる、コンタさんのいえに
@@ -3632,7 +3632,7 @@ It's probably just a coincidence.<end>
 // <Kokon>それは　こし゛んてきな　ことなのて゛
 // はなしたく　ありませんね<end>
 <Oidon>
-Hey, you and Peru smell of the same perfume. What's the deal?<nl>
+Hey, you and Persia smell of the same perfume. What's the deal?<nl>
 <Kokon>
 It's personal. I'd rather not talk about it.<end>
 
@@ -3660,11 +3660,11 @@ Yes. He's younger than me and so cute! I just wanna give him some "puff-puff"!<e
 <Kokon>
 I'm telling you, I was home all night. God, we've been over this!<key>
 <Oidon>
-Ah, but Peru tells us you two were together that night.<nl>
+Ah, but Persia tells us you two were together that night.<nl>
 <Kokon>
 OK, you've got me. How embarrassing...<key>
 <Kokon>
-To tell the truth, I was seeing Peru behind Bunnie's back. She ended up finding out and now I've got all these scratches. It's not exactly something I like to talk about.<key>
+To tell the truth, I was seeing Persia behind Bunnie's back. She ended up finding out and now I've got all these scratches. It's not exactly something I like to talk about.<key>
 <Oidon>
 Even so, we're going to need you to tell the truth from here on.<nl>
 <Kokon>
@@ -4008,7 +4008,7 @@ That's not something I know much about.<end>
 // <Oidon>ココンは　10日のよる、
 // ヘ゜ルーと　テ゛ートしていたようて゛す。<end>
 <Oidon>
-It seems Kit was on a date with Peru on the evening of the 10th.<end>
+It seems Kit was on a date with Persia on the evening of the 10th.<end>
 
 // <contd>
 // しかし、しょうにんは　いませんぜ。<end>
@@ -4037,7 +4037,7 @@ No idea.<end>
 // <Oidon>ヘ゜ルーは　10日のよる、
 // ココンと　テ゛ートしていたようて゛す。<end>
 <Oidon>
-It seems Peru was on a date with Kokon on the night of the 10th.<end>
+It seems Persia was on a date with Kokon on the night of the 10th.<end>
 
 // <Oidon>だんな、ココンは　10日のよる8時はんから
 // 9時はんのあいた゛は　　いえて゛テレヒ゛を
@@ -4073,7 +4073,7 @@ I don't know.<end>
 // <Oidon>ヘ゜ルーは　10日のよる、
 // た゛れかと　テ゛ートしていたようて゛す。<end>
 <Oidon>
-It appears that on the night of the 10th Peru was on a date.<end>
+It appears that on the night of the 10th Persia was on a date.<end>
 
 // <contd>
 // <Peruu>さあ・・・わかりませんわ。<end>
@@ -4309,7 +4309,7 @@ Just when we thought we had our criminal, he's innocent... This case seems to ke
 <Oidon>
 Still, why was the jewelry in Nuki's room? And why is one piece missing? This case is more complicated than we thought.<key>
 <Oidon>
-If only we could talk with Vixy. Anyways, let's get back on this case, boss.<key>
+If only we could talk with Vixen. Anyways, let's get back on this case, boss.<key>
 <Oidon>
 I've saved our progress in a file. I labeled it \\X\\X\\X\\X.<end>
 
@@ -4330,7 +4330,7 @@ There's no one to show anything to.<end>
 // ありませんよ。<pause>そんなかなしいことを
 // いわないて゛くた゛さいよ。<end>
 <Oidon>
-B-boss! I'm not the criminal! Don't say such things!<end>
+B-boss! You know I'm not the culprit! Don't even joke about that!<end>
 
 // <Oidon>ほんじゃ、コンタをよひ゛ますぜ。<end>
 <Oidon>
@@ -4342,7 +4342,7 @@ OK, let's call Kit.<end>
 
 // <Oidon>ほんじゃ、ヘ゜ルーをよひ゛ますぜ。<end>
 <Oidon>
-OK, let's call Peru.<end>
+OK, let's call Persia.<end>
 
 // <Oidon>ほんじゃ、ヌキをよひ゛ますぜ。<end>
 <Oidon>
@@ -4368,7 +4368,7 @@ Lives alone in a condo owned by Renard close by the jewelry store. Stashes the r
 // きんは゜つのものは　いませんよ。
 // <pause>ふしき゛なものて゛すね。<end>
 <Oidon>
-It's not necessarily the perp's. But Red and Peru both say there are no blond customers. We've got no blond suspects either. It's quite the mystery.<end>
+It's not necessarily the perp's. But Red and Persia both say there are no blond customers. We've got no blond suspects either. It's quite the mystery.<end>
 
 // <Oidon>たいほするにしても　しょうこか゛たりませんぜ。<end>
 <Oidon>
@@ -4587,7 +4587,7 @@ So I was to go in his place...<end>
 // <Oidon>せっかく　ヘ゜ルーを　よんた゛んて゛すから
 // ヘ゜ルーに　めを　むけましょうよ。<end>
 <Oidon>
-We've got Peru here, so let's focus on her.<end>
+We've got Persia here, so let's focus on her.<end>
 
 // 。<end>
 .<end>
@@ -5135,7 +5135,7 @@ Even if it means asking the same questions and showing the same things over and 
 
 // <Oidon>ツネコは　いまと゛こに　いるんた゛？<end>
 <Oidon>
-Where is Vixy?<end>
+Where is Vixen?<end>
 
 // <contd>
 // <Konta>・・・しりませんよ。<pause>こっちか゛
@@ -5178,7 +5178,7 @@ He would skimp on the rent and occasionally get into arguments with my father. M
 // <Oidon>だんな、ココンは　10日のよる　11時には
 // ヘ゜ルーと　テ゛ートを　していたらしいですぜ。<end>
 <Oidon>
-Boss, it seems that at 11 on the night of the 10th Kit was on a date with Peru.<end>
+Boss, it seems that at 11 on the night of the 10th Kit was on a date with Persia.<end>
 
 // <Oidon>ほんじゃ、かえってもらいますぜ。<end>
 <Oidon>
@@ -5262,7 +5262,7 @@ Hmm... No idea.<end>
 
 // <Oidon>ツネコを　しっているか？<end>
 <Oidon>
-Do you know Vixy?<end>
+Do you know Vixen?<end>
 
 // <contd>
 // <Nuki>しりませんよ。<end>
@@ -5376,13 +5376,13 @@ I can't come up with anything.<end>
 <Oidon>
 What's the name of Renard's wife?<nl>
 <Peruu>
-Vixy.<end>
+Vixen.<end>
 
 // <Oidon>ツネコは　いま　と゛こに　いるんた゛？
 // <Peruu>わかりませんわ。しゃちょうか　むすこさんなら
 // しっていると　おもいますけと゛・・・。<end>
 <Oidon>
-Where is Vixy now?<nl>
+Where is Vixen now?<nl>
 <Peruu>
 I don't know. Renard's sons should know.<end>
 
@@ -5391,7 +5391,7 @@ I don't know. Renard's sons should know.<end>
 // いいなあ・・・・・・。<pause>
 // おいと゛んも　テ゛ートしたい。<end>
 <Oidon>
-On the night of the 10th, Peru was on a date with Kit. Must be fun... Wish I had a date too.<end>
+On the night of the 10th, Persia was on a date with Kit. Must be fun... Wish I had a date too.<end>
 
 // <contd>
 // <Peruu>ここいか゛いて゛は　みたこと　ありませんわ。<end>
@@ -5503,7 +5503,7 @@ We've got stuff to show but nobody to show it to.<end>
 // ありませんよ。そんなかなしいことを
 // いわないて゛くた゛さいよ。<end>
 <Oidon>
-B-boss! I'm not the criminal! Don't say such things...<end>
+B-boss! You know I'm not the culprit! Don't even joke about that!<end>
 
 // <Oidon>ほんじゃ、コンタを　よひ゛ますぜ。<end>
 <Oidon>
@@ -5522,7 +5522,7 @@ OK, let's get Red in here.<end>
 <Oidon>
 "I've gone on 3 years without you, but I can't stand it anymore. Just forget about everything and come back. It was a mistake. Please. I beg you."<key>
 <Oidon>
-It's addressed to Renard's ex-wife Vixy. Now we can go to her place and question her.<end>
+It's addressed to Renard's ex-wife Vixen. Now we can go to her place and question her.<end>
 
 // <Oidon>ほうせきるいか゛　みつかったのは　いいんて゛すか゛、
 // 1つた゛けたりない　というのは　と゛ういうこと
@@ -5541,7 +5541,7 @@ OK, let's go to the study.<end>
 
 // <Oidon>ほんじゃ、ツネコのへやへ　いきましょうや。<end>
 <Oidon>
-OK, let's go to Vixy's room.<end>
+OK, let's go to Vixen's room.<end>
 
 // 。<end>
 .<end>
@@ -5635,7 +5635,7 @@ Nggh. It won't open. It's locked.<end>
 <Oidon>
 It opens with the key we found in the safe.<pause> There's a letter inside!<key>
 <Oidon>
-...Maybe this is the letter Peru was talking about.<end>
+...Maybe this is the letter Persia was talking about.<end>
 
 // <Oidon>あけましたよ。<pause>て゛も、もうなにも　ありませんぜ。<end>
 <Oidon>
@@ -5839,7 +5839,7 @@ I give up. Let's just return to headquarters, boss.<end>
 
 // <Oidon>ほんじゃ、ヘ゜ルーを　よひ゛ますぜ。<end>
 <Oidon>
-OK, we'll call Peru.<end>
+OK, we'll call Persia.<end>
 
 // <Oidon>ひか゛いしゃ。　3年まえに　つまとりこん。
 // ほうせきてんの　しゃちょうて゛あり、マンションも
@@ -5898,7 +5898,7 @@ What does it mean if it's not "N" for Nuki? I'm lost.<end>
 // やめたことと　なにか　かんれんせいか゛
 // あるような・・・<pause><pause>　そんな　きか゛　しますぜ。<end>
 <Oidon>
-Those animals at Vixy's place were Renard's prized possessions.<key>
+Those animals at Vixen's place were Renard's prized possessions.<key>
 <Oidon>
 Did Renard really give away his prized possessions just so his wife had something to remember him by?<key>
 <Oidon>
@@ -5968,7 +5968,7 @@ I dunno.<end>
 // <Oidon>だんな、ココンは　10日のよる
 // 11時こ゛ろは　ヘ゜ルーと　テ゛ートを
 // していた　そうですぜ。<end>
-Boss, on the night of the 10th around 11 PM Kit was on a date with Peru.<end>
+Boss, on the night of the 10th around 11 PM Kit was on a date with Persia.<end>
 
 // !<end>
 !<end>
@@ -6292,7 +6292,7 @@ Let's focus on Kit, since he's here already.<end>
 // <Oidon>せっかく　ヘ゜ルーを　よんた゛んて゛すから
 // ヘ゜ルーに　めを　むけましょうよ。<end>
 <Oidon>
-Let's focus on Peru, since we've got her here.<end>
+Let's focus on Persia, since we've got her here.<end>
 
 
 //******** CHAPTER 6 ********//
@@ -7210,7 +7210,8 @@ There's nobody here.<end>
 // <Oidon>た゛、<pause>だんな。<pause>　おいと゛んは　はんにんて゛は
 // ありませんよ。<pause>　そんなかなしいことを
 // いわないて゛くた゛さいよ。<end>
-Translation goes here.<end>
+<Oidon>
+B-boss! You know I'm not the culprit! Don't even joke about that!<end>
 
 // <Oidon>ほんじゃ、コンタをよひ゛ますぜ。<end>
 <Oidon>
@@ -7222,7 +7223,7 @@ OK, we'll call Kit.<end>
 
 // <Oidon>ほんじゃ、ツネコをよひ゛ますぜ。<end>
 <Oidon>
-OK, we'll call Vixy.<end>
+OK, we'll call Vixen.<end>
 
 // <Oidon>なにも　ありませんぜ。<end>
 <Oidon>
@@ -7230,7 +7231,7 @@ There's nothing there.<end>
 
 // <Oidon>ほんじゃ、ヘ゜ルーをよひ゛ますぜ。<end>
 <Oidon>
-OK, we'll call Peru.<end>
+OK, we'll call Persia.<end>
 
 // <Oidon>ほんじゃ、リンリンをよひ゛ますぜ。<end>
 <Oidon>

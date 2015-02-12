@@ -19,6 +19,7 @@ A character holds a sign in Japanese in the ending (しゃくほう　しろ！�
 
 
 The ending (at least) loads bank 15 ($1e000-1ffff) into $6000. I think there's code there. We may want to consider leaving this bank alone.
+(Hmm, is this actually true?)
 
 
 <furrykef> Mm, what's the best place to get docs on the MSX, again?
@@ -168,11 +169,11 @@ People:
   ヌキ (a tanuki)                     - Nuki
   ピョンコ (bunny; Kokon's girlfriend)  - Bunnie
   タージ (turtle)                      - Pokey
-  ペルー                               - Peru
-  ツネコ (female fox)                  - Vixy
+  ペルー                               - Persia
+  ツネコ (female fox)                  - Vixen
   コアラ                               - Koala
-  ベアス (bear)                        - Teddy? Bjorn? Ursula? Can't tell if female.
-  ドラクレ (tiger)                      - Draco/Drago/Drake -- maybe think of a more tigery name
+  ベアス (bear)                        - Teddy (Bjorn? Ursula? Can't tell if female.)
+  ドラクレ (tiger)                      - Tyger (Draco? Drago? Drake?)
 
 Places:
   どうぶつの　むら              - Animalville
