@@ -4428,8 +4428,10 @@ Red's already here, so let's focus on him.<end>
 // ほとんと゛、もめこ゛とのうちには
 // はいりませんかね？<end>
 <contd><nl>
-<nuki>We've had disagreements about money before, but nothing else.<key>
-<nuki>But even so, you don't really get me invovled when you have a quarrel<end>
+<Nuki>
+We've had disagreements about money before, but nothing else.<key>
+<Nuki>
+But even so, you don't really get me involved when you have a quarrel.<end>
 
 // 、<end>
 ,<end>
@@ -4743,6 +4745,7 @@ Let's have a look here...<pause> Aaahh!!<pause> Boss, the, there's a cockroach! 
 Nothing unusual here.<end>
 
 // <Oidon>こんなのもっていても　なにもなりませんよ。<end>
+<Oidon>
 There is no point in taking it with us.<end>
 
 // <Oidon>ほんじゃ、しょうこひんとして
@@ -4957,21 +4960,20 @@ No news at this time.<end>
 // ほうせきてんの　しゃちょうて゛あり、マンションも
 // けいえいしている
 // ふたりの　むすこか゛いる。　38さい。<end>
-<Oidon>The victim. Divorced three years ago.
-He managed a jewlery and owned a block of partments.
-He had two sons.<end>
+<Oidon>
+The victim. Divorced three years ago. Managed a jewelry shop and owned a block of apartments. Two sons.<end>
 
 // <Oidon>20さい。ひか゛いしゃのむすこて゛　ちょうなん。
 // おやとは　はなれてくらしている。
 // ほうせきてんの　せんむて゛　し゛き　しゃちょうとの
 // うわさか゛ある。<end>
-<Oidon> Twenty years old. He was the oldest son.
-He has moved out of home and was living alone.
-He was the supervisor at the store, and was rumoured to be the next in line for ownership.<end>
+<Oidon>
+Twenty years old. Renard's oldest son. Has moved out and has been living alone. He was the supervisor at the store, and was rumored to be the next in line for ownership.<end>
 
 // <Oidon>18さい。コンタときょうた゛いて゛　し゛なん。
 // おやとは　はなれてくらしている。<end>
-Translation goes here.<end>
+<Oidon>
+18 years old. Red's brother and Renard's oldest son. Estranged from his father.<end>
 
 // <Oidon>22さい。コンコンほうせきてんに
 // つとめている　てんいん。
@@ -5146,7 +5148,9 @@ Where is Vixen?<end>
 // <contd>
 // <Konta>・・・しりませんよ。<pause>こっちか゛
 // おしえてもらいたい　く゛らいて゛す。<end>
-Translation goes here.<end>
+// @TODO@ -- check translation
+<contd><nl>
+<Konta>...I don't know.<pause> Let me have a closer look.<end>
 
 // <contd>
 // <Kokon>そんなの　しりませんよ。<end>
@@ -5159,7 +5163,7 @@ I don't know.<end>
 // し゛ゃないんて゛すかね。<end>
 <contd><nl>
 <Kokon>
-Who knows... maybe he just got tired of it.<end>
+Who knows? Maybe he just got tired of it.<end>
 
 // <contd>
 // <Kokon>おいと゛んさん、し゛つは　きか゛ついたことか゛
