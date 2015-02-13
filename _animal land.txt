@@ -28,15 +28,6 @@ The ending (at least) loads bank 15 ($1e000-1ffff) into $6000. I think there's c
 http://www.z80.info/
 
 
-<Torbjorn> So in the ending Koala is talking and eventually he says this
-<Torbjorn> / <Koala>おれは　いまこそ　さけふ゛そ゛!
-<Torbjorn> / こ<end>
-<Torbjorn> At the こ there it's supposed to be a whole new line with starting with ここ
-<Torbjorn> but there rest isn't to be found
-<Torbjorn> so I'm wondering if maybe it got lost in the script in pieces or something
-<Torbjorn> there's also some more lines in all katakana afterwards that I can't find
-
-
 Release checklist
 -----------------
 * All passwords work
