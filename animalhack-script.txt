@@ -5461,6 +5461,7 @@ Boss, it seems Nuki did in fact rent a car from the 9th to the 11th. A small, wh
 <end>
 
 // <Oidon>ほんじゃ、いくのは　やめますぜ。<end>
+<Oidon>
 OK, never mind.<end>
 
 
