@@ -4408,7 +4408,9 @@ Red's already here, so let's focus on him.<end>
 // <Nuki>とはいっても　わたしのことなと゛
 // ほとんと゛、もめこ゛とのうちには
 // はいりませんかね？<end>
-Translation goes here.<end>
+<contd><nl>
+<nuki>We've had disagreements about money before, but nothing else.<key>
+<nuki>But even so, you don't really get me invovled when you have a quarrel<end>
 
 // 、<end>
 ,<end>
@@ -4722,12 +4724,12 @@ Let's have a look here...<pause> Aaahh!!<pause> Boss, the, there's a cockroach! 
 Nothing unusual here.<end>
 
 // <Oidon>こんなのもっていても　なにもなりませんよ。<end>
-Translation goes here.<end>
+There is no point in taking it with us.<end>
 
 // <Oidon>ほんじゃ、しょうこひんとして
 // もっておきますぜ。<end>
 <Oidon>
-OK, let's take it as evidence.<end>
+Why don't we take it as a piece of evidence?<end>
 
 // <Oidon>カ゛サ、コ゛ソ・・・・・・。<pause>
 // だんな、なんにも　ありませんぜ。<end>
@@ -4936,13 +4938,17 @@ No info at this time.<end>
 // ほうせきてんの　しゃちょうて゛あり、マンションも
 // けいえいしている
 // ふたりの　むすこか゛いる。　38さい。<end>
-Translation goes here.<end>
+<Oidon>The victim. Divorced three years ago.
+He managed a jewlery and owned a block of partments.
+He had two sons.<end>
 
 // <Oidon>20さい。ひか゛いしゃのむすこて゛　ちょうなん。
 // おやとは　はなれてくらしている。
 // ほうせきてんの　せんむて゛　し゛き　しゃちょうとの
 // うわさか゛ある。<end>
-Translation goes here.<end>
+<Oidon> Twenty years old. He was the oldest son.
+He has moved out of home and was living alone.
+He was the supervisor at the store, and was rumoured to be the next in line for ownership.<end>
 
 // <Oidon>18さい。コンタときょうた゛いて゛　し゛なん。
 // おやとは　はなれてくらしている。<end>
