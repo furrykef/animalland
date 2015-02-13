@@ -8163,6 +8163,7 @@ Translation goes here.<end>
 
 // <Koala>おれは　いまこそ　さけふ゛そ゛!
 // こ<end>
+// This message gets continued later on (full sentence is ここは　へいわなむらなんかし゛ゃない！)
 Translation goes here.<end>
 
 // と゛うふ゛つたちの　さけひ゛か゛　つつ゛くなか
@@ -8177,5 +8178,53 @@ Translation goes here.<end>
 // ハ゛スは　ゆっくり　はしりすき゛る。<pause>
 // 　
 // 　　<end>
-// (probably junk)
+Translation goes here.<end>
+
+// <contd>　<end>
+<contd> <end>
+
+// <contd>・<end>
+<contd>.<end>
+
+//　<end>
+ <end>
+
+// <contd>こは　へいわなむらなんかし゛ゃない！<end>
+// continued from before; preceded by こ, so ここは etc. etc.
+<contd>Translation goes here.<end>
+
+// <contd>
+// <All>こ<end>
+<contd><nl>
+<All>Translation goes here<end>
+
+// <contd>たちを　しせ゛んにかえせ！<end>
+<contd>Translation goes here.<end>
+
+// <Koala>おれ<end>
+Translation goes here.<end>
+
+// <contd>
+// <All>ほ゛く<end>
+<contd><nl>
+Translation goes here.<end>
+
+// <contd>
+// ほ゛く<end>
+<contd><nl>
+Translation goes here.<end>
+
+// <contd>　ホ゛<end>
+// <contd>ク<end>
+// <contd>タ<end>
+// <contd>チ<end>
+// <contd>ヲ　<end>
+// <contd>シ<end>
+// <contd>セ゛<end>
+// <contd>ン<end>
+// <contd>ニ<end>
+// <contd>カ<end>
+// <contd>エ<end>
+// <contd>セ
+// 　　<end>
 Translation goes here.<end>
