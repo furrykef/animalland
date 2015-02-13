@@ -225,7 +225,8 @@ Window<end>
 Books<end>
 
 // つくえの<pause>4ひきた゛し<end>
-Drawer<end>
+Desk<mnl>
+drawer<end>
 
 // ほんた゛な<pause>3のとひ゛ら<end>
 Bookcase<end>
@@ -243,8 +244,8 @@ Red<end>
 Kit<end>
 
 // ふうとう<pause>5のなかみ<end>
-Contents<mnl>
-of envelope<end>
+// not used; would be "Contents<mnl>of envelope"
+<end>
 
 // リンリン<end>
 Ling-Ling<end>
@@ -253,7 +254,8 @@ Ling-Ling<end>
 Pokey<end>
 
 // かえす<end>
-Dismiss<end>
+// not used; would be "Dismiss"
+<end>
 
 // やっは゜り<pause>1いくのをやめる<end>
 Cancel<end>
@@ -986,6 +988,7 @@ Key<end>
 Bookcase<end>
 
 // つくえの<pause>4ひきた゛し<end>
+Desk<mnl>
 Drawer<end>
 
 // きんこ<end>
@@ -1480,8 +1483,8 @@ We've already checked that.<end>
 <Oidon>
 Half of it's torn up and crumpled. Look, it says something!<key>
 <Oidon>
-"Persia: if something should happen to me, give this to the police.<nl>
-Signed, Renard"<key>
+“Persia: if something should happen to me, give this to the police.<nl>
+<pause>- Renard”<key>
 <Oidon>
 Persia's his assistant, but she's currently out on a business trip.<end>
 
@@ -1651,7 +1654,7 @@ The victim. Divorced 3 years ago. Owned Foxy Jewelry and a condo. Two sons. 38 y
 // うわさか゛ある。<end>
 // (Description of Konta/Red)
 <Oidon>
-20 years old. Victim's first son. Managing director at the store. It's rumored that he was to become the owner soon.<end>
+20 years old. Victim's first son. Supervisor at the store. It's rumored that he was to become the owner soon.<end>
 
 // <Oidon>18さい。　コンタと　きょうた゛いて゛　し゛なん。
 // ヒ゜ョンコという　こいひ゛とか゛　いる。<end>
@@ -1857,7 +1860,7 @@ The only clues the perp left are the hair and the gun. We'll have to gather more
 <Oidon>
 There's a convenience store across the street from Foxy Jewelry. Maybe they know something. Let's check it out.<key>
 <Oidon>
-By the way, I recorded our progress in a file. The name is \\M\\A\\L\\L\\A\\R\\D. Be sure to write down the name so you won't forget!<end>
+By the way, I've recorded our progress in a file. The name is \\M\\A\\L\\L\\A\\R\\D. Be sure to write down the name so you won't forget!<end>
 
 // <contd>
 // へ゛つに　かわったところは　ありませんぜ。<end>
@@ -2123,7 +2126,7 @@ Nothing else here.<end>
 // かいてありますぜ。<end>
 // @TODO@ - confirm meaning of ところ here
 <Oidon>
-It says, "8:30 on the 10th".<end>
+It says, “8:30 on the 10th.”<end>
 
 // <Oidon>し゛ゃあ、しょうこひんとして　もっておきますぜ。<end>
 <Oidon>
@@ -2333,7 +2336,7 @@ My dad must have written it. I haven't seen it before, but it's his handwriting.
 // <Konta>8時30分から　ゆうし゛んと　あうやくそくか゛
 // あったのて゛、わすれないように　かいたものて゛す。<end>
 <Oidon>
-What's the deal with this "8:30"?<nl>
+What's the deal with this “8:30”?<nl>
 <Konta>
 Ah... well... I'd promised to meet a friend, so I wrote it down.<end>
 
@@ -2368,7 +2371,7 @@ You lied to us! Bunnie saw you go into Foxy Jewelry at about 8:30! Now tell us t
 <Konta>
 OK, OK! Yeah, I went there at around that time. But I'm not the one who killed my father.<key>
 <Konta>
-The "8:30" I wrote down was just when I was supposed to meet him. We just talked about business from then to 9:30.<key>
+The “8:30” I wrote down was just when I was supposed to meet him. We just talked about business from then to 9:30.<key>
 <Konta>
 At around 11, the time of the incident, I happened across Ling-Ling on my way home, and we chatted about business at my place for an hour. Please believe me!<end>
 
@@ -3051,7 +3054,7 @@ She's just a customer at the jewelry store, so there's no reason to suspect her.
 // <Kokon>ヘ゜ルーさんと　ハ゜フハ゜フしていましたよ。<end>
 <contd><nl>
 <Kokon>
-Persia was giving me some "puff-puff".<end>
+Persia was giving me some “puff-puff.”<end>
 
 // <Oidon>また゛　これをみたものは　いませんぜ。
 // いったい　た゛れのなんて゛しょうかね。<end>
@@ -3396,7 +3399,7 @@ Yes. I have a red one.<end>
 // なんて・・・・・・。<end>
 <contd><nl>
 <Rinrin>
-An "N"...? Or maybe you're looking at it sideways. Maybe it's a "Z"?<end>
+An “N”...? Or maybe you're looking at it sideways. Maybe it's a “Z”?<end>
 
 // <Oidon>10日にコンコンほうせきてんへ　いったか？
 // <Rinrin>はい。ゆうか゛た　5時から6時まて゛た゛ったと
@@ -3644,7 +3647,7 @@ It's personal. I'd rather not talk about it.<end>
 <Oidon>
 You said you were on a date. Were you with Kit?<nl>
 <Peruu>
-Yes. He's younger than me and so cute! I just wanna give him some "puff-puff"!<end>
+Yes. He's younger than me and so cute! I just wanna give him some “puff-puff”!<end>
 
 // <contd>
 // <Kokon>なんと゛　おなし゛しつもんを　するんて゛す？
@@ -4241,7 +4244,7 @@ The victim. Divorced 3 years ago. Owned Foxy Jewelry and a condo. Two sons. 38 y
 // おやとは　はなれてくらしている。
 // し゛き　しゃちょうとの　うわさか゛ある。<end>
 <Oidon>
-20 years old. Victim's first son. Managing director at the store. It's rumored that he was to become the owner soon.<end>
+20 years old. Victim's first son. Supervisor at the store. It's rumored that he was to become the owner soon.<end>
 
 // <Oidon>18さい。コンタときょうた゛いて゛　し゛なん。
 // おやとは　はなれてくらしている。<end>
@@ -4380,7 +4383,7 @@ We need a little more evidence first...<end>
 
 // <Oidon>これはいったい　なにをあらわして
 // いるんて゛しょうかね？よく　わかりませんぜ。<end>
-// referring to the "N" char
+// referring to the "nu" char
 <Oidon>
 What the heck does it mean? I don't get it.<end>
 
@@ -4389,7 +4392,7 @@ What the heck does it mean? I don't get it.<end>
 // なんて゛あるにせよ　このもし゛の　いみか゛　わかれは゛
 // このし゛けんは　かいけつするんて゛しょうね。<end>
 <Oidon>
-This is the most puzzling. All we can come up with is "N" for Nuki. This case would probably be cracked if we could figure out its meaning.<end>
+This is the most puzzling. All we can come up with is “N” for Nuki. This case would probably be cracked if we could figure out its meaning.<end>
 
 0<end>
 
@@ -4468,11 +4471,11 @@ Nuki... he really cheeses me off.<nl>
 <Oidon>
 Why's that?<key>
 <Konta>
-I went to his place the other day to collect the rent. I told him, "Pay up the rent, now!" and he says to me...<key>
+I went to his place the other day to collect the rent. I told him, “Pay up the rent, now!” and he says to me...<key>
 <Konta>
-"Why do you rich people take money from poor people like me?! You're rich! What do you need to squeeze money out of me for?!"<key>
+“Why do you rich people take money from poor people like me?! You're rich! What do you need to squeeze money out of me for?!”<key>
 <Konta>
-Shoot, I don't want his money anymore! I don't even want to hear his name!<end>
+Squeeze blood from a stone, more like! I don't want his money anymore. I don't even want to hear his name!<end>
 
 // <Oidon>ちょっとしつれい・・・・・・。
 // だんな、なにもありませんぜ。<end>
@@ -4966,20 +4969,21 @@ No news at this time.<end>
 // けいえいしている
 // ふたりの　むすこか゛いる。　38さい。<end>
 <Oidon>
-The victim. Divorced three years ago. Managed a jewelry shop and owned a block of apartments. Two sons.<end>
+The victim. Divorced three years ago. Owned a jewelry shop and a condominium. Two sons.<end>
 
 // <Oidon>20さい。ひか゛いしゃのむすこて゛　ちょうなん。
 // おやとは　はなれてくらしている。
 // ほうせきてんの　せんむて゛　し゛き　しゃちょうとの
 // うわさか゛ある。<end>
-// @TODO@ -- translation just barely too long to fit in one screen
 <Oidon>
-Twenty years old. Renard's oldest son. Has moved out and has been living alone. He was the supervisor at the store, and was rumored to be the next in line for ownership.<end>
+Twenty years old. Renard's oldest son. Has moved out and has been living alone.<key>
+<Oidon>
+He was the supervisor at the store and is rumored to have been next in line for ownership.<end>
 
 // <Oidon>18さい。コンタときょうた゛いて゛　し゛なん。
 // おやとは　はなれてくらしている。<end>
 <Oidon>
-18 years old. Red's brother and Renard's oldest son. Estranged from his father.<end>
+18 years old. Red's brother and Renard's oldest son. Has moved out and has been living alone.<end>
 
 // <Oidon>22さい。コンコンほうせきてんに
 // つとめている　てんいん。
@@ -5188,7 +5192,7 @@ Actually, I just realized something.<nl>
 <Oidon>
 Hmm? What's that?<key>
 <Kokon>
-There's a guy named Nuki who lives in my father's condo. He would skimp on the rent and occasionally get into arguments with my father. Maybe it's an "N" for Nuki.<end>
+There's a guy named Nuki who lives in my father's condo. He would skimp on the rent and occasionally get into arguments with my father. Maybe it's an “N” for Nuki.<end>
 
 // 。<end>
 .<end>
@@ -5541,7 +5545,7 @@ OK, let's get Red in here.<end>
 // <pause>だんな　これて゛　ツネコのいえに　いって
 // はなしをきくことか゛　て゛きますぜ。<end>
 <Oidon>
-"I've gone on 3 years without you, but I can't stand it anymore. Just forget about everything and come back. It was a mistake. Please. I beg you."<key>
+“I've gone on 3 years without you, but I can't stand it anymore. Just forget about everything and come back. It was a mistake. Please. I beg you.”<key>
 <Oidon>
 It's addressed to Renard's ex-wife Vixen. Now we can go to her place and question her.<end>
 
@@ -5904,7 +5908,7 @@ I don't know whose it is, but it must be the criminal's.<end>
 // いったい　なにを　いみするのた゛ろう・・・
 // おいと゛んは　わからなくなってしまいましたせ゛。<end>
 <Oidon>
-What does it mean if it's not "N" for Nuki? I'm lost.<end>
+What does it mean if it's not “N” for Nuki? I'm lost.<end>
 
 // 。<end>
 .<end>
@@ -6213,11 +6217,11 @@ Would it have anything to do with why he quit hunting?<nl>
 <Tsuneko>
 ...Yes... it does...<key>
 <Tsuneko>
-We used to have a very happy marriage. But... there was one day 3 days ago he came home looking livid.<key>
+We used to have a very happy marriage. But... there was one day 3 years ago he came home looking livid.<key>
 <Tsuneko>
-He just ignored me and blurted out to himself things like "I finally did it" and "That gold one..."<key>
+He just ignored me and blurted out to himself things like “I finally did it” and “That gold one...”<key>
 <Tsuneko>
-From that day on he quit fish hunting and kept to himself. He seemed troubled, saying things like "I'm not fit to be your husband"...<key>
+From that day on he quit fish hunting and kept to himself. He seemed troubled, saying things like “I'm not fit to be your husband”...<key>
 <Tsuneko>
 Eventually we got divorced and he gave all of his animals to me. That's all I know...<key>
 <Oidon>
@@ -6459,7 +6463,7 @@ It's torn up. I can only make out half a page. I'll look for the date...!!! This
 <Oidon>
 It's from 3 and a half years ago. Hmm... Wonder if there's anything inter...ah.<pause> Boss, there's an article here about a murder.<key>
 <Oidon>
-"shot and killed by a speargun in the Lost Woods..."<key>
+“shot and killed by a speargun in the Lost Woods”...<key>
 <Oidon>
 The print is too blurred to make out anything else.<end>
 
@@ -6494,7 +6498,7 @@ But it's so blurred you can't even make out the contours of the face.<end>
 // て゛も、また゛　そうときめつけるのは
 // はやすき゛ますぜ。<end>
 <Oidon>
-There's a small article in here about the Lost Woods. "Ever since the incident, the Lost Woods have become a dead silent, eerie forest nobody dares to step foot into."<key>
+There's a small article in here about the Lost Woods. “Ever since the incident, the Lost Woods have become a dead silent, eerie forest nobody dares to step foot into.”<key>
 <Oidon>
 ...What incident is it talking about? What if it has to do with Renard... It's too soon to make any conclusions, though.<end>
 

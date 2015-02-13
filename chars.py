@@ -9,8 +9,8 @@ CHAR_WIDTHS_FILENAME = 'char_widths.out.bin'
 
 CHAR_WIDTHS = [
 #       [the digits and period here are bold]
-#       0  1  2  3  4  5  6  7  8  9  .  *
-        7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 3, 4, 0, 0, 0, 0,
+#       0  1  2  3  4  5  6  7  8  9  .  *  “
+        7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 3, 4, 5, 0, 0, 0,
 
 #       [first char here is <mnl> ("menu newline") control code]
 #       [displays as space when not in a menu]
@@ -18,7 +18,7 @@ CHAR_WIDTHS = [
 
 #       [first char here is space]
 #       [asterisk in this row is not the one we use]
-#          !  "     $  %  &  '  (  )  *  +  ,  -  .  /
+#          !  ”     $  %  &  '  (  )  *  +  ,  -  .  /
         3, 2, 5, 0, 6, 6, 6, 3, 3, 3, 6, 6, 3, 5, 2, 4,
 
 #       0  1  2  3  4  5  6  7  8  9  :  ;  <  =  >  ?
