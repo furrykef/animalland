@@ -34,11 +34,10 @@ HQ:
 
 Chapter 2
 ---------
-When the walkthrough says "question [name] thoroughly", it means ask all the questions available. Sometimes asking a question reveals a new topic; be sure to ask about it too. Some questions may not be necessary to ask, but it isn't worth the trouble finding out which ones.
+When the walkthrough says "question [name] thoroughly", it means ask all the questions available. Sometimes asking a question reveals a new topic; be sure to ask about it too. Some questions may not be necessary to ask, but it isn't worth the trouble finding out which ones. Also, show them all the items you have.
 
 Pyonko's shop:
 * Question Pyonko thoroughly
-* Show Pyonko the blond hair, note, and gun
 
 Red's room:
 * Check desk (find notepad)
@@ -49,19 +48,15 @@ HQ:
 * Info (establishes time of murder)
 * Summon Konta
 * Question Konta thoroughly
-* Show Konta the blond hair, note, and gun
 * Show Konta the notepad twice (reveals he met Ling-Ling)
 * Ask Konta about Ling-Ling
 * Summon Kokon
 * Question Kokon thoroughly
-* Show Kokon the blond hair, note, and gun
 
 
 Chapter 3
 ---------
-NB: when questioning people, also show them the gun, memo, and blond hair
-
-* Info (Peruu becomes available)
+* News (Peruu becomes available)
 * Question Peruu thoroughly
 ** Asking about alibi reveals she was on a date
 ** Showing gun reveals she gave it to Gonkichi
@@ -79,9 +74,44 @@ NB: when questioning people, also show them the gun, memo, and blond hair
 * Ask Kokon about alibi (find out he'd lied before since he was with Peruu)
 * Ask Kokon about money
 * Ask Kokon, Peruu, Taaji, and Rinrin about Renard's fish hunting
-* "Reason" at HQ
+* "Ponder" at HQ
 
 This should take you to the Bear Bar
 
 * Question Koala thoroughly
 * Return to HQ to end the chapter
+
+
+Chapter 4
+---------
+* Question Kokon thoroughly
+** Asking about "nu" character allows summoning Nuki
+* Question Nuki thoroughly
+* Dismiss Nuki and "check" his profile (allows travel to Nuki's room)
+* Go to Nuki's room
+* Check books (reveals bookmark)
+* Check bookmark (reveals it's receipt)
+* Take receipt
+* Check receipt
+* Show receipt to Nuki
+* Ask Nuki about Tsuneko
+* Ask Nuki about alibi
+* Check Nuki's car
+* Go to the Bear Bar and question Koala thoroughly
+** Asking about Nuki allows different response to "car"
+* Ask Nuki about car (reveals mat in Nuki's room)
+* Go to Nuki's room
+* Check mat
+* Open mat
+* Take jewels and key
+* Question Peruu thoroughly
+* Question Konta thoroughly
+* Ask Kokon about Tsuneko
+* Show jewels and key to Kokon
+* Show jewels and key to Nuki
+* Arrest Nuki
+* Go to the Bear Bar
+
+
+Chapter 5
+---------

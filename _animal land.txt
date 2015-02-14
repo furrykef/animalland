@@ -129,6 +129,7 @@ Kef Schecter - hacking and translation
 Torbjorn - translation
 geishaboy - translation
 BiFi (#msxdev) - found code for making text bold so I could disable it; helped with password routine; helped with graphics compression
+tepples - logo
 
 Font is a variant of Tau's Custom Font
 
@@ -142,11 +143,6 @@ Beta testers
 ------------
 * I.S.T.
 * EvilSonic will no doubt be interested (drew Animal Land fanart): https://www.weasyl.com/~evilsonic
-
-
-Other people
-------------
-* tepples can help with title screen logo
 
 
 Character and place names
