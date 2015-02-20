@@ -84,34 +84,39 @@ This should take you to the Bear Bar
 
 Chapter 4
 ---------
-* Question Kokon thoroughly
-** Asking about "nu" character allows summoning Nuki
-* Question Nuki thoroughly
-* Dismiss Nuki and "check" his profile (allows travel to Nuki's room)
+* Ask Kokon about "nu" character (allows checking and summoning Nuki)
+* Dismiss Kokon
+* Check Nuki's profile (allows travel to Nuki's room)
 * Go to Nuki's room
 * Check books (reveals bookmark)
 * Check bookmark (reveals it's receipt)
 * Take receipt
-* Check receipt
-* Show receipt to Nuki
-* Ask Nuki about Tsuneko
-* Ask Nuki about alibi
-* Check Nuki's car
+* Question Nuki thoroughly
+** Showing him the receipt allows a different response to "alibi"
+* Ask Nuki about alibi again
 * Go to the Bear Bar and question Koala thoroughly
-** Asking about Nuki allows different response to "car"
+** Asking about Nuki allows different response to asking Nuki about "car"
 * Ask Nuki about car (reveals mat in Nuki's room)
 * Go to Nuki's room
 * Check mat
 * Open mat
 * Take jewels and key
-* Question Peruu thoroughly
-* Question Konta thoroughly
-* Ask Kokon about Tsuneko
-* Show jewels and key to Kokon
-* Show jewels and key to Nuki
+* Question Peruu, Konta, and Kokon thoroughly
+** Questioning Peruu reveals topics about Tsuneko, so question her first
 * Arrest Nuki
 * Go to the Bear Bar
 
 
 Chapter 5
 ---------
+* Go to the study
+* Open the bookcase (reveals safe)
+* Open the safe (reveals key)
+* Take key
+* Open desk drawer
+* Take letter
+* Check letter
+* Go to Tsuneko's house
+* Question Tsuneko thoroughly
+** Showing her the letter allows you to ask her about it
+* Ask Tsuneko about "letter"
