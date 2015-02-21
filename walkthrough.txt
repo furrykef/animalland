@@ -142,3 +142,36 @@ Tsuneko's house:
 
 Chapter 6
 ---------
+* Get ye flask
+* Use flask on hole in ground (reveals ball)
+* Take ball
+* Get the magnifying glass
+* Question the first mole thoroughly
+* Get the telescope
+* Go to the tree with magazine in it
+* Try taking magazine (reveals beehive)
+* Use ball (knocks down magazine)
+* Take magazine
+* Throw ball in lake
+* Claim ball is dirty one (gives you clean ball)
+* Get the matchbox
+* Find rock with newspaper
+** It's near a brick wall to the southeast of the kokeshi stone (the slab)
+* Check rock
+* Take newspaper
+* Check kokeshi stone
+* Use kokeshi stone's message on diamond rock
+* Question the second mole thoroughly
+* Question the fish thoroughly
+* Take the newspaper half from the wastebasket
+* Get the oil from the island
+* Get the key
+* Use the key on the iron box
+* Check iron box (reveals speargun)
+* Take speargun
+* Get goggles
+* Use goggles in shiny area of lake (at dock)
+* Chop the tree by the bridge
+* Cross bridge
+* Pour oil on trees
+* Use match

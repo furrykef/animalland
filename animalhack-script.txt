@@ -1164,8 +1164,7 @@ Goggles<end>
 Key<end>
 
 // すいちゅう<pause>4し゛ゅう<end>
-// @TODO@ - ?
-Diving<end>
+Speargun<end>
 
 // むしメカ゛ネ<end>
 Magnifying<mnl>
@@ -1190,10 +1189,11 @@ Hair dye<end>
 Hut<end>
 
 // くす゛かこ゛<end>
-Wastebasket<end>
+Waste-<mnl>
+basket<end>
 
 // せきは゛ん<end>
-Slab<end>
+Noel Stone<end>
 
 // あな<end>
 Hole<end>
@@ -1202,7 +1202,7 @@ Hole<end>
 Other<end>
 
 // せきは゛んの<pause>4もし゛<end>
-Slab<end>
+Inscription<end>
 
 // しんふ゛ん<end>
 Newspaper<end>
@@ -1239,7 +1239,8 @@ Destination<end>
 West lake<end>
 
 // くす゛れた<pause>6はし<end>
-Broken bridge<end>
+Broken<mnl>
+bridge<end>
 
 // よこ゛れた<pause>4ホ゛ール<end>
 Dirty ball<end>
@@ -6374,6 +6375,7 @@ Let's focus on Persia, since we've got her here.<end>
 #JMP($34000, $36FFF)
 
 // <Oidon>だんな、とるようなものは　ありませんぜ。<end>
+<Oidon>
 Nothing to take here, boss.<end>
 
 // <Oidon>・・・しらへ゛ましたか゛　なにもありませんぜ。<end>
@@ -6392,15 +6394,15 @@ There's nobody here, boss.<end>
 
 // <Oidon>だんな、
 // そんなことをしたら　にけ゛ちゃいますよ。<end>
-// @TODO@ -- check translation
+// when you try taking the mole
 <Oidon>
-Boss, if we do that, it'll get away.<end>
+Sorry, boss, we can't keep him.<end>
 
 // <Oidon>と゛こへ　いくかは　だんなに
 // おまかせしますのて゛　しんこうほうこうを
 // カーソルキーて゛　しし゛してくた゛さい。<end>
 <Oidon>
-I'll let you decide where to go, boss. Move with the arrow keys.<end>
+I'll let you decide where to go, boss. Use the arrow keys to move.<end>
 
 // <Oidon>すいちゅうし゛ゅうは　た゛いし゛な
 // しょうこひんですぜ。　むやみにつかうのは
@@ -6440,7 +6442,6 @@ It's absolutely filthy.<end>
 
 // <Oidon>ク゛<pause>　ク゛ッ・・・・・・。<pause>
 // だんな、これは　とれませんぜ。<end>
-// @TODO@ -- what do the sounds represent?
 <Oidon>
 We can't take it, boss.<end>
 
@@ -6450,6 +6451,7 @@ Nothing suspicious here.<end>
 
 // <Oidon>だんな、と゛うしたんて゛すか？
 // はやく、カーソルキーて゛　しし゛してくた゛さいよ。<end>
+// message when idle
 <Oidon>
 What's the matter, boss? Press the arrow keys and let's get moving.<end>
 
@@ -6463,12 +6465,12 @@ Just a normal box of matches. There are three matches inside.<end>
 // ハは　まったくかけていないのて゛、
 // また゛　し゛ゅうふ゛んに　つかえますぜ。<end>
 <Oidon>
-Just an ordinary axe. It's not covered in foliage, so it should still be usable.<end>
+Just an ordinary axe. The blade is undamaged, so it should still be usable.<end>
 
 // <Oidon>・・・ふつうの　すいとうて゛す。
 // なかには　みす゛か゛　はいってますぜ。<end>
 <Oidon>
-Just a normal flask. There's water inside.<end>
+Just a normal flask. There's quite a lot of water inside.<end>
 
 // <Oidon>・・・ふつうの　ホ゛ールて゛す。
 // しかし、すこし　よこ゛れていますぜ。<end>
@@ -6517,9 +6519,7 @@ It's torn up. I can only make out half a page. I'll look for the date... Yeesh! 
 <Oidon>
 It's from three and a half years ago. Hmm... Wonder if there's anything inter...ah.<pause> Boss, there's an article here about a murder.<key>
 <Oidon>
-“shot and killed by a speargun in the Lost Woods”...<key>
-<Oidon>
-The print is too blurred to make out anything else.<end>
+“shot and killed by a speargun in the Lost Woods”... The print is too blurred to make out anything else.<end>
 
 // <contd><key><Oidon>しかし、だんな、これか゛　はんふ゛んしか
 // ないということは、もうかたほうか゛
@@ -6528,18 +6528,14 @@ The print is too blurred to make out anything else.<end>
 // しれませんぜ。<end>
 <contd><key>
 <Oidon>
-There must be a second half somewhere since this one is torn.<key>
-<Oidon>
-We might be able to find out something if we find it.<end>
+There must be a second half somewhere since this one is torn. We might be able to find out something if we find it.<end>
 
 // <Oidon>だんな、これは　はんふ゛んに　やふ゛けています。
 // これには　ころしのきし゛に　かんけいする
 // かおし゛ゃしんか゛　のっています。<key><Oidon>しかし　かすれているのて゛
 // かおの　りんかくさえも　はっきり　しませんぜ。<end>
 <Oidon>
-It's torn in half, boss. There's a mug shot in here related to the murder article.<key>
-<Oidon>
-But it's so blurred you can't even make out the contours of the face.<end>
+It's torn in half, boss. There's a mugshot in here related to the murder article. But it's so blurred you can't even make out the contours of the face.<end>
 
 // <Oidon>ハ゜ラ　ハ゜ラ　ハ゜ラ　・・・。<pause>
 // だんな、まよいのもりの　きし゛か゛
@@ -6552,9 +6548,11 @@ But it's so blurred you can't even make out the contours of the face.<end>
 // て゛も、また゛　そうときめつけるのは
 // はやすき゛ますぜ。<end>
 <Oidon>
-There's a small article in here about the Lost Woods. “Ever since the incident, the Lost Woods have become a dead silent, eerie forest nobody dares to set foot into.”<key>
+There's a small article in here about the Lost Woods.<key>
 <Oidon>
-...What incident is it talking about? What if it has to do with Renard... It's too soon to make any conclusions, though.<end>
+“Ever since the incident, the Lost Woods have become a dead silent, eerie forest nobody dares to set foot into.”<key>
+<Oidon>
+What incident is it talking about? What if it has to do with Renard...? It's too soon to draw any conclusions, though.<end>
 
 // <Oidon>とくに　かわったところは　ありませんぜ。
 // たた゛の　とうゆの　ようですぜ。<end>
@@ -6579,14 +6577,16 @@ There's nobody here.<end>
 // <Oidon>て゛は、くちのなかに　みす゛を　とります。<pause>
 // あっ、<pause>　コ゛ックン!<pause>
 // だんな、のみこんて゛しまいましたせ゛。<end>
+// When trying to "take" water from a river or lake
 <Oidon>
-Well, I'll put the water in my mouth. *gulp!* I've swallowed it, boss!<end>
+About the best I can do is carry it in my mouth.<pause> *gulp!*<pause> I've swallowed it, boss!<end>
 
 // <Oidon>いまのところは　なにも　もってませんぜ。<end>
 <Oidon>
 We don't have anything yet.<end>
 
 // <Oidon>だんな、ねてるんし゛ゃないて゛すか？<end>
+// message when idle a long time
 <Oidon>
 Did you fall asleep, boss?<end>
 
@@ -6612,14 +6612,14 @@ Nothing to cut here, boss.<end>
 // きるのは　やめましょうよ。<end>
 // @TODO@ -- I think き may be a pun on 木/気. Note it in the wiki if so.
 <Oidon>
-Boss, the forest is very important. Let's not go chopping down anything we don't need to.<end>
+Boss, the forest is very important. Let's not go chopping down anything we don't need to. Maybe we can find a constructive use for it.<end>
 
 // <Oidon>シ゛ャハ゛<pause>　シ゛ャハ゛<pause>　シ゛ャハ゛・・・。<pause>
 // だんな、すいとうの　みす゛を　つかいましたか゛
 // なんとも　ありませんぜ。<end>
 // using the flask
 <Oidon>
-*splash*<pause> *splash*<pause> *splash*<pause> Doesn't do anything, boss.<end>
+*drip*<pause> *drip*<pause> *drip*<pause> Nothing happens, boss.<end>
 
 // ホ゜ーン・・・。<pause><pause>
 // <Oidon>だんな、ホ゛ールを　なけ゛ましたか゛
@@ -6627,9 +6627,7 @@ Boss, the forest is very important. Let's not go chopping down anything we don't
 // ・・・あっ、<pause>ホ゛ールを　とってこなくては。<key><Oidon>だんな、ホ゛ールは　このてに　もと゛りましたせ゛。<end>
 // @TODO@ -- check translation
 <Oidon>
-*paff!*<pause> I threw the ball, boss, but nothing happened.<key>
-<Oidon>
-Ah... Translation goes here.<end>
+*zing!*<pause> I threw the ball, boss, but nothing happened. Now I have to go get it.<pause> ...Got it, boss.<end>
 
 // ホ゜ーン・・・。<pause><pause>ホ゜チャッ。<pause><pause>
 // <Oidon>あっ・・・<pause>だんな、ホ゛ールか゛　みす゛のなかへ
@@ -6639,10 +6637,8 @@ Ah... Translation goes here.<end>
 // シ゛ャホ゛ーン<pause><pause><end>
 // @TODO@ -- onomatopoeia at end
 <Oidon>
-*paff!*<pause> *splash!*<pause><pause> Ack! Boss, the ball went into the water!<key>
-<Oidon>
-Wh-what do we do now?<key>
-*bloop*<pause> *bloop*<pause> *bloop*
+*zing!*<pause> *splash!*<pause><pause> Uh-oh. Boss, the ball landed in the water! Wh-what do we do now?<key>
+*bloop*<pause> *bloop*<pause> *bloop*<pause><nl>
 <Oidon>
 Huh? There's a bubble rising up to the surface...<end>
 
@@ -6702,7 +6698,7 @@ Boss, we can't use it now. Let's use it when it counts.<end>
 // いったい　このもし゛は
 // なにを　いみしているのて゛しょうか？<end>
 <Oidon>
-“Translation goes here.” I read it out loud, but nothing happened. What the heck does it mean?<end>
+“Dilamond rock ills mirage.” I said it out loud, but nothing happened. What the heck does it mean?<end>
 
 // <Oidon>だんな、マッチか゛　おちていますぜ。<end>
 <Oidon>
@@ -6725,12 +6721,13 @@ There's a flask here, boss.<end>
 
 // <Oidon>だんな、し゛めんに　ちいさな　あなか゛
 // あいてますぜ。<end>
+<Oidon>
 There's a small hole in the ground, boss.<end>
 
 // <Oidon>・・・だんな、てか゛　とと゛かないのて゛
 // とれませんぜ。<end>
 <Oidon>
-...I can't reach it, boss. We'll have to leave it.<end>
+...I can't reach it, boss. We'll have to leave it behind for now.<end>
 
 // <Oidon>あれ？<pause>　あなのなかに　ホ゛ールか゛
 // おちていますぜ。<end>
@@ -6749,7 +6746,7 @@ Hmm?<pause> There's a ball in here.<end>
 <Oidon>
 OK, let's pour the water into the hole. *glug*<pause> *glug*<pause> *glug*<pause><key>
 <Oidon>
-Ah!<pause> The ball floated up, boss!<end>
+Hey!<pause> The ball floated up, boss!<end>
 
 // コ゛ホ゛<pause>　コ゛ホ゛<pause>　コ゛ホ゛・・・<pause>
 // <Oidon>し゛めんのあなに　みす゛を　いれてみましたか゛、
@@ -6782,14 +6779,14 @@ It's not particularly important. Let's continue our investigation.<end>
 // かわのなか゛れか゛　はやいのて゛　およいて゛
 // わたることも　て゛きませんぜ。<end>
 <Oidon>
-We can't get to the other side this way. The river's too strong, so we can't swim across either.<end>
+We can't cross it like this. The river's too strong, so we can't swim across either.<end>
 
 // <Oidon>なるほと゛。<pause>きを　きりたおして　はしのかわりに
 // するんて゛すね。て゛は　きを　きりたおしますぜ。<key>・・・コーン、<pause>コーン、<pause>コーン・・・<pause>
 // メリ　メリ　メリ・・・<pause>　ト゛スーン。<pause><end>
 // @TODO@ -- sounds
 <Oidon>
-Aha. Cut down the tree and it makes a bridge. So let's do it.<end>
+Aha. Cut down the tree and we can use it to fix the bridge. Let's get to work. *chop*<pause> *chop*<end>
 
 // <Oidon>だんな、てつの　はこか゛　ありますぜ。<end>
 <Oidon>
@@ -6842,9 +6839,8 @@ The newspaper in the wastebasket seems to be just trash. Let's not take it.<end>
 // はんふ゛んに　きれていた　しんふ゛んの
 // もうかたほうて゛す。<key><Oidon>まえにひろった　しんふ゛んと　ひ゜ったりと
 // あわさりますぜ。<end>
-...<pause>
 <Oidon>
-We found it, boss! The other half of the newspaper is in here.<key>
+*rustle* *rustle*<pause> We found it, boss! The other half of the newspaper is in here.<key>
 <Oidon>
 It fits right together with the other half we found.<end>
 
@@ -6882,11 +6878,12 @@ That's a good thing we found. Now when we use this we can see further.<end>
 // おとしてみます。
 // ・・・ホ゜カ・・・<pause>ハ゛サ。<pause>　おとしましたせ゛。<end>
 <Oidon>
-OK, let's knock the magazine down with the ball.<pause><pause> ...Got it.<end>
+OK, let's knock the magazine down with the ball.<pause> ...There we go.<end>
 
 // <Oidon>て゛は、みす゛のなかを　しらへ゛て　みます。<end>
+// add <key> since otherwise this message disappears too fast
 <Oidon>
-OK, let's search the water.<end>
+OK, let's search the water.<key><end>
 
 0<end>
 
@@ -6912,7 +6909,7 @@ What are the Lost Woods like now?<end>
 // こんな　あそふ゛ところも　みせも
 // いっけんも　ないとこに・・・。<end>
 <Oidon>
-You mentioned two people passed through here a while ago. Who?<nl>
+You mentioned two people who pass through here. Who?<nl>
 <Mogura>
 I don't know. I'm blind.<key>
 <Oidon>
@@ -6959,7 +6956,7 @@ It's quiet... I like it. Who needs all the hustle and bustle of the city?<end>
 <Oidon>
 Does anybody ever come through here?<nl>
 <Mogura>
-Oh,<pause> sometimes, sure.<nl>
+Oh, sometimes, sure.<nl>
 <Oidon>
 Know what kind of people?<nl>
 <Mogura>
@@ -6973,7 +6970,7 @@ No clue. I'm blind, after all.<end>
 <Oidon>
 Any idea where the people who came through here went?<key>
 <Mogura>
-Hmm... Probably further north of the west lake is all I can guess. I've never been out further than that.<end>
+Hmm... probably further north of the west lake is all I can guess. I've never been out further than that.<end>
 
 // <contd>
 // <Mogura>ここの　まきたにあるのか゛　そうた゛よ。
@@ -6991,15 +6988,16 @@ It stinks.<pause> Smells like lamp oil. Someone probably left some on the island
 
 // <Oidon>だんな、モク゛ラのいっていた
 // うきし゛まか゛　みえますぜ。<end>
+// not sure how to trigger this message
 <Oidon>
-Boss, you can see the floating island the mole was talking about here.<end>
+Boss, you can see the island the mole was talking about here.<end>
 
 // <Oidon>て゛は、だんな、およいて゛
 // あのうきし゛ままて゛　いってきますぜ。
 // サ゛ホ゛ーン<pause><end>
 // @TODO@ - サ゛ホ゛ーン
 <Oidon>
-OK, boss, let's swim over to the floating island.<end>
+OK, boss, let's swim over to the island.<end>
 
 // <Oidon>とうゆか゛　ありますぜ。<end>
 <Oidon>
@@ -7023,7 +7021,7 @@ This fish is still a child, boss. No wonder he doesn't run away.<end>
 // ほ゛くは　みす゛のないところへは　いけないんた゛。<end>
 <contd><nl>
 <Sakana>
-I have no idea, then or now. I can't go anywhere there's no water.<end>
+Past or present, I have no idea. I can't go anywhere there's no water.<end>
 
 // <Oidon>このもりに　やってくる　と゛うふ゛つか゛
 // 2ひき　いるそうた゛か゛　しっているか？
@@ -7046,11 +7044,9 @@ What? Who was it?<nl>
 <Sakana>
 I don't know. Looking for the old man?<nl>
 <Oidon>
-Ah, yes.<nl>
+Ah, yes.<key>
 <Sakana>
-In that case, I'll give you my swimming goggles.<key>
-<Sakana>
-However... I don't have them with me here. They fell in the river by some trees arranged in the shape of a triangle.<key>
+In that case, I'll give you my swimming goggles. However... I don't have them with me here. They fell in the river by some trees arranged in the shape of a thick triangle.<key>
 <Sakana>
 But the river's calm there, so even a pair of goggles shouldn't wash away.<end>
 
@@ -7059,17 +7055,16 @@ But the river's calm there, so even a pair of goggles shouldn't wash away.<end>
 // "た゛こいやのこいわはしんきろうなり"<pause>
 // なんた゛こりゃ？<pause>　だんな、ふかかいですぜ。<end>
 <Oidon>
-Huh?<pause> Boss, there's something written on this rock. I'll try to read it.<key>
+Huh?<pause> Boss, there's something written on this rock.<key>
 <Oidon>
-// @TODO@
-“Translation goes here.”<key>
+I think it says, “Noel Stone.” Under that, it says, “Dilamond rock ills mirage.” Huh???<key>
 <Oidon>
-What the heck? It's quite a mystery.<end>
+Which rock is Dilamond Rock? What does “ills mirage” mean? And why is this rock called the Noel Stone?<end>
 
 // <Oidon>だんな、ふつうのいわとは　ちか゛うかたちを
 // してますぜ。<end>
 <Oidon>
-It's a different shape than the others.<end>
+This one looks different from the others.<end>
 
 // <Oidon>なるほと゛・・・。<pause>
 // だんな、こけしいわの　もし゛の　いみか゛
@@ -7081,21 +7076,22 @@ It's a different shape than the others.<end>
 // "こけし"・・・"こをけす"　という
 // ことですぜ。<end>
 <Oidon>
-Now I get it! Boss, I've figured out the meaning behind the reading on the rock!<key>
+Now I get it! It's not a Noel Stone. It's a No L Stone!<key>
 <Oidon>
-// @TODO@
-Translation goes here.<end>
+“Dilamond rock ills mirage.” Take out the letter L and it says, “Diamond rock is mirage.”<key>
+<Oidon>
+Hah! That's actually pretty clever.<end>
 
 // <contd>
 // <Oidon>す、すこ゛い　いきおいですぜ。<pause><pause>
 // まあ、とにかく　これて゛むこうへ　いけますぜ。<end>
 <contd><nl>
 <Oidon>
-S-such might! Well, anyway let's go over there.<end>
+Yow, look at that! Well, anyway, now we can go in.<end>
 
 // <Oidon>て゛は　もと゛りますぜ。<end>
 <Oidon>
-Well, let's go back.<end>
+OK, back to shore.<end>
 
 // <Oidon>ここの　きは　みっしゅうしては　いますか゛
 // き　そのものに　かわったところは
@@ -7124,6 +7120,7 @@ Boss, we can't burn it down with just one match.<end>
 
 // <Oidon>て゛は、ここの　きを　やきはらいますぜ。<pause>
 // コ゛オー　　コ゛オー<pause><end>
+<Oidon>
 OK, we'll burn down this tree.<end>
 
 // <Oidon>て゛は、だんな、このとうゆを
@@ -7174,7 +7171,7 @@ It looks like an ordinary door.<pause> *click*<pause> Hmm. Seems to be unlocked,
 // ひとりとして　いませんせ゛・・・？<pause><end>
 // @TODO@ -- check translation. Same line occurs a few blocks down too.
 <contd><nl>
-Even if it's the perp's, we don't have any suspects who'd live in a place like this.<end>
+Even if it's the perp's, we don't have any suspects who'd live in a place like this.<pause><end>
 
 // <Oidon>て゛は　おいと゛んか゛　なかにはいって
 // しらへ゛てきます。<end>
@@ -7203,7 +7200,7 @@ I'll take a look around.<pause> Ah!<pause> There's something fluttering in a tre
 <Oidon>
 It looks like we're getting somewhere, boss. But I don't think we'll find anything else around here.<key>
 <Oidon>
-Let's go back to HQ. I've written everything so far in a file. The name is \\X\\X\\X\\X.<end>
+Let's go back to HQ. I've written down everything so far in a file. The name is \\X\\X\\X\\X.<end>
 
 // <Oidon>だんな!　すこ゛いものを　みつけました。
 // なんと　けを　そめる　くすりて゛すよ!
@@ -7217,7 +7214,7 @@ Boss! I've found something! This is blond hair dye! It's for blond hair!<key>
 <Oidon>
 I'd bet the perp used it to dye his or her hair blond.<key>
 <Oidon>
-But even if it's the perp's, we don't have any suspects who'd live in a place like this.<end>
+But even if it's the perp's, we don't have any suspects who'd live in a place like this.<pause><end>
 
 // <Oidon>だんな、
 // いわのかけ゛に　なにか　ありますぜ。<end>
@@ -7244,12 +7241,14 @@ Aha! Boss, there's a road here!<end>
 
 // <Oidon>だんな、
 // よくみえないのて゛　しらへ゛られませんぜ。<end>
+// If you try checking the magazine before taking it
 <Oidon>
-I can't see well enough to get a good look, boss.<end>
+I can't get a good look at it from here, boss.<end>
 
 // <Oidon>だんな、はちに　さされちゃいますよ。<end>
+// trying to take beehive
 <Oidon>
-I'll get stung, boss.<end>
+You're nuts!<end>
 
 // <Oidon>きれいな　かわですぜ。
 // あれ？　<pause>みす゛のそこに　なにか　ありますよ。<end>
@@ -7320,9 +7319,7 @@ Nobody passes by down below in this forest. Well, there are two people who pass 
 // "こけしいわ"　へ　いくといいし゛ょ。<end>
 <contd><nl>
 <Mogura>
-The first lake you see to the west is the west lake. Also...<key>
-<Mogura>
-If you don't mind walking to the corners of the forest, you should seek out Ragnarok.<end>
+Way over to the west. You can't get to the western half of the forest without following the directions on the Noel Stone, though.<end>
 
 // <****>"あいか゛<pause>　いそいて゛る　<pause><pause>
 // とおくて゛<pause>　きみか゛よふ゛<pause><pause>
