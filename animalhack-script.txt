@@ -6701,7 +6701,8 @@ Boss, we can't use it now. Let's use it when it counts.<end>
 // よみあけ゛ましたか゛　なにも　おこりませんぜ。
 // いったい　このもし゛は
 // なにを　いみしているのて゛しょうか？<end>
-Translation goes here.<end>
+<Oidon>
+“Translation goes here.” I read it out loud, but nothing happened. What the heck does it mean?<end>
 
 // <Oidon>だんな、マッチか゛　おちていますぜ。<end>
 <Oidon>
@@ -6711,7 +6712,7 @@ There are some matches here, boss.<end>
 
 // <Oidon>ほんじゃ、とって　おきますぜ。<end>
 <Oidon>
-OK, let's take it.<end>
+OK, taken.<end>
 
 // <Oidon>だんな、オノを　みつけましたのて゛
 // とっておきますぜ。<end>
@@ -6739,7 +6740,7 @@ Hmm?<pause> There's a ball in here.<end>
 // <Oidon>・・・しらへ゛ましたか゛　あなのなかには
 // なにも　ありませんぜ。<end>
 <Oidon>
-...There's nothing in here.<end>
+...Nope, nothing in here.<end>
 
 // <Oidon>て゛は、すいとうのみす゛を　し゛めんのあなに
 // いれてみますぜ。
@@ -6753,7 +6754,9 @@ Ah!<pause> The ball floated up, boss!<end>
 // コ゛ホ゛<pause>　コ゛ホ゛<pause>　コ゛ホ゛・・・<pause>
 // <Oidon>し゛めんのあなに　みす゛を　いれてみましたか゛、
 // なんのへんかも　ありませんぜ。<end>
-Translation goes here.<end>
+*glug*<pause> *glug*<pause> *glug*
+<Oidon
+I poured water in the hole, boss, but nothing happened.<end>
 
 // <Oidon>だんな、ほ゛うえんきょうか゛　おちてますぜ。<end>
 <Oidon>
@@ -6784,7 +6787,9 @@ We can't get to the other side this way. The river's too strong, so we can't swi
 // <Oidon>なるほと゛。<pause>きを　きりたおして　はしのかわりに
 // するんて゛すね。て゛は　きを　きりたおしますぜ。<key>・・・コーン、<pause>コーン、<pause>コーン・・・<pause>
 // メリ　メリ　メリ・・・<pause>　ト゛スーン。<pause><end>
-Translation goes here.<end>
+// @TODO@ -- sounds
+<Oidon>
+Aha. Cut down the tree and it makes a bridge. So let's do it.<end>
 
 // <Oidon>だんな、てつの　はこか゛　ありますぜ。<end>
 <Oidon>
@@ -6862,13 +6867,16 @@ Rather big beehive.<end>
 // ハチのすか゛　あるのて゛　て゛きませんし、
 // きを　のほ゛るにも　えた゛か゛　すくないのて゛
 // のほ゛れませんぜ。<end>
-Translation goes here.<end>
+<Oidon>
+I can't reach it, boss. I thought maybe we could shake the tree, but there's a beehive in it. Not enough branches to climb, either.<end>
 
 // <contd>
 // これはいいものを　みつけました。
 // いまから　これをつかって　こまかいところまて゛
 // みていきます。<end>
-Translation goes here.<end>
+// @TODO@ -- verify
+<contd><nl>
+That's a good thing we found. Now when we use this we can see further.<end>
 
 // <Oidon>て゛は　このホ゛ールを　つかって　しゅうかんしを
 // おとしてみます。
@@ -6904,7 +6912,7 @@ What are the Lost Woods like now?<end>
 // こんな　あそふ゛ところも　みせも
 // いっけんも　ないとこに・・・。<end>
 <Oidon>
-You mentioned people sometimes pass through here. Who?<nl>
+You mentioned two people passed through here a while ago. Who?<nl>
 <Mogura>
 I don't know. I'm blind.<key>
 <Oidon>
@@ -6989,7 +6997,9 @@ Boss, you can see the floating island the mole was talking about here.<end>
 // <Oidon>て゛は、だんな、およいて゛
 // あのうきし゛ままて゛　いってきますぜ。
 // サ゛ホ゛ーン<pause><end>
-Translation goes here.<end>
+// @TODO@ - サ゛ホ゛ーン
+<Oidon>
+OK, boss, let's swim over to the floating island.<end>
 
 // <Oidon>とうゆか゛　ありますぜ。<end>
 <Oidon>
@@ -7011,7 +7021,9 @@ This fish is still a child, boss. No wonder he doesn't run away.<end>
 // <contd>
 // <Sakana>むかしも　いまも　わからないよ。
 // ほ゛くは　みす゛のないところへは　いけないんた゛。<end>
-Translation goes here.<end>
+<contd><nl>
+<Sakana>
+I have no idea, then or now. I can't go anywhere there's no water.<end>
 
 // <Oidon>このもりに　やってくる　と゛うふ゛つか゛
 // 2ひき　いるそうた゛か゛　しっているか？
@@ -7024,7 +7036,23 @@ Translation goes here.<end>
 // ちかくのかわに　おとしちゃったんた゛。<key><Sakana>て゛も、あのかわの　なか゛れは
 // おた゛やかた゛から、いくら　すいちゅうメカ゛ネて゛も
 // あまり　なか゛されないはす゛た゛よ。<end>
-Translation goes here.<end>
+// @TODO@ -- "looking for the old man" doesn't seem right
+<Oidon>
+Are you aware there were two people who went into this forest?<nl>
+<Sakana>
+Now that you mention it, I've seen a fox.<key>
+<Oidon>
+What? Who was it?<nl>
+<Sakana>
+I don't know. Looking for the old man?<nl>
+<Oidon>
+Ah, yes.<nl>
+<Sakana>
+In that case, I'll give you my swimming goggles.<key>
+<Sakana>
+However... I don't have them with me here. They fell in the river by some trees arranged in the shape of a triangle.<key>
+<Sakana>
+But the river's calm there, so even a pair of goggles shouldn't wash away.<end>
 
 // <Oidon>あれ？　<pause>だんな、このいわに　なにか
 // かかれてますぜ。よんて゛みます。<pause>
@@ -7053,15 +7081,17 @@ It's a different shape than the others.<end>
 // "こけし"・・・"こをけす"　という
 // ことですぜ。<end>
 <Oidon>
-Now I get it... Boss, I've figured out the meaning behind the reading on the rock.<key>
+Now I get it! Boss, I've figured out the meaning behind the reading on the rock!<key>
 <Oidon>
-// @TODO@ -- finish translation
-<end>
+// @TODO@
+Translation goes here.<end>
 
 // <contd>
 // <Oidon>す、すこ゛い　いきおいですぜ。<pause><pause>
 // まあ、とにかく　これて゛むこうへ　いけますぜ。<end>
-Translation goes here.<end>
+<contd><nl>
+<Oidon>
+S-such might! Well, anyway let's go over there.<end>
 
 // <Oidon>て゛は　もと゛りますぜ。<end>
 <Oidon>
@@ -7077,12 +7107,13 @@ The trees may be dense, but there's nothing unusual about them.<end>
 // しかし、はっきりしたものて゛は　ないのて゛
 // と゛のほうこうへむいているかは
 // わかりませんぜ。<end>
-Translation goes here.<end>
+<Oidon>
+There are footprints here, boss. But they're not too clear, so I don't know which way they go.<end>
 
 // <Oidon>て゛は、ここの　きを　やきはらいますぜ。<pause>
 // チリ<pause>　チリ<pause>　チリ<pause><end>
 <Oidon>
-OK, I'll burn down this tree.<end>
+OK, we'll burn down this tree.<end>
 
 // <contd>
 // <Oidon>だんな、マッチ1ほ゜んて゛　これた゛けの　きを
@@ -7093,13 +7124,14 @@ Boss, we can't burn it down with just one match.<end>
 
 // <Oidon>て゛は、ここの　きを　やきはらいますぜ。<pause>
 // コ゛オー　　コ゛オー<pause><end>
-OK, I'll burn down this tree.<end>
+OK, we'll burn down this tree.<end>
 
 // <Oidon>て゛は、だんな、このとうゆを
 // みっしゅうしている　きき゛のあたりに
 // かけますぜ。<pause>
 // ハ゛シャ<pause>　ハ゛シャ<pause><end>
-Translation goes here.<end>
+<Oidon>
+OK, we'll pour the oil on all these trees.<end>
 
 // <Oidon>だんな、ここに　あしあとか゛　ありますぜ。<pause>
 // しかも　にしのほうこうへ　むかっています。
@@ -7107,12 +7139,15 @@ Translation goes here.<end>
 // おかしいですぜ。<key><Oidon>このむこうに　きっとなにかか゛　あるはす゛て゛す。
 // しかし、<pause>と゛うすれは゛
 // このむこうへ　いけるやら・・・・・・。<end>
-Translation goes here.<end>
+<Oidon>
+Boss, there are footprints here. Looks like they head west. Odd that they're going where there's no path.<key>
+<Oidon>
+Surely there's something over there. But how do we get there?<end>
 
 // <Oidon>けっこう　きれいな　こやですぜ。
 // そうふるくはないと　おもいます。<end>
 <Oidon>
-Seems to be a pretty cabin. Not too old, I'd say.<end>
+Looks like a nice hut. Not too old, I'd say.<end>
 
 // <Oidon>だんな、みす゛うみのそこに
 // なにか　ひかるものか゛　みえましたせ゛。<end>
@@ -7123,7 +7158,8 @@ There's something shiny down below in the lake, boss.<end>
 // おなし゛ようですぜ。こやとはいえと゛も
 // ちょっとや　そっとの　ちからて゛は
 // たおれませんぜ。<end>
-Translation goes here.<end>
+<Oidon>
+Seems to be built like any house. It may be a hut, but it's not going to just fall over.<end>
 
 // <Oidon>ふつうの　ト゛アの　ようですぜ。
 // カ゛チャッ・・・<pause>
@@ -7136,13 +7172,15 @@ It looks like an ordinary door.<pause> *click*<pause> Hmm. Seems to be unlocked,
 // もし　これか゛　はんにんのものた゛としても・・・<pause>
 // こんなところにすむような　ようき゛しゃは
 // ひとりとして　いませんせ゛・・・？<pause><end>
-Translation goes here.<end>
+// @TODO@ -- check translation. Same line occurs a few blocks down too.
+<contd><nl>
+Even if it's the perp's, we don't have any suspects who'd live in a place like this.<end>
 
 // <Oidon>て゛は　おいと゛んか゛　なかにはいって
 // しらへ゛てきます。<end>
 // @TODO@ -- verify
 <Oidon>
-Well, I'll go in and take a look myself.<end>
+Well, I'll go in and take a look.<end>
 
 // <Oidon>ちょっと　まわりを　みてみますぜ。<pause>
 // おっ、<pause>にしに　みえる　きに
@@ -7162,7 +7200,10 @@ I'll take a look around.<pause> Ah!<pause> There's something fluttering in a tre
 // そろそろ　そうさほんふ゛へ　もと゛りましょう。<key><Oidon>だんな　ここまて゛の　し゛けんの　けいかを
 // そうさファイルに　まとめました。
 // ファイルめいは　<red>おおありくい　<black>て゛す。<end>
-Translation goes here.<end>
+<Oidon>
+It looks like we're getting somewhere, boss. But I don't think we'll find anything else around here.<key>
+<Oidon>
+Let's go back to HQ. I've written everything so far in a file. The name is \\X\\X\\X\\X.<end>
 
 // <Oidon>だんな!　すこ゛いものを　みつけました。
 // なんと　けを　そめる　くすりて゛すよ!
@@ -7170,12 +7211,13 @@ Translation goes here.<end>
 // くすりて゛　そめたものた゛った　ようて゛すね。<key><Oidon>もし　これか゛　はんにんのものた゛としても・・・<pause>
 // こんなところにくるような　ようき゛しゃは
 // ひとりとして　いませんせ゛・・・？<pause><end>
+// @TODO@ -- check translation of third part
 <Oidon>
 Boss! I've found something! This is blond hair dye! It's for blond hair!<key>
 <Oidon>
 I'd bet the perp used it to dye his or her hair blond.<key>
 <Oidon>
-Translation goes here.<end>
+But even if it's the perp's, we don't have any suspects who'd live in a place like this.<end>
 
 // <Oidon>だんな、
 // いわのかけ゛に　なにか　ありますぜ。<end>
@@ -7270,7 +7312,7 @@ Beats me. I've only been here for a year.<end>
 <Mogura>
 It's peaceful. There are too many passersby in the city. It's just a nuisance to ground-dwellers like me.<key>
 <Mogura>
-Nobody passes by down below in this forest. Well, you do get a couple people passing through every now and then... but there's nothing really wrong with that.<end>
+Nobody passes by down below in this forest. Well, there are two people who pass through now and then... but there's nothing really wrong with that.<end>
 
 // <contd>
 // <Mogura>いちは゛ん　にしにあるみす゛うみか゛
@@ -7286,6 +7328,7 @@ If you don't mind walking to the corners of the forest, you should seek out Ragn
 // とおくて゛<pause>　きみか゛よふ゛<pause><pause>
 // あいか゛<pause>　いそいて゛る<pause><pause>
 // おおきく<pause>　てを<pause>　ふる"<pause><pause><end>
+<****>
 Translation goes here.<end>
 
 // <****>ケ゛ヘ゛ロッチョーー。<pause>
