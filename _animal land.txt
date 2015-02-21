@@ -4,6 +4,9 @@ http://www.d1.dion.ne.jp/~gake/koryaku/animal/animal.htm
 http://web.archive.org/web/20130510133857/http://www5d.biglobe.ne.jp/~t-suzuki/sousyuhen/so_animal_land.htm
 
 
+The mole ends everything with "jo". Find out what this means, and note it on the wiki.
+
+
 Make sure our PNG to MSX conversion tool is intelligent about colors. E.g., if red is foreground, it should be foreground throughout the image. Do this by prioritizing colors, so that the higher priority color is considered foreground.
 
 

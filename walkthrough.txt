@@ -39,7 +39,7 @@ When the walkthrough says "question [name] thoroughly", it means ask all the que
 Pyonko's shop:
 * Question Pyonko thoroughly
 
-Red's room:
+Konta's room:
 * Check desk (find notepad)
 * Take notepad
 * Check notepad (reveals Konta had something to do at 8:30 on the 10th)
@@ -109,14 +109,36 @@ Chapter 4
 
 Chapter 5
 ---------
-* Go to the study
+Study:
 * Open the bookcase (reveals safe)
 * Open the safe (reveals key)
 * Take key
 * Open desk drawer
 * Take letter
 * Check letter
-* Go to Tsuneko's house
+
+Tsuneko's house:
 * Question Tsuneko thoroughly
 ** Showing her the letter allows you to ask her about it
 * Ask Tsuneko about "letter"
+
+HQ:
+* Question Konta thoroughly
+* Question Kokon thoroughly
+* Question Peruu thoroughly
+
+Tsuneko's house:
+* Ask Tsuneko about animals
+
+HQ:
+* Ponder animals
+
+Tsuneko's house:
+* Ask Tsuneko about animals
+* Ask Tsuneko about letter
+* Ask Tsuneko about Gonkichi
+* Go to the Bear Bar
+
+
+Chapter 6
+---------
