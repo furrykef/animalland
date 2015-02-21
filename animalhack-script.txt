@@ -6755,7 +6755,7 @@ Ah!<pause> The ball floated up, boss!<end>
 // <Oidon>し゛めんのあなに　みす゛を　いれてみましたか゛、
 // なんのへんかも　ありませんぜ。<end>
 *glug*<pause> *glug*<pause> *glug*
-<Oidon
+<Oidon>
 I poured water in the hole, boss, but nothing happened.<end>
 
 // <Oidon>だんな、ほ゛うえんきょうか゛　おちてますぜ。<end>
