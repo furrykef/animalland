@@ -1091,7 +1091,7 @@ Letter<end>
 <end>
 
 // はんにんの<pause>6こと<end>
-Perp<end>
+Culprit<end>
 
 
 // Menu items for chapter 6
@@ -1119,9 +1119,10 @@ Use<end>
 Go<end>
 
 // あしもと<end>
-Down<end>
+Ground<end>
 
 // し゛めん<end>
+// @TODO@ -- used?
 Ground<end>
 
 // き<end>
@@ -5708,7 +5709,7 @@ Boss, there's no need to arrest her.<end>
 // <Oidon>なかなか　きれいな　へやですぜ。
 // はくせいか゛　おいてあります。<end>
 <Oidon>
-Nice room. There's taxidermy all around.<end>
+Nice room. There are stuffed animals all around.<end>
 
 // <Oidon>なかなか　よさそうな　はくせいですぜ。
 // おいと゛んも　1つく゛らいほしいなー。<end>
@@ -5841,8 +5842,9 @@ Which?<end>
 // <Oidon>・・・・・・。<key><Oidon>だんな、これし゛ゃあ　と゛うしようもありません。
 // いちと゛　そうさほんふ゛に　もと゛って
 // て゛なおしましょう。<end>
+// @TODO@ -- check translation. When does Koala say this, anyway?
 <Beasu>
-Welcome. Oh, Andy. Koala is still in a bad mood. He'll be alright in a minute, so you can talk to him then.<key>
+Welcome. Oh, Andy. Koala is still in a bad mood. He should be better soon, so you can talk to him then.<key>
 <Koala>
 What are you doing?! You know I want nothing to do with the police!<nl>
 <Oidon>
@@ -5852,7 +5854,7 @@ This village doesn't need the police. That includes you...<nl>
 <Oidon>
 ...<key>
 <Oidon>
-I guess there is nothing we can do. Let's head back to headquarters and come back another time.<end>
+It's no use. Let's head back to headquarters and come back another time.<end>
 
 // <Oidon>ほんじゃ、ココンを　よひ゛ますぜ。<end>
 <Oidon>
@@ -6385,7 +6387,7 @@ Nothing to take here, boss.<end>
 // <contd>
 // しかし、そこか゛　みえにくいのて゛
 // なにもないとは　いいきれませんぜ。<end>
-<contd> But it's hard to see, so it's hard to tell anything for sure.<end>
+<contd> But it's hard to see, so I can't tell anything for sure.<end>
 
 // <Oidon>だんな、ここには　きく　あいてか゛
 // いませんぜ。<end>
@@ -6394,7 +6396,7 @@ There's nobody here, boss.<end>
 
 // <Oidon>だんな、
 // そんなことをしたら　にけ゛ちゃいますよ。<end>
-// when you try taking the mole
+// when you try taking a mole
 <Oidon>
 Sorry, boss, we can't keep him.<end>
 
@@ -6557,7 +6559,7 @@ What incident is it talking about? What if it has to do with Renard...? It's too
 // <Oidon>とくに　かわったところは　ありませんぜ。
 // たた゛の　とうゆの　ようですぜ。<end>
 <Oidon>
-There's nothing unusual about the oil.<end>
+It's flammable, just like any lamp oil.<end>
 
 // <Oidon>きんは゜つに　けを　そめることか゛て゛きる
 // くすりて゛す。もしや　はんにんは
@@ -6646,7 +6648,7 @@ Huh? There's a bubble rising up to the surface...<end>
 // こ゛ほうひ゛に　このホ゛ールを　2つとも
 // さしあけ゛ましょう。<end>
 <Yousei>
-You're honest.<pause> As a reward, I'll let you have both balls.<end>
+I admire your honesty.<pause> As a reward, I'll let you have both balls.<end>
 
 // <Yousei>うそをいっては　いけません。
 // あなたのホ゛ールは　この　よこ゛れたほうて゛す。
@@ -6658,7 +6660,7 @@ You're honest.<pause> As a reward, I'll let you have both balls.<end>
 <Yousei>
 You mustn't lie. Your ball is this dirty one. I'll give it back anyway, but lying isn't a good thing.<key>
 <Yousei>
-Translation goes here.<end>
+Make an effort to be more honest.<pause> Only to the honest will the gods lend a helping hand.<end>
 
 // <Oidon>・・・た゛いふ゛　とおくまて゛　みわたせますぜ。
 // しかし、つねに　ほ゛うえんきょうて゛みているのて゛
@@ -6727,7 +6729,7 @@ There's a small hole in the ground, boss.<end>
 // <Oidon>・・・だんな、てか゛　とと゛かないのて゛
 // とれませんぜ。<end>
 <Oidon>
-...I can't reach it, boss. We'll have to leave it behind for now.<end>
+...I can't reach it, boss. We'll have to get it some other way.<end>
 
 // <Oidon>あれ？<pause>　あなのなかに　ホ゛ールか゛
 // おちていますぜ。<end>
@@ -7116,7 +7118,7 @@ OK, we'll burn down this tree.<end>
 // やきはらうことは　て゛きませんぜ。<end>
 <contd><nl>
 <Oidon>
-Boss, we can't burn it down with just one match.<end>
+Boss, we can't burn it down with just a match.<end>
 
 // <Oidon>て゛は、ここの　きを　やきはらいますぜ。<pause>
 // コ゛オー　　コ゛オー<pause><end>
@@ -7137,9 +7139,9 @@ OK, we'll pour the oil on all these trees.<end>
 // しかし、<pause>と゛うすれは゛
 // このむこうへ　いけるやら・・・・・・。<end>
 <Oidon>
-Boss, there are footprints here. Looks like they head west. Odd that they're going where there's no path.<key>
+Boss, there are footprints here. Looks like they head west, which is weird, 'cause there's no path there.<key>
 <Oidon>
-Surely there's something over there. But how do we get there?<end>
+Surely there's something in there. But how do we get in?<end>
 
 // <Oidon>けっこう　きれいな　こやですぜ。
 // そうふるくはないと　おもいます。<end>
@@ -7351,7 +7353,7 @@ Boss, let's use this to get to the other side.<end>
 // それとも　この　きれいなホ゛ールて゛すか？<end>
 <contd><key>
 <Yousei>
-I'm the fairy of the lake. Is this dirty ball the one you dropped?<pause> Or is it this clean one?<end>
+I'm a water fairy. Is this dirty ball the one you dropped?<pause> Or is it this clean one?<end>
 
 // 
 // <end>
@@ -7408,15 +7410,15 @@ B-boss! You know I'm not the culprit! Don't even joke about that!<end>
 
 // <Oidon>ほんじゃ、コンタをよひ゛ますぜ。<end>
 <Oidon>
-OK, we'll call Red.<end>
+OK, we'll summon Red.<end>
 
 // <Oidon>ほんじゃ、ココンをよひ゛ますぜ。<end>
 <Oidon>
-OK, we'll call Kit.<end>
+OK, we'll summon Kit.<end>
 
 // <Oidon>ほんじゃ、ツネコをよひ゛ますぜ。<end>
 <Oidon>
-OK, we'll call Vixen.<end>
+OK, we'll summon Vixen.<end>
 
 // <Oidon>なにも　ありませんぜ。<end>
 <Oidon>
@@ -7424,47 +7426,57 @@ There's nothing there.<end>
 
 // <Oidon>ほんじゃ、ヘ゜ルーをよひ゛ますぜ。<end>
 <Oidon>
-OK, we'll call Persia.<end>
+OK, we'll summon Persia.<end>
 
 // <Oidon>ほんじゃ、リンリンをよひ゛ますぜ。<end>
 <Oidon>
-OK, we'll call Ling-Ling.<end>
+OK, we'll summon Ling-Ling.<end>
 
 // <Oidon>ほんじゃ、ヒ゜ョンコをよひ゛ますぜ。<end>
 <Oidon>
-OK, we'll call Bunnie.<end>
+OK, we'll summon Bunnie.<end>
 
 // <Oidon>だんな!　ありました。コンタか゛　いったとおり
 // おうせつまのかへ゛に　ちのついた　た゛んか゛んか゛
 // めりこんて゛いました。このあいた゛は　うっかり
 // みのか゛していたんて゛す。かんにんしてくた゛さい。<end>
-Translation goes here.<end>
+<Oidon>
+Boss! It was there. Just as Red said, there was a bullet covered with blood embedded in the parlor wall. We overlooked it before. Forgive me.<end>
 
 // <Oidon>"あのし゛けんか゛おこっていらい　まよいのもりには
 // た゛れもあしを　ふみいれてないようすて゛
 // まったくなりをひそめたふ゛きみな　もりと
 // なっています。"　と、こうかかれていますぜ。<end>
-Translation goes here.<end>
+// quoting something from chapter 6
+<Oidon>
+It says, “Ever since the incident, the Lost Woods have become a dead silent, eerie forest nobody dares to set foot into.”<end>
 
 // <Oidon>だんな、ころしのきし゛か゛のってますぜ。
 // 「・・・まよいのもりて゛　すいちゅうし゛ゅうて゛
 // うちころされ・・・。」
 // こう　かいてあります。<key><Oidon>これいし゛ょうの
 // ことは　もし゛か゛かすれていて　よめませんぜ。<end>
-Translation goes here.<end>
+// quoting something from chapter 6
+<Oidon>
+Boss, there's an article about a murder here. It says, “shot and killed by a speargun in the Lost Woods”.<key>
+<Oidon>
+Everything else is blurry and I can't read it.<end>
 
 // <Oidon>ん・・・。だんな、かすれていてまったく
 // わかりませんぜ。なにしろ　3年いし゛ょうもまえの
 // しんふ゛んて゛すからね。<end>
-Translation goes here.<end>
+<Oidon>
+Hmm... boss, it's blurry and I can't make anything out. It's over three years old, after all.<end>
 
 // <Oidon>コンタについて　くわしく　ききたいんた゛か゛？<end>
-Translation goes here.<end>
+<Oidon>
+I'd like to know everything you know about Red.<end>
 
 // <Oidon>ほうせきるいか゛　みつかったのはいいんて゛すか゛
 // 1つた゛け　たりないというのは
 // と゛ういうことなんて゛しょうかね？<end>
-Translation goes here.<end>
+<Oidon>
+Great that we found them, but why is one piece missing?<end>
 
 // <Oidon>だんな、このしんふ゛んは　３年はんく゛らいまえの
 // ものですぜ。そして、ツネコのはなしによると
@@ -7472,18 +7484,23 @@ Translation goes here.<end>
 // ３年はんほと゛まえて゛す。<key><Oidon>このきし゛のし゛けんと　ゴンきちのこうと゛うに
 // つなか゛りか゛あると　かんか゛えても
 // まちか゛いないと　おもいますぜ。<end>
-Translation goes here.<end>
+<Oidon>
+Boss, this newspaper mentions an event that happened about three and a half years ago. Furthermore, Vixen says Renard started acting strange three and a half years ago.<key>
+<Oidon>
+Surely there must be a connection here.<end>
 
 // ？<end>
 ?<end>
 
 // <Oidon>それて゛は　おうせつまのかへ゛を　しらへ゛てきます!<end>
-Translation goes here.<end>
+<Oidon>
+All right, I'll search the parlor wall!<end>
 
 // <Oidon>しらへ゛て　みたところ　このち　は
 // ゴンきちのものて゛はないと　わかりました。
 // いったい　た゛れのち　なんた゛ろう？<end>
-Translation goes here.<end>
+<Oidon>
+Upon further investigation, I found this blood is not Renard's. Whose could it be?<end>
 
 // <Oidon>ます゛　はんにんの　と゛うきか゛　ほうせきめあてか
 // それとも　うらみか。このてんか゛
@@ -7491,7 +7508,10 @@ Translation goes here.<end>
 // むす゛かしいですぜ。<key><Oidon>もし、と゛うきか゛　うらみ　た゛とすれは゛
 // ３年はんまえに　いったい　なにか゛あったのかか゛
 // こんと゛のし゛けんの　カキ゛になりそうて゛す。<end>
-Translation goes here.<end>
+<Oidon>
+First off, the perp's motive must be either the jewelry or revenge. Until we've cleared that up, it's hard to reason about him.<key>
+<Oidon>
+If it's revenge, then what exactly happened thre and a half years ago would be the key to this case.<end>
 
 0<end>
 
@@ -7506,12 +7526,25 @@ Translation goes here.<end>
 // いま　つきあっているひとか゛　いると・・・
 // <Oidon>いったい　あいては　た゛れた゛？<key><Tsuneko>そこまて゛は　おしえて　くれませんて゛したか゛
 // あのこは　きっと　そのかたを　かは゛って・・・<end>
-Translation goes here.<end>
+<contd><nl>
+<Tsuneko>
+Oh, Andy, please help Red. It's impossible for him to have killed his father! He's trying to protect someone.<key>
+<Oidon>
+But then...?<nl>
+<Tsuneko>
+I heard it from Red himself earlier. If he's got someone he associates with...<nl>
+<Oidon>
+Who could it be?<key>
+<Tsuneko>
+That's all I know, but surely he's protecting somebody...<end>
 
 // <contd>
 // <Peruu>コンタさんは　とても　まし゛めなかたて゛すわ。
 // とても　ひとこ゛ろしなんて・・・<end>
-Translation goes here.<end>
+// @TODO@ -- check translation
+<contd><nl>
+<Peruu>
+Red's a very serious person. To think he's a murderer...<end>
 
 // ？<end>
 ?<end>
@@ -7523,28 +7556,32 @@ Translation goes here.<end>
 .<end>
 
 // <Oidon>ほんじゃ、いさ゛かや　クマへ　いきましょうや。<end>
-Translation goes here.<end>
+<Oidon>
+OK, we're off to the Bear Bar.<end>
 
 // <Oidon>せっかくコンタを　よんた゛んて゛すから
 // コンタにめを　むけましょうよ。<end>
-Translation goes here.<end>
+<Oidon>
+Let's focus on Red, since we've got him here.<end>
 
 // せんぜ。<end>
 <end>
 
 // <Oidon>だんな、たいほするのは　けっていてきな
 // しょうこをつかんて゛からにしましょうよ。<end>
-Translation goes here.<end>
+<Oidon>
+Boss, we can't make an arrest without solid evidence.<end>
 
 // <Oidon>３年はんほと゛まえに　ゴンきちか゛　なにか
 // し゛けんを　おこしたことは　ないか？<end>
-Translation goes here.<end>
+<Oidon>
+Did something happen to Renard about three and a half years ago?<end>
 
 // <contd>
 // <Konta>・・・しりませんね。<end>
 <contd><nl>
 <Konta>
-I dunno.<end>
+I don't know.<end>
 
 // 。<end>
 .<end>
@@ -7553,12 +7590,16 @@ I dunno.<end>
 .<end>
 
 // <Oidon>まよいのもりについて　なにかしっているか？<end>
-Translation goes here.<end>
+<Oidon>
+Do you know anything about the Lost Woods?<end>
 
 // <contd>
 // <Konta>あんな　うすきみのわるいところ
 // いったことも　ありませんよ。<end>
-Translation goes here.<end>
+// @TODO@ -- is いった here 言った or 行った?
+<contd><nl>
+<Konta>
+I've never been to that foul and eerie place.<end>
 
 // ？<end>
 ?<end>
@@ -7568,7 +7609,8 @@ Translation goes here.<end>
 
 // <Oidon>ちょっとしつれい・・・。
 // だんな、なにもありませんぜ。<end>
-Translation goes here.<end>
+<Oidon>
+Excuse me a moment...<pause> Nothing of interest.<end>
 
 // <Oidon>・・・・・・。<end>
 <Oidon>
@@ -7579,18 +7621,20 @@ Translation goes here.<end>
 
 // <Oidon>これに　みおほ゛えは　ないか？<end>
 <Oidon>
-Recognize this?.<end>
+Recognize this?<end>
 
 // <contd>
 // <Konta>しりませんよ・・・。<end>
 <contd><nl>
 <Konta>
-I dunno.<end>
+I haven't seen it.<end>
 
 // <contd>
 // <Konta>こんな　ふるそうなしんふ゛んを　と゛こから
 // もってきたんて゛すか？　みたことないて゛すよ。<end>
-Translation goes here.<end>
+<contd><nl>
+<Konta>
+Where did you get that old newspaper from? I've never seen it, though.<end>
 
 // <contd>
 // <Konta>・・・それは、おやし゛のものた゛とおもいます。<end>
@@ -7615,12 +7659,16 @@ I, I don't know.<end>
 
 // <Oidon>せっかくココンを　よんた゛んて゛すから
 // ココンにめを　むけましょうよ。<end>
-Translation goes here.<end>
+<Oidon>
+We've already called in Kit, so let's focus on him.<end>
 
 // <contd>
 // <Kokon>おやし゛は　わるいことを　するような
 // ひとし゛ゃない!　しつれいた゛そ゛。<end>
-Translation goes here.<end>
+// @TODO@ -- exact meaning of しつれいた゛そ゛ here
+<contd><nl>
+<Kokon>
+My father would never do such a thing!<end>
 
 // 。<end>
 .<end>
@@ -7628,7 +7676,9 @@ Translation goes here.<end>
 // <contd>
 // <Kokon>まよいのもり・・・おやし゛か゛　むかし、よく
 // ハンティンク゛を　していたは゛しょた゛な。<end>
-Translation goes here.<end>
+<contd><nl>
+<Kokon>
+The Lost Woods... my father used to go hunting there.<end>
 
 // 。<end>
 .<end>
@@ -7641,16 +7691,21 @@ Translation goes here.<end>
 
 // <contd>
 // <Kokon>みたことありませんよ。<end>
-Translation goes here.<end>
+<contd><nl>
+<Kokon>
+I've never seen it.<end>
 
 // <contd>
 // <Kokon>・・・・・・しりませんよ。<end>
-Translation goes here.<end>
+<contd><nl>
+<Kokon>
+No, I don't.<end>
 
 // <contd>
 // <Kokon>と゛こて゛　みつけてきたんて゛す？
 // それは　おやし゛のて゛すよ。<end>
-Translation goes here.<end>
+<contd><nl>
+Where did you find that? That's my father's.<end>
 
 // 。<end>
 .<end>
@@ -7663,16 +7718,21 @@ Translation goes here.<end>
 
 // <contd>
 // <Kokon>・・・わかりませんね。<end>
-Translation goes here.<end>
+<contd><nl>
+<Kokon>
+I don't know.<end>
 
 // <Oidon>せっかくツネコを　よんた゛んて゛すから
 // ツネコにめを　むけましょうよ。<end>
-Translation goes here.<end>
+<Oidon>
+We've already summoned Vixen, so let's focus on her.<end>
 
 // <contd>
 // <Tsuneko>わたしか゛　しっていることは　すへ゛て
 // おはなししたはす゛て゛す。<end>
-Translation goes here.<end>
+<contd><nl>
+<Tsuneko>
+I must have told you all I know.<end>
 
 // 。<end>
 .<end>
@@ -7680,7 +7740,9 @@ Translation goes here.<end>
 // <contd>
 // <Tsuneko>わかりません。おっとは　なにも
 // はなしてくれなかったのて゛・・・<end>
-Translation goes here.<end>
+<contd><nl>
+<Tsuneko>
+I don't know. My husband never talked about it...<end>
 
 // 。<end>
 .<end>
@@ -7691,27 +7753,38 @@ Translation goes here.<end>
 // <contd>
 // <Tsuneko>まったく・・・
 // そこにかかれている　とおりて゛すね。<end>
-Translation goes here.<end>
+// @TODO@ -- check translation
+<contd><nl>
+<Tsuneko>
+Ugh... just as it says there, yes?<end>
 
 // <contd>
 // <Tsuneko>・・・まさか　このし゛けんか゛　３年はんまえに
 // おっとか゛　おかしくなった　け゛んいんた゛と
 // いうのて゛は・・・。<key><Tsuneko>こんな　おそろしいこと　とても
 // しんし゛られませんわ!<end>
-Translation goes here.<end>
+<contd><nl>
+<Tsuneko>
+That's why my husband started acting so strange? I cannot believe such a dreadful thing!<end>
 
 // <contd>
 // <Tsuneko>おっとか゛　た゛いし゛にしていた
 // すいちゅうし゛ゅうて゛す。<end>
-Translation goes here.<end>
+<contd><nl>
+<Tsuneko>
+It's a speargun that meant a lot to my husband.<end>
 
 // <contd>
 // <Tsuneko>そうて゛すか・・・・・・。<end>
-Translation goes here.<end>
+<contd><nl>
+<Tsuneko>
+I see...<end>
 
 // <contd>
 // <Tsuneko>わかりませんわ。<end>
-Translation goes here.<end>
+<contd><nl>
+<Tsuneko>
+I don't know.<end>
 
 // 。<end>
 .<end>
@@ -7722,16 +7795,24 @@ Translation goes here.<end>
 // <contd><key><Kokon>なんて゛すか　これ？
 // <Oidon>しらは゛っくれるな!　おまえか゛　ヒ゜ョンコに
 // あけ゛たものた゛ろう!<end>
-Translation goes here.<end>
+<contd><key>
+<Kokon>
+What's this?<nl>
+<Oidon>
+Don't play dumb! You gave it to Bunnie!<end>
 
 // <contd>
 // <Konta>なんて゛すか　これ？
 // うちに　こんなほうせき　あったかな？<end>
-Translation goes here.<end>
+<contd><nl>
+<Konta>
+What's this? The jewelry from the store?<end>
 
 // <contd>
 // <Tsuneko>わたしの　ほうせきて゛は　ありませんわ。<end>
-Translation goes here.<end>
+<contd><nl>
+<Tsuneko>
+It isn't mine.<end>
 
 // <contd>
 // <Rinrin>それは　わたしのて゛す!
@@ -7741,13 +7822,25 @@ Translation goes here.<end>
 // <Oidon>もうしわけないか゛、このゆひ゛わは　し゛けんの
 // し゛ゅうような　しょうこひんなのて゛<key><Oidon>しは゛らく　あす゛からせて　もらえないかね。
 // <Rinrin>・・・わかりました。<end>
-Translation goes here.<end>
+<contd><nl>
+<Rinrin>
+That's mine! That's the ring I gave to Foxy Jewelry for repairs!<key>
+<Rinrin>
+This ring means a lot to me. I'd like it back now.<nl>
+<Oidon>
+I'm sorry, but this ring is a critical piece of evidence, so we can't give it back just yet.<nl>
+<Rinrin>
+...I understand.<end>
 
 // <contd>
 // <Peruu>と゛こから　みつかったんて゛すか？<key><Peruu>これは、ひとつた゛け　なくなっていた
 // ゆひ゛わて゛す。たしか、おきゃくさんから
 // おあす゛かりした　しなものて゛すわ。<end>
-Translation goes here.<end>
+<contd><nl>
+<Peruu>
+Where did you find that?<key>
+<Peruu>
+That's the ring that went missing. The one a customer dropped off.<end>
 
 // <contd>
 // <Kokon>なんて゛すか　しつこいなあ。<key><Oidon>しかも　このゆひ゛わは　おまえか゛　みせから
@@ -7763,21 +7856,42 @@ Translation goes here.<end>
 // <Kokon>はい。あそこは　うちのマンションなのて゛
 // あいカキ゛て゛　こっそり　はいれましたから・・・<key><Oidon>わかった。おまえには　アリハ゛イも　あるしな。
 // ココン!<pause>　ぬすみの　ようき゛て゛　たいほする!!<end>
-Translation goes here.<end>
+// dropping the seemingly random mention of the alibi at the end
+<contd><nl>
+<Kokon>
+God, you're persistent!<key>
+<Oidon>
+But you're the one who stole them, aren't you? Persia and Ling-Ling said so!<nl>
+<Kokon>
+...OK, you've got me.<key>
+<Kokon>
+Yeah, I'm the one who stole the jewels. But I did \n\o\t kill my father. When I saw my father's body, I felt this... impulse. I figured the theft would be pinned on the murderer.<key>
+<Oidon>
+So then you hid the jewels and your key in Nuki's room?<nl>
+<Kokon>
+Yeah. Since we owned the condo, I had a master key I used to sneak in.<key>
+<Oidon>
+All right then. Kit! You are under arrest for theft!<end>
 
 // <contd>
 // <Kokon>しりませんよ、そんなこと。<end>
-Translation goes here.<end>
+<contd><nl>
+<Kokon>
+I don't know anything about that.<end>
 
 // <Oidon>あれ？　ヒ゜ョンコさんのゆひ゛に　みなれぬ
 // ゆひ゛わか゛・・・<pause><end>
-Translation goes here.<end>
+<Oidon>
+Huh? Bunnie's ring... Translation goes here.<end>
 
 // <Oidon>ヒ゜ョンコくん　このゆひ゛わは　いったい
 // と゛うしたんた゛い？
 // <Pyonko>ココンさんか゛　うわきの　おわひ゛た゛といって
 // フ゜レセ゛ント　してくれたの。<end>
-Translation goes here.<end>
+<Oidon>
+Bunnie, what's the deal with this ring?<nl>
+<Pyonko>
+Kit gave it to me to apologize for fooling around.<end>
 
 // <contd>
 // <Peruu>あれ？<pause>よくみると　これは　ハ゜ンタ゛し゛ゃないて゛すか。
@@ -7789,13 +7903,24 @@ Translation goes here.<end>
 // あんた　けいし゛のくせに　しらなかったの!
 // <Oidon>いや　なにしろ　しんまい　て゛すから・・・
 // そうか　そんなことか゛　あったのか。<end>
-Translation goes here.<end>
+<contd><nl>
+<Peruu>
+Huh? This is a panda, isn't it? It looks like \L\u\n-\L\u\n.<nl>
+<Oidon>
+Lun-Lun?<nl>
+<Peruu>
+The “golden panda,” famous for her blond hair. I was a big fan of her myself.<key>
+<Peruu>
+Sadly, someone had killed her. You're a detective and you didn't know that?<nl>
+<Oidon>
+Ah, well, I'm still new at this. Very interesting...<end>
 
 // <Oidon>だんな!　そうさほんふ゛に　コンタか゛　たす゛ねて
 // きましたせ゛。
 // はなしたいことか゛あると　いってます。
 // きいてみましょう。<end>
-Translation goes here.<end>
+<Oidon>
+Boss! Red came to headquarters saying he had something to discuss. Let's get to it, shall we?<end>
 
 // <contd><key><Oidon>やあ、コンタくん　と゛うしたね？<pause>
 // <Konta>し゛つは<pause><pause>　し゛しゅをしにきました・・・
@@ -7826,26 +7951,54 @@ Translation goes here.<end>
 // と゛うか　とか゛めたり　しないて゛くた゛さい。
 // <Oidon>わかった・・・コンタ!　ちちおや　さつか゛い
 // ようき゛て゛　たいほする!!<end>
-Translation goes here.<end>
+<contd><key>
+<Oidon>
+Hey, Red, what's up?<pause>
+<Konta>
+To tell the truth... I'm turning myself in.<nl>
+<Oidon>
+What? What are you talking about?<key>
+<Konta>
+I... I'm the one who killed my father.<nl>
+<Oidon>
+WHAT?!<nl>
+<Konta>
+Sort of. As you know, I was talking with him at 8:30, right? We got in a fight over who would manage the store from then on. It went late into the night. So, around 11, I flew into a rage and went at him.<key>
+<Konta>
+He was afraid I would hurt him, so he drew his gun and fired a warning shot. That just cheesed me off more, and we started brawling. The gun discharged in the scuffle and he got shot in the heart.<key>
+<Konta>
+Then the bullet penetrated the wall. You'll find it if you look for it.<key>
+<Konta>
+So now you know what really happened. As for my alibi, I'd arranged a false one with Ling-Ling.<key>
+<Konta>
+She played no role in the actual crime. Please don't hold her responsible.<nl>
+<Oidon>
+I see. Very well. Red! You are under arrest!<end>
 
 // <contd><key><Oidon>さて、だんな。たいほは　しましたか゛　コンタの
 // こくはくは　あいまいな　ことは゛かりて゛す。
 // きんは゜つについても　いまた゛に　なそ゛のままて゛す。<key>
 // <Oidon>だんな、やはりここは　さらに　そうさを
 // つつ゛けてみる　ひつようか゛　ありますぜ。<end>
-Translation goes here.<end>
+<contd><key>
+<Oidon>
+Boss, we've arrested Red, but I have doubts about his confession. The blond hair is still a mystery too. It looks like our investigation must continue.<end>
 
 // <Oidon>だんな　リンリンは　と゛うも　るす　みたいて゛す。
 // た゛れも　て゛んわに　て゛ないんて゛すよ。<end>
-Translation goes here.<end>
+<Oidon>
+It seems Ling-Ling's not home, boss. Nobody's answering the phone.<end>
 
 // <Oidon>せっかくヘ゜ルーを　よんた゛んて゛すから
 // ヘ゜ルーにめを　むけましょうよ。<end>
-Translation goes here.<end>
+<Oidon>
+We've already summoned Persia, so let's focus on her.<end>
 
 // <contd>
 // <Peruu>とくに　きおくに　ありませんわ。<end>
-Translation goes here.<end>
+<contd><nl>
+<Peruu>
+Not as far as I recall.<end>
 
 // <contd><key><Oidon>だんな、たしか　たりない　ほうせきは
 // ゆひ゛わ　て゛したよね。
@@ -7853,11 +8006,19 @@ Translation goes here.<end>
 // ゆひ゛わを　かして　もらえないかな？
 // <Pyonko>ええ、かまいませんわ。
 // て゛も、はやく　かえしてくた゛さいね。<end>
-Translation goes here.<end>
+<contd><key>
+<Oidon>
+The missing piece of the jewelry was a ring. It seems suspicious.<key>
+<Oidon>
+I'm sorry, Bunnie, but could we borrow your ring?<key>
+<Pyonko>
+All right. But be sure to give it back soon, OK?<end>
 
 // <contd>
 // <Peruu>いいえ　なにも。<end>
-Translation goes here.<end>
+<contd><nl>
+<Peruu>
+No, nothing.<end>
 
 // 。<end>
 .<end>
@@ -7873,11 +8034,15 @@ Translation goes here.<end>
 
 // <contd>
 // <Peruu>まっ　キタナイしんふ゛ん　て゛すこと!<end>
-Translation goes here.<end>
+<contd><nl>
+<Peruu>
+Ack, what a dirty newspaper!<end>
 
 // <contd>
 // <Peruu>あ　それ<pause>　す゛いふ゛ん　むかしに　だんなさまか゛
 // もってらっしゃるのを　みたことか゛　ありますわ。<end>
+<contd><nl>
+<Peruu>
 Translation goes here.<end>
 
 0<end>
@@ -7885,22 +8050,30 @@ Translation goes here.<end>
 // <contd>
 // <Peruu>と゛こかて゛　みたようなきか゛・・・<pause>
 // て゛も　おもいた゛せませんわ。<end>
-Translation goes here.<end>
+// @TODO@ -- check translation
+<contd><nl>
+<Peruu>
+It looks familiar... but I don't know where it's from<end>
 
 // <Oidon>せっかくリンリンを　よんた゛んて゛すから
 // リンリンにめを　むけましょうよ。<end>
-Translation goes here.<end>
+<Oidon>
+Let's focus on Ling-Ling, since we've got her here.<end>
 
 // <contd>
 // <Rinrin>・・・しりません。<end>
-Translation goes here.<end>
+<contd><nl>
+<Rinrin>
+No, I don't.<end>
 
 // 。<end>
 .<end>
 
 // <contd>
 // <Rinrin>とくに　しっていることは　ありませんわ。<end>
-Translation goes here.<end>
+<contd><nl>
+<Rinrin>
+It's not too familiar.<end>
 
 // 。<end>
 .<end>
@@ -7913,24 +8086,32 @@ Translation goes here.<end>
 
 // <contd>
 // <Rinrin>さあ・・・・・・しりませんよ。<end>
-Translation goes here.<end>
+<contd><nl>
+<Rinrin>
+Mmm... nope.<end>
 
 // <contd>
 // <Rinrin>さあ・・・<pause>わたし・・・<pause>
 // わかりません。<end>
-Translation goes here.<end>
+<contd><nl>
+<Rinrin>
+Ah... well... I don't know.<end>
 
 // <contd>
 // <Rinrin>あの・・・<pause>　いいえ
 // みたことも　ありませんわ。<end>
-Translation goes here.<end>
+<contd><nl>
+<Rinrin>
+No, I've never seen it.<end>
 
 // 。<end>
 .<end>
 
 // <contd>
 // <Rinrin>さあ・・・<pause>　なんて゛しょう。<end>
-Translation goes here.<end>
+<contd><nl>
+<Rinrin>
+Hmm... what is it?<end>
 
 // 。<end>
 .<end>
@@ -7950,12 +8131,15 @@ Translation goes here.<end>
 
 // <Oidon>せっかくヒ゜ョンコを　よんた゛んて゛すから
 // ヒ゜ョンコにめを　むけましょうよ。<end>
-Translation goes here.<end>
+<Oidon>
+Let's focus on Bunnie, since she's here.<end>
 
 // <contd>
 // <Pyonko>さあ　あのひとのことは　わたし
 // よくしらないから・・・<end>
-Translation goes here.<end>
+<contd><nl>
+<Pyonko>
+Ah, I don't know so much about him.<end>
 
 // 。<end>
 .<end>
@@ -7963,7 +8147,10 @@ Translation goes here.<end>
 // <contd>
 // <Pyonko>うわさて゛は　あそこには　すか゛すか゛しい
 // かおをした　モク゛ラか゛　いるそうよ。へんなの。<end>
-Translation goes here.<end>
+// @TODO@ -- check translation
+<contd><nl>
+<Pyonko>
+Rumor has it there's a mole there with a refreshed-looking face. Odd.<end>
 
 // 。<end>
 .<end>
@@ -7973,29 +8160,42 @@ Translation goes here.<end>
 
 // <contd>
 // <Pyonko>しらなーい。わたし　ほんって　よまないから。<end>
-Translation goes here.<end>
+// @TODO@ -- check translation
+<contd><nl>
+<Pyonko>
+I don't know. I never read books.<end>
 
 // <contd>
 // <Pyonko>ふるい　しんふ゛んね。
 // て゛も　あたし　しんふ゛んって　よんた゛ことないの。
 // こ゛めんね。<end>
-Translation goes here.<end>
+<contd><nl>
+<Pyonko>
+That's quite an old newspaper. But I've never read any newspapers. Sorry.<end>
 
 // <contd>
 // <Pyonko>きゃあー!<pause><pause>
 // なにこれ？<pause>　こんな　こわいもの　みせないて゛。<end>
-Translation goes here.<end>
+<contd><nl>
+<Pyonko>
+Ack!<pause> What's that? Don't show me such dreadful things!<end>
 
 // <Oidon>うつっているのは　2ひきの　そっくりな
 // ハ゜ンタ゛て゛す。しかも　いっひ゜きは　きんは゜つ!<pause>
 // あっ　よくみてくた゛さい<pause>　これは<pause>　<dark-red>リンリン<black>て゛す!
 // きんは゜つのほうは　ヘ゜ルーか゛　いっていた<key><Oidon>ルンルンに　ちか゛いありません。
 // リンリンとルンルンは　ふたこ゛　た゛ったのか・・・<end>
-Translation goes here.<end>
+<Oidon>
+There are two pandas in the picture. But only one is blonde! Let me get a closer look...<key>
+<Oidon>
+This,<pause> this is Ling-Ling! And the blonde one must be the Lun-Lun Persia was talking about. Are they twins?<end>
 
 // <contd>
 // <Pyonko>た゛れ、これ？　わかんないわ。<end>
-Translation goes here.<end>
+// @TODO@ -- check translation
+<contd><nl>
+<Pyonko>
+Who's that? No idea.<end>
 
 // <Beasu>いらっしゃい!
 // <Oidon>あれっ、コアラさん　いないの？
@@ -8005,7 +8205,14 @@ Translation goes here.<end>
 // と゛こかへ　いってしまったんて゛すよ。<key><Oidon>そうて゛すか。
 // だんな、しかたないのて゛　そうさほんふ゛に
 // かえりましょう。<end>
-Translation goes here.<end>
+<Beasu>
+Welcome!<nl>
+<Oidon>
+Huh, Koala's not here?<nl>
+<Beasu>
+'Fraid not. He got hammered and went to lie down. Then he suddenly got up with this worried face and left.<key>
+<Oidon>
+I see. Well, boss, all we can do is go back to headquarters.<end>
 
 // <Oidon>とくに　みるようなものは　ありませんぜ。<end>
 <Oidon>
@@ -8013,17 +8220,21 @@ There's nothing interesting to look at.<end>
 
 // <Oidon>こうきゅうそうな　ゆひ゛わて゛す。
 // て゛も　なんの　へんてつも　ありませんぜ。<end>
-Translation goes here.<end>
+<Oidon>
+Quite a luxurious ring. Nothing unusual about it, though.<end>
 
 // <Oidon>あれっ、このゆひ゛わ　よくみると　ほうせきの
 // ところか゛　はす゛れるように　なってますよ。<pause>
 // わわっ!<pause>　なかに　しゃしんか゛　はいってました。<end>
-Translation goes here.<end>
+<Oidon>
+Huh? Now that I look at the ring, the jewel doesn't seem to be firmly in place.<pause> Whoa!<pause> There's a photo in here!<end>
 
 // <Oidon>そんな　よわきなことを　いっていて
 // いいんて゛すか!
 // し゛けんかいけつまて゛　あといっほ゜なんて゛すよ。<end>
-Translation goes here.<end>
+// @TODO@ -- check translation
+<Oidon>
+Is it good to say such a timid thing? We're one step away from solving this case.<end>
 
 // <Oidon>だんな　たいへんて゛す!　ゴンきちの　したいを
 // かいほ゛うした　けんしかんから　あらたな
@@ -8038,7 +8249,15 @@ Translation goes here.<end>
 // リンリンとルンルンに　ちか゛いありません!<key><Oidon>こうなったら　ほ゛やほ゛やしては　いられません!
 // いますく゛　リンリンのいえに　のりこんて゛
 // たいほしなけれは゛!<end>
-Translation goes here.<end>
+// @TODO@ -- integrate <char> better
+<Oidon>
+Boss! We've just got a report from the coroner who performed Renard's autopsy.<key>
+<Oidon>
+He found scraps of paper in Renard's stomach. That paper fits together with the one with the <char> on it.<key>
+<Oidon>
+Put them together and it says, “<char>o escape from panda twins”...<key>
+<Oidon>
+Panda twins... Ling-Ling and Lun-Lun! We can't be too careful, boss. Let's go over to Ling-Ling's and arrest her!<end>
 
 // <Oidon>ちょっと　まってくた゛さい。
 // だんな　ちょうと゛て゛んわか゛　はいりました。<pause>
@@ -8055,18 +8274,31 @@ Translation goes here.<end>
 // リンリンに　ちか゛いありません。<key><Oidon>これは　もういちと゛　コンタから　はなしをきく
 // ひつようか゛　ありそうて゛すね。
 // ・・・それて゛は　コンタを　よひ゛ますぜ。<end>
-Translation goes here.<end>
+<Oidon>
+Hang on. The phone's ringing.<pause> *click* Animal Land Police Department.<pause> Yes?<pause> She WHAT?<pause> O-<pause>OK.<pause> Thanks. Bye.<pause> *click*<key>
+<Oidon>
+B-<pause>b-<pause>bad news, boss! Ling-Ling is dead! She was found in her room. It seems she'd slit her wrists.<key>
+<Oidon>
+Ah, a note from her just arrived. Let's take a look...<key>
+<Oidon>
+“I'm sorry, everyone. Everything is my fault. Not Red's or anyone else's.”<key>
+<Oidon>
+That's all it says. Well, this was most... unexpected. I guess it has to do with breaking up with Red.<key>
+<Oidon>
+I guess we'll have to talk to Red again. I'll call him in.<end>
 
 // <Oidon>ほうせきを　ぬすんた゛のか゛　ココンた゛とすると
 // はんにんの　と゛うきは　うらみ　らしいて゛すね。
 // となると　ゴンきちか゛　３年はんまえ　た゛れかを
 // ころしたというのは　ほんとうみたいて゛すね。<end>
-Translation goes here.<end>
+<Oidon>
+If Kit did steal the jewelry, the killer's motive must have been revenge, which makes sense if, as seems to be the case, Renard killed someone three and a half years ago.<end>
 
 // <Oidon>と゛うも　コンタか゛　はんにんた゛とは
 // おもえません。た゛れかを　かは゛っている
 // ということも　かんか゛えられます。<end>
-Translation goes here.<end>
+<Oidon>
+Red doesn't look like the real culprit. He seems to be taking the fall to protect someone else.<end>
 
 // 。<end>
 .<end>
@@ -8203,7 +8435,8 @@ OK, you may go now.<end>
 // <Oidon>だんな、ここに　いますぜ。
 // いいかけ゛ん　なまえく゛らい　まちか゛えないて゛
 // くた゛さいよ。<end>
-Translation goes here.<end>
+<Oidon>
+He's right here, boss. Translation goes here.<end>
 
 // す<char><char>"イ"イイ($10)<char><char>ーMMmmIK{mK{yiy[yiYYyyiIimM{{{iKmm
 // @TODO@ - data?
