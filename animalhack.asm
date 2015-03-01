@@ -238,7 +238,7 @@ DrawCmdMenu:
 .first_menu_item:
         ld      a, $6b                  ; Set text color to orange
         ld      (text_color), a
-        ld      a, d                    ; Number of menu item (in MSX charset)
+        ld      a, d                    ; Number of menu item (in screen encoding)
         call    PrintChar8              ; Display it
         ld      a, CHAR_BOLD_PERIOD
         call    PrintChar8

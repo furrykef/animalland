@@ -4,6 +4,9 @@ http://www.d1.dion.ne.jp/~gake/koryaku/animal/animal.htm
 http://web.archive.org/web/20130510133857/http://www5d.biglobe.ne.jp/~t-suzuki/sousyuhen/so_animal_land.htm
 
 
+There shouldn't be a keypress between the last two "WE WANT PEACE!"s.
+
+
 The mole ends everything with "jo". Find out what this means, and note it on the wiki.
 
 
@@ -24,7 +27,7 @@ The けいさつ/ALPD graphic begins at $0b8ed ($98ed in memory space). The patt
 The tilemap begins at $0bfd4 and runs to $0c0de, exclusive.
 
 
-A character holds a sign in Japanese in the ending (しゃくほう　しろ！！, "Release him/her!!" -- perhaps translate as "FREE [name]!!").
+A character holds a sign in Japanese in the ending (しゃくほう　しろ！！, "Let us go!!").
 
 
 The ending (at least) loads bank 15 ($1e000-1ffff) into $6000. I think there's code there. We may want to consider leaving this bank alone.
@@ -178,7 +181,7 @@ People:
   ヌキ (a tanuki)                     - Nuki
   ピョンコ (bunny; Kokon's girlfriend)  - Bunnie
   タージ (turtle)                      - Pokey
-  ペルー                               - Persia
+  ペルー (Persian cat)                 - Persia
   ツネコ (female fox)                  - Vixen
   コアラ                               - Koala
   ベアス (bear)                        - Teddy (Bjorn? Ursula? Can't tell if female.)
@@ -205,18 +208,12 @@ Ending: えンテ゛ィンク゛ (secret password!)
 
 Possible English passwords
 --------------------------
-KAKAPO
 CALICO
 FALCON
-HIPPO
-ELEPHANT
-RHINO
 MAMMOTH
 MARMOT
 CRICKET
 SNAIL
-CARACOL
-VULPES
 COYOTE
 BEAGLE
 NAUTILUS
@@ -224,19 +221,6 @@ BASILISK
 PENGUIN
 SEAGULL
 COLLIE
-MUZZLE
-KOKO
-TANUKI (use for the chapter that introduces Nuki!)
-
-For the ending:
-DENOUEMENT (but this flouts the 8-char max)
-GNIDNE ("ending" backwards)
-SPOILERS
-IMACHEAT
-VICTOLY
-INSTAWIN
-
-
-Misc
-----
-Consider "ASK ABOUT" instead of "ASK".
+ORCA
+MACAW
+NEMATODE

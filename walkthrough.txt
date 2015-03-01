@@ -185,11 +185,11 @@ Does the clean ball serve any purpose??
 Chapter 7
 ---------
 * Check Pyonko (reveals ring)
-* Question Pyonko thoroughly
-* Question everyone else thoroughly
-** Showing the ring to Kokon after showing it to Peruu and Ling-Ling reveals he stole it
+* Ask Pyonko about ring (takes it)
+* Show ring to Peruu, Ling-Ling, then Kokon twice (reveals Kokon stole it)
+* Show photo to Peruu
 
-Once Kokon has been arrested, trying to summon someone should cause Konta to show up and confess.
+At this point, trying to summon someone should cause Konta to show up and confess.
 
 * Check parlor wall
 * Check blood
