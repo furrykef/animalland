@@ -1,5 +1,8 @@
 MURDER IN ANIMAL LAND
 =====================
+conman from ##japanese has expressed interest
+
+
 http://www.d1.dion.ne.jp/~gake/koryaku/animal/animal.htm
 http://web.archive.org/web/20130510133857/http://www5d.biglobe.ne.jp/~t-suzuki/sousyuhen/so_animal_land.htm
 
@@ -66,6 +69,7 @@ Release checklist
 * hacking notes on wiki are up to date
 * readme.txt has proper word wrapping
 * readme.txt and README.md are up to date
+* Game uses safe region of RAM for its variables
 
 
 When done, submit to MSX sites:
@@ -152,8 +156,10 @@ Credits
 Kef Schecter - hacking and translation
 Torbjorn - translation
 geishaboy - translation
+conman - translation checker
 BiFi (#msxdev) - found code for making text bold so I could disable it; helped with password routine; helped with graphics compression
-tepples - logo
+tepples - logo (unused)
+Raijin - part of final logo
 
 Font is a variant of Tau's Custom Font
 
@@ -168,6 +174,7 @@ Beta testers
 * I.S.T.
 * EvilSonic will no doubt be interested (drew Animal Land fanart): https://www.weasyl.com/~evilsonic
 * Kitsune Sniper
+* Raijin
 
 
 Character and place names

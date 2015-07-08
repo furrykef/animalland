@@ -59,7 +59,7 @@ $47a1:
         jp      $4616
 
 
-$4616:  add     a,$80           ; convert char to MSX charset
+$4616:  add     a,$80           ; convert char to screen encoding
         cp      $23             ; originally $a3 -- <pause>
         jr      z,$464f
         cp      $24             ; originally $a4 -- ellipsis

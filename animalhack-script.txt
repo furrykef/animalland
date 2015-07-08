@@ -37,10 +37,6 @@ name?<end>
 No such file, boss.<end>
 
 // Intro text
-// I cut this down just a hair so it would fit in the original space.
-// I could have relocated it, but the original text was a bit verbose/
-// repetitive and no real details are lost. I also changed "sofa" to
-// "chair" to be consistent with the in-game scenes.
 #JMP($6A0, $893)
 // ある日、わたしのところに
 // さつし゛んし゛けんか゛　とひ゛こんて゛きた。<key>
@@ -55,7 +51,7 @@ No such file, boss.<end>
 // かっこうて゛　し゛ゅうて゛　しんそ゛うを
 // うたれて　そくしのし゛ょうたいて゛
 // あったらしい。<end>
-Animalville was a quiet, peaceful mountain village like any other.<key>
+My village was like any other: a quiet, peaceful hamlet among the mountains.<key>
 At least, it was until the murder of \R\e\n\a\r\d \F\o\x, the owner of Foxy Jewelry.<end>
 
 // はっけんしゃは、かれのむすこて゛
@@ -71,9 +67,7 @@ At least, it was until the murder of \R\e\n\a\r\d \F\o\x, the owner of Foxy Jewe
 // わたしは、すく゛さま　ちゅうし゛つな
 // ふ゛かて゛ある　いぬの"<cyan>おいと゛ん<white>"と　ともに
 // このし゛けんの　そうさにのりた゛すことにした。<end>
-He was discovered by \K\i\t, his son.<key>
-Kit entered the jewelry store at about 11 AM the day after the murder.<key>
-The door was unlocked. When he went in, he saw his father in his chair, his chest covered with blood.<key>
+His son \K\i\t went to the jewelry store at about 11 AM and found the door unlocked. When he went in, he saw his father in his chair, his chest covered with blood.<key>
 He'd been shot in the heart. My partner \A\n\d\y and I set out at once to investigate the case...<end>
 
 
@@ -1202,7 +1196,7 @@ Waste-<mnl>
 basket<end>
 
 // せきは゛ん<end>
-Noel Stone<end>
+Stone<end>
 
 // あな<end>
 Hole<end>
@@ -1622,6 +1616,7 @@ This safe... it's the kind with a dial.<end>
 
 // <Oidon>んく゛き゛き゛っ、カキ゛か゛　かかってて　あきませんぜ。
 // だんなも　やってみて　くた゛さいよ。<end>
+// Second line omitted in translation on the grounds it might be confusing to the player.
 <Oidon>
 Nngghh...<pause> it's locked.<end>
 
@@ -1988,7 +1983,7 @@ It's full of yummy things. So many of my favorite dog treats...<end>
 <Oidon>
 Did you notice anything odd last night?<nl>
 <Pyonko>
-I saw Red go into the jewelry shop at around 8. Other than that...<key>
+I saw Red go into the jewelry shop at around 8:30. Other than that...<key>
 <Pyonko>
 Ah, that's right. I saw a car parked out there around 11.<end>
 
@@ -2014,7 +2009,7 @@ I'm afraid I don't.<end>
 <Oidon>
 Recognize this?<nl>
 <Pyonko>
-People's names? I see Red's name is on it.<end>
+Are those names? I see Red's name is on it.<end>
 
 0<end>
 
@@ -2308,9 +2303,9 @@ I don't know what's in the safe, but he often put important stuff in the drawer.
 <Oidon>
 What's the combination to the safe?<nl>
 <Konta>
-Renard was the only one who knew. But it would help solve the case if anything of relevance is in there...<key>
+Renard was the only one who knew. But we might need whatever's in there to solve the case...<key>
 <Konta>
-So I'll do what I can. I'll let you know as soon as I find anything.<end>
+I'll be sure to let you know if I find anything.<end>
 
 // <Oidon>ちょっと　しつれい。
 // しらへ゛ましたけと゛　なにもないて゛すよ。<end>
@@ -2351,6 +2346,7 @@ Ah... well... I'd promised to meet a friend, so I wrote it down.<end>
 // おいと゛んのはなか゛　そう　かき゛つけたんた゛。
 // <Konta>なにを　いってるんて゛すか。
 // あなたのはなも　あてになりませんね。<end>
+// @TODO@ -- context?
 <Oidon>
 I smell something fishy.<nl>
 <Konta>
@@ -3254,7 +3250,11 @@ No, I haven't.<end>
 <Oidon>
 Excuse me for a moment...<nl>
 <Peruu>
-Agh!<pause> I don't care if you're police. Try something like that again and I'm calling the cops!<end>
+Agh! Stop it! Don't make me call the cops!<key>
+<Oidon>
+But we are the cops.<nl>
+<Peruu>
+Don't bother me with details. Just don't do it again!<end>
 
 // <contd>
 // <Peruu>これは　きのう　わたしか゛　しゃちょうに
@@ -6015,7 +6015,7 @@ The evidence we have so far is:<pause> blond hair, memo, gun, Kit's key, jewels<
 // ほうせきてんにいて、<key><Oidon>そのあとは　いえて゛　リンリンと　はなしを
 // していたそうて゛す。<end>
 <Oidon>
-Boss, Red was at the jewelry shop between 9:30 and 10 on the night of the 10th. After that he spoke to Ling-Ling at his place.<end>
+Boss, Red was at the jewelry shop between 8:30 and 9:30 on the night of the 10th. After that he spoke to Ling-Ling at his place.<end>
 
 // <contd>
 // <Kokon>はい。<pause>せ゛んせ゛ん・・・。<end>
@@ -7043,7 +7043,6 @@ Past or present, I have no idea. I can't go anywhere there's no water.<end>
 // ちかくのかわに　おとしちゃったんた゛。<key><Sakana>て゛も、あのかわの　なか゛れは
 // おた゛やかた゛から、いくら　すいちゅうメカ゛ネて゛も
 // あまり　なか゛されないはす゛た゛よ。<end>
-// @TODO@ -- "looking for the old man" doesn't seem right
 <Oidon>
 Are you aware there were two people who went into this forest?<nl>
 <Sakana>
@@ -7051,11 +7050,11 @@ Now that you mention it, I've seen a fox.<key>
 <Oidon>
 What? Who was it?<nl>
 <Sakana>
-I don't know. Looking for the old man?<nl>
+I don't know. Are you looking someone?<nl>
 <Oidon>
-Ah, yes.<key>
+Yeah.<key>
 <Sakana>
-In that case, I'll give you my swimming goggles. However... I don't have them with me here. They fell in the river by some trees arranged in the shape of a thick triangle.<key>
+In that case, I'll give you my swimming goggles. Well, I would if I had 'em. They fell in the river by some trees arranged in the shape of a thick triangle.<key>
 <Sakana>
 But the river's calm there, so even a pair of goggles shouldn't wash away.<end>
 
@@ -7066,9 +7065,11 @@ But the river's calm there, so even a pair of goggles shouldn't wash away.<end>
 <Oidon>
 Huh?<pause> Boss, there's something written on this rock.<key>
 <Oidon>
-I think it says, “Noel Stone.” Under that, it says, “Dilamond rock ills mirage.” Huh???<key>
+It says, “ABCDEFGHIJKMNOPQRSTUVWXYZ.” Hmm. No L.<key>
 <Oidon>
-Which rock is Dilamond Rock? What does “ills mirage” mean? And why is this rock called the Noel Stone?<end>
+Then it says, “Dilamond rock ills mirage.” Huh??<key>
+<Oidon>
+Which rock is Dilamond Rock? What does “ills mirage” mean? And what's with the alphabet with no L?<end>
 
 // <Oidon>だんな、ふつうのいわとは　ちか゛うかたちを
 // してますぜ。<end>
@@ -8558,28 +8559,34 @@ A good detective always pays attention to details. Details like the person you'r
 // なんと　ひにくな　かなしいことた゛ろう・・・<pause>
 // おや　なんた゛か　そとか゛　さわか゛しいそ゛。
 // 　　　　カ゛ヤ　カ゛ヤ　カ゛ヤ　カ゛ヤ　カ゛ヤ<end>
+//
+// りょうしんの　かしゃくにたえきれす゛ is 良心の呵責に耐えられず ("in a fit of conscience")
 <Oidon>
-I, I'm sorry, Red. Translation goes here.
+I, I'm sorry, Red. After Ling-Ling used you and got her revenge, she had a change of heart and-
 <Konta>
-No, no, no! You've got it all wrong!<key>
+No, no, no! You don't understand anything!<key>
 <Konta>
-Look, I'll tell you everything. It was both of us!<nl>
+She didn't kill my father. \W\e did.<nl>
 <Oidon>
-What?<key>
+What?
+<Konta>
+Let me explain...<key>
 <Konta>
 Three and a half years ago, when Lun-Lun was killed, Ling-Ling began to distrust my father, a speargun expert.<key>
 <Konta>
-She knew he was jealous of Lun-Lun's popularity. But Lun-Lun's killer was never found.<key>
+Lun-Lun's killer was never found, and Ling-Ling knew Renard was jealous of Lun-Lun's popularity.<key>
 <Konta>
 Ling-Ling wanted revenge, so she kept looking into it after everyone else had given up. About a year ago, she became convinced that Renard was the killer.<key>
 <Konta>
-That's about when I met her. She and I really loved each other. We secretly met in the cabin in the Lost Woods, just the two of us.<key>
+That's about when I met her. We fell in love. We secretly met in the cabin in the Lost Woods, just the two of us.<key>
 <Konta>
-She spoke frankly. She decided not to kill my father, for my sake.<key>
+She confessed her intentions. But she decided not to kill my father, for my sake.<key>
 <Oidon>
 What happened? Did she change her mind?<nl>
 <Konta>
-It's my fault. I couldn't believe that my father was a murderer. So we decided to test him. We dyed her blonde, put the picture in the ring, and had Ling-Ling put the ring in the shop for repairs to see how he'd react.<key>
+Not exactly. I couldn't believe that my father was a murderer. So we decided to test him.<key>
+<Konta>
+We dyed her blonde, put the picture in the ring, and had Ling-Ling put the ring in the shop for repairs to see how he'd react.<key>
 <Konta>
 My father was startled, and was convinced that Ling-Ling had come to kill him. On the evening of the 10th, I went to the shop to talk to him in person.<key>
 <Konta>
@@ -8773,5 +8780,4 @@ We <end>
 
 // 　　<end>
 <contd>!<nl>
-<nl>
   <end>
