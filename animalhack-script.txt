@@ -1928,7 +1928,7 @@ Excuse me, I'd like to take a look. Standard procedure.<key>
 <Pyonko>
 Hey! What do you think you're doing? *slap!*<nl>
 <Oidon>
-Ah... sorry, never mind.<end>
+Ow!<pause> OK, never mind.<end>
 
 // <Oidon>ヒ゜ョンコのくちを　あけてみましたところ、
 // きれいな　はを　してましたせ゛。<end>
